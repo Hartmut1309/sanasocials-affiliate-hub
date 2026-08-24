@@ -160,6 +160,22 @@
   .chip:focus-visible{outline:2.5px solid var(--acc);outline-offset:2px}
   .count{font-size:14px;color:var(--dim);margin-left:auto;font-weight:600}
   .langline{font-size:16px;color:var(--mut);margin:0 0 22px;max-width:none}
+  
+  /* start-here band (KetoSana + CleanseSana) */
+  .starthere{margin:0 0 26px;padding:22px 22px 24px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;background:var(--bg2)}
+  .sh-kicker{display:inline-block;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:6px}
+  .sh-head h2{margin:0 0 6px;font-size:clamp(21px,2.4vw,27px);line-height:1.22}
+  .sh-head p{margin:0 0 18px;font-size:15px;line-height:1.6;color:var(--mut);max-width:74ch}
+  .sh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .sh-card{display:flex;flex-direction:column;gap:7px;padding:18px 18px 16px;border:1px solid var(--line);border-top:4px solid var(--catc,var(--gold));border-radius:12px;background:var(--card);text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease}
+  .sh-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.09)}
+  .sh-tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--catc,var(--gold))}
+  .sh-card b{font-family:var(--disp,inherit);font-size:24px;line-height:1.1;color:var(--ink)}
+  .sh-epc{font-size:22px;font-weight:800;color:var(--ink)}
+  .sh-epc i{font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .sh-fmt{font-family:var(--mono,monospace);font-size:12.5px;font-weight:700;color:var(--mut);letter-spacing:.02em}
+  .sh-note{font-size:14px;line-height:1.55;color:var(--mut)}
+  .sh-go{margin-top:4px;font-size:14.5px;font-weight:800;color:var(--catc,var(--gold))}
   .fmtline{margin:-6px 0 22px;padding:13px 17px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;background:var(--bg2);font-size:14.5px;line-height:1.62;color:var(--mut);font-weight:600}
   .fmtline b{color:var(--ink)}
   .fmtline code{font-family:var(--mono);font-size:13.5px;color:var(--acc);font-weight:700}
@@ -410,15 +426,16 @@
     <a class="rpill" style="--catc:var(--c-blood)" href="#offer-5"><i>5</i> GlucoSana</a>
     <a class="rpill" style="--catc:var(--c-nerve)" href="#offer-6"><i>6</i> NerveSana</a>
     <a class="rpill" style="--catc:var(--c-men)" href="#offer-7"><i>7</i> VigorSana</a>
+    <a class="rpill" style="--catc:var(--c-bundle)" href="#offer-8"><i>8</i> VitaSana</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="flagpill">● <b>7 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe · updated 18 August 2026</div>
+    <div class="flagpill">● <b>8 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe · updated 18 August 2026</div>
     <div class="eyebrow">SanaSocials × Digistore24 · Partner Program</div>
     <h1>Your Current Angles Are Saturated. The DACH Version of Them Hasn't Run Yet.</h1>
-    <p class="lede"><strong>More than 100 million German speakers</strong> — one-third the US market, Europe's wealthiest language market — at <strong>40–60% cheaper CPMs</strong>, with a fraction of the competition. Seven doctor-fronted supplement funnels, <strong>60–75% RevShare</strong> through the whole funnel — thank-you page included — top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>.</p>
+    <p class="lede"><strong>More than 100 million German speakers</strong> — one-third the US market, Europe's wealthiest language market — at <strong>40–60% cheaper CPMs</strong>, with a fraction of the competition. Eight doctor-fronted supplement funnels, <strong>60–75% RevShare</strong> through the whole funnel — thank-you page included — top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>.</p>
     <p class="quoteline">"<b>It's the US market in 2019.</b>" — enter your Digistore24 ID once, every link on this page becomes yours.</p>
     <div class="statstrip" role="list">
       <div class="stat" role="listitem"><b>100M+</b><span>German speakers in Europe</span></div>
@@ -438,7 +455,7 @@
         <label for="camMain">Campaign key <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
         <input id="camMain" placeholder="e.g. fb-test-01" autocomplete="off" spellcheck="false">
       </div>
-      <button class="btn primary" id="copyAllMain" type="button">Copy all 9 promo links</button>
+      <button class="btn primary" id="copyAllMain" type="button">Copy all promo links</button>
       <div class="hint">Links update live as you type: <code>?aff=</code><span style="color:var(--acc);font-weight:800">your-id</span><code>&amp;cam=</code><span style="color:var(--gold);font-weight:800">campaign-key</span>. New to Digistore24? <a href="https://www.digistore24.com" target="_blank" rel="noopener">Create your free account</a> — one account covers every offer here.</div>
     </div>
 
@@ -453,6 +470,7 @@
           <tr><td>5</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoSana</td><td class="hidem">Blood Sugar</td><td class="r">ask</td><td><a href="#offer-5">Jump →</a></td></tr>
           <tr><td>6</td><td><span class="idot" style="background:var(--c-nerve)"></span>NerveSana</td><td class="hidem">Nerve Health</td><td class="r">ask</td><td><a href="#offer-6">Jump →</a></td></tr>
           <tr><td>7</td><td><span class="idot" style="background:var(--c-men)"></span>VigorSana</td><td class="hidem">Men's Health</td><td class="r">ask</td><td><a href="#offer-7">Jump →</a></td></tr>
+          <tr><td>8</td><td><span class="idot" style="background:var(--c-bundle)"></span>VitaSana Collection</td><td class="hidem">VIP Wellness System</td><td class="r">ask</td><td><a href="#offer-8">Jump →</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -462,17 +480,39 @@
 <main class="wrap">
 
   <div class="filters" role="toolbar" aria-label="Filter offers by category" id="cards">
-    <button class="chip" aria-pressed="true" data-f="all" type="button">All offers · 7</button>
+    <button class="chip" aria-pressed="true" data-f="all" type="button">All offers · 8</button>
     <button class="chip" aria-pressed="false" data-f="weight" type="button" style="--catc:var(--c-weight)"><span class="dot"></span>Weight Loss</button>
     <button class="chip" aria-pressed="false" data-f="blood" type="button" style="--catc:var(--c-blood)"><span class="dot"></span>Blood Sugar</button>
     <button class="chip" aria-pressed="false" data-f="gut" type="button" style="--catc:var(--c-gut)"><span class="dot"></span>Detox &amp; Gut</button>
     <button class="chip" aria-pressed="false" data-f="nerve" type="button" style="--catc:var(--c-nerve)"><span class="dot"></span>Nerve Health</button>
     <button class="chip" aria-pressed="false" data-f="men" type="button" style="--catc:var(--c-men)"><span class="dot"></span>Men's Health</button>
-    <span class="count" id="countLabel">Showing 7 of 7</span>
+    <span class="count" id="countLabel">Showing 8 of 8</span>
   </div>
   <p class="langline"><b>The funnels are German — you don't need to be.</b> Every page, VSL and checkout below is native German-built by DACH copywriters — not translated US pages. Run our swipes and angles translated for you, or point your proven creatives at German-speaking audiences. <em>The language barrier is the moat</em> — it kept your competitors out, not you.</p>
 
   <p class="fmtline"><b>The funnel formats, and what each one is for.</b> <b>VSL</b> = video sales letter page &middot; <b>PDP</b> = long-form product detail page (text sales page) &middot; <b>DTC</b> = direct-to-cart page: the package boxes and prices only, no sales content &mdash; built for warm traffic, email lists and affiliates running their own pre-sell or advertorial. The <b>DTC</b> rows come in two bundle sets: <b>1&middot;3&middot;6</b> bottles (single-bottle entry price) and <b>2&middot;3&middot;6</b> bottles (2-bottle entry, higher starting order value). VSL and PDP pages run 1, 3 and 6 bottles. Not every offer carries every format &mdash; the rows on each card are the ones that are live today. Every format carries your <code>aff</code> and <code>cam</code> parameters through to Digistore24 checkout.</p>
+  <section class="starthere rev" aria-label="Where to start">
+    <div class="sh-head"><span class="sh-kicker">Start here</span><h2>The two offers running a full VSL <em>and</em> PDP</h2>
+      <p>Everything else on this page is one funnel format. These two let you match the funnel to the traffic instead of forcing the traffic into one page &mdash; cold video to the VSL, readers to the PDP, warm traffic straight to the cart.</p></div>
+    <div class="sh-grid">
+      <a class="sh-card" href="#offer-2" style="--catc:var(--c-weight)">
+        <span class="sh-tag">Highest EPC on the programme</span>
+        <b>KetoSana</b>
+        <span class="sh-epc">~$6.10 <i>EPC</i></span>
+        <span class="sh-fmt">VSL &middot; PDP &middot; DTC 1&middot;3&middot;6 &middot; DTC 2&middot;3&middot;6</span>
+        <span class="sh-note">Best fit for cold video traffic. If you run video and haven&rsquo;t tested it, start here.</span>
+        <span class="sh-go">Go to KetoSana &rarr;</span>
+      </a>
+      <a class="sh-card" href="#offer-4" style="--catc:var(--c-gut)">
+        <span class="sh-tag">Newest VSL &middot; freshest angle</span>
+        <b>CleanseSana</b>
+        <span class="sh-epc">~$3.20 <i>EPC &middot; new VSL</i></span>
+        <span class="sh-fmt">VSL &middot; PDP &middot; DTC 1&middot;3&middot;6 &middot; DTC 2&middot;3&middot;6</span>
+        <span class="sh-note">The VSL reads above the proven $2.60 PDP &mdash; a young number on a young funnel, so ask for the current figure before you scale. Almost nobody is running it yet.</span>
+        <span class="sh-go">Go to CleanseSana &rarr;</span>
+      </a>
+    </div>
+  </section>
   <div class="cards" id="cardlist">
 
     <!-- 1 · SlimSana -->
@@ -815,6 +855,48 @@
       </div>
     </article>
 
+    <!-- 8 · VitaSana Collection -->
+    <article class="card rev" data-cat="bundle" id="offer-8" style="--catc:var(--c-bundle)">
+      <header>
+        <div class="rank">8</div>
+        <div class="hgroup">
+          <div class="eyebrow2"><b>VitaSana Collection</b> &middot; VIP Wellness System &middot; 8 Products &middot; German-language funnel &middot; DACH + EU</div>
+          <h3>The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</h3>
+          <p class="subhead">Built for email lists &mdash; buyers pick their next transformation by their biggest pain point, and you earn 60&ndash;75% across the whole VIP Wellness System.</p>
+        </div>
+        <img class="bottle" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
+        <span class="badge">Lifetime-Customer Machine</span>
+      </header>
+      <div class="kpis">
+        <div class="kpi"><b class="na">&mdash; ask support</b><span>EPC</span></div>
+        <div class="kpi"><b>&euro;245+</b><span>AOV</span></div>
+        <div class="kpi"><b>60&ndash;75%</b><span>RevShare, whole system</span></div>
+        <div class="kpi"><b class="na">ask</b><span>CPA &middot; volume players</span></div>
+        <div class="kpi"><b>8</b><span>Products, one funnel</span></div>
+      </div>
+      <div class="body">
+        <p class="pitch">The complete <strong>&ldquo;clinic protocol&rdquo; VIP Wellness System</strong>: SlimSana, MetaboSana, CleanseSana, CurcumaSana, KetoSana, GlucoSana, NerveSana and VigorSana in one self-selecting funnel. <strong>One doctor. One system. Total consistency.</strong> German buyers have already tried single supplements and random solutions &mdash; this one sells them a protocol instead. Buyers choose their next transformation by their own biggest pain point, so the cross-sell reads as personalized guidance rather than an upsell stack.</p>
+        <ul class="hooks">
+          <li><b>8</b> products, one commission stream</li>
+          <li>One link sells the whole portfolio</li>
+          <li>Built for list owners &amp; content traffic</li>
+        </ul>
+        <div class="aud">
+          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Segment</span><b>Men &amp; women 30+, multi-symptom health buyers</b></div>
+        </div>
+        <p class="fmtline" style="border-left-color:var(--c-bundle);margin:0 0 14px"><b>The funnel is moving to a new address.</b> VitaSana Collection is the one offer whose pages still sit on the retired domain, so we are not publishing a promo link here until the move is done &mdash; a link carrying the old name would break the naming rule further down this page. <b>Email <a href="mailto:affiliates@sana-socials.com?subject=VitaSana%20Collection%20%E2%80%94%20promo%20link&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0AList%20size%20%28if%20email%29%3A%0A">affiliates@sana-socials.com</a> for the current link</b>, and you will be first on the list when the new funnel address goes live. Everything else about the offer &mdash; commission, tracking, assets &mdash; is unchanged.</p>
+        <div class="resources">
+          <a class="assets" href="https://drive.google.com/drive/folders/10zABAswTGyC6i-gxzyqs_TufieAlUDco" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, &hellip;</a>
+          <a class="mkt-verify" href="https://www.digistore24-app.com/app/en/marketplace?search=VitaSana" target="_blank" rel="noopener">Verify stats in the DS24 marketplace &uarr;</a>
+        </div>
+        <div class="cardfoot">
+          <span class="note">Strongest play for email lists: every send can hit a different pain point.</span>
+        </div>
+      </div>
+    </article>
+
+
   </div>
 
   <div class="pipeline rev" id="pipeline">
@@ -956,7 +1038,7 @@
       <div class="tile rev"><span class="n">Q1</span><h4>January–March · Diet season</h4><p>The biggest weight-loss window of the year — SlimSana, KetoSana and MetaboSana lead. Book creative in December, scale hard through January, ride continuation angles into March.</p></div>
       <div class="tile rev"><span class="n">Q2</span><h4>April–June · Spring reset</h4><p>Detox and summer-body demand: CleanseSana's natural season, with men's-performance angles (VigorSana) building into summer. Refresh creatives as feeds warm up.</p></div>
       <div class="tile rev"><span class="n">Q3</span><h4>July–September · Back to routine</h4><p>Energy, gut and metabolism angles convert as holidays end — and CPMs stay soft, making this the cheapest quarter to test fresh VSLs and lock in winning creatives.</p></div>
-      <div class="tile rev"><span class="n">Q4</span><h4>October–December · Prevention + BFCM</h4><p>Blood-sugar and immunity demand rises (GlucoSana, GlucoTrust German), Black-Friday-style promos work on Digistore24 — and December is when smart operators prep the January super-window.</p></div>
+      <div class="tile rev"><span class="n">Q4</span><h4>October–December · Prevention + BFCM</h4><p>Blood-sugar and immunity demand rises (GlucoSana), Black-Friday-style promos work on Digistore24 — and December is when smart operators prep the January super-window.</p></div>
     </div>
   </section>
 
@@ -966,7 +1048,7 @@
     <h2>From zero to first commission in three steps</h2>
     <div class="grid3">
       <div class="tile rev"><span class="n">1</span><h4>Create your free Digistore24 account</h4><p>Digistore24 is Europe's leading reseller platform — it handles tracking, payouts, VAT and compliance. Register free at <a href="https://www.digistore24.com" target="_blank" rel="noopener">digistore24.com</a> — one account covers every offer on this page.</p></div>
-      <div class="tile rev"><span class="n">2</span><h4>Generate your links on this page</h4><p>Enter your Digistore24 ID (and an optional campaign key per traffic source) in the panel at the top. Every promo link on this page personalizes instantly — copy and go. <strong>Your links work the moment you have an ID — no application, no waiting.</strong> All seven offers sit in Digistore24's official marketplace, open to every affiliate.</p></div>
+      <div class="tile rev"><span class="n">2</span><h4>Generate your links on this page</h4><p>Enter your Digistore24 ID (and an optional campaign key per traffic source) in the panel at the top. Every promo link on this page personalizes instantly — copy and go. <strong>Your links work the moment you have an ID — no application, no waiting.</strong> All our offers sit in Digistore24's official marketplace, open to every affiliate.</p></div>
       <div class="tile rev"><span class="n">3</span><h4>Tell us where you'll run</h4><p>Email your affiliate manager <strong>Stefan Richter</strong> at <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a> with your traffic sources. He'll match you to the right funnel format, send current EPCs, unlock swipes — and talk CPA once you show volume. Set your <a href="tracking/">tracking &amp; campaign keys</a> before the first euro of spend.</p></div>
     </div>
   </section>
@@ -981,7 +1063,7 @@
       <details class="rev"><summary>How do you protect attribution on long VSLs with delayed CTAs?</summary><p>Digistore24 tracking pixel and S2S postback support, campaign-key conventions per traffic source, and delayed-CTA handling on the VSL pages. The rule that saves accounts: settle your campaign-key convention with Stefan <em>before</em> the first euro of spend, not after. Full walkthrough in the <a href="tracking/">tracking setup guide</a>.</p></details>
       <details class="rev"><summary>What time window do the published numbers use?</summary><p>Network averages from our live Digistore24 campaigns, dated on this page (last verified 7 August 2026). Ask Stefan for per-channel or per-window splits — you get real numbers with explicit time windows, auditable against the <a href="https://www.digistore24-app.com/app/en/marketplace" target="_blank" rel="noopener">Digistore24 marketplace</a>, not screenshots.</p></details>
       <details class="rev"><summary>Why do some offers say "ask support" instead of an EPC?</summary><p>We publish only numbers verified from our own campaign data. Young VSLs move weekly — instead of a stale or padded figure, you get the current one from Stefan, usually with a channel split. An "ask" cell means the number exists and moves fast, not that it's hiding.</p></details>
-      <details class="rev"><summary>Which offer should I start with?</summary><p>Match the funnel to your traffic: <b>KetoSana</b> for cold video traffic (top EPC, ~$6.10) · <b>CleanseSana</b> for a fresh angle nobody's running (newest VSL, $3.20 EPC) · <b>MetaboSana</b> for science-trusting audiences · <b>GlucoTrust German</b> when you need format choice (5 funnels incl. a no-upsell eCom page for compliance-sensitive channels) · <b>VitaSana</b> if you own a list.</p></details>
+      <details class="rev"><summary>Which offer should I start with?</summary><p><b>Start with KetoSana or CleanseSana.</b> They are the two offers running a full VSL <em>and</em> PDP, so you can match the funnel to the traffic instead of forcing traffic into one format. <b>KetoSana</b> carries the top EPC on the programme (~$6.10): send cold video to the VSL, readers to the PDP. <b>CleanseSana</b> is the freshest angle — the new VSL reads ~$3.20 against the proven PDP's $2.60, and almost nobody is running it yet. After those two: <b>MetaboSana</b> for science-trusting audiences, <b>SlimSana</b> for broad weight-loss volume, <b>VitaSana Collection</b> if you own a list.</p></details>
       <details class="rev"><summary>How do I get above 60% RevShare?</summary><p>Volume, proven with data: 60% rises toward 75%, or you move to CPA €120–150 (currently $137–171), or a hybrid — structured per traffic source and quality. Start at 60% today, bring your numbers, upgrade. No tier is handed out on a promise, which is exactly why the tiers hold.</p></details>
       <details class="rev"><summary>Can I get custom landers or a custom VSL intro?</summary><p>Qualified volume partners, yes — the super-affiliate tier includes channel-personalized asset kits, tiered white-glove service, custom landers and VSL intros, and Stefan as your dedicated manager. Show volume, get the keys.</p></details>
       <details class="rev"><summary>Do I need to speak German?</summary><p>No. The funnels are native German-built by DACH copywriters; swipes and angles come translated for you. You bring the media buying — pointing your proven creatives at German-speaking audiences is the whole play.</p></details>
