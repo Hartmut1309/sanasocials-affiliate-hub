@@ -1183,6 +1183,30 @@
     });
   }
 
+
+  /* Keep the address bar clean without breaking navigation.
+     Scroll ourselves instead of letting the browser follow the fragment, so the
+     hash is never written. scrollIntoView honours scroll-margin-top (130px), so
+     targets still clear the sticky header. Inbound links (the spokes' ../../#rules)
+     scroll natively on load; we tidy the URL only after that has happened. */
+  var reduceMo=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(!a) return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id) return;
+    var t=document.getElementById(id);
+    if(!t||!t.scrollIntoView) return;      /* no target or no support -> native behaviour */
+    e.preventDefault();
+    try{ t.scrollIntoView({behavior:reduceMo?'auto':'smooth',block:'start'}); }
+    catch(_){ location.hash=id; }          /* last-resort fallback: never leave the click dead */
+  });
+  window.addEventListener('load',function(){
+    if(location.hash){ setTimeout(function(){
+      history.replaceState(null,'',location.pathname+location.search);
+    },700); }
+  });
+
   /* scrollspy for offer rail */
   var pills=[].slice.call(document.querySelectorAll('.rpill'));
   var map={};
