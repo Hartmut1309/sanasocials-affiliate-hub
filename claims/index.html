@@ -1,0 +1,116 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pre-Approved Claims Center — SanaSocials Affiliate Hub</title>
+<meta name="description" content="What you may say per offer — approved claims, banned claims, and where the per-SKU claim packs live. Regulated health category: use this before writing a single ad.">
+<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<style>
+  @font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:Manrope;font-style:normal;font-weight:200 800;src:url(/fonts/manrope-latin.woff2) format("woff2");font-display:swap}
+  :root{--bg:#FAF7F0;--bg2:#F1ECE1;--card:#FFFFFF;--card2:#FBF9F3;--line:#DFD8C9;--line2:#CDC4B0;--ink:#0A1220;--mut:#26394F;--dim:#4E6484;--acc:#0B8A64;--acc-ink:#FFFFFF;--gold:#8A6A20;--gold-dim:rgba(138,106,32,.12);--danger:#B3402F;--danger-dim:rgba(179,64,47,.09);--acc-dim:rgba(11,138,100,.10);--disp:"Bricolage Grotesque",-apple-system,"Segoe UI",sans-serif;--sans:Manrope,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace}
+  :root[data-theme="dark"]{--bg:#0B1220;--bg2:#0E1626;--card:#121C30;--card2:#101a2c;--line:#243350;--line2:#2F4160;--ink:#EFF3FA;--mut:#B4C3DA;--dim:#8399BA;--acc:#3FD9A4;--acc-ink:#062117;--gold:#D9B36B;--gold-dim:rgba(217,179,107,.14);--danger:#E07A6B;--danger-dim:rgba(224,122,107,.12);--acc-dim:rgba(63,217,164,.13)}
+  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  .topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 20px}
+  .brand{font-family:var(--disp);font-weight:800;font-size:21px;color:var(--ink)}
+  .brand small{display:block;font-family:var(--sans);font-weight:800;font-size:11.5px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+  .backbtn{border:1.5px solid var(--acc);background:var(--acc);color:var(--acc-ink);border-radius:9px;padding:9px 15px;font-size:14.5px;font-weight:800;white-space:nowrap}
+  .backbtn:hover{filter:brightness(1.07);text-decoration:none}
+  h1{font-family:var(--disp);font-weight:800;font-size:clamp(30px,4.6vw,44px);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.01em}
+  h2{font-family:var(--disp);font-weight:800;font-size:24px;margin:38px 0 10px}
+  .eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-top:34px}
+  .lede{color:var(--mut);font-size:18.5px}
+  p{color:var(--mut)}p b,p strong{color:var(--ink)}
+  .box{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px 26px;margin:16px 0}
+  .box.ok{border-color:color-mix(in srgb,var(--acc) 45%,var(--line));background:linear-gradient(180deg,var(--acc-dim),transparent 70%),var(--card)}
+  .box.no{border-color:color-mix(in srgb,var(--danger) 45%,var(--line));background:linear-gradient(180deg,var(--danger-dim),transparent 70%),var(--card)}
+  .box h3{font-family:var(--disp);font-weight:800;font-size:19px;margin:0 0 10px}
+  .box.ok h3{color:var(--acc)}.box.no h3{color:var(--danger)}
+  .box ul{margin:0;padding-left:22px}
+  .box li{color:var(--mut);margin:7px 0;font-size:16.5px}
+  .box li b{color:var(--ink)}
+  .tablewrap{border:1px solid var(--line);border-radius:12px;overflow-x:auto;background:var(--card);margin:14px 0}
+  table{width:100%;border-collapse:collapse;font-size:15px;min-width:540px}
+  th{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);text-align:left;padding:10px 16px;background:var(--card2);border-bottom:1px solid var(--line);font-weight:800}
+  td{padding:9px 16px;border-bottom:1px solid var(--line);color:var(--mut);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  td a{font-weight:800}
+  .cta{display:inline-block;background:var(--acc);color:var(--acc-ink);border-radius:10px;padding:13px 20px;font-weight:800;font-size:16px;margin:10px 0 8px}
+  .cta:hover{filter:brightness(1.07);text-decoration:none}
+  .note{font-size:14.5px;color:var(--dim)}
+  footer{border-top:1px solid var(--line);margin-top:52px;padding:24px 0 44px;color:var(--dim);font-size:14px}
+  footer .wrap{display:flex;flex-direction:column;gap:10px}
+  .legallinks{display:flex;gap:8px 22px;flex-wrap:wrap;font-size:14.5px;font-weight:700}
+  .legallinks a{color:var(--mut)}
+</style>
+<script>try{var t=localStorage.getItem('pnq_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
+<div class="topbar"><div class="wrap">
+  <div class="brand">SanaSocials<small>Affiliate Hub · Digistore24</small></div>
+  <a class="backbtn" href="/#rules">← Back to the hub</a>
+</div></div>
+
+<main class="wrap">
+  <div class="eyebrow">Pre-Approved Claims Center</div>
+  <h1>What you may say — and what gets accounts banned</h1>
+  <p class="lede">We run long-term offers in a regulated health category. The upside: you never have to guess. Everything below is safe to run; everything in the red box ends the partnership. When a claim isn't listed, ask before you launch — one email beats a burned ad account.</p>
+
+  <div class="box ok">
+    <h3>✓ Approved for every offer</h3>
+    <ul>
+      <li><b>The 60-day money-back guarantee</b> — all offers, every funnel.</li>
+      <li><b>The doctor credential stack:</b> "a genuinely reputable, well-known doctor — Harvard-trained, 17+ years in practice, featured on ABC, NBC and FOX." His name is deliberately not used in affiliate marketing — <b>run the credentials, not a name</b>. It's the single-doctor model (think Dr. Gundry) replicated for DACH, and it's the trust edge typical Digistore24/ClickBank offers never have.</li>
+      <li><b>Every headline, mechanism and hook line published on the offer cards and dedicated affiliate pages</b> — approved to reuse verbatim in your ads, pre-sells and emails.</li>
+      <li><b>"Native German-built funnels — not translated US pages."</b></li>
+      <li><b>Program facts as published:</b> RevShare 60–75% through the entire funnel (thank-you page included), CPA €120–150 (currently $137–171), published EPCs/AOVs with their dates.</li>
+    </ul>
+  </div>
+
+  <div class="box no">
+    <h3>✗ Never — on any surface, in any language</h3>
+    <ul>
+      <li>Disease claims: cure, treat, heal, prevent, or reverse any disease or medical condition.</li>
+      <li>Guaranteed results — health outcomes or earnings.</li>
+      <li>Before/after photos without our written permission.</li>
+      <li>Fabricated testimonials, fake experts, deepfakes, celebrity endorsements, fake-news formats.</li>
+      <li>Inventing study citations or inflating the documented science.</li>
+      <li>Presenting supplement information as medical advice — consumer-facing pages carry the standard supplement disclaimer.</li>
+    </ul>
+  </div>
+
+  <h2>Per-offer claim packs</h2>
+  <p>The lines already published on each offer's card and dedicated affiliate page are your approved baseline. <b>Full per-SKU claim packs — soft and aggressive levels, in compliant German wording — are rolling out into each offer's amber Affiliate Assets folder alongside the ad packs.</b></p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Offer</th><th>Approved baseline</th><th>Claim pack</th></tr></thead>
+    <tbody>
+      <tr><td>SlimSana</td><td><a href="/offers/slimsana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>KetoSana</td><td><a href="/offers/ketosana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>MetaboSana</td><td><a href="/offers/metabosana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>CleanseSana</td><td><a href="/offers/cleansesana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>GlucoSana</td><td><a href="/offers/glucosana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>NerveSana</td><td><a href="/offers/nervesana/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>VigorSana</td><td><a href="/offers/vigorsana/">Dedicated page angles</a></td><td>On request via Stefan</td></tr>
+      <tr><td>VitaSana Collection</td><td><a href="/offers/vitasana-collection/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+      <tr><td>GlucoTrust German</td><td><a href="/offers/glucotrust-german/">Dedicated page angles</a></td><td>Assets folder · rolling out</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Gray area? Ask first.</h2>
+  <p>Gray-area channels (Telegram blasts, incentivized traffic, adult) and any claim not covered above need written approval — the full conduct rules live on the <a href="/#rules">hub compliance section</a>.</p>
+  <a class="cta" href="mailto:affiliates@sana-socials.com?subject=Claim%20Approval%20Request&amp;body=Digistore24%20ID%3A%0AOffer%3A%0AChannel%20%2F%20traffic%20source%3A%0AThe%20exact%20claim%20or%20angle%20(paste%20the%20wording)%3A%0AWhere%20it%20will%20run%20(ad%2C%20pre-sell%2C%20email)%3A%0A">Get a claim approved by Stefan →</a>
+</main>
+
+<footer><div class="wrap">
+  <div><b>SanaSocials Affiliate Hub</b> · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+  <nav class="legallinks" aria-label="Legal">
+    <a href="/impressum/">Legal Notice (Impressum)</a>
+    <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="/tracking/">Tracking Guide</a>
+  </nav>
+</div></footer>

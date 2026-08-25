@@ -1,0 +1,101 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tracking Setup Guide — SanaSocials Affiliate Hub</title>
+<meta name="description" content="Campaign-key conventions, Digistore24 pixel &amp; S2S postback setup, delayed-CTA handling and DACH consent notes — settle attribution before the first euro of spend.">
+<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<style>
+  @font-face{font-family:"Bricolage Grotesque";font-style:normal;font-weight:200 800;src:url(/fonts/bricolage-grotesque-latin.woff2) format("woff2");font-display:swap}
+  @font-face{font-family:Manrope;font-style:normal;font-weight:200 800;src:url(/fonts/manrope-latin.woff2) format("woff2");font-display:swap}
+  :root{--bg:#FAF7F0;--bg2:#F1ECE1;--card:#FFFFFF;--card2:#FBF9F3;--line:#DFD8C9;--line2:#CDC4B0;--ink:#0A1220;--mut:#26394F;--dim:#4E6484;--acc:#0B8A64;--acc-ink:#FFFFFF;--gold:#8A6A20;--gold-dim:rgba(138,106,32,.12);--assets:#F0A41A;--danger:#B3402F;--disp:"Bricolage Grotesque",-apple-system,"Segoe UI",sans-serif;--sans:Manrope,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--mono:"SF Mono",SFMono-Regular,Menlo,Consolas,monospace}
+  :root[data-theme="dark"]{--bg:#0B1220;--bg2:#0E1626;--card:#121C30;--card2:#101a2c;--line:#243350;--line2:#2F4160;--ink:#EFF3FA;--mut:#B4C3DA;--dim:#8399BA;--acc:#3FD9A4;--acc-ink:#062117;--gold:#D9B36B;--gold-dim:rgba(217,179,107,.14);--assets:#F7B733;--danger:#E07A6B}
+  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  .topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 20px}
+  .brand{font-family:var(--disp);font-weight:800;font-size:21px;color:var(--ink)}
+  .brand small{display:block;font-family:var(--sans);font-weight:800;font-size:11.5px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+  .backbtn{border:1.5px solid var(--acc);background:var(--acc);color:var(--acc-ink);border-radius:9px;padding:9px 15px;font-size:14.5px;font-weight:800;white-space:nowrap}
+  .backbtn:hover{filter:brightness(1.07);text-decoration:none}
+  h1{font-family:var(--disp);font-weight:800;font-size:clamp(30px,4.6vw,44px);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.01em}
+  h2{font-family:var(--disp);font-weight:800;font-size:24px;margin:38px 0 10px}
+  .eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-top:34px}
+  .lede{color:var(--mut);font-size:18.5px}
+  p{color:var(--mut)}p b,p strong{color:var(--ink)}li{color:var(--mut)}li b{color:var(--ink)}
+  .box{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px 24px;margin:16px 0}
+  .box.gold{border-color:color-mix(in srgb,var(--gold) 50%,var(--line2));background:linear-gradient(180deg,var(--gold-dim),transparent 75%),var(--card)}
+  .tablewrap{border:1px solid var(--line);border-radius:12px;overflow-x:auto;background:var(--card);margin:14px 0}
+  table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+  th{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);text-align:left;padding:10px 16px;background:var(--card2);border-bottom:1px solid var(--line);font-weight:800}
+  td{padding:9px 16px;border-bottom:1px solid var(--line);color:var(--mut);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  code{font-family:var(--mono);font-size:14px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--ink);white-space:nowrap}
+  .check{list-style:none;padding:0;margin:14px 0}
+  .check li{position:relative;padding-left:30px;margin:9px 0;font-size:16.5px}
+  .check li::before{content:"";position:absolute;left:0;top:6px;width:15px;height:15px;border-radius:4px;background:var(--acc)}
+  .cta{display:inline-block;background:var(--acc);color:var(--acc-ink);border-radius:10px;padding:13px 20px;font-weight:800;font-size:16px;margin:10px 0 8px}
+  .cta:hover{filter:brightness(1.07);text-decoration:none}
+  .note{font-size:14.5px;color:var(--dim)}
+  footer{border-top:1px solid var(--line);margin-top:52px;padding:24px 0 44px;color:var(--dim);font-size:14px}
+  footer .wrap{display:flex;flex-direction:column;gap:10px}
+  .legallinks{display:flex;gap:8px 22px;flex-wrap:wrap;font-size:14.5px;font-weight:700}
+  .legallinks a{color:var(--mut)}
+</style>
+<script>try{var t=localStorage.getItem('pnq_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
+<div class="topbar"><div class="wrap">
+  <div class="brand">SanaSocials<small>Affiliate Hub · Digistore24</small></div>
+  <a class="backbtn" href="/#operators">← Back to the hub</a>
+</div></div>
+
+<main class="wrap">
+  <div class="eyebrow">Tracking Setup Guide</div>
+  <h1>Attribution that survives scale</h1>
+  <p class="lede">Lost attribution is the quiet scaling killer: the campaign works, the dashboard says it doesn't, and a winner gets killed. Ten minutes of setup before the first euro of spend prevents all of it.</p>
+
+  <h2>1 · Campaign keys — your only clean read</h2>
+  <p>Every link on the hub carries <code>?aff=your-id&amp;cam=campaign-key</code>. The <code>cam</code> key flows into Digistore24 reporting, so it is the one label that follows a sale all the way to commission. Use one key per creative or ad set you will ever want to read separately.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Traffic source</th><th>Key pattern</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Meta / Facebook</td><td><code>meta-{angle}-{adset}</code></td><td><code>meta-sludge-b3</code></td></tr>
+      <tr><td>Native (Taboola, Outbrain…)</td><td><code>ntv-{network}-{widget}</code></td><td><code>ntv-taboola-w41</code></td></tr>
+      <tr><td>YouTube</td><td><code>yt-{angle}-{cut}</code></td><td><code>yt-locks-cut3</code></td></tr>
+      <tr><td>Email</td><td><code>em-{list}-{send}</code></td><td><code>em-health-aug12</code></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Rules that keep the data readable: lowercase, hyphens only, never reuse a key across channels, and agree the convention with Stefan before launch so our reporting and yours name the same thing the same way.</p>
+
+  <h2>2 · Pixel &amp; server-to-server postback</h2>
+  <p>All nine funnels support the <b>Digistore24 tracking pixel</b> and <b>S2S postbacks</b>, configured from your own Digistore24 account. The exact, always-current setup steps live in the official <a href="https://help.digistore24.com/" target="_blank" rel="noopener">Digistore24 help center</a> — search "tracking pixel" or "postback". Tell Stefan which platform you optimize on (Meta CAPI, native network S2S, etc.) and he confirms the event mapping on our side before you spend.</p>
+
+  <h2>3 · Delayed CTAs on VSL pages</h2>
+  <p>Our VSL buy buttons appear mid-video, not on page load. For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model — that's why.</p>
+
+  <h2>4 · Running your own pre-sell into EU traffic?</h2>
+  <p>If you put a quiz, listicle or advertorial in front of our funnel, GDPR applies to <b>your</b> page: non-essential pixels need a consent banner before they fire. Our funnel pages handle their own consent — your pre-sell needs its own. Budget for it; consent-loss is measurement-loss, not a reason to skip the banner.</p>
+
+  <h2>5 · The pre-spend checklist</h2>
+  <ul class="check">
+    <li>Digistore24 ID entered on the hub — every link personalized</li>
+    <li>Campaign-key convention agreed with Stefan (one key per creative/ad set)</li>
+    <li>Pixel or postback test conversion confirmed in your DS24 account</li>
+    <li>Language German, geo DE + AT + CH first — expand once the funnel proves</li>
+  </ul>
+  <a class="cta" href="mailto:affiliates@sana-socials.com?subject=Tracking%20Setup%20Check&amp;body=Digistore24%20ID%3A%0APlatform%20(Meta%20CAPI%2C%20native%20S2S%2C%20other)%3A%0ACampaign-key%20convention%3A%0AOffers%20you%20will%20run%3A%0AOptimization%20model%20(purchase%20%2F%20IC%20%2F%20blended)%3A%0A">Confirm my tracking setup with Stefan →</a>
+  <p class="note">Stefan Richter, your affiliate manager, replies from affiliates@sana-socials.com.</p>
+</main>
+
+<footer><div class="wrap">
+  <div><b>SanaSocials Affiliate Hub</b> · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+  <nav class="legallinks" aria-label="Legal">
+    <a href="/impressum/">Legal Notice (Impressum)</a>
+    <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="/claims/">Claims Center</a>
+  </nav>
+</div></footer>
