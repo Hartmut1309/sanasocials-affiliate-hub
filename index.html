@@ -60,8 +60,8 @@
   button{font-family:var(--sans)}
 
   /* flags as svg symbols */
-  .flag{width:28px;height:20px;border-radius:3.5px;box-shadow:0 0 0 1px rgba(10,18,32,.14);vertical-align:-4px;display:inline-block}
-  .flag.sm{width:23px;height:16px;vertical-align:-3px}
+  .flag{width:38px;height:27px;border-radius:4.5px;box-shadow:0 0 0 1px rgba(10,18,32,.18),0 1px 3px rgba(10,18,32,.13);vertical-align:-6px;display:inline-block}
+  .flag.sm{width:31px;height:22px;vertical-align:-5px}
 
   /* top bar */
   .topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -161,6 +161,16 @@
   .count{font-size:14px;color:var(--dim);margin-left:auto;font-weight:600}
   .langline{font-size:16px;color:var(--mut);margin:0 0 22px;max-width:none}
   
+
+  /* market-size band */
+  .marketband{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin:18px 0 6px;padding:20px 22px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:14px;background:var(--card)}
+  .mb-flags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .flag.lg{width:52px;height:37px;border-radius:5px;box-shadow:0 0 0 1px rgba(10,18,32,.18),0 2px 6px rgba(10,18,32,.16);vertical-align:middle}
+  .mb-text{flex:1 1 340px;min-width:280px}
+  .mb-text b{display:block;font-family:var(--disp,inherit);font-size:clamp(19px,2.1vw,24px);line-height:1.2;color:var(--ink);margin-bottom:7px}
+  .mb-text p{margin:0;font-size:15px;line-height:1.62;color:var(--mut)}
+  .stat.wide{grid-column:span 2}
+  @media (max-width:640px){.stat.wide{grid-column:auto}.flag.lg{width:42px;height:30px}}
   /* start-here band (KetoSana + CleanseSana) */
   .starthere{margin:0 0 26px;padding:22px 22px 24px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;background:var(--bg2)}
   .sh-kicker{display:inline-block;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:6px}
@@ -375,6 +385,8 @@
 
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="f-de" viewBox="0 0 3 2"><rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#DD0000"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/></symbol>
+  <symbol id="f-be" viewBox="0 0 3 2"><rect width="1" height="2" fill="#000"/><rect x="1" width="1" height="2" fill="#FAE042"/><rect x="2" width="1" height="2" fill="#ED2939"/></symbol>
+  <symbol id="f-lu" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="3" height=".667" fill="#ED2939"/><rect y="1.333" width="3" height=".667" fill="#00A1DE"/></symbol>
   <symbol id="f-fr" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/><rect x="2" width="1" height="2" fill="#ED2939"/></symbol>
   <symbol id="f-at" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ED2939"/><rect y=".667" width="3" height=".667" fill="#fff"/></symbol>
   <symbol id="f-ch" viewBox="0 0 3 2"><rect width="3" height="2" fill="#DA291C"/><rect x="1.3" y=".35" width=".4" height="1.3" fill="#fff"/><rect x=".85" y=".8" width="1.3" height=".4" fill="#fff"/></symbol>
@@ -434,17 +446,26 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="flagpill">● <b>9 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe · updated 18 August 2026</div>
+    <div class="flagpill">● <b>9 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;● <b>1 offer live</b>&nbsp;· <svg class="flag sm"><use href="#f-fr"/></svg> <svg class="flag sm"><use href="#f-be"/></svg> <svg class="flag sm"><use href="#f-lu"/></svg>&nbsp;French-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;updated 26 August 2026</div>
     <div class="eyebrow">SanaSocials × Digistore24 · Partner Program</div>
     <h1>Your Current Angles Are Saturated. The DACH Version of Them Hasn't Run Yet.</h1>
-    <p class="lede"><strong>More than 100 million German speakers</strong> — one-third the US market, Europe's wealthiest language market — at <strong>40–60% cheaper CPMs</strong>, with a fraction of the competition. Nine doctor-fronted supplement funnels, <strong>60–75% RevShare</strong> through the whole funnel — thank-you page included — top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>.</p>
+    <p class="lede"><strong>183 million people across six countries</strong> &mdash; Germany, Austria, Switzerland, France, Belgium and Luxembourg. That is <strong>more than half the population of the United States</strong>, in Europe&rsquo;s wealthiest language markets, reachable through nine German funnels and a French one &mdash; at <strong>40–60% cheaper CPMs</strong>, with a fraction of the competition. Nine doctor-fronted supplement funnels, <strong>60–75% RevShare</strong> through the whole funnel — thank-you page included — top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>.</p>
     <p class="quoteline">"<b>It's the US market in 2019.</b>" — enter your Digistore24 ID once, every link on this page becomes yours.</p>
     <div class="statstrip" role="list">
-      <div class="stat" role="listitem"><b>100M+</b><span>German speakers in Europe</span></div>
+      <div class="stat wide" role="listitem"><b>183M</b><span>People in our six markets &mdash; over half the US</span></div>
       <div class="stat" role="listitem"><b>40–60%</b><span>Cheaper CPMs vs US</span></div>
       <div class="stat" role="listitem"><b>60–75%</b><span>RevShare, whole funnel</span></div>
       <div class="stat" role="listitem"><b>€120–150</b><span>CPA · currently $140–176</span></div>
       <div class="stat" role="listitem"><b>$6.10</b><span>Top offer EPC (KetoSana)</span></div>
+    </div>
+    <div class="marketband rev">
+      <div class="mb-flags">
+        <svg class="flag lg"><use href="#f-de"/></svg><svg class="flag lg"><use href="#f-at"/></svg><svg class="flag lg"><use href="#f-ch"/></svg><svg class="flag lg"><use href="#f-fr"/></svg><svg class="flag lg"><use href="#f-be"/></svg><svg class="flag lg"><use href="#f-lu"/></svg>
+      </div>
+      <div class="mb-text">
+        <b>183 million people. Six countries. One media buy away.</b>
+        <p>Germany 83.8m &middot; France 68.8m &middot; Belgium 11.9m &middot; Austria 9.2m &middot; Switzerland 8.7m &middot; Luxembourg 0.7m. Put together that is <b>more than half the population of the United States</b> &mdash; and the whole of it sits behind two languages instead of fifty. Nine funnels cover the German side, a French SlimSana funnel opens the other. This is not a niche you are testing into. It is a second home market most English-language buyers have never priced.</p>
+      </div>
     </div>
     <p class="srcnote">Figures from our live Digistore24 campaign data, verified 7 August 2026. EPCs are network averages across approved traffic — your results depend on your traffic quality. Don&rsquo;t take our word for it: if you have a Digistore24 account, <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">open the affiliate marketplace</a> and you get all of our offers with Digistore24&rsquo;s own live stats beside them &mdash; EPC, cancellation rate, earnings per sale. Each offer card below also links straight to its individual marketplace entry, which is public and needs no login.</p>
 
@@ -491,7 +512,7 @@
     <button class="chip" aria-pressed="false" data-f="men" type="button" style="--catc:var(--c-men)"><span class="dot"></span>Men's Health</button>
     <span class="count" id="countLabel">Showing 9 of 9</span>
   </div>
-  <p class="langline"><b>The funnels are German — you don't need to be.</b> Every page, VSL and checkout below is native German-built by DACH copywriters — not translated US pages. Run our swipes and angles translated for you, or point your proven creatives at German-speaking audiences. <em>The language barrier is the moat</em> — it kept your competitors out, not you.</p>
+  <p class="langline"><b>The funnels are German and French &mdash; you don&rsquo;t need to be.</b> Every page, VSL and checkout below is native German-built by DACH copywriters — not translated US pages. Run our swipes and angles translated for you, or point your proven creatives at German-speaking audiences. <em>The language barrier is the moat</em> — it kept your competitors out, not you.</p>
 
   <p class="fmtline"><b>The funnel formats, and what each one is for.</b> <b>VSL</b> = video sales letter page &middot; <b>PDP</b> = long-form product detail page (text sales page) &middot; <b>DTC</b> = direct-to-cart page: the package boxes and prices only, no sales content &mdash; built for warm traffic, email lists and affiliates running their own pre-sell or advertorial. The <b>DTC</b> rows come in two bundle sets: <b>1&middot;3&middot;6</b> bottles (single-bottle entry price) and <b>2&middot;3&middot;6</b> bottles (2-bottle entry, higher starting order value). VSL and PDP pages run 1, 3 and 6 bottles. Not every offer carries every format &mdash; the rows on each card are the ones that are live today. Every format carries your <code>aff</code> and <code>cam</code> parameters through to Digistore24 checkout.</p>
   <section class="starthere rev" aria-label="Where to start">
@@ -1156,7 +1177,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v5.4 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v5.7 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
