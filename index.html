@@ -170,19 +170,18 @@
 
   /* marker highlight for the one claim that has to land */
   .hl{background:linear-gradient(180deg,transparent 8%,var(--assets) 8%,var(--assets) 92%,transparent 92%);color:var(--assets-ink) !important;font-weight:800;padding:1px 6px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-size:1.06em;letter-spacing:.005em}
-  /* !important is deliberate: .hl is a utility that must beat local colour rules such as
-     .mb-text p b{color:var(--ink)} (0-1-2). Without it the dark theme paints near-white ink
+  /* !important is deliberate: .hl is a utility that must beat local colour rules such as (0-1-2). Without it the dark theme paints near-white ink
      (#EFF3FA) on the amber marker - about 1.9:1 contrast, effectively unreadable. */
-  /* market-size band */
-  .marketband{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin:18px 0 6px;padding:20px 22px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:14px;background:var(--card)}
-  .mb-flags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .flag.lg{width:52px;height:37px;border-radius:5px;box-shadow:0 0 0 1px rgba(10,18,32,.18),0 2px 6px rgba(10,18,32,.16);vertical-align:middle}
-  .mb-text{flex:1 1 340px;min-width:280px}
-  .mb-text>b{display:block;font-family:var(--disp,inherit);font-size:clamp(19px,2.1vw,24px);line-height:1.2;color:var(--ink);margin-bottom:7px}
-  .mb-text p b{color:var(--ink);font-weight:800}
-  .mb-text p{margin:0;font-size:15px;line-height:1.62;color:var(--mut)}
+
+  /* population-by-country strip under the lede */
+  .geostrip{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin:14px 0 18px}
+  .gs{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border:1px solid var(--line2);border-radius:999px;background:var(--card);font-size:15px;font-weight:700;color:var(--mut);white-space:nowrap}
+  .gs b{color:var(--ink);font-weight:800;font-size:16.5px}
+  .gs .flag{width:34px;height:24px}
+  .gs.total{border-color:color-mix(in srgb,var(--acc) 45%,var(--line2));background:color-mix(in srgb,var(--acc) 9%,var(--card));color:var(--ink);padding-left:14px}
+  @media (max-width:520px){.gs{font-size:14px;padding:5px 10px 5px 7px}.gs .flag{width:28px;height:20px}}
   .stat.wide{grid-column:span 2}
-  @media (max-width:640px){.stat.wide{grid-column:auto}.flag.lg{width:42px;height:30px}}
+  @media (max-width:640px){.stat.wide{grid-column:auto}}
   /* start-here band (KetoSana + CleanseSana) */
   .starthere{margin:0 0 26px;padding:22px 22px 24px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;background:var(--bg2)}
   .sh-kicker{display:inline-block;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:6px}
@@ -461,7 +460,16 @@
     <div class="flagpill">● <b>9 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;● <b>1 offer live</b>&nbsp;· <svg class="flag sm"><use href="#f-fr"/></svg> <svg class="flag sm"><use href="#f-be"/></svg> <svg class="flag sm"><use href="#f-lu"/></svg>&nbsp;French-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;updated 26 August 2026</div>
     <div class="eyebrow">SanaSocials × Digistore24 · Partner Program</div>
     <h1>Your Current Angles Are Saturated. The DACH Version of Them Hasn't Run Yet.</h1>
-    <p class="lede"><strong>183 million people across six countries</strong> &mdash; Germany, Austria, Switzerland, France, Belgium and Luxembourg. That is <strong class="hl">more than half the population of the United States</strong>, in Europe&rsquo;s wealthiest language markets, reachable through nine German funnels and a French one &mdash; at <strong>40–60% cheaper CPMs</strong>, with a fraction of the competition. Nine doctor-fronted supplement funnels, <strong>60–75% RevShare</strong> through the whole funnel — thank-you page included — top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>.</p>
+    <p class="lede"><strong>183 million people across six countries</strong> &mdash; that is <strong class="hl">more than half the population of the United States</strong>, and the whole of it sits behind <strong>two languages instead of fifty</strong>. Europe&rsquo;s wealthiest language markets, at <strong>40&ndash;60% cheaper CPMs</strong>, with a fraction of the competition. Nine doctor-fronted German funnels and a French one, <strong>60&ndash;75% RevShare</strong> through the whole funnel &mdash; thank-you page included &mdash; top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>. This is not a niche you test into. It is a second home market most English-language buyers have never priced.</p>
+    <div class="geostrip" aria-label="Population by country">
+      <span class="gs"><svg class="flag"><use href="#f-de"/></svg><b>83.8</b>m</span>
+      <span class="gs"><svg class="flag"><use href="#f-fr"/></svg><b>68.8</b>m</span>
+      <span class="gs"><svg class="flag"><use href="#f-be"/></svg><b>11.9</b>m</span>
+      <span class="gs"><svg class="flag"><use href="#f-at"/></svg><b>9.2</b>m</span>
+      <span class="gs"><svg class="flag"><use href="#f-ch"/></svg><b>8.7</b>m</span>
+      <span class="gs"><svg class="flag"><use href="#f-lu"/></svg><b>0.7</b>m</span>
+      <span class="gs total">= <b>183m</b> people, two languages</span>
+    </div>
     <p class="quoteline">"<b>It's the US market in 2019.</b>" — enter your Digistore24 ID once, every link on this page becomes yours.</p>
     <div class="statstrip" role="list">
       <div class="stat wide" role="listitem"><b>183M</b><span>People in our six markets &mdash; over half the US</span></div>
@@ -469,15 +477,6 @@
       <div class="stat" role="listitem"><b>60–75%</b><span>RevShare, whole funnel</span></div>
       <div class="stat" role="listitem"><b>€120–150</b><span>CPA · currently $140–176</span></div>
       <div class="stat" role="listitem"><b>$6.10</b><span>Top offer EPC (KetoSana)</span></div>
-    </div>
-    <div class="marketband rev">
-      <div class="mb-flags">
-        <svg class="flag lg"><use href="#f-de"/></svg><svg class="flag lg"><use href="#f-at"/></svg><svg class="flag lg"><use href="#f-ch"/></svg><svg class="flag lg"><use href="#f-fr"/></svg><svg class="flag lg"><use href="#f-be"/></svg><svg class="flag lg"><use href="#f-lu"/></svg>
-      </div>
-      <div class="mb-text">
-        <b>183 million people. Six countries. One media buy away.</b>
-        <p>Germany 83.8m &middot; France 68.8m &middot; Belgium 11.9m &middot; Austria 9.2m &middot; Switzerland 8.7m &middot; Luxembourg 0.7m. Put together that is <b class="hl">more than half the population of the United States</b> &mdash; and the whole of it sits behind two languages instead of fifty. Nine funnels cover the German side, a French SlimSana funnel opens the other. This is not a niche you are testing into. It is a second home market most English-language buyers have never priced.</p>
-      </div>
     </div>
     <p class="srcnote">Figures from our live Digistore24 campaign data, verified 7 August 2026. EPCs are network averages across approved traffic — your results depend on your traffic quality. Don&rsquo;t take our word for it: if you have a Digistore24 account, <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">open the affiliate marketplace</a> and you get all of our offers with Digistore24&rsquo;s own live stats beside them &mdash; EPC, cancellation rate, earnings per sale. Each offer card below also links straight to its individual marketplace entry, which is public and needs no login.</p>
 
