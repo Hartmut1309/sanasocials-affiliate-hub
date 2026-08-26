@@ -167,7 +167,8 @@
   .mb-flags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
   .flag.lg{width:52px;height:37px;border-radius:5px;box-shadow:0 0 0 1px rgba(10,18,32,.18),0 2px 6px rgba(10,18,32,.16);vertical-align:middle}
   .mb-text{flex:1 1 340px;min-width:280px}
-  .mb-text b{display:block;font-family:var(--disp,inherit);font-size:clamp(19px,2.1vw,24px);line-height:1.2;color:var(--ink);margin-bottom:7px}
+  .mb-text>b{display:block;font-family:var(--disp,inherit);font-size:clamp(19px,2.1vw,24px);line-height:1.2;color:var(--ink);margin-bottom:7px}
+  .mb-text p b{color:var(--ink);font-weight:800}
   .mb-text p{margin:0;font-size:15px;line-height:1.62;color:var(--mut)}
   .stat.wide{grid-column:span 2}
   @media (max-width:640px){.stat.wide{grid-column:auto}.flag.lg{width:42px;height:30px}}
