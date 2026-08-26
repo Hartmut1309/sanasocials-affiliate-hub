@@ -169,7 +169,10 @@
   @media (max-width:720px){.lrow .tag.geo{flex-basis:auto}}
 
   /* marker highlight for the one claim that has to land */
-  .hl{background:linear-gradient(180deg,transparent 8%,var(--assets) 8%,var(--assets) 92%,transparent 92%);color:var(--assets-ink);font-weight:800;padding:1px 6px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-size:1.06em;letter-spacing:.005em}
+  .hl{background:linear-gradient(180deg,transparent 8%,var(--assets) 8%,var(--assets) 92%,transparent 92%);color:var(--assets-ink) !important;font-weight:800;padding:1px 6px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone;font-size:1.06em;letter-spacing:.005em}
+  /* !important is deliberate: .hl is a utility that must beat local colour rules such as
+     .mb-text p b{color:var(--ink)} (0-1-2). Without it the dark theme paints near-white ink
+     (#EFF3FA) on the amber marker - about 1.9:1 contrast, effectively unreadable. */
   /* market-size band */
   .marketband{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin:18px 0 6px;padding:20px 22px;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:14px;background:var(--card)}
   .mb-flags{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
