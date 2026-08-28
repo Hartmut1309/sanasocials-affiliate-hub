@@ -4,7 +4,7 @@
 <meta property="og:description" content="100M+ German speakers, 40–60% cheaper CPMs, a fraction of the competition. 10 doctor-fronted offers, 60–75% RevShare, live link generator.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://affiliate-hub.sana-socials.com/">
-<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v3.png">
+<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v4.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -264,6 +264,7 @@
   .faqs details[open] summary::after{content:"–"}
   .faqs details p{margin:0 0 16px;color:var(--mut);font-size:16px}
   .cardfoot{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:18px;flex-wrap:wrap}
+  .btn.needsid{opacity:.5;filter:saturate(.45);cursor:not-allowed}
   .note{font-size:14px;color:var(--dim);font-weight:600}
 
   /* sections */
@@ -1259,6 +1260,19 @@
   function cam(){return clean(camMain.value)||'CAMPAIGNKEY';}
   function buildLink(t){return t.replace('AFFILIATE',aff()).replace('CAMPAIGNKEY',cam());}
 
+  function hasId(){return clean(affMain.value)!=='';}
+  function needId(){
+    showToast('Enter your Digistore24 ID first \u2014 otherwise the links are untracked');
+    try{affMain.focus();affMain.select();}catch(e){}
+  }
+  function syncCopyGate(){
+    var ok=hasId();
+    document.querySelectorAll('.copy,.copyall,#copyAllTop,#copyAllMain').forEach(function(b){
+      b.classList.toggle('needsid',!ok);
+      b.setAttribute('aria-disabled',ok?'false':'true');
+      b.title=ok?'':'Enter your Digistore24 ID above to activate your links';
+    });
+  }
   function render(){
     document.querySelectorAll('.url').forEach(function(el){
       var t=el.getAttribute('data-link');
@@ -1267,6 +1281,7 @@
     });
     if(idLabel){idLabel.textContent=clean(affMain.value)||'Your ID';}
     try{localStorage.setItem('pnq_aff',affMain.value);localStorage.setItem('pnq_cam',camMain.value);}catch(e){}
+    syncCopyGate();
   }
   function sync(src){
     if(src===affTop && affMain.value!==affTop.value) affMain.value=affTop.value;
@@ -1303,11 +1318,13 @@
 
   document.querySelectorAll('.lrow .copy').forEach(function(btn){
     btn.addEventListener('click',function(){
+      if(!hasId()){needId();return;}
       copyText(buildLink(btn.parentElement.querySelector('.url').getAttribute('data-link')),'Link copied');
     });
   });
   document.querySelectorAll('.copyall').forEach(function(btn){
     btn.addEventListener('click',function(){
+      if(!hasId()){needId();return;}
       var card=btn.closest('.card');
       var name=card.querySelector('.eyebrow2 b').textContent;
       var lines=[name+' — promo links ('+aff()+')'];
@@ -1318,6 +1335,7 @@
     });
   });
   function copyEverything(){
+    if(!hasId()){needId();return;}
     var lines=['SanaSocials Affiliate Hub — all promo links ('+aff()+')',''];
     document.querySelectorAll('.card').forEach(function(card){
       lines.push(card.querySelector('.rank').textContent.trim()+'. '+card.querySelector('.eyebrow2 b').textContent);
@@ -1326,7 +1344,7 @@
       });
       lines.push('');
     });
-    copyText(lines.join('\n'),'All 9 offers copied');
+    copyText(lines.join('\n'),'All '+document.querySelectorAll('.card').length+' offers copied');
   }
   document.getElementById('copyAllTop').addEventListener('click',copyEverything);
   document.getElementById('copyAllMain').addEventListener('click',copyEverything);
