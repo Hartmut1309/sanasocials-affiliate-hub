@@ -130,6 +130,24 @@
   .anglebox ul{margin:0 0 14px;padding-left:22px}
   .anglebox li{color:var(--mut);font-size:16px;margin:6px 0;font-weight:600}
   .anglebox li::marker{color:var(--catc,var(--acc))}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+  @media(max-width:820px){.duo{grid-template-columns:1fr}}
+  .dbox{background:var(--card);border:1px solid var(--line2);border-radius:10px;padding:14px 16px 12px}
+  .dbox h4{font-family:var(--disp);font-weight:800;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);margin:0 0 8px}
+  .dbox ul{margin:0;padding-left:20px}
+  .painbox{border:1.5px solid color-mix(in srgb,var(--catc,var(--acc)) 40%,var(--line2));border-radius:14px;background:color-mix(in srgb,var(--catc,var(--acc)) 5%,var(--card));padding:22px 24px;margin:26px 0}
+  .painbox h3{font-family:var(--disp);font-weight:800;font-size:21px;margin:0 0 4px;color:var(--ink)}
+  .painbox p.sub{margin:0 0 12px;font-size:14.5px;color:var(--dim);font-weight:600}
+  .pk-insight{border-left:3px solid var(--catc,var(--acc));padding:2px 0 2px 12px;margin:0 0 4px}
+  .pk-insight p{margin:4px 0;font-size:15.5px;color:var(--mut);font-weight:600}
+  .pk-lab{margin:14px 0 6px;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);font-weight:700}
+  .pk-quotes{margin:0;padding-left:22px}
+  .pk-quotes li{color:var(--mut);font-size:16px;margin:6px 0;font-weight:600}
+  .pk-quotes li::marker{color:var(--catc,var(--acc))}
+  .pk-gloss{color:var(--dim);font-weight:500}
+  .pk-keys{margin:0 0 12px;font-size:15.5px;line-height:1.75;color:var(--mut);font-weight:600}
+  .pk-note{margin:10px 0 0;font-size:13.5px;color:var(--dim)}
+  .pk-note a{color:inherit}
   .warn{border:1.5px solid color-mix(in srgb,#B3402F 45%,var(--line2));border-radius:12px;background:color-mix(in srgb,#B3402F 6%,var(--card));padding:18px 22px;margin:26px 0;font-size:15px;color:var(--mut)}
   .warn b{color:var(--ink)}
   .note{font-size:14px;color:var(--dim);font-weight:600}
@@ -226,7 +244,7 @@
   <p class="fmtline" style="border-left-color:var(--c-blood)"><b>The funnel is moving to a new address.</b> GlucoTrust German is one of two offers whose pages still sit on the retired domain, so we are not publishing promo links here until the move is done &mdash; a link carrying the old name would break the naming rule on the main hub page. <b>Email <a href="mailto:affiliates@sana-socials.com?subject=GlucoTrust%20German%20%E2%80%94%20promo%20links">affiliates@sana-socials.com</a> for the current links</b> and say which format you want. Commission, tracking and assets are unchanged.</p>
   
   <p class="note" style="margin-top:8px">Funnel address changing &mdash; email for the current links.</p>
-  <section class="anglebox"><h3>Run-ready angles</h3><p class="sub">Approved to reuse verbatim in your ads, pre-sells and emails — full German swipes &amp; ad packs land in the Affiliate Assets folder.</p><ul><li>The all-time best performing blood-sugar offer on Clickbank &mdash; now in German</li><li>Mechanism over hype: the argument that converts sceptical German 40+ buyers</li><li>The no-upsell eCom page for channels where an upsell flow gets your account reviewed</li></ul><button class="btn small" id="copyAngles" type="button">Copy angles</button></section>
+  <section class="anglebox"><h3>Run-ready angles</h3><p class="sub">Approved to reuse verbatim in your ads, pre-sells and emails — full German swipes &amp; ad packs land in the Affiliate Assets folder.</p><div class="duo"><div class="dbox"><h4>English</h4><ul><li>The all-time best performing blood-sugar offer on Clickbank &mdash; now in German</li><li>Mechanism over hype: the argument that converts sceptical German 40+ buyers</li><li>The no-upsell eCom page for channels where an upsell flow gets your account reviewed</li></ul></div><div class="dbox" lang="de"><h4>Deutsch</h4><ul><li>Das erfolgreichste Blutzucker-Offer aller Zeiten auf Clickbank — jetzt auf Deutsch</li><li>Mechanismus statt Hype — das Argument, das skeptische deutsche 40+-Käufer konvertiert</li><li>Die No-Upsell-eCom-Page für Kanäle, in denen ein Upsell-Flow dein Konto in den Review schickt</li></ul></div></div></section>
   <section class="resbox" aria-labelledby="resTitle">
     <div class="reshead">
       <h3 id="resTitle">Affiliate Resources</h3>
@@ -313,10 +331,10 @@
       lines.push(r.querySelector('.tag').textContent.trim()+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));});
     copyText(lines.join('\n'),'Links copied');
   });
-  var angBtn=document.getElementById('copyAngles');
-  if(angBtn){angBtn.addEventListener('click',function(){
-    var lines=[];document.querySelectorAll('.anglebox li').forEach(function(li){lines.push(li.textContent.trim());});
-    copyText(lines.join('\n'),'Angles copied');});}
+  var pkBtn=document.getElementById('copyKeys');
+  if(pkBtn){pkBtn.addEventListener('click',function(){
+    var el=document.getElementById('pkKeys');
+    copyText(el.textContent.split('\u00b7').map(function(s){return s.trim();}).filter(Boolean).join('\n'),'Keywords copied');});}
   var themeBtn=document.getElementById('themeBtn');
   function applyTheme(t){if(t){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.removeAttribute('data-theme');}
     try{t?localStorage.setItem('pnq_theme',t):localStorage.removeItem('pnq_theme');}catch(e){}}
