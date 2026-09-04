@@ -97,7 +97,8 @@
   .genpanel .hint{flex-basis:100%;font-size:14px;color:var(--dim)}
   .linkrows{display:flex;flex-direction:column;gap:9px;margin:18px 0}
   .lrow{display:flex;align-items:stretch;gap:9px}
-  .lrow .tag{flex:0 0 104px;display:flex;align-items:center;justify-content:flex-end;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+  .lrow .tag{flex:0 0 132px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;text-align:right;line-height:1.2;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+  .lrow .tag .sub{display:block;font-size:11px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--mut);margin-top:2px;white-space:nowrap}
   .lrow .url{flex:1;min-width:0;display:flex;align-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:10px 14px;font-family:var(--mono);font-size:14px;color:var(--mut);overflow-x:auto;white-space:nowrap;scrollbar-width:thin}
   .lrow .url .aff{color:var(--acc);font-weight:700}
   .lrow .url .cam{color:var(--gold);font-weight:700}
@@ -187,7 +188,7 @@
   .fmtline{margin:14px 0 0;padding:12px 16px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;background:var(--bg2);font-size:14px;line-height:1.6;color:var(--mut);font-weight:600}
   .fmtline b{color:var(--ink)}
   .fmtline code{font-family:var(--mono);font-size:13px;color:var(--acc);font-weight:700}
-  @media(max-width:640px){.lrow{flex-direction:column;gap:4px}.lrow .tag{justify-content:flex-start}}
+  @media(max-width:640px){.lrow{flex-direction:column;gap:4px}.lrow .tag{flex-basis:auto;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;text-align:left;gap:2px 8px}.lrow .tag .sub{margin-top:0}}
 </style>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <symbol id="f-de" viewBox="0 0 3 2"><rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#DD0000"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/></symbol>
@@ -294,6 +295,7 @@
   function clean(v){return (v||'').replace(/[^A-Za-z0-9_\-\.]/g,'').slice(0,64);}
   function aff(){return clean(affMain.value)||'AFFILIATE';}
   function cam(){return clean(camMain.value)||'CAMPAIGNKEY';}
+  function tagLabel(r){var t=r.querySelector('.tag');if(!t)return '';var c=t.cloneNode(true);var s=c.querySelector('.sub');var sub=s?s.textContent.trim():'';if(s)c.removeChild(s);var main=c.textContent.trim();return sub?main+' ('+sub+')':main;}
   function buildLink(t){return t.replace('AFFILIATE',aff()).replace('CAMPAIGNKEY',cam());}
   function render(){
     document.querySelectorAll('.url').forEach(function(el){
@@ -328,7 +330,7 @@
   document.getElementById('copyAllTop').addEventListener('click',function(){
     var lines=[document.title+' ('+aff()+')'];
     document.querySelectorAll('.lrow').forEach(function(r){
-      lines.push(r.querySelector('.tag').textContent.trim()+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));});
+      lines.push(tagLabel(r)+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));});
     copyText(lines.join('\n'),'Links copied');
   });
   var pkBtn=document.getElementById('copyKeys');
