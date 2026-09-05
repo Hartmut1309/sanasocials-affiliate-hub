@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- dtc-v31-build-20260905T161603 -->
+<!-- dtc-v32-build-20260905T161701 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
@@ -11,7 +11,7 @@
 <style>
 :root{color-scheme:light;
   --bg:#FFFFFF;--cream:#FBF6EC;--band:#F3F5F4;--card:#FFFFFF;
-  --line:#C9D0CB;--line2:#AEB8B2;--rule:#D7DDD9;
+  --line:#A9B4AE;--line2:#8C9993;--rule:#C3CCC7;
   --ink:#12202A;--mut:#4F5D57;--dim:#7A8781;
   --brand:#0E5C38;--check:#2E7D4F;
   --hl6:#F5B400;--hl6-ink:#1E1A08;--hl6-border:#DDA000;
@@ -60,11 +60,11 @@ svg{width:20px;height:20px;flex:0 0 20px}
 .index{padding:14px 0 30px;background:#fff}
 .index .wrap>p{margin:0 0 12px;font-family:var(--disp);font-size:13.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
 .igrid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
-.itile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:12px 6px 10px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
-.itile:hover{transform:translateY(-2px);border-color:var(--navy);box-shadow:0 14px 26px -20px rgba(19,42,71,.6)}
+.itile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;background:var(--card);border:2.5px solid var(--acc);border-radius:16px;padding:12px 6px 10px;text-decoration:none;color:var(--ink);box-shadow:0 6px 14px -10px rgba(18,32,42,.35);transition:transform .15s,box-shadow .15s,background .15s}
+.itile:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--acc) 7%,#fff);box-shadow:0 14px 26px -18px rgba(18,32,42,.55)}
 .itile img{height:90px;width:auto;margin-bottom:4px}
-.itile b{font-family:var(--disp);font-size:13.5px;font-weight:800;color:var(--navy)}
-.itile span{font-size:12.5px;color:var(--mut);line-height:1.25}
+.itile b{font-family:var(--disp);font-size:13.5px;font-weight:800;color:var(--acc)}
+.itile span{font-size:12.5px;color:var(--ink);line-height:1.25;font-weight:600}
 @media(max-width:900px){.igrid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:520px){.igrid{grid-template-columns:repeat(4,1fr);gap:6px}.itile img{height:64px}.itile span{display:none}.itile b{font-size:11.5px}}
 
@@ -72,9 +72,9 @@ svg{width:20px;height:20px;flex:0 0 20px}
 .nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:2px solid var(--rule);border-bottom:2px solid var(--rule);overflow:hidden;width:100%}
 .nav .wrap{display:flex;gap:8px;align-items:center;padding:10px 22px;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav .wrap::-webkit-scrollbar{display:none}
-.nav a{white-space:nowrap;text-decoration:none;font-family:var(--disp);font-size:14.5px;font-weight:800;color:var(--navy);border:2px solid var(--line);border-radius:999px;padding:8px 14px;background:var(--card)}
-.nav a:hover{border-color:var(--navy);background:var(--band)}
-.nav a.pk{border-style:dashed;border-color:var(--gold2);color:var(--gold2)}
+.nav a{white-space:nowrap;text-decoration:none;font-family:var(--disp);font-size:14.5px;font-weight:800;color:var(--acc,var(--navy));border:2.5px solid var(--acc,var(--navy));border-radius:999px;padding:8px 15px;background:var(--card)}
+.nav a:hover{background:color-mix(in srgb,var(--acc,var(--navy)) 10%,#fff)}
+.nav a.pk{border-color:var(--gold2);color:var(--gold2);background:var(--gold-soft)}
 
 /* product block */
 .prod{padding:44px 0 44px;border-top:6px solid var(--acc);background:var(--bg)}
@@ -237,10 +237,10 @@ svg{width:20px;height:20px;flex:0 0 20px}
 <section class="index" aria-label="Alle Rezepturen">
   <div class="wrap">
     <p>Alle 8 Rezepturen · Tippen Sie auf ein Produkt, um zu den Paketen zu springen</p>
-    <div class="igrid"><a class="itile" href="#slimsana"><img src="img/slimsana-1.webp" alt="SlimSana" decoding="async"><b>SlimSana</b><span>Gewicht & Heißhunger</span></a><a class="itile" href="#glucosana"><img src="img/glucosana-1.webp" alt="GlucoSana" decoding="async"><b>GlucoSana</b><span>Blutzucker & Energie</span></a><a class="itile" href="#metabosana"><img src="img/metabosana-1.webp" alt="MetaboSana" decoding="async"><b>MetaboSana</b><span>Stoffwechsel & Energie</span></a><a class="itile" href="#nervesana"><img src="img/nervesana-1.webp" alt="NerveSana" decoding="async"><b>NerveSana</b><span>Nerven & Kribbeln</span></a><a class="itile" href="#cleansesana"><img src="img/cleansesana-1.webp" alt="CleanseSana" decoding="async"><b>CleanseSana</b><span>Darm & Verdauung</span></a><a class="itile" href="#ketosana"><img src="img/ketosana-1.webp" alt="KetoSana" decoding="async"><b>KetoSana</b><span>Keto & Low-Carb</span></a><a class="itile" href="#curcumasana"><img src="img/curcumasana-1.webp" alt="CurcumaSana" decoding="async"><b>CurcumaSana</b><span>Gelenke & Beweglichkeit</span></a><a class="itile" href="#vigorsana"><img src="img/vigorsana-1.webp" alt="VigorSana" decoding="async"><b>VigorSana</b><span>Männer-Vitalität</span></a></div>
+    <div class="igrid"><a class="itile" href="#slimsana" style="--acc:#B3245B"><img src="img/slimsana-1.webp" alt="SlimSana" decoding="async"><b>SlimSana</b><span>Gewicht & Heißhunger</span></a><a class="itile" href="#glucosana" style="--acc:#1B5FB8"><img src="img/glucosana-1.webp" alt="GlucoSana" decoding="async"><b>GlucoSana</b><span>Blutzucker & Energie</span></a><a class="itile" href="#metabosana" style="--acc:#B8760F"><img src="img/metabosana-1.webp" alt="MetaboSana" decoding="async"><b>MetaboSana</b><span>Stoffwechsel & Energie</span></a><a class="itile" href="#nervesana" style="--acc:#6B3FC2"><img src="img/nervesana-1.webp" alt="NerveSana" decoding="async"><b>NerveSana</b><span>Nerven & Kribbeln</span></a><a class="itile" href="#cleansesana" style="--acc:#0E7C7B"><img src="img/cleansesana-1.webp" alt="CleanseSana" decoding="async"><b>CleanseSana</b><span>Darm & Verdauung</span></a><a class="itile" href="#ketosana" style="--acc:#3D5AB8"><img src="img/ketosana-1.webp" alt="KetoSana" decoding="async"><b>KetoSana</b><span>Keto & Low-Carb</span></a><a class="itile" href="#curcumasana" style="--acc:#A8541E"><img src="img/curcumasana-1.webp" alt="CurcumaSana" decoding="async"><b>CurcumaSana</b><span>Gelenke & Beweglichkeit</span></a><a class="itile" href="#vigorsana" style="--acc:#0F2E5C"><img src="img/vigorsana-1.webp" alt="VigorSana" decoding="async"><b>VigorSana</b><span>Männer-Vitalität</span></a></div>
   </div>
 </section>
-<nav class="nav" aria-label="Produkte"><div class="wrap"><a href="#slimsana">SlimSana</a><a href="#glucosana">GlucoSana</a><a href="#metabosana">MetaboSana</a><a href="#nervesana">NerveSana</a><a href="#cleansesana">CleanseSana</a><a href="#ketosana">KetoSana</a><a href="#curcumasana">CurcumaSana</a><a href="#vigorsana">VigorSana</a><a class="pk" href="#pakete">3er-Pakete</a></div></nav>
+<nav class="nav" aria-label="Produkte"><div class="wrap"><a href="#slimsana" style="--acc:#B3245B">SlimSana</a><a href="#glucosana" style="--acc:#1B5FB8">GlucoSana</a><a href="#metabosana" style="--acc:#B8760F">MetaboSana</a><a href="#nervesana" style="--acc:#6B3FC2">NerveSana</a><a href="#cleansesana" style="--acc:#0E7C7B">CleanseSana</a><a href="#ketosana" style="--acc:#3D5AB8">KetoSana</a><a href="#curcumasana" style="--acc:#A8541E">CurcumaSana</a><a href="#vigorsana" style="--acc:#0F2E5C">VigorSana</a><a class="pk" href="#pakete">3er-Pakete</a></div></nav>
 <main>
 
   <section class="prod" id="slimsana" aria-labelledby="h-slimsana" style="--acc:#B3245B">
