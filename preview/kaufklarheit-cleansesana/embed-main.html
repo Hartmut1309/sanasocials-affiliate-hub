@@ -1,0 +1,786 @@
+<!-- KaufKlarheit CleanseSana — GHL embed (home), build.py 05.09.2026. Loaded by the loader element; scripts are stripped there, the boot <img onload> runs instead. -->
+<style>
+.c-section:has(#kk-root),.c-row:has(#kk-root),.c-column:has(#kk-root),.c-element:has(#kk-root),.c-wrapper:has(#kk-root),.c-column:has(#kk-root)>.inner,.c-row:has(#kk-root)>.inner{padding:0!important;margin:0!important;max-width:none!important}
+#kk-root{width:100%}
+.kk-page.kk-page {
+  --bg: #f7f8f5;
+  --surface: #ffffff;
+  --surface-soft: #eef2ed;
+  --surface-tint: #edf2f4;
+  --text: #17211e;
+  --muted: #64716d;
+  --accent: #1d6258;
+  --accent-dark: #12473f;
+  --accent-soft: #d9e9e2;
+  --border: #dbe3df;
+  --border-strong: #bdcec7;
+  --warm: #f1eadf;
+  --warning: #7a5b29;
+  --shadow: 0 20px 55px rgba(25, 52, 45, .08);
+  --max-width: 1160px;
+  --narrow: 820px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --space-1: .35rem;
+  --space-2: .6rem;
+  --space-3: .9rem;
+  --space-4: 1.25rem;
+  --space-5: 1.75rem;
+  --space-6: 2.5rem;
+  --space-7: 4rem;
+  --space-8: 6.5rem;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+.kk-page.kk-page * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+.kk-page.kk-page {  background: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.6; font-size: 16px; }
+.kk-page.kk-page, .kk-page.kk-page button, .kk-page.kk-page a { -webkit-font-smoothing: antialiased; }
+.kk-page.kk-page a { color: inherit; }
+.kk-page.kk-page img { max-width: 100%; height: auto; }
+.kk-page.kk-page .container { width: min(calc(100% - 2rem), var(--max-width)); max-width: 100%; margin-inline: auto; }
+.kk-page.kk-page .narrow { max-width: var(--narrow); }
+.kk-page.kk-page .section-pad { padding: var(--space-8) 0; }
+.kk-page.kk-page .section-muted { background: var(--surface-soft); }
+.kk-page.kk-page .section-tint { background: var(--surface-tint); }
+.kk-page.kk-page .muted { color: var(--muted); }
+.kk-page.kk-page .eyebrow { margin: 0 0 var(--space-3); color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .13em; line-height: 1.3; text-transform: uppercase; }
+.kk-page.kk-page h1, .kk-page.kk-page h2, .kk-page.kk-page h3, .kk-page.kk-page p { margin-top: 0; }
+.kk-page.kk-page h1, .kk-page.kk-page h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.035em; }
+.kk-page.kk-page h1 { max-width: 720px; margin-bottom: var(--space-5); font-size: clamp(2.45rem, 5.4vw, 5rem); line-height: .99; hyphens: auto; overflow-wrap: break-word; }
+.kk-page.kk-page h2 { margin-bottom: var(--space-4); font-size: clamp(2rem, 3.4vw, 3.35rem); line-height: 1.05; }
+.kk-page.kk-page h3 { margin-bottom: var(--space-3); font-size: 1.06rem; line-height: 1.25; }
+.kk-page.kk-page .section-intro { max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+.kk-page.kk-page .skip-link { position: fixed; z-index: 20; top: .75rem; left: .75rem; padding: .65rem .9rem; background: var(--text); color: #fff; border-radius: 8px; opacity: 0; pointer-events: none; transform: translateY(calc(-100% - 1rem)); transition: opacity .2s ease, transform .2s ease; }
+.kk-page.kk-page .skip-link:focus, .kk-page.kk-page .skip-link:focus-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.kk-page.kk-page .site-header { position: relative; z-index: 5; border-bottom: 1px solid var(--border); background: rgba(247, 248, 245, .96); }
+.kk-page.kk-page .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 1rem; }
+.kk-page.kk-page .brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); text-decoration: none; }
+.kk-page.kk-page .brand-mark { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); font-family: var(--font-display); font-size: 1.2rem; }
+.kk-page.kk-page .brand strong, .kk-page.kk-page .brand small { display: block; }
+.kk-page.kk-page .brand strong { font-size: .92rem; letter-spacing: .02em; }
+.kk-page.kk-page .brand small { color: var(--muted); font-size: .67rem; }
+.kk-page.kk-page .top-nav { display: flex; align-items: center; gap: 1.2rem; color: var(--muted); font-size: .82rem; }
+.kk-page.kk-page .top-nav a, .kk-page.kk-page .footer-links a { text-decoration: none; }
+.kk-page.kk-page .top-nav a:hover, .kk-page.kk-page .top-nav a:focus-visible, .kk-page.kk-page .footer-links a:hover, .kk-page.kk-page .footer-links a:focus-visible, .kk-page.kk-page .text-link:hover, .kk-page.kk-page .text-link:focus-visible { color: var(--accent); }
+.kk-page.kk-page .measurement-consent-banner { border-bottom: 1px solid var(--border-strong); background: #e8f0ec; }
+.kk-page.kk-page .consent-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 2rem; padding-block: 1.35rem; }
+.kk-page.kk-page .consent-copy { max-width: 760px; }
+.kk-page.kk-page .consent-copy .eyebrow { margin-bottom: .35rem; }
+.kk-page.kk-page .consent-copy h2 { margin-bottom: .45rem; font-family: var(--font-sans); font-size: 1.1rem; font-weight: 800; letter-spacing: 0; }
+.kk-page.kk-page .consent-copy p { margin-bottom: .35rem; color: #42534d; font-size: .86rem; line-height: 1.5; }
+.kk-page.kk-page .consent-copy > a { color: var(--accent-dark); font-size: .82rem; font-weight: 800; }
+.kk-page.kk-page .consent-current { margin-top: .55rem; }
+.kk-page.kk-page .consent-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .65rem; }
+.kk-page.kk-page .consent-actions form { margin: 0; }
+.kk-page.kk-page .consent-choice { width: 100%; border-color: var(--accent); background: var(--surface); color: var(--accent-dark); white-space: nowrap; }
+.kk-page.kk-page .consent-choice:hover, .kk-page.kk-page .consent-choice:focus-visible { background: var(--accent-soft); }
+.kk-page.kk-page .hero { position: relative; overflow: hidden; padding-top: 4rem; padding-bottom: 5rem; background: var(--bg); }
+.kk-page.kk-page .hero h1 { font-size: clamp(2.45rem, 4.6vw, 4.35rem); }
+.kk-page.kk-page .hero::after { position: absolute; right: -150px; bottom: -240px; width: 520px; height: 520px; border: 1px solid rgba(29, 98, 88, .12); border-radius: 50%; content: ""; }
+.kk-page.kk-page .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); align-items: center; gap: clamp(2.5rem, 7vw, 7rem); min-height: 590px; }
+.kk-page.kk-page .hero-grid > *, .kk-page.kk-page .hero-copy, .kk-page.kk-page .hero-copy > *, .kk-page.kk-page .hero-note, .kk-page.kk-page .hero-note p { min-width: 0; max-width: 100%; }
+.kk-page.kk-page .hero-lead { width: 100%; max-width: 640px; min-width: 0; margin-bottom: var(--space-5); color: #475752; font-size: clamp(1.08rem, 1.5vw, 1.3rem); line-height: 1.55; overflow-wrap: anywhere; }
+.kk-page.kk-page .disclosure { width: 100%; max-width: 640px; min-width: 0; box-sizing: border-box; margin-bottom: var(--space-5); padding: .85rem 1rem; border-left: 3px solid var(--accent); background: rgba(255,255,255,.7); color: #50605b; font-size: .88rem; overflow-wrap: anywhere; }
+.kk-page.kk-page .disclosure strong { color: var(--text); }
+.kk-page.kk-page .hero-points { display: grid; gap: .75rem; width: 100%; max-width: 580px; min-width: 0; margin: 0 0 var(--space-6); padding: 0; list-style: none; }
+.kk-page.kk-page .hero-points li { min-width: 0; }
+.kk-page.kk-page .hero-points li > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+.kk-page.kk-page .hero-points li { display: flex; align-items: center; gap: .85rem; color: #384842; font-size: .95rem; }
+.kk-page.kk-page .hero-points li span:first-child { color: var(--accent); font-size: .68rem; font-weight: 800; letter-spacing: .1em; }
+.kk-page.kk-page .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: var(--space-5); }
+.kk-page.kk-page .hero-note { width: 100%; max-width: 340px; box-sizing: border-box; justify-self: end; padding: 2rem; border: 1px solid var(--border-strong); border-radius: var(--radius); background: rgba(255,255,255,.65); box-shadow: var(--shadow); overflow-wrap: anywhere; }
+.kk-page.kk-page .note-kicker { margin-bottom: 1.3rem; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.kk-page.kk-page .hero-note p { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.22; }
+.kk-page.kk-page .hero-note .note-small { margin: 0; color: var(--muted); font-family: var(--font-sans); font-size: .8rem; line-height: 1.5; }
+.kk-page.kk-page .hero-product-note img { display: block; width: auto; height: 190px; margin: -.2rem auto 1rem; object-fit: contain; }
+.kk-page.kk-page .hero-facts { margin: 0 0 1.25rem; border-top: 1px solid var(--border); }
+.kk-page.kk-page .hero-facts > div { display: flex; justify-content: space-between; gap: 1rem; padding: .58rem 0; border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .hero-facts dt { color: var(--muted); font-size: .72rem; }
+.kk-page.kk-page .hero-facts dd { margin: 0; font-size: .76rem; font-weight: 800; text-align: right; }
+.kk-page.kk-page .note-rule { width: 42px; height: 1px; margin: 1.5rem 0; background: var(--accent); }
+.kk-page.kk-page .button { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; min-height: 48px; padding: .78rem 1.15rem; border: 1px solid transparent; border-radius: 999px; font-size: .86rem; font-weight: 800; letter-spacing: .01em; text-align: center; text-decoration: none; transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
+.kk-page.kk-page .button:hover, .kk-page.kk-page .button:focus-visible { transform: translateY(-2px); }
+.kk-page.kk-page .button-primary { background: var(--accent); color: #fff; }
+.kk-page.kk-page .button-primary:hover, .kk-page.kk-page .button-primary:focus-visible { background: var(--accent-dark); }
+.kk-page.kk-page .button-secondary { border-color: var(--accent); background: transparent; color: var(--accent-dark); }
+.kk-page.kk-page .button-secondary:hover, .kk-page.kk-page .button-secondary:focus-visible { background: var(--accent-soft); }
+.kk-page.kk-page .button-outline { width: 100%; margin-top: 1.35rem; border-color: var(--border-strong); color: var(--accent-dark); }
+.kk-page.kk-page .button-outline:hover, .kk-page.kk-page .button-outline:focus-visible { border-color: var(--accent); background: var(--accent-soft); }
+.kk-page.kk-page .section-heading { margin-bottom: var(--space-6); }
+.kk-page.kk-page .split-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .55fr); align-items: end; gap: 2.5rem; }
+.kk-page.kk-page .split-heading > p { margin: 0 0 .3rem; color: var(--muted); }
+.kk-page.kk-page .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 2.4rem; border: 1px solid var(--border); background: var(--border); }
+.kk-page.kk-page .summary-item { min-height: 180px; padding: 1.4rem; background: var(--surface); }
+.kk-page.kk-page .summary-number { display: block; margin-bottom: 2rem; color: var(--accent); font-size: .73rem; font-weight: 900; }
+.kk-page.kk-page .summary-item strong { display: block; margin-bottom: .45rem; }
+.kk-page.kk-page .summary-item p { margin: 0; color: var(--muted); font-size: .9rem; }
+.kk-page.kk-page .product-profile-section { background: var(--surface); }
+.kk-page.kk-page .product-profile { display: grid; grid-template-columns: minmax(190px, .48fr) minmax(0, 1.52fr); align-items: center; gap: clamp(2.5rem, 7vw, 7rem); }
+.kk-page.kk-page .product-profile-media { display: grid; place-items: center; }
+.kk-page.kk-page .product-image-frame { display: grid; width: min(100%, 250px); min-height: 350px; place-items: center; padding: 1.5rem; border: 1px solid var(--border-strong); border-radius: var(--radius); background: linear-gradient(145deg, var(--surface-soft), var(--surface-tint)); }
+.kk-page.kk-page .product-image-frame img { display: block; width: auto; height: 300px; max-width: 100%; object-fit: contain; }
+.kk-page.kk-page .product-profile-copy { max-width: 700px; }
+.kk-page.kk-page .profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.kk-page.kk-page .profile-facts { margin: 1.7rem 0; border-top: 1px solid var(--border); }
+.kk-page.kk-page .profile-facts > div { display: grid; grid-template-columns: .75fr 1.25fr; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .profile-facts dt { color: var(--muted); font-size: .85rem; }
+.kk-page.kk-page .profile-facts dd { margin: 0; font-size: .88rem; font-weight: 800; }
+.kk-page.kk-page .ingredients-section { background: #f2f5ef; }
+.kk-page.kk-page .ingredient-highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.kk-page.kk-page .ingredient-highlight { padding: 1.35rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.kk-page.kk-page .ingredient-highlight h3 { margin: .55rem 0 .55rem; }
+.kk-page.kk-page .ingredient-highlight p { margin: 0; color: var(--muted); font-size: .86rem; }
+.kk-page.kk-page .ingredient-amount { display: inline-flex; padding: .28rem .55rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-dark); font-size: .7rem; font-weight: 900; letter-spacing: .03em; }
+.kk-page.kk-page .ingredient-details { margin-top: 1.25rem; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.kk-page.kk-page .ingredient-details summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.35rem; cursor: pointer; list-style: none; color: var(--accent-dark); font-weight: 900; }
+.kk-page.kk-page .ingredient-details summary::-webkit-details-marker { display: none; }
+.kk-page.kk-page .ingredient-details summary span { font-size: 1.25rem; font-weight: 400; transition: transform .2s ease; }
+.kk-page.kk-page .ingredient-details[open] summary { border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .ingredient-details[open] summary span { transform: rotate(45deg); }
+.kk-page.kk-page .ingredient-table-wrap { overflow-x: auto; }
+.kk-page.kk-page .ingredient-table { width: 100%; min-width: 820px; border-collapse: collapse; font-size: .79rem; }
+.kk-page.kk-page .ingredient-table caption { padding: 1rem 1.35rem; color: var(--muted); font-size: .72rem; text-align: left; }
+.kk-page.kk-page .ingredient-table th, .kk-page.kk-page .ingredient-table td { padding: .82rem 1rem; border-top: 1px solid var(--border); vertical-align: top; text-align: left; }
+.kk-page.kk-page .ingredient-table thead th { background: #f7faf8; color: var(--accent-dark); font-size: .7rem; letter-spacing: .04em; text-transform: uppercase; }
+.kk-page.kk-page .ingredient-table tbody th { width: 22%; }
+.kk-page.kk-page .ingredient-table tbody th small { display: block; margin-top: .2rem; color: var(--muted); font-weight: 400; }
+.kk-page.kk-page .ingredient-table td { color: var(--muted); }
+.kk-page.kk-page .ingredient-table td:nth-child(2) { width: 19%; }
+.kk-page.kk-page .ingredient-table td:nth-child(3) { width: 15%; color: var(--text); }
+.kk-page.kk-page .ingredient-bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+.kk-page.kk-page .other-ingredients, .kk-page.kk-page .ingredient-boundary { padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.kk-page.kk-page .other-ingredients p, .kk-page.kk-page .ingredient-boundary p { margin-bottom: .55rem; color: var(--muted); font-size: .84rem; }
+.kk-page.kk-page .other-ingredients p:last-child, .kk-page.kk-page .ingredient-boundary p:last-child { margin-bottom: 0; }
+.kk-page.kk-page .ingredient-boundary { border-left: 3px solid var(--warning); background: var(--warm); }
+.kk-page.kk-page .ingredient-cta-row { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 1rem; padding: 1.25rem; border-radius: var(--radius); background: var(--accent-dark); color: #fff; }
+.kk-page.kk-page .ingredient-cta-row div > * { display: block; }
+.kk-page.kk-page .ingredient-cta-row span { margin-top: .25rem; color: #d6e6e1; font-size: .82rem; }
+.kk-page.kk-page .ingredient-cta-row .button { flex: 0 0 auto; border-color: #a9d4c8; }
+.kk-page.kk-page .criteria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.kk-page.kk-page .criteria-card { padding: 1.45rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.kk-page.kk-page .criteria-card > span { display: block; margin-bottom: 2.8rem; color: var(--accent); font-size: .74rem; font-weight: 900; }
+.kk-page.kk-page .criteria-card p { margin: 0; color: var(--muted); font-size: .91rem; }
+.kk-page.kk-page .comparison-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.kk-page.kk-page .comparison-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+.kk-page.kk-page .comparison-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .88rem; }
+.kk-page.kk-page .comparison-table caption { padding: 1rem 1.1rem; border-bottom: 1px solid var(--border); color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
+.kk-page.kk-page .comparison-table th, .kk-page.kk-page .comparison-table td { padding: 1rem; border-bottom: 1px solid var(--border); vertical-align: top; text-align: left; }
+.kk-page.kk-page .comparison-table tr:last-child th, .kk-page.kk-page .comparison-table tr:last-child td { border-bottom: 0; }
+.kk-page.kk-page .comparison-table thead th { background: #f7faf8; color: var(--accent-dark); font-size: .75rem; }
+.kk-page.kk-page .comparison-table tbody th { width: 25%; color: var(--text); font-size: .8rem; }
+.kk-page.kk-page .comparison-table td { color: var(--muted); }
+.kk-page.kk-page .facts-layout { display: grid; grid-template-columns: minmax(300px, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.kk-page.kk-page .facts-box { border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.kk-page.kk-page .facts-box-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.4rem; border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .facts-label { color: var(--accent); font-size: .72rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.kk-page.kk-page .status-dot { color: var(--muted); font-size: .73rem; }
+.kk-page.kk-page .facts-list { margin: 0; padding: .5rem 1.4rem; }
+.kk-page.kk-page .facts-list > div { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .facts-list > div:last-child { border-bottom: 0; }
+.kk-page.kk-page .facts-list dt { color: var(--muted); font-size: .85rem; }
+.kk-page.kk-page .facts-list dd { margin: 0; font-size: .86rem; font-weight: 800; text-align: right; }
+.kk-page.kk-page .facts-footnote { margin: 0; padding: 1rem 1.4rem 1.4rem; color: var(--muted); font-size: .78rem; }
+.kk-page.kk-page .facts-copy { padding-top: 1rem; }
+.kk-page.kk-page .facts-copy-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.25rem; }
+.kk-page.kk-page .facts-copy-head h3 { margin-bottom: 1rem; }
+.kk-page.kk-page .facts-copy-head img { flex: 0 0 auto; width: 120px; height: 220px; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); background: var(--surface-soft); }
+.kk-page.kk-page .label-note { max-width: 570px; margin: 1.5rem 0; padding: 1.1rem 1.2rem; border-left: 3px solid var(--accent); background: var(--surface-soft); color: var(--muted); overflow-wrap: anywhere; }
+.kk-page.kk-page .label-note h3 { margin-bottom: .55rem; color: var(--text); font-size: .98rem; }
+.kk-page.kk-page .label-note p { margin-bottom: .8rem; color: var(--muted); font-size: .82rem; }
+.kk-page.kk-page .label-note ul { display: grid; gap: .55rem; margin: 0; padding: 0; list-style: none; }
+.kk-page.kk-page .label-note li { position: relative; padding-left: 1rem; font-size: .82rem; }
+.kk-page.kk-page .label-note li::before { position: absolute; top: .45em; left: 0; width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); content: ""; }
+.kk-page.kk-page .buyer-takeaways { display: grid; gap: .65rem; margin: 1.35rem 0 1.5rem; padding: 0; list-style: none; }
+.kk-page.kk-page .buyer-takeaways li { padding-left: 1rem; border-left: 2px solid var(--accent-soft); color: #465750; font-size: .9rem; }
+.kk-page.kk-page .facts-copy p { max-width: 570px; color: var(--muted); }
+.kk-page.kk-page .text-link { display: inline-flex; gap: .5rem; color: var(--accent-dark); font-size: .9rem; font-weight: 800; text-decoration: none; }
+.kk-page.kk-page .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.kk-page.kk-page .price-card { display: flex; min-height: 330px; flex-direction: column; padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.kk-page.kk-page .price-card-featured { border-color: var(--accent); box-shadow: 0 10px 35px rgba(29,98,88,.1); }
+.kk-page.kk-page .price-card-top { display: flex; align-items: center; justify-content: space-between; gap: .8rem; color: var(--muted); font-size: .8rem; font-weight: 800; }
+.kk-page.kk-page .price-note { padding: .25rem .45rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-dark); font-size: .67rem; }
+.kk-page.kk-page .price-card-media { display: grid; height: 108px; margin: .75rem 0 .2rem; place-items: center; min-width: 0; }
+.kk-page.kk-page .price-card-media img { display: block; width: auto; height: 108px; max-width: 100%; object-fit: contain; }
+.kk-page.kk-page .price-total { margin: 2rem 0 .3rem; font-family: var(--font-display); font-size: 2.65rem; line-height: 1; }
+.kk-page.kk-page .price-unit { min-height: 42px; margin: 0; color: var(--accent); font-size: .82rem; font-weight: 800; }
+.kk-page.kk-page .price-divider { width: 100%; height: 1px; margin: 1.25rem 0; background: var(--border); }
+.kk-page.kk-page .price-detail { min-height: 44px; margin: 0; color: var(--muted); font-size: .78rem; }
+.kk-page.kk-page .price-detail-positive { color: var(--accent-dark); font-weight: 800; }
+.kk-page.kk-page .price-volume { margin: .25rem 0 .15rem; color: var(--muted); font-size: .78rem; }
+.kk-page.kk-page .price-shipping { min-height: 21px; margin: .15rem 0 .35rem; color: var(--accent-dark); font-size: .76rem; font-weight: 800; }
+.kk-page.kk-page .packaging-note { max-width: 780px; margin: 1rem 0 1.35rem; padding: .95rem 1.1rem; border-left: 3px solid var(--accent-soft); background: var(--surface); color: var(--muted); font-size: .82rem; }
+.kk-page.kk-page .packaging-note strong { color: var(--text); }
+.kk-page.kk-page .shipping-note { max-width: 780px; margin: 1.4rem 0 0; padding: .95rem 1.1rem; border-left: 3px solid var(--warning); background: var(--warm); color: #66553a; font-size: .82rem; }
+.kk-page.kk-page .pros-cons-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+.kk-page.kk-page .pros-cons-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.kk-page.kk-page .pros-cons-card { padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.kk-page.kk-page .pros-cons-card h3 { display: flex; align-items: center; gap: .65rem; }
+.kk-page.kk-page .pros-cons-card h3 span { display: grid; width: 25px; height: 25px; place-items: center; border-radius: 50%; font-size: .9rem; }
+.kk-page.kk-page .positive h3 span { background: var(--accent-soft); color: var(--accent-dark); }
+.kk-page.kk-page .caution h3 span { background: var(--warm); color: var(--warning); }
+.kk-page.kk-page .pros-cons-card ul, .kk-page.kk-page .check-list, .kk-page.kk-page .audience-not ul { display: grid; gap: .75rem; margin: 1.3rem 0 0; padding: 0; list-style: none; }
+.kk-page.kk-page .pros-cons-card li, .kk-page.kk-page .check-list li, .kk-page.kk-page .audience-not li { position: relative; padding-left: 1.25rem; color: var(--muted); font-size: .9rem; }
+.kk-page.kk-page .pros-cons-card li::before, .kk-page.kk-page .check-list li::before, .kk-page.kk-page .audience-not li::before { position: absolute; left: 0; color: var(--accent); content: "·"; font-weight: 900; }
+.kk-page.kk-page .audience-grid { display: grid; grid-template-columns: .9fr .8fr .8fr; gap: 2.5rem; align-items: start; }
+.kk-page.kk-page .audience-not { padding: 1.45rem; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: rgba(255,255,255,.7); }
+.kk-page.kk-page .audience-not .muted { margin: 1.5rem 0 0; font-size: .78rem; }
+.kk-page.kk-page .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(2rem, 7vw, 7rem); align-items: start; }
+.kk-page.kk-page .faq-list { border-top: 1px solid var(--border); }
+.kk-page.kk-page .faq-item { border-bottom: 1px solid var(--border); }
+.kk-page.kk-page .faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem 0; cursor: pointer; list-style: none; font-weight: 800; }
+.kk-page.kk-page .faq-item summary::-webkit-details-marker { display: none; }
+.kk-page.kk-page .faq-item summary span { flex: 0 0 auto; color: var(--accent); font-size: 1.3rem; font-weight: 400; transition: transform .2s ease; }
+.kk-page.kk-page .faq-item[open] summary span { transform: rotate(45deg); }
+.kk-page.kk-page .faq-answer { max-width: 680px; padding: 0 2.5rem 1.2rem 0; color: var(--muted); font-size: .92rem; }
+.kk-page.kk-page .faq-answer p { margin: 0; }
+.kk-page.kk-page .final-cta-section { padding-top: 2rem; padding-bottom: var(--space-8); }
+.kk-page.kk-page .final-cta { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(1.5rem, 4vw, 3rem); border-radius: var(--radius); background: var(--accent-dark); color: #fff; }
+.kk-page.kk-page .final-cta h2 { max-width: 620px; margin-bottom: .8rem; }
+.kk-page.kk-page .final-cta p:not(.eyebrow) { max-width: 610px; margin: 0; color: #d6e6e1; }
+.kk-page.kk-page .final-cta .eyebrow { color: #9fc6ba; }
+.kk-page.kk-page .final-cta .button { flex: 0 0 auto; border-color: #a9d4c8; color: #fff; }
+.kk-page.kk-page .final-cta .button:hover, .kk-page.kk-page .final-cta .button:focus-visible { background: rgba(255,255,255,.12); }
+.kk-page.kk-page .mobile-sticky-cta { position: fixed; z-index: 10; right: 0; bottom: 0; left: 0; display: none; visibility: hidden; padding: .65rem 1rem calc(.65rem + env(safe-area-inset-bottom)); border-top: 1px solid var(--border); background: rgba(247,248,245,.96); box-shadow: 0 -8px 30px rgba(23,33,30,.09); pointer-events: none; transform: translateY(100%); transition: transform .25s ease, visibility 0s linear .25s; }
+.kk-page.kk-page .mobile-sticky-cta.is-visible { visibility: visible; pointer-events: auto; transform: translateY(0); transition-delay: 0s; }
+.kk-page.kk-page .mobile-sticky-cta.is-suspended { visibility: hidden; pointer-events: none; transform: translateY(100%); transition: none; }
+.kk-page.kk-page .mobile-sticky-cta .button { width: 100%; }
+.kk-page.kk-page .site-footer { padding: 3rem 0 1.5rem; border-top: 1px solid var(--border); background: #eef1ee; }
+.kk-page.kk-page .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; }
+.kk-page.kk-page .footer-brand { margin-bottom: .5rem; font-family: var(--font-display); font-size: 1.35rem; }
+.kk-page.kk-page .footer-grid .muted { max-width: 430px; margin: 0; font-size: .82rem; }
+.kk-page.kk-page .footer-links { display: grid; gap: .6rem; justify-items: end; color: var(--muted); font-size: .82rem; }
+.kk-page.kk-page .footer-meta { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .7rem; }
+.kk-page.kk-page .redirect-page { display: grid; min-height: 100vh; place-items: center; padding: 1.25rem; }
+.kk-page.kk-page .redirect-card { width: min(100%, 580px); padding: clamp(1.5rem, 5vw, 3rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.kk-page.kk-page .redirect-card p:not(.eyebrow) { margin-bottom: 1.5rem; color: var(--muted); }
+.kk-page.kk-page *:focus-visible { outline: 3px solid rgba(29,98,88,.45); outline-offset: 3px; }
+@media (max-width: 900px){.kk-page.kk-page .consent-inner { grid-template-columns: 1fr; gap: 1rem; }
+.kk-page.kk-page .consent-actions { width: 100%; max-width: 540px; }
+.kk-page.kk-page .hero-grid, .kk-page.kk-page .comparison-layout, .kk-page.kk-page .facts-layout, .kk-page.kk-page .pros-cons-grid, .kk-page.kk-page .faq-layout { grid-template-columns: 1fr; }
+.kk-page.kk-page .hero-grid { min-height: auto; }
+.kk-page.kk-page .hero-note { max-width: none; justify-self: start; }
+.kk-page.kk-page .criteria-grid { grid-template-columns: repeat(2, 1fr); }
+.kk-page.kk-page .ingredient-highlights { grid-template-columns: repeat(2, 1fr); }
+.kk-page.kk-page .split-heading { grid-template-columns: 1fr; gap: .8rem; }
+.kk-page.kk-page .split-heading > p { margin: 0; }
+.kk-page.kk-page .audience-grid { grid-template-columns: 1fr 1fr; }
+.kk-page.kk-page .audience-grid > div:first-child { grid-column: 1 / -1; }
+
+}
+@media (max-width: 720px){.kk-page.kk-page { font-size: 15px; }
+.kk-page.kk-page .container { width: min(calc(100% - 1.5rem), var(--max-width)); }
+.kk-page.kk-page .section-pad { padding: 4.5rem 0; }
+.kk-page.kk-page .top-nav { display: none; }
+.kk-page.kk-page .consent-inner { padding-block: 1rem; }
+.kk-page.kk-page .consent-actions { grid-template-columns: 1fr; }
+.kk-page.kk-page .consent-choice { min-height: 44px; white-space: normal; }
+.kk-page.kk-page .hero { padding-top: 3.25rem; }
+.kk-page.kk-page h1 { max-width: 100%; font-size: clamp(2.25rem, 12.6vw, 3.55rem); line-height: 1.02; hyphens: auto; overflow-wrap: anywhere; word-break: normal; }
+.kk-page.kk-page .hero h1 { hyphens: none; overflow-wrap: normal; }
+.kk-page.kk-page h1, .kk-page.kk-page h2, .kk-page.kk-page h3, .kk-page.kk-page .hero-lead, .kk-page.kk-page .disclosure, .kk-page.kk-page .hero-note, .kk-page.kk-page .section-intro, .kk-page.kk-page .summary-item, .kk-page.kk-page .summary-item > * { min-width: 0; max-width: 100%; }
+.kk-page.kk-page h2 { overflow-wrap: anywhere; word-break: normal; }
+.kk-page.kk-page .hero-note { width: 100%; max-width: 100%; min-width: 0; padding: 1.35rem; }
+.kk-page.kk-page .hero-note p { font-size: 1.3rem; }
+.kk-page.kk-page .hero-actions, .kk-page.kk-page .hero-actions .button, .kk-page.kk-page .profile-actions, .kk-page.kk-page .profile-actions .button { width: 100%; }
+.kk-page.kk-page .hero-product-note img { height: 160px; }
+.kk-page.kk-page .product-profile { grid-template-columns: 1fr; gap: 2rem; }
+.kk-page.kk-page .product-image-frame { width: 180px; min-height: 270px; padding: 1rem; }
+.kk-page.kk-page .product-image-frame img { height: 220px; }
+.kk-page.kk-page .facts-copy-head img { width: 84px; height: 150px; }
+.kk-page.kk-page .facts-copy-head h3 { font-size: 1rem; }
+.kk-page.kk-page .label-note { padding: 1rem; }
+.kk-page.kk-page .price-card-media { height: 112px; }
+.kk-page.kk-page .price-card-media img { height: 112px; }
+.kk-page.kk-page .summary-grid, .kk-page.kk-page .criteria-grid, .kk-page.kk-page .price-grid, .kk-page.kk-page .pros-cons-columns, .kk-page.kk-page .ingredient-highlights, .kk-page.kk-page .ingredient-bottom-grid { grid-template-columns: 1fr; }
+.kk-page.kk-page .summary-item { min-height: auto; }
+.kk-page.kk-page .criteria-card > span { margin-bottom: 1.6rem; }
+.kk-page.kk-page .comparison-table-wrap { margin-inline: -.25rem; }
+.kk-page.kk-page .facts-list { padding-inline: 1rem; }
+.kk-page.kk-page .facts-box-head { padding-inline: 1rem; }
+.kk-page.kk-page .facts-footnote { padding-inline: 1rem; }
+.kk-page.kk-page .facts-list > div { grid-template-columns: .8fr 1.2fr; }
+.kk-page.kk-page .price-card { min-height: auto; }
+.kk-page.kk-page .audience-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+.kk-page.kk-page .ingredient-details { margin-inline: -.15rem; }
+.kk-page.kk-page .ingredient-details summary { padding: 1rem; }
+.kk-page.kk-page .ingredient-table { min-width: 0; }
+.kk-page.kk-page .ingredient-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.kk-page.kk-page .ingredient-table tbody, .kk-page.kk-page .ingredient-table tr, .kk-page.kk-page .ingredient-table th, .kk-page.kk-page .ingredient-table td { display: block; width: 100%; }
+.kk-page.kk-page .ingredient-table tr { padding: 1rem; border-top: 1px solid var(--border); }
+.kk-page.kk-page .ingredient-table th, .kk-page.kk-page .ingredient-table td { padding: 0; border: 0; }
+.kk-page.kk-page .ingredient-table tbody th { width: 100%; margin-bottom: .75rem; font-size: .92rem; }
+.kk-page.kk-page .ingredient-table td { width: 100% !important; margin-top: .7rem; font-size: .82rem; }
+.kk-page.kk-page .ingredient-table td::before { display: block; margin-bottom: .12rem; color: var(--accent); content: attr(data-label); font-size: .64rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.kk-page.kk-page .ingredient-cta-row { align-items: stretch; flex-direction: column; }
+.kk-page.kk-page .ingredient-cta-row .button { width: 100%; }
+.kk-page.kk-page .audience-grid > div:first-child { grid-column: auto; }
+.kk-page.kk-page .final-cta { align-items: stretch; flex-direction: column; }
+.kk-page.kk-page .final-cta .button { width: 100%; }
+.kk-page.kk-page .mobile-sticky-cta { display: block; }
+.kk-page.kk-page .footer-grid, .kk-page.kk-page .footer-meta { grid-template-columns: 1fr; }
+.kk-page.kk-page .footer-links { justify-items: start; }
+.kk-page.kk-page .footer-meta { display: grid; }
+
+}
+@media (prefers-reduced-motion: reduce){html { scroll-behavior: auto; }
+.kk-page.kk-page *, .kk-page.kk-page *::before, .kk-page.kk-page *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+
+}
+
+</style>
+<div class="kk-page" id="top" data-page="home">
+<img alt="" aria-hidden="true" style="display:none;width:0;height:0" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-t="CleanseSana im Check: Inhaltsstoffe, Preise &amp; Pakete | KaufKlarheit" data-d="CleanseSana transparent geprüft: vollständige Inhaltsstoffliste laut aktuellem Etikett, Anwendung, Preise, Pakete und klare Kaufkriterien." data-r="index, follow" onload='var W=this.closest(".kk-page")||document,SET_HEAD=true,T=this.getAttribute("data-t"),D=this.getAttribute("data-d"),RB=this.getAttribute("data-r");try{if(SET_HEAD){document.title=T;[["description",D],["robots",RB]].forEach(function(a){var e=document.head.querySelector("meta[name="+JSON.stringify(a[0])+"]");if(!e){e=document.createElement("meta");e.setAttribute("name",a[0]);document.head.appendChild(e);}e.setAttribute("content",a[1]);});}}catch(e){}
+try{var q=new URLSearchParams(location.search),p=[];q.forEach(function(v,k){if(k==="aff"||k==="cam"||/^ds24/i.test(k)){p.push(encodeURIComponent(k)+"="+encodeURIComponent(v));}});if(p.length){var as=W.querySelectorAll("a.outbound-cta");for(var i=0;i&lt;as.length;i++){var h=as[i].getAttribute("href");as[i].setAttribute("href",h+(h.indexOf("?")&gt;-1?"&amp;":"?")+p.join("&amp;"));}}}catch(e){}
+try{var s=W.querySelector("[data-sticky-cta]");if(s){var out=W.querySelectorAll(".outbound-cta:not([data-cta-position=sticky-mobile])"),fin=W.querySelector(".final-cta-section");var upd=function(){var vis=window.scrollY&gt;Math.max(520,window.innerHeight*1.15);var near=false;for(var j=0;j&lt;out.length;j++){var r=out[j].getBoundingClientRect();if(r.top&lt;window.innerHeight*0.8&amp;&amp;r.bottom&gt;window.innerHeight*0.2){near=true;break;}}var fv=false;if(fin){var fr=fin.getBoundingClientRect();fv=fr.top&lt;window.innerHeight&amp;&amp;fr.bottom&gt;0;}var show=vis&amp;&amp;!near&amp;&amp;!fv&amp;&amp;window.innerWidth&lt;720;s.classList.toggle("is-suspended",fv);s.classList.toggle("is-visible",show);s.setAttribute("aria-hidden",show?"false":"true");};window.addEventListener("scroll",upd,{passive:true});window.addEventListener("resize",upd);upd();}}catch(e){}'>
+<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="KaufKlarheit Startseite">
+            <span class="brand-mark" aria-hidden="true">K</span>
+            <span><strong>KaufKlarheit</strong><small>Ratgeber für bewusste Kaufentscheidungen</small></span>
+        </a>
+        <nav class="top-nav" aria-label="Hauptnavigation">
+            <a href="#inhaltsstoffe">Inhaltsstoffe</a>
+            <a href="#kriterien">Kaufkriterien</a>
+            <a href="#faktencheck">CleanseSana-Check</a>
+            <a href="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/affiliate-hinweis.html">Transparenz</a>
+        </nav>
+    </div>
+</header>
+<main id="main-content">
+    <section class="hero section-pad">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">CleanseSana Kaufberatung · Stand 05.09.2026</p>
+                <h1>CleanseSana im Check: Was steckt in den Kapseln – und welches Paket passt?</h1>
+                <p class="hero-lead">Wir haben das aktuelle Etikett der 30-Kapsel-Flasche, alle ausgewiesenen Inhaltsstoffe, Anwendung und Paketpreise übersichtlich geprüft. So sehen Sie vor dem Klick, was belegt ist – und was nicht.</p>
+                <div class="disclosure" role="note">
+                    <strong>Transparenzhinweis:</strong> Diese Seite enthält Affiliate-Links. Wenn Sie über einen solchen Link kaufen, können wir eine Vergütung erhalten. Für Sie entstehen dadurch keine zusätzlichen Kosten.
+                </div>
+                <div class="hero-actions">
+                    <a class="button button-primary outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-hero" data-cta-position="hero">Aktuelle CleanseSana-Angebote prüfen <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="#inhaltsstoffe" data-product="cleansesana" data-cta-id="ingredients" data-cta-position="hero">Inhaltsstoffe ansehen <span aria-hidden="true">↓</span></a>
+                </div>
+                <ul class="hero-points">
+                    <li><span aria-hidden="true">01</span><span>8 mengenmäßig ausgewiesene Bestandteile laut aktuellem Etikett</span></li>
+                    <li><span aria-hidden="true">02</span><span>1er-, 3er- und 6er-Paket als einmaliger Kauf</span></li>
+                    <li><span aria-hidden="true">03</span><span>Ab €39,00 je Flasche (30 Kapseln) im 6er-Paket</span></li>
+                </ul>
+            </div>
+            <aside class="hero-note hero-product-note" aria-label="CleanseSana Schnellcheck">
+                <div class="note-kicker">Schnellcheck</div>
+                <img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-1.webp" width="601" height="1200" alt="CleanseSana Kapseln – reguläre Produktgröße 30 Kapseln">
+                <dl class="hero-facts">
+                    <div><dt>Format</dt><dd>Kapseln (30 Stück)</dd></div>
+                    <div><dt>Anwendung laut Etikett</dt><dd>1 × 1 Kapsel täglich</dd></div>
+                    <div><dt>Kaufart</dt><dd>Einmalige Zahlung</dd></div>
+                </dl>
+                <p class="note-small">Unabhängige Affiliate-Kaufberatung. Kein Herstellerauftritt und keine medizinische Beratung.</p>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section-pad section-muted" id="kurz-gesagt">
+        <div class="container narrow">
+            <p class="eyebrow">Kurz gesagt</p>
+            <h2>Die wichtigsten Kaufargumente in 30 Sekunden.</h2>
+            <p class="section-intro">CleanseSana lässt sich anhand konkreter Daten vergleichen: aktuelles Etikett, klar bezifferte Mengen, drei Pakete und ein externer Checkout über Digistore24.</p>
+            <div class="summary-grid">
+                <div class="summary-item"><span class="summary-number">01</span><strong>Formel transparent</strong><p>8 mengenmäßig ausgewiesene Bestandteile je Kapsel plus weitere Zutaten laut aktuellem Etikett.</p></div>
+                <div class="summary-item"><span class="summary-number">02</span><strong>Einmaliger Kauf</strong><p>Die dokumentierten Pakete sind kein automatisches Abonnement.</p></div>
+                <div class="summary-item"><span class="summary-number">03</span><strong>Größeres Paket, besserer Stückpreis</strong><p>Das 6er-Paket liegt rechnerisch bei €39,00 je Flasche mit 30 Kapseln.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad product-profile-section" id="cleansesana-kurzprofil">
+        <div class="container product-profile">
+            <div class="product-profile-media">
+                <div class="product-image-frame">
+                    <img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-1.webp" width="601" height="1200" loading="lazy" decoding="async" alt="CleanseSana Kapseln – reguläre Produktgröße 30 Kapseln">
+                </div>
+            </div>
+            <div class="product-profile-copy">
+                <p class="eyebrow">CleanseSana Kurzprofil</p>
+                <h2>Das Produkt auf einen Blick</h2>
+                <p class="section-intro">CleanseSana ist ein Nahrungsergänzungsmittel in Kapselform mit 30 Kapseln je Flasche. Drei dokumentierte Paketgrößen machen den Einstieg oder den rechnerisch günstigeren Mengenkauf möglich.</p>
+                <dl class="profile-facts">
+                    <div><dt>Format</dt><dd>Kapseln</dd></div>
+                    <div><dt>Reguläre Produktgröße</dt><dd>30 Kapseln (Nettogewicht 45 g) laut aktuellem Etikett</dd></div>
+                    <div><dt>Anwendung</dt><dd>Erwachsene: 1 Kapsel täglich mit Nahrung. laut aktuellem Etikett</dd></div>
+                    <div><dt>Angebote</dt><dd>1er / 3er / 6er — 30 / 90 / 180 Kapseln Gesamtmenge</dd></div>
+                    <div><dt>Preise</dt><dd>€69,00 / €147,00 / €234,00</dd></div>
+                    <div><dt>Kauf</dt><dd>Einmalige Zahlung, kein automatisches Abo</dd></div>
+                    <div><dt>Garantie</dt><dd>60 Tage laut Anbieter</dd></div>
+                    <div><dt>Checkout</dt><dd>Digistore24</dd></div>
+                </dl>
+                <aside class="packaging-note" aria-label="Hinweis zur Reichweite"><strong>Hinweis zur Reichweite:</strong> Laut Etikett enthält eine Flasche 30 Kapseln (Nettogewicht 45 g). Bei einer Kapsel täglich entspricht eine Flasche rechnerisch etwa 30 Tagen; die Gesamtmenge eines Pakets ergibt sich aus der Zahl der Flaschen.</aside>
+                <div class="profile-actions">
+                    <a class="button button-primary outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-profile" data-cta-position="profile">Angebote beim Anbieter prüfen <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#inhaltsstoffe">Erst Inhaltsstoffe prüfen <span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad ingredients-section" id="inhaltsstoffe" data-track-section="view_ingredients">
+        <div class="container">
+            <div class="section-heading split-heading">
+                <div><p class="eyebrow">Aktuelles Etikett (30 Kapseln)</p><h2>Was steckt tatsächlich in CleanseSana?</h2></div>
+                <p>Das Etikett weist 8 Bestandteile mit Mengen je Kapsel aus. Diese Transparenz zeigt die Zusammensetzung – sie ist kein Beleg für eine bestimmte Wirkung.</p>
+            </div>
+            <div class="ingredient-highlights">
+                <article class="ingredient-highlight">
+                    <span class="ingredient-amount">430 mg</span>
+                    <h3>Gemahlene Haferkleie</h3>
+                    <p>Der mengenmäßig größte einzeln ausgewiesene Bestandteil der Mischung je Kapsel.</p>
+                </article>
+                <article class="ingredient-highlight">
+                    <span class="ingredient-amount">233 mg</span>
+                    <h3>Leinsamen &amp; Flohsamenschalen</h3>
+                    <p>Leinsamenpulver mit 130 mg und Flohsamenschalenpulver mit 103 mg – zwei weitere pflanzliche Bestandteile mit bezifferter Menge.</p>
+                </article>
+                <article class="ingredient-highlight">
+                    <span class="ingredient-amount">4 weitere Pflanzenstoffe</span>
+                    <h3>Pflanzliche Ergänzung</h3>
+                    <p>Apfelpektin und Konjakwurzel mit je 8,5 mg sowie Schwarznussschale und Pflaume mit je 5 mg laut Etikett.</p>
+                </article>
+                <article class="ingredient-highlight">
+                    <span class="ingredient-amount">1,5 Mrd. KBE</span>
+                    <h3>Lactobacillus acidophilus</h3>
+                    <p>Als lebende Bakterienkultur mit 1,5 Milliarden koloniebildenden Einheiten je Kapsel ausgewiesen (5 mg).</p>
+                </article>
+            </div>
+
+            <details class="ingredient-details">
+                <summary>Alle 8 mengenmäßig ausgewiesenen Bestandteile prüfen <span aria-hidden="true">+</span></summary>
+                <div class="ingredient-table-wrap">
+                    <table class="ingredient-table">
+                        <caption>Zusammensetzung je Kapsel laut offiziellem CleanseSana-Etikett, Version EU_DE_EMCB_141_01_120925</caption>
+                        <thead><tr><th scope="col">Bestandteil</th><th scope="col">Art</th><th scope="col">Menge je Kapsel</th><th scope="col">Sachliche Einordnung</th></tr></thead>
+                        <tbody>
+                                <tr>
+                                    <th scope="row">Gemahlene Haferkleie<small>Avena sativa</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>430 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Die größte einzeln ausgewiesene Menge der Mischung. Das belegt die enthaltene Menge, aber keine Wirkung des fertigen Produkts.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Leinsamenpulver<small>Linum usitatissimum</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>130 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Als Bestandteil der Mischung ausgewiesen; daraus folgt kein Wirksamkeitsnachweis für CleanseSana.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Flohsamenschalenpulver<small>Plantago ovata</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>103 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Die Zutat ist mengenmäßig belegt; ein Ballaststoffgehalt je Kapsel wird auf dem vorliegenden Etikett nicht gesondert beziffert.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Apfelpektin-Pulver<small>Malus spp., aus Frucht</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>8,5 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Als Bestandteil der Mischung ausgewiesen; das Etikett nennt keine Standardisierung.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Teufelszungenpulver (Konjak)<small>Amorphophallus konjac, aus Knollen/Wurzel</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>8,5 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Die Zutat ist belegt; ein Glucomannan-Gehalt wird nicht genannt.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Schwarznuss-Schale<small>Juglans nigra</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>5 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Als Bestandteil der Mischung ausgewiesen; daraus folgt kein Produktversprechen.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Pflaume<small>Prunus domestica, Frucht</small></th>
+                                    <td data-label="Art">Pflanzlicher Bestandteil</td>
+                                    <td data-label="Menge je Kapsel"><strong>5 mg</strong></td>
+                                    <td data-label="Sachliche Einordnung">Als Fruchtbestandteil ausgewiesen; keine produktbezogene Wirkung wird daraus abgeleitet.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Lactobacillus acidophilus<small>lebende Bakterienkultur</small></th>
+                                    <td data-label="Art">Bakterienkultur</td>
+                                    <td data-label="Menge je Kapsel"><strong>1,5 Mrd. KBE (5 mg)</strong></td>
+                                    <td data-label="Sachliche Einordnung">Die Keimzahl ist je Kapsel ausgewiesen; ein Nachweis für eine bestimmte Wirkung des Gesamtprodukts ergibt sich daraus nicht.</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <div class="ingredient-bottom-grid">
+                <div class="other-ingredients">
+                    <h3>Weitere Zutaten laut Etikett</h3>
+                    <p>Überzugsmittel (Hypromellose) · Füllstoff (Reismehl) · Rieselhilfsmittel (Magnesiumsalze von Speisefettsäuren)</p>
+                    <p class="muted">Für diese Zutaten nennt die vorliegende Tabelle keine separaten Einzelmengen.</p>
+                </div>
+                <aside class="ingredient-boundary" aria-labelledby="ingredient-boundary-title">
+                    <h3 id="ingredient-boundary-title">Was daraus nicht folgt</h3>
+                    <p>Das Vorhandensein eines bekannten Einzelstoffs beweist weder die Wirksamkeit der Gesamtformel noch eine bestimmte Wirkung auf Verdauung oder Darm. Der Gesamtgehalt an Ballaststoffen je Kapsel, Standardisierungen sowie ein Glucomannan- oder Pektingehalt werden auf dem vorliegenden Etikett nicht beziffert.</p>
+                </aside>
+            </div>
+            <div class="ingredient-cta-row">
+                <div><strong>Passt die dokumentierte Zusammensetzung zu Ihrer Kaufentscheidung?</strong><span>Dann können Sie Preise und Verfügbarkeit beim Anbieter prüfen.</span></div>
+                <a class="button button-primary outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-ingredients" data-cta-position="ingredients">Aktuelle Angebote ansehen <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad" id="kriterien" data-track-section="view_buying_criteria">
+        <div class="container">
+            <div class="section-heading split-heading">
+                <div><p class="eyebrow">Die Entscheidung vorbereiten</p><h2>Worauf sollte man bei Ballaststoff-Kapseln mit Bakterienkulturen achten?</h2></div>
+                <p>Die folgenden Punkte helfen, die praktische Kaufentscheidung für ein konkretes Produkt vorzubereiten.</p>
+            </div>
+            <div class="criteria-grid">
+                <article class="criteria-card"><span>01</span><h3>Transparenz der Inhaltsstoffe</h3><p>Eine nachvollziehbare Zutatenliste und klare Mengenangaben sind die Grundlage für jede sachliche Einordnung. Ohne offizielles Etikett bleiben Aussagen zu einzelnen Wirkstoffen offen.</p></article>
+                <article class="criteria-card"><span>02</span><h3>Dosierungsangaben</h3><p>Nur mit einer konkreten Verzehrempfehlung lässt sich beurteilen, wie ein Produkt im Alltag eingesetzt wird und wie lange eine Flasche ungefähr reicht.</p></article>
+                <article class="criteria-card"><span>03</span><h3>Anwendung</h3><p>Prüfen Sie, ob die Anwendung verständlich beschrieben ist und zu Ihren Gewohnheiten passt. Praktisch bedeutet nicht automatisch besser.</p></article>
+                <article class="criteria-card"><span>04</span><h3>Kapselzahl und Nutzungsdauer</h3><p>Die Zahl der Flaschen sagt allein wenig aus. Kapselzahl und tägliche Menge gehören zusammen, wenn man die Reichweite beurteilen möchte.</p></article>
+                <article class="criteria-card"><span>05</span><h3>Preis je vergleichbarer Produktmenge</h3><p>Der Gesamtpreis ist nur ein Teil der Rechnung. Der rechnerische Preis je Flasche mit 30 Kapseln macht unterschiedliche Angebote besser vergleichbar.</p></article>
+                <article class="criteria-card"><span>06</span><h3>Paketstruktur</h3><p>Mehr Flaschen können den Stückpreis verändern, erhöhen aber auch den Gesamtbetrag. Entscheidend ist, ob die Menge zur eigenen Kaufentscheidung passt.</p></article>
+                <article class="criteria-card"><span>07</span><h3>Rückgabebedingungen</h3><p>Eine genannte Garantie ist kein Ergebnisversprechen. Lesen Sie Fristen, Voraussetzungen und den Ablauf einer Rückgabe im aktuellen Anbietertext.</p></article>
+                <article class="criteria-card"><span>08</span><h3>Anbieter und Checkout</h3><p>Vor der Bestellung sollte klar sein, bei wem der Kauf abgeschlossen wird, welche Zahlungsseite erscheint und welche Bedingungen dort gelten.</p></article>
+                <article class="criteria-card"><span>09</span><h3>Realistische Erwartungshaltung</h3><p>Nahrungsergänzungsmittel sind kein Ersatz für Ernährung, Bewegung oder medizinische Behandlung. Eine seriöse Kaufentscheidung braucht Raum für Grenzen und Unsicherheit.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad section-tint" id="kapseln-pulver">
+        <div class="container comparison-layout">
+            <div><p class="eyebrow">Formatfrage</p><h2>Kapseln oder Pulver?</h2><p class="section-intro">Bei der Formatwahl geht es vor allem um die praktische Nutzung — nicht um pauschale Aussagen über eine bessere Wirkung.</p></div>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <caption>Praktischer Vergleich der Darreichungsformen</caption>
+                    <thead><tr><th scope="col">Aspekt</th><th scope="col">Kapseln</th><th scope="col">Pulver</th></tr></thead>
+                    <tbody>
+                        <tr><th scope="row">Verwendung</th><td>Als einzelne Einheit einnehmen; die konkrete Menge hängt vom Etikett ab.</td><td>In Flüssigkeit einrühren; die konkrete Anwendung hängt vom Etikett ab.</td></tr>
+                        <tr><th scope="row">Dosierbarkeit</th><td>Die Einheit ist vorportioniert, sofern die Packungsangaben eindeutig sind.</td><td>Die Menge lässt sich variieren, wenn Dosierhilfe und Angaben eindeutig sind.</td></tr>
+                        <tr><th scope="row">Transport</th><td>Einzelne Kapseln lassen sich oft unkompliziert mitnehmen.</td><td>Dose und Dosierlöffel brauchen unterwegs mehr Platz und sollten trocken bleiben.</td></tr>
+                        <tr><th scope="row">Persönliche Vorliebe</th><td>Geeignet für Menschen, die eine feste Darreichungsform bevorzugen.</td><td>Geeignet für Menschen, die Pulver in Getränken bevorzugen.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad" id="faktencheck" data-track-section="view_cleansesana_factcheck">
+        <div class="container">
+            <div class="section-heading split-heading">
+                <div><p class="eyebrow">Produktbezogene Einordnung</p><h2>CleanseSana im Faktencheck</h2></div>
+                <p>Die folgende Übersicht beschränkt sich auf Angaben, die für diese Version dokumentiert sind. Wo eine Prüfung fehlt, steht das ausdrücklich dabei.</p>
+            </div>
+            <div class="facts-layout">
+                <div class="facts-box">
+                    <div class="facts-box-head"><span class="facts-label">Faktenblatt</span><span class="status-dot">Stand 05.09.2026</span></div>
+                    <dl class="facts-list">
+                        <div><dt>Produkt</dt><dd>CleanseSana</dd></div>
+                        <div><dt>Format</dt><dd>Kapseln</dd></div>
+                        <div><dt>Reguläre Produktgröße</dt><dd>30 Kapseln (45 g) laut aktuellem Etikett</dd></div>
+                        <div><dt>Anwendung</dt><dd>Erwachsene: 1 Kapsel täglich mit Nahrung. laut Etikett</dd></div>
+                        <div><dt>Angebote</dt><dd>1er / 3er / 6er — 30 / 90 / 180 Kapseln Gesamtmenge</dd></div>
+                        <div><dt>Kauf</dt><dd>Einmalige Zahlung, kein automatisches Abo</dd></div>
+                        <div><dt>Checkout</dt><dd>Digistore24</dd></div>
+                        <div><dt>EU-Vertrieb</dt><dd>Digistore24 MSLW Limited, Dublin, Irland laut Etikett</dd></div>
+                        <div><dt>Garantie</dt><dd>60 Tage laut Anbieter</dd></div>
+                        <div><dt>Kennzeichnung</dt><dd>Nahrungsergänzungsmittel mit Pflanzenstoffen und lebenden Bakterienkulturen</dd></div>
+                        <div><dt>Herstellung</dt><dd>Aus in- und ausländischen Inhaltsstoffen in den USA hergestellt.</dd></div>
+                        <div><dt>Aufbewahrung</dt><dd>Kühl und trocken unter 30 °C laut Etikett</dd></div>
+                    </dl>
+                    <p class="facts-footnote">Die Angaben zur Produktkennzeichnung beziehen sich auf das aktuelle offizielle Etikett der 30-Kapsel-Flasche. Sie sind keine individuelle medizinische Beratung.</p>
+                </div>
+                <div class="facts-copy">
+                    <div class="facts-copy-head"><h3>Was bedeutet das für Sie als Käufer?</h3><img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-1.webp" width="601" height="1200" loading="lazy" decoding="async" alt="CleanseSana Kapseln – reguläre Produktgröße 30 Kapseln"></div>
+                    <p>CleanseSana ist als Kapselprodukt mit drei dokumentierten Paketgrößen eingeordnet. Das macht einen Preisvergleich möglich. Das aktuelle Etikett liefert außerdem eine Kapselzahl und eine allgemeine Anwendung für Erwachsene, die bei der Reichweitenrechnung berücksichtigt werden kann.</p>
+                    <aside class="label-note" aria-labelledby="label-note-title">
+                        <h3 id="label-note-title">Wichtige Hinweise laut Etikett</h3>
+                        <p>Die folgenden Punkte sind eine kurze Zusammenfassung der Produktkennzeichnung — keine individuelle medizinische Beratung.</p>
+                        <ul>
+                            <li>Nicht für Personen unter 18 Jahren oder für schwangere oder stillende Frauen geeignet.</li>
+                            <li>Laut Etikett vor der Verwendung ärztlichen Rat einholen, insbesondere bei Medikamenteneinnahme, gesundheitlichen Einschränkungen oder ärztlicher Aufsicht; eine Verwendung bei gleichzeitiger Einnahme von Arzneimitteln wird nicht empfohlen.</li>
+                            <li>Bei einer Steigerung der Ballaststoffaufnahme laut Etikett auf eine ausreichende Flüssigkeitszufuhr achten.</li>
+                        </ul>
+                    </aside>
+                    <ul class="buyer-takeaways">
+                        <li><strong>1er-Angebot:</strong> 30 Kapseln und geringster Gesamtbetrag unter den dokumentierten Angeboten.</li>
+                        <li><strong>3er-Angebot:</strong> 90 Kapseln und rechnerisch €20 günstiger je Flasche als das 1er-Angebot.</li>
+                        <li><strong>6er-Angebot:</strong> 180 Kapseln und niedrigster Preis je Flasche in diesem Vergleich.</li>
+                        <li><strong>Garantie:</strong> Die vom Anbieter genannte 60-Tage-Garantie kann das finanzielle Entscheidungsrisiko reduzieren — vorbehaltlich der Anbieterbedingungen.</li>
+                        <li><strong>Checkout:</strong> Der endgültige Kauf wird über Digistore24 abgeschlossen.</li>
+                    </ul>
+                    <p>Preise, Versand und Rückgabebedingungen können sich ändern und sollten vor der Bestellung im aktuellen Checkout kontrolliert werden.</p>
+                    <a class="text-link" href="#preise">Zu Paketen und Preisen <span aria-hidden="true">↘</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad section-muted" id="preise" data-track-section="view_pricing">
+        <div class="container">
+            <div class="section-heading split-heading">
+                <div><p class="eyebrow">Pakete &amp; Kosten</p><h2>Welches Paket passt zu Ihrer Entscheidung?</h2></div>
+                <p>Preisstand: 05.09.2026. Größere Pakete senken den rechnerischen Preis je Flasche, erhöhen aber den Gesamtbetrag.</p>
+            </div>
+            <div class="price-grid">
+                    <article class="price-card">
+                        <div class="price-card-top"><span>1er-Angebot</span><span class="price-note">Kleinster Einstieg</span></div>
+                        <div class="price-card-media"><img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-1.webp" width="601" height="1200" loading="lazy" decoding="async" alt="CleanseSana Kapseln – 1er-Angebot, dargestellt mit einer Flasche à 30 Kapseln"></div>
+                        <p class="price-total">€69,00</p>
+                        <p class="price-volume">Gesamtmenge: 30 Kapseln</p>
+                        <p class="price-shipping">€9 Versandgebühren</p>
+                        <p class="price-unit">€69,00 je Flasche (30 Kapseln)</p>
+                        <div class="price-divider"></div>
+                        <p class="price-detail">Kleinster Gesamtbetrag der dokumentierten Pakete</p>
+                        <a class="button button-outline outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-1-bottle" data-cta-position="pricing">1er-Paket beim Anbieter ansehen <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="price-card">
+                        <div class="price-card-top"><span>3er-Angebot</span></div>
+                        <div class="price-card-media"><img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-3.webp" width="1309" height="1200" loading="lazy" decoding="async" alt="CleanseSana Kapseln – 3er-Angebot, dargestellt mit Flaschen à 30 Kapseln"></div>
+                        <p class="price-total">€147,00</p>
+                        <p class="price-volume">Gesamtmenge: 90 Kapseln</p>
+                        <p class="price-shipping">Kostenloser Versand laut Anbieter</p>
+                        <p class="price-unit">€49,00 je Flasche (30 Kapseln) · rechnerisch</p>
+                        <div class="price-divider"></div>
+                        <p class="price-detail price-detail-positive">€20 weniger je Flasche als beim 1er-Angebot</p>
+                        <a class="button button-outline outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-3-bottles" data-cta-position="pricing">3er-Paket beim Anbieter ansehen <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="price-card price-card-featured">
+                        <div class="price-card-top"><span>6er-Angebot</span><span class="price-note">Niedrigster Preis je Flasche</span></div>
+                        <div class="price-card-media"><img src="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/img/cleansesana-6.webp" width="1556" height="1200" loading="lazy" decoding="async" alt="CleanseSana Kapseln – 6er-Angebot, dargestellt mit Flaschen à 30 Kapseln"></div>
+                        <p class="price-total">€234,00</p>
+                        <p class="price-volume">Gesamtmenge: 180 Kapseln</p>
+                        <p class="price-shipping">Kostenloser Versand laut Anbieter</p>
+                        <p class="price-unit">€39,00 je Flasche (30 Kapseln) · rechnerisch</p>
+                        <div class="price-divider"></div>
+                        <p class="price-detail price-detail-positive">€10 weniger je Flasche als beim 3er-Angebot</p>
+                        <a class="button button-outline outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-6-bottles" data-cta-position="pricing">6er-Paket beim Anbieter ansehen <span aria-hidden="true">↗</span></a>
+                    </article>
+            </div>
+            <p class="packaging-note"><strong>Hinweis zur Reichweite:</strong> Laut Etikett enthält eine Flasche 30 Kapseln (Nettogewicht 45 g). Bei einer Kapsel täglich entspricht eine Flasche rechnerisch etwa 30 Tagen; die Gesamtmenge eines Pakets ergibt sich aus der Zahl der Flaschen.</p>
+            <p class="shipping-note"><strong>Aktuell dokumentierter Versand:</strong> €9 beim 1er-Paket; kostenloser Versand beim 3er- und 6er-Paket laut Angebotsseite des Anbieters. Preise und Bedingungen können sich ändern – maßgeblich ist der aktuelle Checkout.</p>
+        </div>
+    </section>
+
+    <section class="section-pad" id="vor-und-nachteile">
+        <div class="container pros-cons-grid">
+            <div><p class="eyebrow">Abwägung</p><h2>Vor- und Nachteile</h2><p class="section-intro">Eine Kaufberatung sollte auch die Punkte nennen, die gegen eine vorschnelle Entscheidung sprechen.</p></div>
+            <div class="pros-cons-columns">
+                <div class="pros-cons-card positive"><h3><span aria-hidden="true">+</span> Mögliche Vorteile</h3><ul><li>Kapselformat für Menschen mit entsprechender Vorliebe.</li><li>Dokumentierte Auswahl von 1er-, 3er- und 6er-Angeboten.</li><li>60-Tage-Geld-zurück-Garantie laut Anbieterangabe.</li><li>Checkout über Digistore24.</li><li>Der rechnerische Stückpreis je Flasche sinkt bei größeren Angeboten in den vorliegenden Preisen.</li></ul></div>
+                <div class="pros-cons-card caution"><h3><span aria-hidden="true">!</span> Zu beachten</h3><ul><li>Etikett und Dosierung vor dem Kauf prüfen.</li><li>Preise und Versand können sich ändern.</li><li>Nahrungsergänzungsmittel liefern kein fest zugesagtes Ergebnis.</li><li>Die endgültigen Angebots- und Rückgabebedingungen gelten beim Anbieter.</li></ul></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad section-tint" id="zielgruppe">
+        <div class="container audience-grid">
+            <div><p class="eyebrow">Passt das zu Ihnen?</p><h2>Für wen kann CleanseSana eine prüfenswerte Option sein?</h2><p class="section-intro">Nicht jede Kaufentscheidung braucht das größte Paket. Interessant kann CleanseSana vor allem für Menschen sein, die:</p></div>
+            <ul class="check-list"><li>eine Kapsel statt Pulver oder Tropfen bevorzugen;</li><li>eine vollständig einsehbare Zusammensetzung wichtig finden;</li><li>zwischen kleinerem Einstieg und günstigerem Mengenpreis wählen möchten;</li><li>eine einmalige Zahlung statt eines automatischen Abos suchen;</li><li>vor dem Kauf Etikett, Warnhinweise und Checkout-Bedingungen prüfen.</li></ul>
+            <div class="audience-not"><h3>Für wen eher nicht?</h3><ul><li>Wer ein fest zugesagtes Ergebnis erwartet.</li><li>Wer einen Ersatz für eine medizinische Behandlung sucht.</li><li>Wer grundsätzlich kein Nahrungsergänzungsmittel verwenden möchte.</li><li>Wer die offiziellen Produkt- und Anbieterbedingungen nicht prüfen möchte.</li></ul><p class="muted">Bei individuellen gesundheitlichen Fragen wenden Sie sich bitte an eine qualifizierte Fachperson.</p></div>
+        </div>
+    </section>
+
+    <section class="section-pad" id="faq">
+        <div class="container faq-layout">
+            <div class="faq-intro"><p class="eyebrow">Klar beantwortet</p><h2>Häufige Fragen</h2><p class="section-intro">Die Antworten bleiben bei den Informationen, die sich in dieser Version nachvollziehbar einordnen lassen.</p></div>
+            <div class="faq-list">
+                    <details class="faq-item" data-faq-id="faq-1">
+                        <summary>Was ist CleanseSana?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>CleanseSana wird als Nahrungsergänzungsmittel in Kapselform angeboten. Die reguläre Produktgröße laut aktuellem offiziellen Etikett beträgt 30 Kapseln (Nettogewicht 45 g); das Etikett nennt Pflanzenstoffe sowie lebende Bakterienkulturen. Auf dieser Seite ordnen wir das Produkt anhand von Format, Angebotsstruktur, Preisangaben und den verfügbaren Anbieterinformationen ein.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-2">
+                        <summary>Welche Packungsgrößen gibt es?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Dokumentiert sind 1er-, 3er- und 6er-Angebote zu €69,00, €147,00 und €234,00. Sie entsprechen 30, 90 bzw. 180 Kapseln Gesamtmenge. Aktuell kommen beim 1er-Angebot €9 Versand hinzu; für das 3er- und 6er-Angebot ist der Versand laut Anbieter kostenlos. Konditionen können sich ändern und sollten im Checkout geprüft werden.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-3">
+                        <summary>Wie viel kostet CleanseSana?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Zum bestätigten Preisstand vom 05.09.2026 sind €69,00 für das 1er-Angebot, €147,00 für das 3er-Angebot und €234,00 für das 6er-Angebot dokumentiert. Preise können sich ändern.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-4">
+                        <summary>Welche CleanseSana-Paketgröße ist je Flasche am günstigsten?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Im dokumentierten Preisstand ist das 6er-Angebot mit rechnerisch €39,00 je Flasche (30 Kapseln) am günstigsten. Das 3er-Angebot liegt bei €49,00, das 1er-Angebot bei €69,00 je Flasche.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-5">
+                        <summary>Wie lange reicht ein Paket?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Laut aktuellem Etikett nehmen Erwachsene eine Kapsel täglich mit Nahrung ein. Rechnerisch entspricht eine Flasche mit 30 Kapseln etwa 30 Tagen. Die Gesamtmengen der 1er-, 3er- und 6er-Angebote entsprechen damit ungefähr 30, 90 oder 180 Tagen. Das ist eine Orientierung auf Basis der Etikettangabe und keine individuelle Anwendungsempfehlung.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-6">
+                        <summary>Wo wird die Bestellung abgeschlossen?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Die Bestellung wird nicht auf dieser Ratgeberseite abgeschlossen. Der Checkout erfolgt beim Anbieter über Digistore24, sofern Sie sich nach dem Faktencheck für den Angebotslink entscheiden.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-7">
+                        <summary>Wo wird CleanseSana bestellt?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Die Bestellung wird über die aktuelle Angebotsseite des Anbieters gestartet und im Digistore24-Checkout abgeschlossen. KaufKlarheit ist weder Verkäufer noch Checkout-Anbieter.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-8">
+                        <summary>Gibt es ein Abonnement?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Für die dokumentierten CleanseSana-Pakete wurde eine einmalige Zahlung bestätigt; sie sind nicht als automatisches Abonnement vorgesehen. Prüfen Sie vor der Bestellung trotzdem die aktuell angezeigten Bedingungen im Checkout.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-9">
+                        <summary>Gibt es eine Geld-zurück-Garantie?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Der Anbieter nennt eine 60-Tage-Geld-zurück-Garantie. Die definitiven Bedingungen, Fristen und Ausschlüsse sollten im aktuellen Checkout und in den Anbieterbedingungen geprüft werden.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-10">
+                        <summary>Welche Rückgabebedingungen gelten?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Die endgültigen Rückgabebedingungen gelten beim Anbieter und müssen im aktuellen Checkout beziehungsweise in den Anbieterbedingungen geprüft werden. Diese Ratgeberseite ersetzt keine Vertragsbedingungen.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-11">
+                        <summary>Woher stammen die Angaben zu den Inhaltsstoffen?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Die Zusammensetzung und Mengen auf dieser Seite stammen aus dem aktuellen offiziellen Etikett der 30-Kapsel-Flasche, Version EU_DE_EMCB_141_01_120925. Die vollständige Zutatenliste wird sachlich wiedergegeben und nicht in Wirksamkeitsversprechen umgedeutet.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-12">
+                        <summary>Welche Inhaltsstoffe stehen auf dem aktuellen Etikett?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Das aktuelle Etikett weist 8 Bestandteile mit Mengen je Kapsel aus: gemahlene Haferkleie mit 430 mg, Leinsamenpulver mit 130 mg, Flohsamenschalenpulver mit 103 mg, Apfelpektin und Konjak mit je 8,5 mg, Schwarznussschale und Pflaume mit je 5 mg sowie Lactobacillus acidophilus mit 1,5 Milliarden KBE. Die vollständige, sachlich eingeordnete Liste steht im Abschnitt „Inhaltsstoffe“. Die Zusammensetzung allein belegt keine bestimmte Wirkung.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-13">
+                        <summary>Was sollte man bei Nahrungsergänzungsmitteln beachten?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Achten Sie auf ein verifiziertes Etikett, klare Dosierungsangaben, nachvollziehbare Anbieterinformationen, den Gesamtpreis, die Rückgabebedingungen und eine realistische Erwartung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung oder medizinische Behandlung.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-14">
+                        <summary>Sind Kapseln grundsätzlich besser als Pulver?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Nein. Kapseln und Pulver haben unterschiedliche praktische Eigenschaften. Welche Form passt, hängt von Dosierbarkeit, Alltag, Transport und persönlicher Vorliebe ab — nicht von einer pauschalen Überlegenheitsbehauptung.</p></div>
+                    </details>
+                    <details class="faq-item" data-faq-id="faq-15">
+                        <summary>Wo finde ich die aktuellen Bedingungen?<span aria-hidden="true">+</span></summary>
+                        <div class="faq-answer"><p>Die aktuellen Preise, Versandangaben, Rückgabebedingungen und sonstigen Bestellbedingungen stehen im Checkout beziehungsweise in den verlinkten Anbieterbedingungen. Diese Angaben können sich ändern.</p></div>
+                    </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pad final-cta-section">
+        <div class="container final-cta">
+            <div><p class="eyebrow">Ihre Entscheidung</p><h2>CleanseSana-Pakete und aktuelle Verfügbarkeit prüfen</h2><p>Sie kennen jetzt Zusammensetzung, Anwendung, Preisunterschiede und Grenzen. Beim Anbieter sehen Sie die endgültigen Konditionen vor dem Kauf.</p></div>
+            <a class="button button-primary outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-final" data-cta-position="final">Aktuelle Angebote öffnen <span aria-hidden="true">↗</span></a>
+        </div>
+    </section>
+
+    <div class="mobile-sticky-cta" data-sticky-cta aria-hidden="true">
+        <a class="button button-primary outbound-cta" href="https://cleansesana.com/cleansesana-pdp-fe" data-product="cleansesana" data-cta-id="offer-sticky-mobile" data-cta-position="sticky-mobile">Aktuelle Pakete prüfen <span aria-hidden="true">↗</span></a>
+    </div>
+</main>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"KaufKlarheit"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was ist CleanseSana?","acceptedAnswer":{"@type":"Answer","text":"CleanseSana wird als Nahrungsergänzungsmittel in Kapselform angeboten. Die reguläre Produktgröße laut aktuellem offiziellen Etikett beträgt 30 Kapseln (Nettogewicht 45 g); das Etikett nennt Pflanzenstoffe sowie lebende Bakterienkulturen. Auf dieser Seite ordnen wir das Produkt anhand von Format, Angebotsstruktur, Preisangaben und den verfügbaren Anbieterinformationen ein."}},{"@type":"Question","name":"Welche Packungsgrößen gibt es?","acceptedAnswer":{"@type":"Answer","text":"Dokumentiert sind 1er-, 3er- und 6er-Angebote zu €69,00, €147,00 und €234,00. Sie entsprechen 30, 90 bzw. 180 Kapseln Gesamtmenge. Aktuell kommen beim 1er-Angebot €9 Versand hinzu; für das 3er- und 6er-Angebot ist der Versand laut Anbieter kostenlos. Konditionen können sich ändern und sollten im Checkout geprüft werden."}},{"@type":"Question","name":"Wie viel kostet CleanseSana?","acceptedAnswer":{"@type":"Answer","text":"Zum bestätigten Preisstand vom 05.09.2026 sind €69,00 für das 1er-Angebot, €147,00 für das 3er-Angebot und €234,00 für das 6er-Angebot dokumentiert. Preise können sich ändern."}},{"@type":"Question","name":"Welche CleanseSana-Paketgröße ist je Flasche am günstigsten?","acceptedAnswer":{"@type":"Answer","text":"Im dokumentierten Preisstand ist das 6er-Angebot mit rechnerisch €39,00 je Flasche (30 Kapseln) am günstigsten. Das 3er-Angebot liegt bei €49,00, das 1er-Angebot bei €69,00 je Flasche."}},{"@type":"Question","name":"Wie lange reicht ein Paket?","acceptedAnswer":{"@type":"Answer","text":"Laut aktuellem Etikett nehmen Erwachsene eine Kapsel täglich mit Nahrung ein. Rechnerisch entspricht eine Flasche mit 30 Kapseln etwa 30 Tagen. Die Gesamtmengen der 1er-, 3er- und 6er-Angebote entsprechen damit ungefähr 30, 90 oder 180 Tagen. Das ist eine Orientierung auf Basis der Etikettangabe und keine individuelle Anwendungsempfehlung."}},{"@type":"Question","name":"Wo wird die Bestellung abgeschlossen?","acceptedAnswer":{"@type":"Answer","text":"Die Bestellung wird nicht auf dieser Ratgeberseite abgeschlossen. Der Checkout erfolgt beim Anbieter über Digistore24, sofern Sie sich nach dem Faktencheck für den Angebotslink entscheiden."}},{"@type":"Question","name":"Wo wird CleanseSana bestellt?","acceptedAnswer":{"@type":"Answer","text":"Die Bestellung wird über die aktuelle Angebotsseite des Anbieters gestartet und im Digistore24-Checkout abgeschlossen. KaufKlarheit ist weder Verkäufer noch Checkout-Anbieter."}},{"@type":"Question","name":"Gibt es ein Abonnement?","acceptedAnswer":{"@type":"Answer","text":"Für die dokumentierten CleanseSana-Pakete wurde eine einmalige Zahlung bestätigt; sie sind nicht als automatisches Abonnement vorgesehen. Prüfen Sie vor der Bestellung trotzdem die aktuell angezeigten Bedingungen im Checkout."}},{"@type":"Question","name":"Gibt es eine Geld-zurück-Garantie?","acceptedAnswer":{"@type":"Answer","text":"Der Anbieter nennt eine 60-Tage-Geld-zurück-Garantie. Die definitiven Bedingungen, Fristen und Ausschlüsse sollten im aktuellen Checkout und in den Anbieterbedingungen geprüft werden."}},{"@type":"Question","name":"Welche Rückgabebedingungen gelten?","acceptedAnswer":{"@type":"Answer","text":"Die endgültigen Rückgabebedingungen gelten beim Anbieter und müssen im aktuellen Checkout beziehungsweise in den Anbieterbedingungen geprüft werden. Diese Ratgeberseite ersetzt keine Vertragsbedingungen."}},{"@type":"Question","name":"Woher stammen die Angaben zu den Inhaltsstoffen?","acceptedAnswer":{"@type":"Answer","text":"Die Zusammensetzung und Mengen auf dieser Seite stammen aus dem aktuellen offiziellen Etikett der 30-Kapsel-Flasche, Version EU_DE_EMCB_141_01_120925. Die vollständige Zutatenliste wird sachlich wiedergegeben und nicht in Wirksamkeitsversprechen umgedeutet."}},{"@type":"Question","name":"Welche Inhaltsstoffe stehen auf dem aktuellen Etikett?","acceptedAnswer":{"@type":"Answer","text":"Das aktuelle Etikett weist 8 Bestandteile mit Mengen je Kapsel aus: gemahlene Haferkleie mit 430 mg, Leinsamenpulver mit 130 mg, Flohsamenschalenpulver mit 103 mg, Apfelpektin und Konjak mit je 8,5 mg, Schwarznussschale und Pflaume mit je 5 mg sowie Lactobacillus acidophilus mit 1,5 Milliarden KBE. Die vollständige, sachlich eingeordnete Liste steht im Abschnitt „Inhaltsstoffe“. Die Zusammensetzung allein belegt keine bestimmte Wirkung."}},{"@type":"Question","name":"Was sollte man bei Nahrungsergänzungsmitteln beachten?","acceptedAnswer":{"@type":"Answer","text":"Achten Sie auf ein verifiziertes Etikett, klare Dosierungsangaben, nachvollziehbare Anbieterinformationen, den Gesamtpreis, die Rückgabebedingungen und eine realistische Erwartung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung oder medizinische Behandlung."}},{"@type":"Question","name":"Sind Kapseln grundsätzlich besser als Pulver?","acceptedAnswer":{"@type":"Answer","text":"Nein. Kapseln und Pulver haben unterschiedliche praktische Eigenschaften. Welche Form passt, hängt von Dosierbarkeit, Alltag, Transport und persönlicher Vorliebe ab — nicht von einer pauschalen Überlegenheitsbehauptung."}},{"@type":"Question","name":"Wo finde ich die aktuellen Bedingungen?","acceptedAnswer":{"@type":"Answer","text":"Die aktuellen Preise, Versandangaben, Rückgabebedingungen und sonstigen Bestellbedingungen stehen im Checkout beziehungsweise in den verlinkten Anbieterbedingungen. Diese Angaben können sich ändern."}}]}</script>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <p class="footer-brand">KaufKlarheit</p>
+            <p class="muted">Unabhängiger Ratgeber mit transparenter Affiliate-Kennzeichnung. Keine offizielle CleanseSana-Webseite.</p>
+            <p class="muted footer-contact">Kontakt: <a href="mailto:kontakt@kaufklarheit.de">kontakt@kaufklarheit.de</a></p>
+        </div>
+        <nav aria-label="Rechtliche Navigation" class="footer-links">
+            <a href="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/impressum.html">Impressum</a>
+            <a href="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/datenschutz.html">Datenschutz</a>
+            <a href="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/affiliate-hinweis.html">Affiliate-Hinweis</a>
+            <a href="https://affiliate-hub.sana-socials.com/preview/kaufklarheit-cleansesana/kontakt.html">Kontakt</a>
+        </nav>
+    </div>
+    <div class="container footer-meta">
+        <span>Aktualisiert am 05.09.2026</span>
+    </div>
+</footer>
+</div>
