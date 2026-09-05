@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VitaSana Collection – alle 8 Rezepturen zum VIP-Preis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=Lato:wght@400;700&display=swap">
+<style>
+:root{color-scheme:light;
+  --cream:#FFF8EE;--card:#FFFFFF;--line:#E8DDC7;--line2:#D6C8AA;
+  --ink:#17251F;--mut:#55655D;--green:#064225;--green2:#0B5C34;
+  --cta:#1E8E4E;--cta2:#176F3D;--gold:#C9A227;--gold2:#A8851C;--goldsoft:#FBF3D9;
+  --save:#B3402F;--navy:#0F233E;
+  --disp:"Montserrat",-apple-system,"Segoe UI",Arial,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro",-apple-system,"Segoe UI",Arial,sans-serif;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green2)}
+h1,h2,h3{font-family:var(--disp);letter-spacing:-.01em;text-wrap:balance;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.eyebrow{font-family:var(--disp);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2)}
+svg{width:18px;height:18px;flex:0 0 18px}
+
+/* header */
+.top{background:var(--card);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px}
+.logo{width:min(300px,58vw);height:auto}
+.trustline{display:flex;gap:22px;font-family:var(--disp);font-size:12.5px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
+.trustline span{display:flex;align-items:center;gap:6px}
+.trustline svg{color:var(--gold2)}
+@media(max-width:860px){.trustline span:not(:first-child){display:none}}
+
+/* hero */
+.hero{padding:40px 0 22px;background:linear-gradient(180deg,#FFFDF8 0%,var(--cream) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(28px,3.9vw,42px);font-weight:800;line-height:1.12;color:var(--green);margin:8px 0 12px}
+.hero .sub{font-size:19px;color:var(--mut);max-width:60ch;margin:0}
+.hero .sub b{color:var(--ink)}
+.steps{display:flex;flex-wrap:wrap;gap:8px 22px;margin:18px 0 0;padding:0;list-style:none;font-family:var(--disp);font-size:13px;font-weight:600;color:var(--green)}
+.steps li{display:flex;align-items:center;gap:8px}
+.steps i{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center}
+.formulator{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.formulator img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:0 0 72px}
+.formulator b{display:block;font-family:var(--disp);font-size:14px;color:var(--green)}
+.formulator span{font-size:14px;color:var(--mut);line-height:1.4}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:16px}.hero{padding:22px 0 14px}.steps{display:none}.formulator span{display:none}.formulator img{width:56px;height:56px;flex-basis:56px}.hero .sub{font-size:17.5px}}
+
+/* topic rail */
+.rail{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rail .wrap{display:flex;align-items:center;gap:10px;padding:9px 20px;overflow-x:auto;scrollbar-width:none}
+.rail .wrap::-webkit-scrollbar{display:none}
+.rail .lab{font-family:var(--disp);font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.1em;white-space:nowrap;padding-right:6px}
+.chip{white-space:nowrap;text-decoration:none;font-family:var(--disp);font-size:13.5px;font-weight:700;color:var(--green);background:var(--card);border:1.5px solid var(--line2);border-radius:999px;padding:7px 14px;transition:background .15s,color .15s,border-color .15s}
+.chip:hover{border-color:var(--green)}
+.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.chip.chip-sys{border-style:dashed}
+.chip:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* product block */
+.prod{padding:44px 0 34px;border-bottom:1px solid var(--line)}
+.prod:nth-of-type(even){background:#FCF5E9}
+.phead{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:center;margin-bottom:22px}
+.phead-img{height:200px;width:auto;justify-self:center;filter:drop-shadow(0 12px 18px rgba(6,66,37,.22))}
+.phead h2{font-size:clamp(26px,3.2vw,34px);font-weight:800;color:var(--green);margin:4px 0 8px}
+.prod.navy .phead h2{color:var(--navy)}
+.who{font-size:18.5px;margin:0 0 10px;max-width:62ch}
+.bul{list-style:none;margin:0;padding:0;display:grid;gap:5px;max-width:70ch}
+.bul li{display:flex;gap:9px;align-items:flex-start;font-size:16px}
+.bul svg{color:var(--cta);margin-top:3px}
+.facts{margin:10px 0 0;font-family:var(--disp);font-size:13px;font-weight:600;color:var(--green2);letter-spacing:.02em}
+.caution{margin:8px 0 0;font-size:13.5px;color:var(--mut);border-left:3px solid var(--gold);padding-left:10px;line-height:1.4}
+@media(max-width:700px){.phead{grid-template-columns:96px 1fr;gap:16px;align-items:start}.phead-img{height:140px}.who{font-size:17px}.bul li{font-size:15px}}
+
+/* tiers */
+.tiers{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:16px;align-items:stretch}
+.tier{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--card);border:1.5px solid var(--line2);border-radius:16px;padding:22px 18px 18px}
+.tier.hero{border:2.5px solid var(--gold);background:linear-gradient(180deg,#FFFDF6 0%,#fff 38%);box-shadow:0 18px 40px -22px rgba(6,66,37,.45);transform:translateY(-8px)}
+.tag{font-family:var(--disp);font-size:12.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green2);display:flex;flex-direction:column;gap:2px;line-height:1.2}
+.tag span{font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--mut)}
+.tier.hero .tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1E1A0A;border-radius:999px;padding:6px 14px;white-space:nowrap;flex-direction:row;gap:8px;align-items:baseline}
+.tier.hero .tag span{color:#3A3010}
+.tier-img{height:168px;width:auto;margin:14px 0 8px}
+.tier.hero .tier-img{height:190px;margin-top:18px}
+.tier h3{font-size:19px;font-weight:700;color:var(--ink)}
+.tier h3 em{font-style:normal;color:var(--green);font-weight:800}
+.supply{font-size:14px;color:var(--mut);margin-top:2px}
+.per{display:flex;align-items:baseline;gap:8px;margin:12px 0 2px;font-family:var(--disp);font-variant-numeric:tabular-nums}
+.per b{font-size:44px;font-weight:800;line-height:1;color:var(--green)}
+.tier.hero .per b{font-size:52px}
+.per span{font-size:13px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.total{font-family:var(--disp);font-size:16px;font-variant-numeric:tabular-nums}
+.total s{color:var(--mut);font-weight:600;margin-right:4px}
+.total b{font-weight:800}
+.save{display:inline-block;margin-top:8px;font-family:var(--disp);font-size:13.5px;font-weight:800;color:var(--save);background:#FBEBE6;border-radius:8px;padding:5px 10px;font-variant-numeric:tabular-nums}
+.incl{list-style:none;margin:14px 0 0;padding:14px 0 0;border-top:1px dashed var(--line2);width:100%;display:grid;gap:6px;font-size:15px;text-align:left}
+.incl li{display:flex;gap:8px;align-items:center}
+.incl svg{color:var(--cta)}
+.btn{display:block;width:100%;margin-top:16px;padding:16px 18px;border-radius:12px;background:var(--cta);color:#fff;text-decoration:none;text-align:center;font-family:var(--disp);font-size:17px;font-weight:800;letter-spacing:.01em;box-shadow:0 8px 18px -10px rgba(30,142,78,.9);transition:background .15s,transform .15s}
+.btn:hover{background:var(--cta2)} .btn:active{transform:translateY(1px)}
+.tier.hero .btn{font-size:18.5px;padding:18px}
+.btn.ghost{background:var(--green);box-shadow:none}
+.btn.ghost:hover{background:var(--green2)}
+.micro{margin-top:10px;font-size:12.5px;color:var(--mut)}
+@media(max-width:900px){.tier.hero .tag span{display:none}.tiers{grid-template-columns:1fr;gap:18px;margin-top:14px}.tier.hero{order:-1;transform:none}.tier{padding:24px 18px 18px}.tier-img{height:150px}.tier.hero .tier-img{height:170px}}
+
+/* 12-bottle bar */
+.yearbar{display:grid;grid-template-columns:110px 1fr auto 200px;gap:20px;align-items:center;background:var(--card);border:1.5px solid var(--line2);border-radius:14px;padding:14px 18px;margin-top:16px}
+.yearbar img{height:84px;width:auto;justify-self:center}
+.yb-text b{display:block;font-family:var(--disp);font-size:16px;color:var(--green)}
+.yb-text span{font-size:14px;color:var(--mut)}
+.yb-price{font-family:var(--disp);text-align:right;font-variant-numeric:tabular-nums;display:grid;justify-items:end;line-height:1.15}
+.yb-price b{font-size:30px;font-weight:800;color:var(--green)}
+.yb-price small{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.yb-price span{font-size:13px;margin-top:4px;color:var(--ink)} .yb-price s{color:var(--mut)}
+.yearbar .btn{margin-top:0;padding:14px 12px;font-size:15.5px}
+@media(max-width:900px){.yearbar{grid-template-columns:80px 1fr;row-gap:10px}.yb-price{grid-column:2;text-align:left;justify-items:start}.yearbar .btn{grid-column:1/-1}}
+
+/* systems */
+.systems{padding:46px 0 40px;background:var(--green);color:#EEF4F0}
+.systems .eyebrow{color:var(--gold)}
+.systems h2{font-size:clamp(26px,3.2vw,34px);font-weight:800;color:#fff;margin:6px 0 6px}
+.systems .lead{margin:0 0 24px;color:#C7D6CC;max-width:70ch;font-size:17.5px}
+.sysgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sys{background:var(--card);color:var(--ink);border-radius:16px;padding:18px 18px 18px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.sys img{height:150px;width:auto}
+.sys h3{font-size:19px;font-weight:800;color:var(--green);margin-top:10px}
+.sys .who{font-size:15.5px;color:var(--mut);margin:4px 0 0}
+.sys .incl{border-top:none;padding-top:8px;margin-top:8px;text-align:center}
+.sys .incl li{justify-content:center;font-family:var(--disp);font-weight:700;font-size:15px}
+.sys .per b{font-size:40px}
+.sys .caution{border:none;padding:0;text-align:center;font-size:12.5px}
+@media(max-width:900px){.sysgrid{grid-template-columns:1fr}}
+
+/* guarantee + trust */
+.guar{padding:44px 0}
+.guar .wrap{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;background:var(--card);border:1.5px solid var(--gold);border-radius:18px;padding:26px 28px}
+.seal{width:150px;height:150px}
+.guar h2{font-size:clamp(24px,3vw,30px);font-weight:800;color:var(--green);margin-bottom:8px}
+.guar p{margin:0;font-size:17.5px;max-width:70ch}
+@media(max-width:700px){.guar .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;padding:22px}}
+.trust{padding:0 0 44px}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.trust div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.4}
+.trust svg{color:var(--gold2);margin-top:2px;width:20px;height:20px;flex-basis:20px}
+.trust b{display:block;font-family:var(--disp);font-size:13px;color:var(--green)}
+.pay{grid-column:1/-1;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap}
+.pay img{height:36px;width:auto}
+.pay span{font-family:var(--disp);font-size:13px;font-weight:700;color:var(--green)}
+@media(max-width:900px){.trust .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.trust .wrap{grid-template-columns:1fr}.pay img{height:28px}}
+
+/* faq */
+.faq{padding:0 0 44px}
+.faq h2{font-size:clamp(24px,3vw,30px);font-weight:800;color:var(--green);margin-bottom:14px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;padding:0 18px}
+.faq summary{cursor:pointer;list-style:none;padding:14px 0;font-family:var(--disp);font-weight:700;font-size:16.5px;color:var(--ink);display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--gold2);flex:0 0 auto}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 16px;color:var(--mut);max-width:75ch}
+
+/* overview grid: all 8 products at a glance */
+.overview{padding:6px 0 26px}
+.overview .lab{font-family:var(--disp);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:0 0 10px}
+.ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.otile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;background:var(--card);border:1.5px solid var(--line2);border-radius:14px;padding:14px 10px 12px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s,box-shadow .15s}
+.otile:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 12px 24px -18px rgba(6,66,37,.5)}
+.otile img{height:118px;width:auto;margin-bottom:4px}
+.otile b{font-family:var(--disp);font-size:15.5px;font-weight:800;color:var(--green)}
+.otile span{font-size:13px;color:var(--mut);line-height:1.3}
+.otile em{font-style:normal;font-family:var(--disp);font-size:12.5px;font-weight:700;color:var(--gold2);margin-top:2px}
+@media(max-width:820px){.ogrid{grid-template-columns:repeat(3,1fr);gap:8px}.otile{padding:10px 6px 9px;gap:2px}.otile img{height:72px}.otile b{font-size:13px}.otile span{display:none}.otile em{font-size:11.5px}.overview{padding-bottom:16px}}
+
+/* footer: 1:1 replica of the live VitaSana Collection footer (section #004225, Lato 18px, Montserrat 13px disclaimer, Arial 15px legal line) */
+.site-footer{background:#004225;color:#fff;padding:20px 0;font-family:"Lato",Arial,sans-serif}
+.site-footer .fwrap{max-width:1170px;margin:0 auto;padding:0 5px}
+.fcols{display:grid;grid-template-columns:53.3fr 14.7fr 32.1fr;padding:10px 5px 0}
+.fcol{padding:10px 5px;font-size:18px;line-height:1.5em;font-weight:400}
+.fcol h4{font-family:inherit;font-size:1.25rem;font-weight:700;margin:0 0 .625rem;line-height:1.4;color:#fff;letter-spacing:0;text-wrap:initial}
+.fcol ul{margin:0;padding-left:1.5em;list-style-type:decimal}
+.fcol li{padding-inline-start:.5em;margin:0}
+.fcol p{margin:0 0 1em}
+.fcol p:last-child{margin-bottom:0}
+.fcol a{color:#fff;text-decoration:underline}
+.fmark{padding:10px 5px;text-align:center}
+.fmark img{height:50px;width:auto;display:inline-block}
+.fdisc{font-family:var(--disp);font-size:13px;font-weight:400;line-height:1.3em;text-align:center;color:#fff;margin:0 0 20px;padding:5px 5px 0}
+.flegal{font-family:Arial,sans-serif;font-size:15px;font-weight:400;line-height:1.6em;text-align:center;color:#004225;margin:0;padding:0 10px 10px}
+.flegal a{color:#fff;font-weight:700;text-decoration:none}
+.flegal a:hover{text-decoration:underline}
+.flegal .sep{color:#004225;margin:0 .35em}
+@media(max-width:820px){.fcols{grid-template-columns:1fr}}
+</style>
+<!-- dtc-build-20260905T151252 -->
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img class="logo" src="img/vitasana-collection-wordmark.webp" alt="VitaSana Collection" width="300">
+    <div class="trustline">
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l6 2.4v5.2c0 3.9-2.6 6.6-6 8.4-3.4-1.8-6-4.5-6-8.4V4.4L10 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 10l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Garantie</span>
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h10v8H2zM12 8h3.5L18 10.8V13h-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="5.5" cy="14.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="14.5" cy="14.5" r="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Kostenloser Versand ab 3 Flaschen</span>
+      <span><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="8.5" width="12" height="9" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6.5 8.5V6.3a3.5 3.5 0 017 0v2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Sichere Zahlung</span>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">VIP Wellness System · 8 Rezepturen · nur auf dieser Seite</div>
+      <h1>Alle 8 Rezepturen zum VIP-Preis. Wählen Sie Ihr Paket.</h1>
+      <p class="sub">Bis zu <b>58&nbsp;% unter dem Einzelpreis</b> von 69&nbsp;€ pro Flasche. Kostenloser Versand ab 3 Flaschen. <b>60 Tage Geld-zurück-Garantie</b> auf jede Bestellung.</p>
+      <ul class="steps">
+        <li><i>1</i>Paket wählen</li>
+        <li><i>2</i>Sicher bestellen über Digistore24</li>
+        <li><i>3</i>Lieferung in 3 bis 5 Werktagen mit Sendungsverfolgung</li>
+      </ul>
+    </div>
+    <div class="formulator">
+      <img src="img/dr-eric-wood.webp" alt="Dr. Eric Wood, ND" width="72" height="72">
+      <div><b>Rezepturen von Dr. Eric Wood, ND</b><span>Harvard-ausgebildet (Benson-Henry Institute), Professor für funktionelle Medizin (John Patrick University), über 17 Jahre funktionelle Medizin. Dosierung und Kombination jeder Rezeptur auf dieser Seite stammen aus seiner Hand.</span></div>
+    </div>
+  </div>
+</section>
+<section class="overview" aria-label="Alle Rezepturen">
+  <div class="wrap">
+    <p class="lab">Alle 8 Rezepturen der Collection · 30-Tage-Vorrat ab 29&nbsp;€ pro Flasche</p>
+    <div class="ogrid"><a class="otile" href="#slimsana"><img src="img/slimsana-1.webp" alt="SlimSana" decoding="async"><b>SlimSana</b><span>Gewicht & Heißhunger</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#glucosana"><img src="img/glucosana-1.webp" alt="GlucoSana" decoding="async"><b>GlucoSana</b><span>Blutzucker & Energie</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#metabosana"><img src="img/metabosana-1.webp" alt="MetaboSana" decoding="async"><b>MetaboSana</b><span>Stoffwechsel & Energie</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#nervesana"><img src="img/nervesana-1.webp" alt="NerveSana" decoding="async"><b>NerveSana</b><span>Nerven & Kribbeln</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#cleansesana"><img src="img/cleansesana-1.webp" alt="CleanseSana" decoding="async"><b>CleanseSana</b><span>Darm & Verdauung</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#ketosana"><img src="img/ketosana-1.webp" alt="KetoSana" decoding="async"><b>KetoSana</b><span>Keto & Low-Carb</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#curcumasana"><img src="img/curcumasana-1.webp" alt="CurcumaSana" decoding="async"><b>CurcumaSana</b><span>Gelenke & Beweglichkeit</span><em>ab 29 € pro Flasche</em></a><a class="otile" href="#vigorsana"><img src="img/vigorsana-1.webp" alt="VigorSana" decoding="async"><b>VigorSana</b><span>Männer-Vitalität</span><em>ab 29 € pro Flasche</em></a></div>
+  </div>
+</section>
+<nav class="rail" aria-label="Themen">
+  <div class="wrap"><span class="lab">Womit beginnen Sie?</span><a class="chip" href="#slimsana">Gewicht</a><a class="chip" href="#glucosana">Blutzucker</a><a class="chip" href="#metabosana">Stoffwechsel</a><a class="chip" href="#nervesana">Nerven</a><a class="chip" href="#cleansesana">Darm</a><a class="chip" href="#ketosana">Keto</a><a class="chip" href="#curcumasana">Gelenke</a><a class="chip" href="#vigorsana">Männer</a><a class="chip chip-sys" href="#systeme">3er-Systeme</a></div>
+</nav>
+<main>
+
+  <section class="prod" id="slimsana" aria-labelledby="h-slimsana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/slimsana-1.webp" alt="SlimSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Gewicht & Heißhunger</div>
+          <h2 id="h-slimsana">SlimSana</h2>
+          <p class="who">Für alle ab 40, bei denen weniger essen und mehr bewegen nicht mehr reicht.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Chrom trägt zu einem normalen Stoffwechsel von Makronährstoffen bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Chrom trägt zur Aufrechterhaltung eines normalen Blutzuckerspiegels bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit Grüntee-Extrakt, Apfelessig, Berberin, Ingwer, Zimt und Cayenne</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich zum Essen</p>
+          <p class="caution">Bei Diabetes oder blutzuckersenkenden Medikamenten vorher mit dem Arzt sprechen.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/slimsana-1.webp" alt="1 Flasche SlimSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>SlimSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663520">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/slimsana-6.webp" alt="6 Flaschen SlimSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>SlimSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663523">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/slimsana-3.webp" alt="3 Flaschen SlimSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>SlimSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663522">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/slimsana-12.webp" alt="12 Flaschen SlimSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen SlimSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663524">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="glucosana" aria-labelledby="h-glucosana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/glucosana-1.webp" alt="GlucoSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Blutzucker & Energie</div>
+          <h2 id="h-glucosana">GlucoSana</h2>
+          <p class="who">Für alle, die nach dem Essen abstürzen und um 15 Uhr kaum die Augen offen halten.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Chrom trägt zur Aufrechterhaltung eines normalen Blutzuckerspiegels bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Vitamin C trägt zur Verringerung von Müdigkeit und Ermüdung bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit Curcuma, Kakao, Berberin, Gymnema, Zimt, Olivenblatt und Bittermelone</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich zur Hauptmahlzeit</p>
+          <p class="caution">Bei Diabetes-Medikamenten vorher mit dem Arzt sprechen. Nicht bei Gallensteinen.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/glucosana-1.webp" alt="1 Flasche GlucoSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>GlucoSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663527">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/glucosana-6.webp" alt="6 Flaschen GlucoSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>GlucoSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663530">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/glucosana-3.webp" alt="3 Flaschen GlucoSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>GlucoSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663529">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/glucosana-12.webp" alt="12 Flaschen GlucoSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen GlucoSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663531">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="metabosana" aria-labelledby="h-metabosana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/metabosana-1.webp" alt="MetaboSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Stoffwechsel & Energie</div>
+          <h2 id="h-metabosana">MetaboSana</h2>
+          <p class="who">Für den bleischweren Nachmittag und einen Stoffwechsel, der sich anfühlt, als wäre er eingeschlafen.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Zink trägt zu einem normalen Fettsäure- und Kohlenhydrat-Stoffwechsel bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Chrom trägt zu einem normalen Stoffwechsel von Makronährstoffen bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit Alpha-Liponsäure, EGCG aus Grüntee, Mariendistel und Berberin</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich zum Frühstück</p>
+          <p class="caution">Enthält EGCG: nicht mehr als 800 mg EGCG pro Tag aus allen Quellen, immer zum Essen einnehmen.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/metabosana-1.webp" alt="1 Flasche MetaboSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>MetaboSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663533">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/metabosana-6.webp" alt="6 Flaschen MetaboSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>MetaboSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663535">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/metabosana-3.webp" alt="3 Flaschen MetaboSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>MetaboSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663534">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/metabosana-12.webp" alt="12 Flaschen MetaboSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen MetaboSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663536">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="nervesana" aria-labelledby="h-nervesana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/nervesana-1.webp" alt="NerveSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Nerven & Kribbeln</div>
+          <h2 id="h-nervesana">NerveSana</h2>
+          <p class="who">Für Füße und Hände, die abends kribbeln, brennen oder taub werden.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Magnesium trägt zu einer normalen Funktion des Nervensystems bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Magnesium trägt zur Verringerung von Müdigkeit und Ermüdung bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit Alpha-Liponsäure, Mäusedorn, Curcumin und Coenzym Q10</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich, abends</p>
+          
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/nervesana-1.webp" alt="1 Flasche NerveSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>NerveSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663539">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/nervesana-6.webp" alt="6 Flaschen NerveSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>NerveSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663541">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/nervesana-3.webp" alt="3 Flaschen NerveSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>NerveSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663540">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/nervesana-12.webp" alt="12 Flaschen NerveSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen NerveSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663542">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="cleansesana" aria-labelledby="h-cleansesana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/cleansesana-1.webp" alt="CleanseSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Darm & Verdauung</div>
+          <h2 id="h-cleansesana">CleanseSana</h2>
+          <p class="who">Für den Bauch, der nach jedem Essen aufgebläht ist, und eine Verdauung, die keinen Rhythmus findet.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Ballaststoff-Formel mit Haferkleie (430 mg), Leinsamen (130 mg) und Flohsamenschalen (103 mg)</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Plus Lactobacillus acidophilus (1,5 Mrd. KBE), Apfelpektin und Konjak</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Sieben pflanzliche Ballaststoffquellen in einer Kapsel</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich mit einem großen Glas Wasser</p>
+          <p class="caution">Über den Tag ausreichend trinken (mindestens 2 Liter).</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/cleansesana-1.webp" alt="1 Flasche CleanseSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>CleanseSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663545">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/cleansesana-6.webp" alt="6 Flaschen CleanseSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>CleanseSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663547">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/cleansesana-3.webp" alt="3 Flaschen CleanseSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>CleanseSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663546">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/cleansesana-12.webp" alt="12 Flaschen CleanseSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen CleanseSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663548">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="ketosana" aria-labelledby="h-ketosana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/ketosana-1.webp" alt="KetoSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Keto & Low-Carb</div>
+          <h2 id="h-ketosana">KetoSana</h2>
+          <p class="who">Für den Keto- oder Low-Carb-Start, und für alle, die schon einmal an Tag 3 aufgegeben haben.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Flüssige Tropfen mit 24 Inhaltsstoffen, darunter Maca, Traubenkern, Guarana, Grüntee und Afrikanische Mango</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit L-Carnitin, GABA und Aminosäuren</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Auch ohne Keto-Diät anwendbar</li></ul>
+          <p class="facts">60 ml · 2 × 1 ml täglich, vor Frühstück und Mittagessen</p>
+          <p class="caution">Enthält L-Tyrosin, GABA und L-Tryptophan: bei Schilddrüsen-Medikamenten oder Antidepressiva vorher mit dem Arzt sprechen.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/ketosana-1.webp" alt="1 Flasche KetoSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>KetoSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663550">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/ketosana-6.webp" alt="6 Flaschen KetoSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>KetoSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663553">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/ketosana-3.webp" alt="3 Flaschen KetoSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>KetoSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663552">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/ketosana-12.webp" alt="12 Flaschen KetoSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen KetoSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663554">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod" id="curcumasana" aria-labelledby="h-curcumasana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/curcumasana-1.webp" alt="CurcumaSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Gelenke & Beweglichkeit</div>
+          <h2 id="h-curcumasana">CurcumaSana</h2>
+          <p class="who">Für Knie, Hände und Rücken, die morgens 20 Minuten brauchen, bis sie in Gang kommen.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1.200 mg Curcuma-Wurzel plus 100 mg Extrakt mit 95 % Curcuminoiden pro Tagesportion</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit BioPerine (10 mg Piperin aus schwarzem Pfeffer)</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Standardisierte Dosierung: 96,8 mg Curcumin pro Portion</li></ul>
+          <p class="facts">60 Kapseln · 2 Kapseln täglich, 20 bis 30 Minuten vor einer Mahlzeit</p>
+          <p class="caution">Nicht bei Gallensteinen oder Verschluss der Gallenwege.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/curcumasana-1.webp" alt="1 Flasche CurcumaSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>CurcumaSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663556">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/curcumasana-6.webp" alt="6 Flaschen CurcumaSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>CurcumaSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663559">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/curcumasana-3.webp" alt="3 Flaschen CurcumaSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>CurcumaSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663558">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/curcumasana-12.webp" alt="12 Flaschen CurcumaSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen CurcumaSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663560">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="prod navy" id="vigorsana" aria-labelledby="h-vigorsana">
+    <div class="wrap">
+      <header class="phead">
+        <img class="phead-img" src="img/vigorsana-1.webp" alt="VigorSana Flasche" loading="lazy" decoding="async">
+        <div class="phead-text">
+          <div class="eyebrow">Männer-Vitalität</div>
+          <h2 id="h-vigorsana">VigorSana</h2>
+          <p class="who">Für Männer ab 40, denen Antrieb, Energie und Lust abhandengekommen sind.</p>
+          <ul class="bul"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Zink trägt zur Erhaltung eines normalen Testosteronspiegels im Blut bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Niacin trägt zur Verringerung von Müdigkeit und Ermüdung bei</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Mit L-Citrullin (150 mg), L-Carnitin (150 mg), Pinienrinden-Extrakt (100 mg), Maca und Safran</li></ul>
+          <p class="facts">30 Kapseln · 1 Kapsel täglich zum Frühstück</p>
+          <p class="caution">Nur für Männer. Nicht für Personen unter 18 Jahren.</p>
+        </div>
+      </header>
+      <div class="tiers">
+        
+      <article class="tier">
+        <div class="tag">Starter<span>Zum Kennenlernen</span></div>
+        <img class="tier-img" src="img/vigorsana-1.webp" alt="1 Flasche VigorSana" loading="lazy" decoding="async">
+        <h3>1 Flasche <em>VigorSana</em></h3>
+        <div class="supply">30-Tage-Vorrat</div>
+        <div class="per"><b>47 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>69 €</s> <b>47 € gesamt</b></div>
+        <div class="save">Sie sparen 22 € (32 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>zzgl. 9 € Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,57 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663563">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier hero">
+        <div class="tag">Am beliebtesten<span>Bestseller · größte Ersparnis</span></div>
+        <img class="tier-img" src="img/vigorsana-6.webp" alt="6 Flaschen VigorSana" loading="lazy" decoding="async">
+        <h3>6 Flaschen <em>VigorSana</em></h3>
+        <div class="supply">180-Tage-Vorrat</div>
+        <div class="per"><b>35 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>414 €</s> <b>210 € gesamt</b></div>
+        <div class="save">Sie sparen 204 € (49 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,17 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663566">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+        
+      <article class="tier">
+        <div class="tag">Sparpaket<span>Beliebter Einstieg</span></div>
+        <img class="tier-img" src="img/vigorsana-3.webp" alt="3 Flaschen VigorSana" loading="lazy" decoding="async">
+        <h3>3 Flaschen <em>VigorSana</em></h3>
+        <div class="supply">90-Tage-Vorrat</div>
+        <div class="per"><b>41 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>123 € gesamt</b></div>
+        <div class="save">Sie sparen 84 € (41 %)</div>
+        <ul class="incl">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Kostenloser Versand</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>60-Tage-Geld-zurück-Garantie</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>1,37 € pro Tag</li>
+        </ul>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663564">In den Warenkorb</a>
+        <div class="micro">Sichere Zahlung · Diskrete Verpackung</div>
+      </article>
+      </div>
+      
+      <div class="yearbar">
+        <img src="img/vigorsana-12.webp" alt="12 Flaschen VigorSana" loading="lazy" decoding="async">
+        <div class="yb-text">
+          <b>Jahresvorrat · 12 Flaschen VigorSana</b>
+          <span>360-Tage-Vorrat · bester Flaschenpreis · kostenloser Versand · 0,97 € pro Tag</span>
+        </div>
+        <div class="yb-price"><b>29 €</b><small>pro Flasche</small><span><s>828 €</s> 348 € gesamt · Sie sparen 480 € (58 %)</span></div>
+        <a class="btn ghost" href="https://www.checkout-ds24.com/product/663568">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+  <section class="systems" id="systeme" aria-labelledby="h-systeme">
+    <div class="wrap">
+      <div class="eyebrow">3er-Systeme · 3 Flaschen · 99&nbsp;€</div>
+      <h2 id="h-systeme">Drei Rezepturen, ein System, der beste Flaschenpreis.</h2>
+      <p class="lead">Jedes System bündelt drei aufeinander abgestimmte Rezepturen für ein Thema. Drei Flaschen für 99&nbsp;€ statt 207&nbsp;€, also 33&nbsp;€ pro Flasche, kostenloser Versand inklusive.</p>
+      <div class="sysgrid">
+      <article class="sys">
+        <img src="img/system-stoffwechsel.webp" alt="Das Stoffwechsel-Paket: SlimSana, MetaboSana, GlucoSana" loading="lazy" decoding="async">
+        <h3>Das Stoffwechsel-Paket</h3>
+        <p class="who">Gewicht, Blutzucker und Stoffwechsel in einem System.</p>
+        <ul class="incl"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>SlimSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>MetaboSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GlucoSana</li></ul>
+        <div class="per"><b>33 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>99 € gesamt</b></div>
+        <div class="save">Sie sparen 108 € (52 %) · kostenloser Versand</div>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663571">Paket in den Warenkorb</a>
+        <p class="caution">Alle drei enthalten Chrom: bei Diabetes-Medikamenten vorher mit dem Arzt sprechen.</p>
+      </article>
+      <article class="sys">
+        <img src="img/system-vitalitaet.webp" alt="Das Vitalitäts-Paket: NerveSana, VigorSana, MetaboSana" loading="lazy" decoding="async">
+        <h3>Das Vitalitäts-Paket</h3>
+        <p class="who">Für Männer: Nerven, Testosteronspiegel und Stoffwechsel.</p>
+        <ul class="incl"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>NerveSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>VigorSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>MetaboSana</li></ul>
+        <div class="per"><b>33 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>99 € gesamt</b></div>
+        <div class="save">Sie sparen 108 € (52 %) · kostenloser Versand</div>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663572">Paket in den Warenkorb</a>
+        <p class="caution">Nur für Männer (VigorSana).</p>
+      </article>
+      <article class="sys">
+        <img src="img/system-reinigung.webp" alt="Das Reinigungs-Paket: CleanseSana, CurcumaSana, SlimSana" loading="lazy" decoding="async">
+        <h3>Das Reinigungs-Paket</h3>
+        <p class="who">Darm, Gelenke und Gewicht, als Routine für den Alltag.</p>
+        <ul class="incl"><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>CleanseSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>CurcumaSana</li><li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>SlimSana</li></ul>
+        <div class="per"><b>33 €</b><span>pro Flasche</span></div>
+        <div class="total"><s>207 €</s> <b>99 € gesamt</b></div>
+        <div class="save">Sie sparen 108 € (52 %) · kostenloser Versand</div>
+        <a class="btn" href="https://www.checkout-ds24.com/product/663573">Paket in den Warenkorb</a>
+        <p class="caution">Nicht bei Gallensteinen (CurcumaSana).</p>
+      </article></div>
+    </div>
+  </section>
+  <section class="guar" aria-labelledby="h-guar">
+    <div class="wrap">
+      <svg class="seal" viewBox="0 0 150 150" aria-hidden="true">
+  <circle cx="75" cy="75" r="70" fill="#FBF3D9" stroke="#C9A227" stroke-width="4"/>
+  <circle cx="75" cy="75" r="58" fill="none" stroke="#C9A227" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <text x="75" y="70" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="40" fill="#064225">60</text>
+  <text x="75" y="88" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="13" letter-spacing="2" fill="#064225">TAGE</text>
+  <text x="75" y="106" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="9.5" letter-spacing="1.2" fill="#A8851C">GELD-ZURÜCK-GARANTIE</text>
+</svg>
+      <div>
+        <h2 id="h-guar">60 Tage testen. Ohne Wenn und Aber.</h2>
+        <p>Testen Sie jede Rezeptur 60 Tage lang. Wenn Sie nicht zufrieden sind, genügt eine E-Mail an den Support, und Sie erhalten den vollen Kaufpreis zurück, auch bei angebrochener Flasche. Das gilt für jedes Paket auf dieser Seite, vom Starter bis zum Jahresvorrat.</p>
+      </div>
+    </div>
+  </section>
+  <section class="trust" aria-label="Vertrauen">
+    <div class="wrap">
+      <div><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="8.5" width="12" height="9" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6.5 8.5V6.3a3.5 3.5 0 017 0v2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><div><b>Sichere Zahlung</b>Bestellformular von Digistore24, SSL-verschlüsselt. Einmalige Zahlung, kein Abo.</div></div>
+      <div><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 2.5h5M8.5 2.5v5L4 15a2 2 0 001.7 3h8.6A2 2 0 0016 15l-4.5-7.5v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><div><b>Hergestellt in den USA</b>Produziert in GMP-zertifizierten Anlagen, Vertrieb in der EU über Digistore24.</div></div>
+      <div><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6.5l7-3.5 7 3.5v7l-7 3.5-7-3.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 6.5l7 3.5 7-3.5M10 10v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><div><b>Diskreter Versand</b>Neutrale Verpackung, Sendungsverfolgung per E-Mail, 3 bis 5 Werktage.</div></div>
+      <div><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2l6 2.4v5.2c0 3.9-2.6 6.6-6 8.4-3.4-1.8-6-4.5-6-8.4V4.4L10 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 10l2 2 4-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Etikett = Inhalt</b>Alle Dosierungen auf dieser Seite stehen so auf dem Etikett. Keine versteckten Zusätze.</div></div>
+      <div class="pay"><span>Zahlungsarten</span><img src="img/zahlungsarten.webp" alt="SEPA, Visa, Mastercard, PayPal, Klarna, Amazon Pay, Apple Pay, Google Pay" loading="lazy"></div>
+    </div>
+  </section>
+  <section class="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <h2 id="h-faq">Häufige Fragen</h2>
+      <details><summary>Wie wähle ich das richtige Produkt?</summary><p>Beginnen Sie bei Ihrem größten Thema; die Leiste oben führt Sie direkt hin. Jede Rezeptur ist für sich allein anwendbar. Die 3er-Systeme am Ende der Seite kombinieren drei aufeinander abgestimmte Rezepturen zum besten Flaschenpreis.</p></details><details><summary>Kann ich mehrere Rezepturen zusammen einnehmen?</summary><p>Ja, die Rezepturen sind für die gemeinsame Einnahme ausgelegt. Beachten Sie die Hinweise bei den einzelnen Produkten: SlimSana, GlucoSana und MetaboSana enthalten Chrom, VigorSana und MetaboSana enthalten Zink. Wer Medikamente nimmt, spricht vorher mit dem Arzt.</p></details><details><summary>Was kostet der Versand, und wie lange dauert er?</summary><p>Ab 3 Flaschen ist der Versand kostenlos, bei einer einzelnen Flasche fallen 9 € an. Sie erhalten eine Versandbestätigung mit Sendungsverfolgung. Die Lieferung dauert in der Regel 3 bis 5 Werktage, diskret verpackt.</p></details><details><summary>Wie funktioniert die 60-Tage-Geld-zurück-Garantie?</summary><p>Sie haben ab Erhalt 60 Tage Zeit, jede Rezeptur zu testen. Wenn Sie nicht zufrieden sind, genügt eine E-Mail an den Support, und Sie erhalten den Kaufpreis zurück. Die Einzelheiten stehen unter Rückerstattung/Rückgabe.</p></details><details><summary>Ist das ein Abo?</summary><p>Nein. Jede Bestellung ist eine einmalige Zahlung. Es gibt keine automatische Verlängerung und keine versteckten Folgekosten.</p></details><details><summary>Wie kann ich bezahlen?</summary><p>Über das gesicherte Bestellformular von Digistore24: PayPal, Kreditkarte, SEPA-Lastschrift, Klarna, Apple Pay, Google Pay und Amazon Pay.</p></details><details><summary>Wie bestelle ich mehrere verschiedene Produkte?</summary><p>Legen Sie das erste Produkt in den Warenkorb. Nach dem Bestellformular werden Ihnen passende Ergänzungen angeboten. Alternativ kommen Sie auf diese Seite zurück und bestellen das nächste Produkt; die Versandkosten entfallen ab 3 Flaschen je Bestellung.</p></details>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="fwrap">
+    <div class="fcols">
+      <div class="fcol"><h4>Über Dr. Eric Wood</h4><ul><li><p>Harvard-ausgebildeter Funktionsmediziner</p></li><li><p>Fast 20 Jahre klinische Erfahrung</p></li><li><p>Medizinischer Experte für US-Nachrichtensender</p></li><li><p>Spezialist für Stoffwechsel, Entzündungen &amp; zelluläre Gesundheit</p></li></ul></div>
+      <div class="fcol"><h4>Produkt-Labels</h4><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447a22c710811bdfae197.pdf" rel="noopener noreferrer nofollow">SlimSana</a><br><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447b7035c3a19e7ea7098.pdf" rel="noopener noreferrer nofollow">GlucoSana</a></p><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447aaeadab22820f22257.pdf" rel="noopener noreferrer nofollow">MetaboSana</a></p><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447a688fd1a4fb3195cf9.pdf" rel="noopener noreferrer nofollow">NerveSana</a></p></div>
+      <div class="fcol"><h4>&nbsp;</h4><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447c188fd1a1853196038.pdf" rel="noopener noreferrer nofollow">CleanseSana</a><br><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447ae2c71085234fae4a9.pdf" rel="noopener noreferrer nofollow">KetoSana</a></p><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/695447bbedb8a2bd62de6999.pdf" rel="noopener noreferrer nofollow">CurcumaSana</a></p><p><a href="https://storage.googleapis.com/msgsndr/L4LdQDk3vJiv9duiMlUd/media/6954479a2c71083f05fae0e8.pdf" rel="noopener noreferrer nofollow">VigorSana</a></p></div>
+    </div>
+    <div class="fmark"><img src="img/vitasana-collection-wordmark.webp" alt="VitaSana Collection"></div>
+    <p class="fdisc">Die auf dieser Website bereitgestellten Informationen dienen ausschließlich allgemeinen Informationszwecken und ersetzen keine professionelle medizinische Beratung, Diagnose oder Behandlung. Bitte konsultieren Sie bei bestehenden gesundheitlichen Problemen, während der Einnahme von Medikamenten, bei Schwangerschaft oder Stillzeit Ihren Arzt vor der Anwendung. Vernachlässigen Sie niemals professionellen medizinischen Rat oder verzögern Sie dessen Einholung aufgrund von etwas, das Sie auf dieser Website gelesen haben. Unsere Produkte sind Nahrungsergänzungsmittel und keine Arzneimittel; sie sind nicht dazu bestimmt, Krankheiten zu diagnostizieren, zu behandeln, zu heilen oder zu verhindern. Es wird keinerlei Haftung vom Hersteller übernommen. Jeder Mensch hat eine individuelle gesundheitliche Situation, daher können die Ergebnisse bei der Einnahme unserer Nahrungsergänzungsmittel von Person zu Person variieren. Die Gewichtsabnahme wird als Teil einer gesunden kalorienreduzierten Ernährung und eines Trainingsprogramms erreicht. Einige Namen und persönliche Identifikationsinformationen auf dieser Website wurden geändert, um die Privatsphäre von Personen zu schützen. Sprecher/Personen können fiktive Personen mit Pseudonymen sein. Weitere Details entnehmen Sie bitte unserem ausführlichen Disclaimer.</p>
+    <p class="flegal"><a href="https://pronutraquest.com/impressum-pnq">Impressum</a> <span class="sep">I</span> <a href="https://pronutraquest.com/datenschutz-pnq">Datenschutz</a> <span class="sep">I</span> <a href="https://pronutraquest.com/disclaimer-pnq">Disclaimer</a> <span class="sep">I</span> <a href="https://pronutraquest.com/agb-pnq">AGB</a> <span class="sep">I</span> <a href="https://pronutraquest.com/versand-pnq">Versand</a> <span class="sep">I</span> <a href="https://pronutraquest.com/rueckerstattung-und-rueckgabe-pnq">Rückerstattung/Rückgabe</a> <span class="sep">I</span> <a href="https://pronutraquest.com/kontakt-pnq">Kontakt</a></p>
+  </div>
+</footer>
+<script>
+(function(){
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var map={};chips.forEach(function(c){map[c.getAttribute('href').slice(1)]=c;});
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){chips.forEach(function(c){c.classList.remove('on')}); var c=map[e.target.id]; if(c){c.classList.add('on'); c.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});} }});
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var s=document.getElementById(id); if(s)io.observe(s);});
+})();
+</script>
+<script src="https://www.digistore24-scripts.com/service/digistore.js"></script>
+<script type="text/javascript" src="https://www.digistore24.com/trusted-badge/42639/ZiPcA1SttaS8cf1/salespage"></script>
+</body>
+</html>
