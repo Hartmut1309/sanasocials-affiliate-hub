@@ -24,6 +24,7 @@
     --acc:#0B8A64; --acc-ink:#FFFFFF; --acc-dim:rgba(11,138,100,.10);
     --gold:#8A6A20; --gold-dim:rgba(138,106,32,.12);
     --assets:#F0A41A; --assets-ink:#231604;
+    --alt:#1D4E89; --alt-ink:#FFFFFF;
     --danger:#B3402F;
     --money:#0E1626; --money-ink:#EDF1F8; --money-acc:#3FD9A4;
     --c-weight:#E8590C; --c-blood:#1971C2; --c-gut:#2F9E44; --c-nerve:#6741D9; --c-men:#C2255C; --c-bundle:#B08D2F;
@@ -39,6 +40,7 @@
     --acc:#3FD9A4; --acc-ink:#062117; --acc-dim:rgba(63,217,164,.13);
     --gold:#D9B36B; --gold-dim:rgba(217,179,107,.14);
     --assets:#F7B733; --assets-ink:#231604;
+    --alt:#6FB3F2; --alt-ink:#06182B;
     --danger:#E07A6B;
     --money:#0A1120; --money-ink:#EDF1F8; --money-acc:#3FD9A4;
     --c-weight:#FF8A3D; --c-blood:#4DA3E8; --c-gut:#51C462; --c-nerve:#9775FA; --c-men:#F06595; --c-bundle:#D9B36B;
@@ -248,8 +250,11 @@
   .resources a.assets:hover{filter:brightness(1.06);color:var(--assets-ink);border-color:var(--assets);text-decoration:none}
   .resources a.offerpage{background:var(--acc);border-color:var(--acc);color:var(--acc-ink);font-weight:800;box-shadow:0 5px 15px -7px color-mix(in srgb,var(--acc) 70%,transparent)}
   .resources a.offerpage:hover{filter:brightness(1.07);color:var(--acc-ink);border-color:var(--acc);text-decoration:none}
-  .resources a.assets:focus-visible,.resources a.offerpage:focus-visible{outline:2.5px solid var(--ink);outline-offset:2px}
-  .resources a.mkt-verify,.resources a.altpage{border-style:dashed;font-weight:700;color:var(--dim)}
+  .resources a.assets:focus-visible,.resources a.offerpage:focus-visible,.resources a.altpage:focus-visible{outline:2.5px solid var(--ink);outline-offset:2px}
+  .resources a.mkt-verify{border-style:dashed;font-weight:700;color:var(--dim);margin-left:auto}
+  .resources a.mkt-verify ~ a.mkt-verify{margin-left:0}
+  .resources a.altpage{background:var(--alt);border-color:var(--alt);color:var(--alt-ink);font-weight:800;box-shadow:0 5px 15px -7px color-mix(in srgb,var(--alt) 70%,transparent)}
+  .resources a.altpage:hover{filter:brightness(1.08);color:var(--alt-ink);border-color:var(--alt);text-decoration:none}
   .cvrline{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:0 0 16px;border:1px solid color-mix(in srgb,var(--catc,var(--acc)) 35%,var(--line));border-left:4px solid var(--catc,var(--acc));border-radius:9px;background:color-mix(in srgb,var(--catc,var(--acc)) 6%,var(--card));padding:9px 14px;font-size:14px;color:var(--mut);font-weight:600}
   .cvrline b{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
   .cvrline .lab{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:800}
@@ -595,8 +600,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/slimsana/" target="_blank" rel="noopener">Dedicated SlimSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1t81_w0ka4dA6v-fN5r-dVEMcyd68Yek9" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://myslimsana.com/slimsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional SlimSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/651454" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://myslimsana.com/slimsana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">RevShare starts at 60% across the whole funnel — rises to 75% with volume. CPA on request.</span>
@@ -647,8 +652,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/ketosana/" target="_blank" rel="noopener">Dedicated KetoSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1BuaCKRyYBrygAvYtXS9f-TSkbiOaB5Rm" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://myketosana.com/ketosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional KetoSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/661129" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://myketosana.com/ketosana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">RevShare 60–75% through the entire funnel — thank-you page included, on every offer.</span>
@@ -699,8 +704,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/metabosana/" target="_blank" rel="noopener">Dedicated MetaboSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/12x8xEba9e37lQULX6rCb2VC1MpHODGnI" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://metabosana.com/metabosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional MetaboSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/663162" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://metabosana.com/metabosana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Ask support for current EPC before scaling — numbers move weekly on new VSLs.</span>
@@ -752,8 +757,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/cleansesana/" target="_blank" rel="noopener">Dedicated CleanseSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1SWzh7WvOJAuV8qDu5jkjqfkRojlVNX1W" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://cleansesana.com/cleansesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional CleanseSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/665412" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://cleansesana.com/cleansesana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">VSL just launched — ask support for current stats before scaling.</span>
@@ -803,8 +808,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/glucosana/" target="_blank" rel="noopener">Dedicated GlucoSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/12h0kSFHBlDmbaCbMqHh5vPesH9MAtVAW" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://myglucosana.com/glucosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional GlucoSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/668255" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://myglucosana.com/glucosana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Blood-sugar demand in DACH is rising with an aging population — evergreen category.</span>
@@ -854,8 +859,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/nervesana/" target="_blank" rel="noopener">Dedicated NerveSana Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1D1tEBOm49z5KKQXMvGVKLXuSg2zfLNb5" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="altpage" href="https://nervesana.com/nervesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional NerveSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/670068" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://nervesana.com/nervesana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Premium pricing holds because the pain is real and untreated — low refunds.</span>
@@ -904,8 +909,8 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/vigorsana/" target="_blank" rel="noopener">Dedicated VigorSana Affiliate Page →</a>
+          <a class="altpage" href="https://myvigorsana.com/vigorsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional VigorSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/671283" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
-          <a class="altpage" href="https://myvigorsana.com/vigorsana-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">VSL newly live — ask for current stats before scaling. Materials on request.</span>
@@ -952,7 +957,7 @@
         <div class="resources">
           <a class="offerpage" href="offers/vitasana-collection/" target="_blank" rel="noopener">Dedicated VitaSana Collection Affiliate Page →</a>
           <a class="assets" href="https://drive.google.com/drive/folders/10zABAswTGyC6i-gxzyqs_TufieAlUDco" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, &hellip;</a>
-          <a class="altpage" href="https://vitasanacollection.com/vitasana-collections-affiliate-page-ds24" target="_blank" rel="noopener">Alternative affiliate page ↗</a>
+          <a class="altpage" href="https://vitasanacollection.com/vitasana-collections-affiliate-page-ds24" target="_blank" rel="noopener">Additional VitaSana Collection Affiliate Page ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Strongest play for email lists: every send can hit a different pain point.</span>
@@ -1000,8 +1005,8 @@
         <div class="resources">
           <a class="offerpage" href="offers/glucotrust-german/" target="_blank" rel="noopener">Dedicated GlucoTrust German Affiliate Page &rarr;</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1GMEaoI6qlP6RWRkgIXc_z_IFSZJEu9KH" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, &hellip;</a>
-          <a class="mkt-verify" href="https://www.digistore24-app.com/product/600901" target="_blank" rel="noopener">Verify stats in the DS24 marketplace &uarr;</a>
           <a class="altpage" href="https://myvitalletter.com/affiliates-ds24-irl" target="_blank" rel="noopener">Email swipes + all current links &#8599;</a>
+          <a class="mkt-verify" href="https://www.digistore24-app.com/product/600901" target="_blank" rel="noopener">Verify stats in the DS24 marketplace &uarr;</a>
         </div>
         <div class="cardfoot">
           <span class="note">2-bottle page variants are in preparation &mdash; the 1&middot;3&middot;6 set is live now.</span>
@@ -1265,7 +1270,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v5.10 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v5.11 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
