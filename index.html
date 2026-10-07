@@ -1,14 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="SanaSocials Affiliate Hub — The DACH Advantage for Performance Affiliates">
-<meta property="og:description" content="100M+ German speakers, 40–60% cheaper CPMs, a fraction of the competition. 10 doctor-fronted offers, 60–75% RevShare, live link generator.">
+<meta property="og:title" content="SanaSocials Affiliate Hub — Doctor-Fronted Offers in German, French and English">
+<meta property="og:description" content="13 doctor-fronted Digistore24 offers in three language markets: German, French and English. 60–75% RevShare through the whole funnel, live affiliate-link generator.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://affiliate-hub.sana-socials.com/">
-<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v5.png">
+<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v6.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="The DACH market advantage for supplement affiliates: 9 doctor-fronted Digistore24 offers, KPIs, EPCs and a live affiliate-link generator.">
+<meta name="description" content="Doctor-fronted supplement offers for affiliates in three language markets: German (Germany, Austria, Switzerland, Liechtenstein, Luxembourg), French (France, Belgium, Switzerland, Luxembourg) and English (United States, Canada, United Kingdom and worldwide outside the EU). Live Digistore24 affiliate-link generator.">
 <title>SanaSocials Affiliate Hub</title>
 <link rel="icon" href="/favicon.ico?v=3" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
@@ -161,6 +161,50 @@
   .chip[aria-pressed="true"]{background:var(--catc,var(--ink));border-color:var(--catc,var(--ink));color:#fff}
   .chip:focus-visible{outline:2.5px solid var(--acc);outline-offset:2px}
   .count{font-size:14px;color:var(--dim);margin-left:auto;font-weight:600}
+
+  /* v6: language markets */
+  .markets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:16px 0 20px}
+  .mk{display:flex;flex-direction:column;gap:4px;padding:13px 17px;border:1.5px solid var(--line2);border-radius:12px;background:var(--card);color:var(--mut)}
+  .mk:hover{text-decoration:none;border-color:var(--acc)}
+  .mk b{font-family:var(--disp);font-size:21px;font-weight:800;color:var(--ink);line-height:1.15}
+  .mk span{font-size:15px;font-weight:600;line-height:1.45}
+  .mk i{font-style:normal;font-size:13px;font-weight:800;letter-spacing:.05em;color:var(--acc)}
+  .rgrp{flex:0 0 auto;align-self:center;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--gold);padding:0 0 0 10px}
+  .rgrp:first-child{padding-left:0}
+  .indexwrap tr.grp td{background:var(--card2);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800;padding:9px 16px}
+  .langsec{margin:6px 0 40px;scroll-margin-top:130px}
+  .langhead{margin:0 0 20px;padding:18px 22px 20px;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:14px;background:var(--card)}
+  .langhead h2{font-size:clamp(23px,2.7vw,31px);margin:6px 0 8px}
+  .langhead p{margin:0;color:var(--mut);font-size:16.5px}
+  .langhead p+p{margin-top:8px}
+  .soon{margin:24px 0 0;padding:17px 21px;border:1.5px dashed color-mix(in srgb,var(--catc,var(--gold)) 60%,var(--line2));border-radius:14px;background:color-mix(in srgb,var(--catc,var(--gold)) 7%,var(--card));color:var(--mut);font-size:16.5px}
+  .soon b{color:var(--ink)}
+  @media(max-width:640px){.hero .flagpill{display:inline-block;line-height:1.5;border-radius:16px}}
+
+  /* v6 round 2: three-row rail, full-width language bands */
+  :root{--band:#132A4A;--band-ink:#FFFFFF;--band-mut:#D6E1F2;--band-acc:#F2C66D}
+  :root[data-theme="dark"]{--band:#F3E3BE;--band-ink:#0A1220;--band-mut:#2A3A55;--band-acc:#6E500E}
+  .rail .wrap{display:flex;flex-direction:column;gap:4px;overflow:visible;padding:7px 20px}
+  .rrow{display:flex;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none}
+  .rrow::-webkit-scrollbar{display:none}
+  .rgrp,.rgrp:first-child{flex:0 0 122px;padding:0;font-size:11.5px;letter-spacing:.1em}
+  .rpill{padding:3px 11px 3px 5px;font-size:13px;gap:6px;border-width:1.25px}
+  .rpill i{width:18px;height:18px;font-size:10.5px}
+  .rail.stuck .wrap{padding:4px 20px;gap:3px}
+  .rail.stuck .rpill{padding:2px 9px 2px 4px;font-size:12px}
+  .rail.stuck .rpill i{width:16px;height:16px;font-size:10px}
+  .rpill.soonpill{border-style:dashed;color:var(--mut);padding-left:11px}
+  .rpill.soonpill em{font-style:normal;font-weight:600;color:var(--dim)}
+  @media(max-width:640px){.rgrp,.rgrp:first-child{flex-basis:96px;font-size:10.5px;letter-spacing:.06em}}
+  .card,.langsec,.soon,section.block{scroll-margin-top:calc(var(--head-h,57px) + var(--rail-h,104px) + 14px)}
+  .langsec{margin:34px 0 44px}
+  .langhead{background:var(--band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);border:0;border-radius:0;padding:30px 0 32px;margin:0 0 30px}
+  .langhead .eyebrow{color:var(--band-acc)}
+  .langhead h2{color:var(--band-ink);font-size:clamp(25px,3vw,36px)}
+  .langhead p{color:var(--band-mut);font-size:17px}
+  .langhead b{color:var(--band-ink)}
+  .langhead a{color:var(--band-acc);text-decoration:underline;text-underline-offset:3px}
+  .h1sub{font-family:var(--disp);font-weight:800;font-size:clamp(22px,2.7vw,33px);line-height:1.15;letter-spacing:-.005em;color:var(--mut);margin:-.15em 0 .7em}
   .langline{font-size:16px;color:var(--mut);margin:0 0 22px;max-width:none}
   
 
@@ -402,30 +446,13 @@
   }
 </style>
 
-<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="f-de" viewBox="0 0 3 2"><rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height="1.333" fill="#DD0000"/><rect y="1.333" width="3" height=".667" fill="#FFCE00"/></symbol>
-  <symbol id="f-be" viewBox="0 0 3 2"><rect width="1" height="2" fill="#000"/><rect x="1" width="1" height="2" fill="#FAE042"/><rect x="2" width="1" height="2" fill="#ED2939"/></symbol>
-  <symbol id="f-lu" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="3" height=".667" fill="#ED2939"/><rect y="1.333" width="3" height=".667" fill="#00A1DE"/></symbol>
-  <symbol id="f-fr" viewBox="0 0 3 2"><rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/><rect x="2" width="1" height="2" fill="#ED2939"/></symbol>
-  <symbol id="f-at" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ED2939"/><rect y=".667" width="3" height=".667" fill="#fff"/></symbol>
-  <symbol id="f-ch" viewBox="0 0 3 2"><rect width="3" height="2" fill="#DA291C"/><rect x="1.3" y=".35" width=".4" height="1.3" fill="#fff"/><rect x=".85" y=".8" width="1.3" height=".4" fill="#fff"/></symbol>
-  <symbol id="f-eu" viewBox="0 0 3 2"><rect width="3" height="2" fill="#003399"/><g fill="#FFCC00"><circle cx="2.1" cy="1" r=".09"/><circle cx="2.02" cy="1.3" r=".09"/><circle cx="1.8" cy="1.52" r=".09"/><circle cx="1.5" cy="1.6" r=".09"/><circle cx="1.2" cy="1.52" r=".09"/><circle cx=".98" cy="1.3" r=".09"/><circle cx=".9" cy="1" r=".09"/><circle cx=".98" cy=".7" r=".09"/><circle cx="1.2" cy=".48" r=".09"/><circle cx="1.5" cy=".4" r=".09"/><circle cx="1.8" cy=".48" r=".09"/><circle cx="2.02" cy=".7" r=".09"/></g></symbol>
-  <symbol id="f-li" viewBox="0 0 3 2"><rect width="3" height="2" fill="#002B7F"/><rect y="1" width="3" height="1" fill="#CE1126"/><circle cx=".45" cy=".5" r=".18" fill="#FFCC00"/></symbol>
-  <symbol id="f-no" viewBox="0 0 3 2"><rect width="3" height="2" fill="#BA0C2F"/><rect x=".75" width=".55" height="2" fill="#fff"/><rect y=".73" width="3" height=".55" fill="#fff"/><rect x=".89" width=".27" height="2" fill="#00205B"/><rect y=".87" width="3" height=".27" fill="#00205B"/></symbol>
-  <symbol id="f-is" viewBox="0 0 3 2"><rect width="3" height="2" fill="#02529C"/><rect x=".75" width=".55" height="2" fill="#fff"/><rect y=".73" width="3" height=".55" fill="#fff"/><rect x=".89" width=".27" height="2" fill="#DC1E35"/><rect y=".87" width="3" height=".27" fill="#DC1E35"/></symbol>
-  <symbol id="f-es" viewBox="0 0 3 2"><rect width="3" height="2" fill="#AA151B"/><rect y=".5" width="3" height="1" fill="#F1BF00"/></symbol>
-  <symbol id="f-lu" viewBox="0 0 3 2"><rect width="3" height="2" fill="#ED2939"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#00A1DE"/></symbol>
-  <symbol id="f-it" viewBox="0 0 3 2"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></symbol>
-  <symbol id="f-hu" viewBox="0 0 3 2"><rect width="3" height="2" fill="#CD2A3E"/><rect y=".667" width="3" height=".667" fill="#fff"/><rect y="1.333" width="3" height=".667" fill="#436F4D"/></symbol>
-  <symbol id="f-dk" viewBox="0 0 3 2"><rect width="3" height="2" fill="#C8102E"/><rect x=".8" width=".4" height="2" fill="#fff"/><rect y=".8" width="3" height=".4" fill="#fff"/></symbol>
-</svg>
 
 <div class="topbar" id="topbar">
   <div class="wrap">
     <div class="brand">SanaSocials<small>Affiliate Hub · Digistore24</small></div>
     <nav class="navlinks" aria-label="Sections">
       <a href="#cards">Offers</a>
-      <a href="#why">Why DACH</a>
+      <a href="#why">Why German</a>
       <a href="#operators">For Operators</a>
       <a href="#market">Market Data</a>
       <a href="#faq">FAQ</a>
@@ -451,42 +478,50 @@
 
 <nav class="rail" id="rail" aria-label="Jump to offer">
   <div class="wrap">
-    <a class="rpill" style="--catc:var(--c-weight)" href="#offer-1"><i>1</i> SlimSana</a>
-    <a class="rpill" style="--catc:var(--c-weight)" href="#offer-2"><i>2</i> KetoSana</a>
-    <a class="rpill" style="--catc:var(--c-weight)" href="#offer-3"><i>3</i> MetaboSana</a>
-    <a class="rpill" style="--catc:var(--c-gut)" href="#offer-4"><i>4</i> CleanseSana</a>
-    <a class="rpill" style="--catc:var(--c-blood)" href="#offer-5"><i>5</i> GlucoSana</a>
-    <a class="rpill" style="--catc:var(--c-nerve)" href="#offer-6"><i>6</i> NerveSana</a>
-    <a class="rpill" style="--catc:var(--c-men)" href="#offer-7"><i>7</i> VigorSana</a>
-    <a class="rpill" style="--catc:var(--c-bundle)" href="#offer-8"><i>8</i> VitaSana</a>
-    <a class="rpill" style="--catc:var(--c-blood)" href="#offer-9"><i>9</i> GlucoTrust</a><a class="rpill" style="--catc:var(--c-weight)" href="#offer-10"><i>10</i> SlimSana FR</a>
+    <div class="rrow"><span class="rgrp">German Offers:</span>
+      <a class="rpill" style="--catc:var(--c-weight)" href="#offer-1"><i>1</i> SlimSana</a>
+      <a class="rpill" style="--catc:var(--c-weight)" href="#offer-2"><i>2</i> KetoSana</a>
+      <a class="rpill" style="--catc:var(--c-weight)" href="#offer-3"><i>3</i> MetaboSana</a>
+      <a class="rpill" style="--catc:var(--c-gut)" href="#offer-4"><i>4</i> CleanseSana</a>
+      <a class="rpill" style="--catc:var(--c-blood)" href="#offer-5"><i>5</i> GlucoSana</a>
+      <a class="rpill" style="--catc:var(--c-nerve)" href="#offer-6"><i>6</i> NerveSana</a>
+      <a class="rpill" style="--catc:var(--c-men)" href="#offer-7"><i>7</i> VigorSana</a>
+      <a class="rpill" style="--catc:var(--c-men)" href="#offer-11"><i>8</i> HeroSana</a>
+      <a class="rpill" style="--catc:var(--c-bundle)" href="#offer-8"><i>9</i> VitaSana</a>
+      <a class="rpill" style="--catc:var(--c-blood)" href="#offer-9"><i>10</i> GlucoTrust</a>
+    </div>
+    <div class="rrow"><span class="rgrp">French Offers:</span>
+      <a class="rpill" style="--catc:var(--c-weight)" href="#offer-10"><i>11</i> SlimSana FR</a>
+      <a class="rpill" style="--catc:var(--c-gut)" href="#offer-12"><i>12</i> FloraVitaSana FR</a>
+      <a class="rpill soonpill" href="#ligne-soon">LigneSana (KetoSana French) <em>&middot; coming within the next few days</em></a>
+    </div>
+    <div class="rrow"><span class="rgrp">US Offers:</span>
+      <a class="rpill" style="--catc:var(--c-weight)" href="#offer-13"><i>13</i> KetoSana US</a>
+    </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="flagpill">● <b>9 offers live</b>&nbsp;· <svg class="flag sm"><use href="#f-de"/></svg> <svg class="flag sm"><use href="#f-at"/></svg> <svg class="flag sm"><use href="#f-ch"/></svg>&nbsp;German-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;● <b>1 offer live</b>&nbsp;· <svg class="flag sm"><use href="#f-fr"/></svg> <svg class="flag sm"><use href="#f-be"/></svg> <svg class="flag sm"><use href="#f-lu"/></svg>&nbsp;French-speaking Europe&nbsp;&nbsp;·&nbsp;&nbsp;updated 30 August 2026</div>
+    <div class="flagpill">● <b>13 offers live</b>&nbsp;· German, French and English&nbsp;&nbsp;·&nbsp;&nbsp;updated 7 October 2026</div>
     <div class="eyebrow">SanaSocials × Digistore24 · Partner Program</div>
-    <h1>Your Current Angles Are Saturated. The DACH Version of Them Hasn't Run Yet.</h1>
-    <p class="lede"><strong>183 million people across six countries</strong> &mdash; that is <strong class="hl">more than half the population of the United States</strong>, and the whole of it sits behind <strong>two languages instead of fifty</strong>. Europe&rsquo;s wealthiest language markets, at <strong>40&ndash;60% cheaper CPMs</strong>, with a fraction of the competition. Nine doctor-fronted German funnels and a French one, <strong>60&ndash;75% RevShare</strong> through the whole funnel &mdash; thank-you page included &mdash; top EPC <strong>~$6.10</strong>. Buyers who spend more, refund less, and have <strong>never seen your angle</strong>. This is not a niche you test into. It is a second home market most English-language buyers have never priced.</p>
-    <div class="geostrip" aria-label="Population by country">
-      <span class="gs"><svg class="flag"><use href="#f-de"/></svg><b>83.8</b>m</span>
-      <span class="gs"><svg class="flag"><use href="#f-fr"/></svg><b>68.8</b>m</span>
-      <span class="gs"><svg class="flag"><use href="#f-be"/></svg><b>11.9</b>m</span>
-      <span class="gs"><svg class="flag"><use href="#f-at"/></svg><b>9.2</b>m</span>
-      <span class="gs"><svg class="flag"><use href="#f-ch"/></svg><b>8.7</b>m</span>
-      <span class="gs"><svg class="flag"><use href="#f-lu"/></svg><b>0.7</b>m</span>
-      <span class="gs total">= <b>183m</b> people</span>
+    <h1>One Doctor-Fronted Product Family.</h1>
+    <p class="h1sub">Three Language Markets. All Your Links in One Place.</p>
+    <p class="lede"><strong>German, French and English funnels on Digistore24</strong>, all fronted by the same genuinely reputable, well-known doctor. Run the <strong>German offers</strong> where your angles have never been seen: Europe&rsquo;s wealthiest language market, at <strong>40&ndash;60% cheaper CPMs</strong> than the US, with a fraction of the competition. Open the <strong>French offers</strong> to France, Belgium, Switzerland and Luxembourg. Send <strong>English traffic</strong> to the English offers, shipped from our US fulfillment center. Everywhere: <strong>60&ndash;75% RevShare</strong> through the whole funnel &mdash; thank-you page included.</p>
+    <div class="markets" aria-label="Language markets">
+      <a class="mk" href="#lang-de"><b>German</b><span>Germany &middot; Austria &middot; Switzerland &middot; Liechtenstein &middot; Luxembourg</span><i>10 offers</i></a>
+      <a class="mk" href="#lang-fr"><b>French</b><span>France &middot; Belgium &middot; Switzerland &middot; Luxembourg</span><i>2 offers &middot; LigneSana coming within the next few days</i></a>
+      <a class="mk" href="#lang-en"><b>English</b><span>United States &middot; Canada &middot; United Kingdom &middot; worldwide (outside the EU) from our US fulfillment center</span><i>1 offer</i></a>
     </div>
-    <p class="quoteline">"<b>It's the US market in 2019.</b>" — enter your Digistore24 ID once, every link on this page becomes yours.</p>
+    <p class="quoteline">Enter your Digistore24 ID once &mdash; <b>every link on this page becomes yours.</b></p>
     <div class="statstrip" role="list">
-      <div class="stat wide" role="listitem"><b>183M</b><span>People in our six markets &mdash; over half the US</span></div>
-      <div class="stat" role="listitem"><b>40–60%</b><span>Cheaper CPMs vs US</span></div>
+      <div class="stat wide" role="listitem"><b>3</b><span>Language markets &mdash; German, French, English</span></div>
+      <div class="stat" role="listitem"><b>40–60%</b><span>Cheaper CPMs in German vs US</span></div>
       <div class="stat" role="listitem"><b>60–75%</b><span>RevShare, whole funnel</span></div>
       <div class="stat" role="listitem"><b>€120–150</b><span>CPA · currently $140–176</span></div>
-      <div class="stat" role="listitem"><b>$6.10</b><span>Top offer EPC (KetoSana)</span></div>
+      <div class="stat" role="listitem"><b>13</b><span>Offers with live links</span></div>
     </div>
-    <p class="srcnote">Figures from our live Digistore24 campaign data, verified 7 August 2026. EPCs are network averages across approved traffic — your results depend on your traffic quality. Don&rsquo;t take our word for it: if you have a Digistore24 account, <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">open the affiliate marketplace</a> and you get all of our offers with Digistore24&rsquo;s own live stats beside them &mdash; EPC, cancellation rate, earnings per sale. Each offer card below also links straight to its individual marketplace entry, which is public and needs no login.</p>
+    <p class="srcnote">Commission terms as of 7 October 2026. We no longer print EPCs on this page: they move weekly, and a stale EPC is worse than none &mdash; ask Stefan for the current EPC on any offer, with its time window. Don&rsquo;t take our word for it: if you have a Digistore24 account, <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">open the affiliate marketplace</a> and you get all of our offers with Digistore24&rsquo;s own live stats beside them &mdash; EPC, cancellation rate, earnings per sale. Each offer card below also links straight to its individual marketplace entry, which is public and needs no login.</p>
 
     <div class="genpanel" id="generator">
       <div class="f">
@@ -503,17 +538,24 @@
 
     <div class="indexwrap rev">
       <table>
-        <thead><tr><th>#</th><th>Offer</th><th class="hidem">Niche</th><th style="text-align:right">EPC</th><th></th></tr></thead>
+        <thead><tr><th>#</th><th>Offer</th><th class="hidem">Niche</th><th></th></tr></thead>
         <tbody>
-          <tr><td>1</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana</td><td class="hidem">Weight Loss</td><td class="r">$1.90</td><td><a href="#offer-1">Jump →</a></td></tr>
-          <tr><td>2</td><td><span class="idot" style="background:var(--c-weight)"></span>KetoSana</td><td class="hidem">Keto Weight Loss</td><td class="r">$6.10</td><td><a href="#offer-2">Jump →</a></td></tr>
-          <tr><td>3</td><td><span class="idot" style="background:var(--c-weight)"></span>MetaboSana</td><td class="hidem">Metabolism</td><td class="r">ask</td><td><a href="#offer-3">Jump →</a></td></tr>
-          <tr><td>4</td><td><span class="idot" style="background:var(--c-gut)"></span>CleanseSana</td><td class="hidem">Detox &amp; Gut</td><td class="r">$4.25</td><td><a href="#offer-4">Jump →</a></td></tr>
-          <tr><td>5</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoSana</td><td class="hidem">Blood Sugar</td><td class="r">ask</td><td><a href="#offer-5">Jump →</a></td></tr>
-          <tr><td>6</td><td><span class="idot" style="background:var(--c-nerve)"></span>NerveSana</td><td class="hidem">Nerve Health</td><td class="r">ask</td><td><a href="#offer-6">Jump →</a></td></tr>
-          <tr><td>7</td><td><span class="idot" style="background:var(--c-men)"></span>VigorSana</td><td class="hidem">Men's Health</td><td class="r">ask</td><td><a href="#offer-7">Jump →</a></td></tr>
-          <tr><td>8</td><td><span class="idot" style="background:var(--c-bundle)"></span>VitaSana Collection</td><td class="hidem">VIP Wellness System</td><td class="r">ask</td><td><a href="#offer-8">Jump →</a></td></tr>
-          <tr><td>9</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoTrust German</td><td class="hidem">Blood Sugar</td><td class="r">$2.45</td><td><a href="#offer-9">Jump →</a></td></tr><tr><td>10</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana FR</td><td class="hidem">Weight Loss &middot; French</td><td class="r">new</td><td><a href="#offer-10">Jump &rarr;</a></td></tr>
+          <tr class="grp"><td colspan="4">German &middot; Germany &middot; Austria &middot; Switzerland &middot; Liechtenstein &middot; Luxembourg</td></tr>
+          <tr><td>1</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana</td><td class="hidem">Weight Loss</td><td><a href="#offer-1">Jump →</a></td></tr>
+          <tr><td>2</td><td><span class="idot" style="background:var(--c-weight)"></span>KetoSana</td><td class="hidem">Keto Weight Loss</td><td><a href="#offer-2">Jump →</a></td></tr>
+          <tr><td>3</td><td><span class="idot" style="background:var(--c-weight)"></span>MetaboSana</td><td class="hidem">Metabolism</td><td><a href="#offer-3">Jump →</a></td></tr>
+          <tr><td>4</td><td><span class="idot" style="background:var(--c-gut)"></span>CleanseSana</td><td class="hidem">Detox &amp; Gut</td><td><a href="#offer-4">Jump →</a></td></tr>
+          <tr><td>5</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoSana</td><td class="hidem">Blood Sugar</td><td><a href="#offer-5">Jump →</a></td></tr>
+          <tr><td>6</td><td><span class="idot" style="background:var(--c-nerve)"></span>NerveSana</td><td class="hidem">Nerve Health</td><td><a href="#offer-6">Jump →</a></td></tr>
+          <tr><td>7</td><td><span class="idot" style="background:var(--c-men)"></span>VigorSana</td><td class="hidem">Men's Health</td><td><a href="#offer-7">Jump →</a></td></tr>
+          <tr><td>8</td><td><span class="idot" style="background:var(--c-men)"></span>HeroSana Caliber</td><td class="hidem">Men's Vitality Gummies</td><td><a href="#offer-11">Jump →</a></td></tr>
+          <tr><td>9</td><td><span class="idot" style="background:var(--c-bundle)"></span>VitaSana Collection</td><td class="hidem">VIP Wellness System</td><td><a href="#offer-8">Jump →</a></td></tr>
+          <tr><td>10</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoTrust German</td><td class="hidem">Blood Sugar</td><td><a href="#offer-9">Jump →</a></td></tr>
+          <tr class="grp"><td colspan="4">French &middot; France &middot; Belgium &middot; Switzerland &middot; Luxembourg</td></tr>
+          <tr><td>11</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana FR</td><td class="hidem">Weight Loss</td><td><a href="#offer-10">Jump →</a></td></tr>
+          <tr><td>12</td><td><span class="idot" style="background:var(--c-gut)"></span>FloraVitaSana FR</td><td class="hidem">Gut Health</td><td><a href="#offer-12">Jump →</a></td></tr>
+          <tr class="grp"><td colspan="4">English &middot; United States &middot; Canada &middot; United Kingdom &middot; worldwide (outside the EU)</td></tr>
+          <tr><td>13</td><td><span class="idot" style="background:var(--c-weight)"></span>KetoSana US</td><td class="hidem">Keto Weight Loss</td><td><a href="#offer-13">Jump →</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -523,25 +565,31 @@
 <main class="wrap">
 
   <div class="filters" role="toolbar" aria-label="Filter offers by category" id="cards">
-    <button class="chip" aria-pressed="true" data-f="all" type="button">All offers · 10</button>
+    <button class="chip" aria-pressed="true" data-f="all" type="button">All offers · 13</button>
     <button class="chip" aria-pressed="false" data-f="weight" type="button" style="--catc:var(--c-weight)"><span class="dot"></span>Weight Loss</button>
     <button class="chip" aria-pressed="false" data-f="blood" type="button" style="--catc:var(--c-blood)"><span class="dot"></span>Blood Sugar</button>
     <button class="chip" aria-pressed="false" data-f="gut" type="button" style="--catc:var(--c-gut)"><span class="dot"></span>Detox &amp; Gut</button>
     <button class="chip" aria-pressed="false" data-f="nerve" type="button" style="--catc:var(--c-nerve)"><span class="dot"></span>Nerve Health</button>
     <button class="chip" aria-pressed="false" data-f="men" type="button" style="--catc:var(--c-men)"><span class="dot"></span>Men's Health</button>
-    <span class="count" id="countLabel">Showing 10 of 10</span>
+    <span class="count" id="countLabel">Showing 13 of 13</span>
   </div>
-  <p class="langline"><b>The funnels are German and French &mdash; you don&rsquo;t need to be.</b> Every page, VSL and checkout below is native German-built by DACH copywriters — not translated US pages. Run our swipes and angles translated for you, or point your proven creatives at German-speaking audiences. <em>The language barrier is the moat</em> — it kept your competitors out, not you.</p>
+  <p class="langline"><b>You don&rsquo;t need to speak German or French.</b> The German funnels are built natively for German-speaking buyers &mdash; not translated US pages &mdash; and swipes and angles come translated for you. Pick the language market that fits your traffic and point your proven creatives at it. <em>The language barrier is the moat</em> &mdash; it kept your competitors out, not you.</p>
 
-  <p class="fmtline"><b>The funnel formats, and what each one is for.</b> <b>VSL</b> = video sales letter page &middot; <b>PDP</b> = long-form product detail page (text sales page) &middot; <b>DTC</b> = direct-to-cart page: the package boxes and prices only, no sales content &mdash; built for warm traffic, email lists and affiliates running their own pre-sell or advertorial. The <b>VSL</b>, <b>PDP</b> and <b>DTC</b> rows each come in two bundle sets: <b>1&middot;3&middot;6</b> bottles (single-bottle entry price) and <b>2&middot;3&middot;6</b> bottles (2-bottle entry, higher starting order value). Not every offer carries every format &mdash; the rows on each card are the ones that are live today. Every format carries your <code>aff</code> and <code>cam</code> parameters through to Digistore24 checkout.</p>
+  <p class="fmtline"><b>The funnel formats, and what each one is for.</b> <b>VSL</b> = video sales letter page &middot; <b>PDP</b> = long-form product detail page (text sales page) &middot; <b>DTC</b> = direct-to-cart page: the package boxes and prices only, no sales content &mdash; built for warm traffic, email lists and affiliates running their own pre-sell or advertorial. The <b>VSL</b>, <b>PDP</b> and <b>DTC</b> rows each come in two bundle sets: <b>1&middot;3&middot;6</b> bottles (single-bottle entry price) and <b>2&middot;3&middot;6</b> bottles (2-bottle entry, higher starting order value). HeroSana Caliber gummies come in jars instead: <b>2&middot;4&middot;8</b> jars plus a monthly subscription. Not every offer carries every format &mdash; the rows on each card are the ones that are live today. Every format carries your <code>aff</code> and <code>cam</code> parameters through to Digistore24 checkout.</p>
+  <section class="langsec" id="lang-de" aria-labelledby="lang-de-h">
+    <div class="langhead rev">
+      <div class="eyebrow">German-language offers &middot; 10 offers</div>
+      <h2 id="lang-de-h">Germany &middot; Austria &middot; Switzerland &middot; Liechtenstein &middot; Luxembourg</h2>
+      <p>Europe&rsquo;s wealthiest language market, at 40&ndash;60% cheaper CPMs than the US, with buyers who have never seen your angle. Every German funnel is built natively for German-speaking buyers. Over the last 90 days, <b>95% of orders came from Germany, Austria and Switzerland</b> &mdash; <a href="#market">see where the orders come from</a> and <a href="#why">why this market pays</a>.</p>
+    </div>
   <section class="starthere rev" aria-label="Where to start">
-    <div class="sh-head"><span class="sh-kicker">Start here</span><h2>The two offers running a full VSL <em>and</em> PDP</h2>
-      <p>Everything else on this page is one funnel format. These two let you match the funnel to the traffic instead of forcing the traffic into one page &mdash; cold video to the VSL, readers to the PDP, warm traffic straight to the cart.</p></div>
+    <div class="sh-head"><span class="sh-kicker">Start here</span><h2>Two German offers to test first</h2>
+      <p>For German traffic, start with one of these two. Both run a VSL, a PDP and a cart page, so you match the funnel to the traffic instead of forcing the traffic into one page &mdash; cold video to the VSL, readers to the PDP, warm traffic straight to the cart.</p></div>
     <div class="sh-grid">
       <a class="sh-card" href="#offer-2" style="--catc:var(--c-weight)">
-        <span class="sh-tag">Highest EPC on the program</span>
+        <span class="sh-tag">Most orders on the program &middot; last 90 days</span>
         <b>KetoSana</b>
-        <span class="sh-epc">~$6.10 <i>EPC</i></span>
+        <span class="sh-epc">#1 <i>by orders</i></span>
         <span class="sh-fmt">VSL &middot; PDP &middot; DTC &mdash; each in 1&middot;3&middot;6 and 2&middot;3&middot;6</span>
         <span class="sh-note">Best fit for cold video traffic. If you run video and haven&rsquo;t tested it, start here.</span>
         <span class="sh-go">Go to KetoSana &rarr;</span>
@@ -549,9 +597,9 @@
       <a class="sh-card" href="#offer-4" style="--catc:var(--c-gut)">
         <span class="sh-tag">Newest VSL &middot; freshest angle</span>
         <b>CleanseSana</b>
-        <span class="sh-epc">~$4.25 <i>EPC &middot; new VSL</i></span>
+        <span class="sh-epc">New VSL <i>+ proven PDP</i></span>
         <span class="sh-fmt">VSL &middot; PDP &middot; DTC &mdash; each in 1&middot;3&middot;6 and 2&middot;3&middot;6</span>
-        <span class="sh-note">The VSL reads above the proven $2.60 PDP &mdash; a young number on a young funnel, so ask for the current figure before you scale. Almost nobody is running it yet.</span>
+        <span class="sh-note">The new VSL runs next to the proven PDP. Almost nobody is running it yet &mdash; ask Stefan for the current EPC before you scale.</span>
         <span class="sh-go">Go to CleanseSana &rarr;</span>
       </a>
     </div>
@@ -563,15 +611,15 @@
       <header>
         <div class="rank">1</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>SlimSana</b> · Weight Loss · German-language funnel · DACH + EU</div>
-          <h3>Harvard-Trained Doctor's 60-Second "Metabolic Switch" Fix Germans Ignore</h3>
-          <p class="subhead">11-ingredient deep funnel for DACH's most frustrated weight-loss buyers — ~$1.90 EPC, 60–75% RevShare, traffic 40–60% below US rates.</p>
+          <div class="eyebrow2"><b>SlimSana</b> · Weight Loss · German-language funnel</div>
+          <h3>SlimSana &mdash; Harvard-Trained Doctor's 60-Second "Metabolic Switch" Fix Germans Ignore</h3>
+          <p class="subhead">11-ingredient deep funnel for DACH's most frustrated weight-loss buyers — 60–75% RevShare, traffic 40–60% below US rates.</p>
         </div>
         <img class="bottle" src="img/slimsana.png" alt="SlimSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">Proven Core Offer</span>
       </header>
       <div class="kpis">
-        <div class="kpi"><b>$1.90</b><span>EPC (≈ €1.60)</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>EPC &middot; current figure</span></div>
         <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
         <div class="kpi"><b>60–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–176</span></div>
@@ -585,7 +633,7 @@
           <li>Weight loss = DACH's biggest health spend</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU &middot; <svg class="flag"><use href="#f-fr"/></svg> French funnel live</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; French edition: <a href="#offer-10">SlimSana FR</a></b></div>
           <div><span>Segment</span><b>Women &amp; men 35–60+, failed diets</b></div>
         </div>
         <div class="cvrline"><span class="lab">Conversion · July 2026</span> <span>Desktop: <b>DE 3.85%</b> · <b>CH 5.26%</b> · <b>AT 3.17%</b></span> <span>Mobile runs 1–1.7 points lower</span></div>
@@ -615,15 +663,15 @@
       <header>
         <div class="rank">2</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>KetoSana</b> · Keto Weight Loss · German-language funnel · DACH + EU</div>
-          <h3>Germany's Highest-EPC Keto Offer Runs on a Mechanism Nobody Else Is Selling</h3>
-          <p class="subhead">Our single highest-EPC offer at ~$6.10 — premium liquid drops, AOV around €250 (≈ $290), 60-day guarantee, made-in-Germany trust that closes cold DACH traffic.</p>
+          <div class="eyebrow2"><b>KetoSana</b> · Keto Weight Loss · German-language funnel</div>
+          <h3>KetoSana &mdash; Our Best-Selling Offer Runs on a Keto Mechanism Nobody Else Is Selling</h3>
+          <p class="subhead">The most orders on the program over the last 90 days — premium liquid drops, AOV around €250 (≈ $290), 60-day guarantee, made-in-Germany trust that closes cold DACH traffic.</p>
         </div>
         <img class="bottle" src="img/ketosana.png" alt="KetoSana bottle" loading="lazy" onerror="this.style.display='none'">
-        <span class="badge">🏆 Top EPC · $6.10</span>
+        <span class="badge">🏆 #1 by Orders &middot; Last 90 Days</span>
       </header>
       <div class="kpis">
-        <div class="kpi"><b>$6.10</b><span>EPC (≈ €5.20)</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>EPC &middot; current figure</span></div>
         <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
         <div class="kpi"><b>60–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–176</span></div>
@@ -632,12 +680,12 @@
       <div class="body">
         <p class="pitch"><strong>Clinical-grade keto, zero hype.</strong> A Harvard-trained, genuinely well-known doctor — 17+ years treating high-performers in his US practice, featured on ABC, NBC, FOX — reveals the three biological "locks" that keep Germans fat after 40, and the pharma-grade formula that opens all three. Made in Germany. 60-day guarantee.</p>
         <ul class="hooks">
-          <li><b>$6.10 EPC</b> — our current #1, on Meta traffic; Google performing well too</li>
+          <li><b>Our #1 by orders</b> — Meta traffic leads; Google performing well too</li>
           <li>22 clinically dosed ingredients</li>
           <li>Speaks to skeptics burned by diet hype</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; English edition: <a href="#offer-13">KetoSana US</a></b></div>
           <div><span>Segment</span><b>30–65, optimal 40–58 · keto-curious, disposable income</b></div>
         </div>
         <div class="cvrline"><span class="lab">Conversion · July 2026</span> <span>Desktop: <b>DE 3.85%</b> · <b>CH 5.26%</b> · <b>AT 3.17%</b></span> <span>Mobile runs 1–1.7 points lower</span></div>
@@ -667,8 +715,8 @@
       <header>
         <div class="rank">3</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>MetaboSana</b> · Metabolism · German-language funnel · DACH + EU</div>
-          <h3>Stanford-Backed 3-Phase "Cell Unlock" Makes Clean Eating Finally Work</h3>
+          <div class="eyebrow2"><b>MetaboSana</b> · Metabolism · German-language funnel</div>
+          <h3>MetaboSana &mdash; Stanford-Backed 3-Phase "Cell Unlock" Makes Clean Eating Finally Work</h3>
           <p class="subhead">VSL live since April 22 — AOV around €250 (≈ $290) and a research story that converts DACH's science-trusting diet skeptics.</p>
         </div>
         <img class="bottle" src="img/metabosana.png" alt="MetaboSana bottle" loading="lazy" onerror="this.style.display='none'">
@@ -689,7 +737,7 @@
           <li>Email swipes via Digistore24</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Science-minded premium buyers 30+</b></div>
         </div>
         <div class="cvrline"><span class="lab">Conversion · July 2026</span> <span>Desktop: <b>DE 3.85%</b> · <b>CH 5.26%</b> · <b>AT 3.17%</b></span> <span>Mobile runs 1–1.7 points lower</span></div>
@@ -719,22 +767,22 @@
       <header>
         <div class="rank">4</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>CleanseSana</b> · Detox · Gut Health · German-language funnel · DACH + EU</div>
-          <h3>The 4-Mechanism Gut Reboot That Hit Digistore24's Top Offers in 4 Weeks</h3>
-          <p class="subhead">The brand-new VSL is live and converting at $4.25 EPC — up from $3.20 on 7 August, and well above the proven PDP's $2.60 — putting a fresh "cellular sludge" angle on digestion, immunity and fat loss.</p>
+          <div class="eyebrow2"><b>CleanseSana</b> · Detox · Gut Health · German-language funnel</div>
+          <h3>CleanseSana &mdash; The 4-Mechanism Gut Reboot That Hit Digistore24's Top Offers in 4 Weeks</h3>
+          <p class="subhead">The new VSL runs next to the proven PDP, putting a fresh "cellular sludge" angle on digestion, immunity and fat loss. Ask Stefan for the current EPC on both before you scale.</p>
         </div>
         <img class="bottle" src="img/cleansesana.png" alt="CleanseSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">⚡ New VSL · Just Launched</span>
       </header>
       <div class="kpis">
-        <div class="kpi"><b>$4.25</b><span>EPC · new VSL</span></div>
-        <div class="kpi"><b>$2.60</b><span>EPC · PDP funnel</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>EPC &middot; current figure</span></div>
+        <div class="kpi"><b>VSL + PDP</b><span>Both live</span></div>
         <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
         <div class="kpi"><b>60–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–176</span></div>
       </div>
       <div class="body">
-        <p class="pitch">The gut <strong>"Reboot"</strong>: a doctor-formulated system targeting <strong>"Toxic Backup Syndrome"</strong> — the cellular sludge blocking digestion, immunity and fat loss. Hit the Digistore24 top-offers list within four weeks of launch — and the brand-new VSL is live now, converting at $4.25 EPC &mdash; the second-highest on the program &mdash; with the proven PDP funnel running alongside it. Almost nobody is running it yet.</p>
+        <p class="pitch">The gut <strong>"Reboot"</strong>: a doctor-formulated system targeting <strong>"Toxic Backup Syndrome"</strong> — the cellular sludge blocking digestion, immunity and fat loss. Hit the Digistore24 top-offers list within four weeks of launch — and the new VSL is live now, with the proven PDP funnel running alongside it. Almost nobody is running it yet.</p>
         <ul class="hooks">
           <li><b>New VSL</b> just launched — zero ad fatigue</li>
           <li>Top-offers list in <b>4 weeks</b></li>
@@ -742,7 +790,7 @@
           <li>Stacks with SlimSana / GlucoSana upsells</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; French edition: <a href="#offer-12">FloraVitaSana FR</a></b></div>
           <div><span>Segment</span><b>Men &amp; women 30+, digestion &amp; detox pain</b></div>
         </div>
         <div class="cvrline"><span class="lab">Conversion · July 2026</span> <span>Desktop: <b>DE 3.85%</b> · <b>CH 5.26%</b> · <b>AT 3.17%</b></span> <span>Mobile runs 1–1.7 points lower</span></div>
@@ -772,8 +820,8 @@
       <header>
         <div class="rank">5</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>GlucoSana</b> · Blood Sugar · German-language funnel · DACH + EU</div>
-          <h3>Harvard-Trained Doctor's 17-Year "Glucose Prison" Protocol — Finally Outside His Clinic</h3>
+          <div class="eyebrow2"><b>GlucoSana</b> · Blood Sugar · German-language funnel</div>
+          <h3>GlucoSana &mdash; Harvard-Trained Doctor's 17-Year "Glucose Prison" Protocol — Finally Outside His Clinic</h3>
           <p class="subhead">The successor to our all-time best DACH offer — AOV €177–294, built for high-intent 40+ buyers who've failed mainstream solutions.</p>
         </div>
         <img class="bottle" src="img/glucosana.png" alt="GlucoSana bottle" loading="lazy" onerror="this.style.display='none'">
@@ -794,7 +842,7 @@
           <li>Cross-sells into SlimSana / MetaboSana</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, blood-sugar concerns</b></div>
         </div>
         <div class="linkrows">
@@ -823,8 +871,8 @@
       <header>
         <div class="rank">6</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>NerveSana</b> · Nerve Health · German-language funnel · DACH + EU</div>
-          <h3>The "Ikaria Anomaly" — Why 90-Year-Old Greeks Have Healthier Nerves Than 40-Year-Old Germans</h3>
+          <div class="eyebrow2"><b>NerveSana</b> · Nerve Health · German-language funnel</div>
+          <h3>NerveSana &mdash; The "Ikaria Anomaly" — Why 90-Year-Old Greeks Have Healthier Nerves Than 40-Year-Old Germans</h3>
           <p class="subhead">8.3M German neuropathy sufferers, premium pricing, desperate high-intent buyers — a mechanism angle no competitor is running.</p>
         </div>
         <img class="bottle" src="img/nervesana.png" alt="NerveSana bottle" loading="lazy" onerror="this.style.display='none'">
@@ -845,7 +893,7 @@
           <li>Facebook 40+ demos convert strongly</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, neuropathy &amp; nerve pain</b></div>
         </div>
         <div class="linkrows">
@@ -874,8 +922,8 @@
       <header>
         <div class="rank">7</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>VigorSana</b> · Men's Health · Performance · German-language funnel · DACH + EU</div>
-          <h3>The "Bio-Energetic Leak" Quietly Draining Men Over 40 — and the 4-Phase Fix</h3>
+          <div class="eyebrow2"><b>VigorSana</b> · Men's Health · Performance · German-language funnel</div>
+          <h3>VigorSana &mdash; The "Bio-Energetic Leak" Quietly Draining Men Over 40 — and the 4-Phase Fix</h3>
           <p class="subhead">A private, doctor-free solution for men too embarrassed to ask — 60-day money-back guarantee removes purchase friction.</p>
         </div>
         <img class="bottle" src="img/vigorsana.png" alt="VigorSana bottle" loading="lazy" onerror="this.style.display='none'">
@@ -896,7 +944,7 @@
           <li>Privacy + desperation = conversions</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men 40–65, energy &amp; performance loss</b></div>
         </div>
         <div class="linkrows">
@@ -919,13 +967,54 @@
       </div>
     </article>
 
-    <!-- 8 · VitaSana Collection -->
-    <article class="card rev" data-cat="bundle" id="offer-8" style="--catc:var(--c-bundle)">
+    <!-- 8 · HeroSana Caliber (id offer-11) -->
+    <article class="card rev" data-cat="men" id="offer-11" style="--catc:var(--c-men)">
       <header>
         <div class="rank">8</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>VitaSana Collection</b> &middot; VIP Wellness System &middot; 8 Products &middot; German-language funnel &middot; DACH + EU</div>
-          <h3>The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</h3>
+          <div class="eyebrow2"><b>HeroSana Caliber</b> &middot; Men's Vitality &middot; Gummies &middot; German-language funnel</div>
+          <h3>HeroSana Caliber &mdash; &ldquo;Your Doctor Says Everything Is Normal for Your Age. So Why Don&rsquo;t You Feel Like Yourself?&rdquo;</h3>
+          <p class="subhead">A daily men&rsquo;s vitality gummy for German-speaking men aged 25 to 67, formulated by a Harvard-trained doctor and built on EU-authorized nutrient claims &mdash; 60-day money-back guarantee, from &euro;49 per jar.</p>
+        </div>
+        <img class="bottle" src="img/herosana.png" alt="HeroSana Caliber jars" loading="lazy" onerror="this.style.display='none'">
+        <span class="badge green">New &middot; Just Launched</span>
+      </header>
+      <div class="kpis">
+        <div class="kpi"><b>&mdash; new</b><span>EPC &middot; no history yet</span></div>
+        <div class="kpi"><b>&euro;138&ndash;392</b><span>Order &middot; 2&ndash;8 jars</span></div>
+        <div class="kpi"><b>60&ndash;75%</b><span>RevShare</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>CPA &middot; on request</span></div>
+        <div class="kpi"><b>25&ndash;67</b><span>Men</span></div>
+      </div>
+      <div class="body">
+        <p class="pitch">One gummy routine with <strong>niacin, vitamin B6 and zinc</strong> &mdash; the nutrients with EU-authorized claims: niacin and vitamin B6 contribute to the reduction of tiredness and fatigue, vitamin B6 to the regulation of hormonal activity, and zinc to the maintenance of normal testosterone levels in the blood. Plus a dose-transparent maca extract. <strong>A gummy he actually takes every day beats a capsule he forgets.</strong></p>
+        <ul class="hooks">
+          <li>Jars of <b>2, 4 or 8</b> &mdash; plus a monthly subscription</li>
+          <li>Built on EU-authorized nutrient claims</li>
+          <li>Deep post-purchase funnel &mdash; you earn on every step</li>
+        </ul>
+        <div class="aud">
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
+          <div><span>Segment</span><b>Men 25&ndash;67 who feel their energy and edge slipping</b></div>
+        </div>
+        <div class="linkrows">
+          <div class="lrow"><div class="tag">PDP 2&middot;4&middot;8<span class="sub">Jars + subscription</span></div><div class="url" data-link="https://herosana.com/herosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        </div>
+        <p class="fmtline" style="border-left-color:var(--c-men);margin:12px 0 4px;font-size:13.5px"><b>Read this before you run it.</b> Promote HeroSana Caliber only with the EU-authorized nutrient claims shown on the sales page and the label &mdash; no erectile-dysfunction or &ldquo;testosterone booster&rdquo; angles, no weight-loss promises. The VSL goes on this card as soon as it is switched to the HeroSana checkout; until then, send all traffic to the PDP. There is <b>no EPC history yet</b>: you are early.</p>
+        <div class="cardfoot">
+          <span class="note">RevShare starts at 60% across the whole funnel — rises to 75% with volume. CPA on request.</span>
+          <button class="btn small copyall" type="button">Copy this offer's links</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9 · VitaSana Collection (id offer-8) -->
+    <article class="card rev" data-cat="bundle" id="offer-8" style="--catc:var(--c-bundle)">
+      <header>
+        <div class="rank">9</div>
+        <div class="hgroup">
+          <div class="eyebrow2"><b>VitaSana Collection</b> &middot; VIP Wellness System &middot; 8 Products &middot; German-language funnel</div>
+          <h3>VitaSana Collection &mdash; The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</h3>
           <p class="subhead">Built for email lists &mdash; buyers pick their next transformation by their biggest pain point, and you earn 60&ndash;75% across the whole VIP Wellness System.</p>
         </div>
         <img class="bottle" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
@@ -946,7 +1035,7 @@
           <li>Built for list owners &amp; content traffic</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-de"/></svg> <svg class="flag"><use href="#f-at"/></svg> <svg class="flag"><use href="#f-ch"/></svg> + German speakers in EU</b></div>
+          <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 30+, multi-symptom health buyers</b></div>
         </div>
         <div class="linkrows">
@@ -966,22 +1055,22 @@
       </div>
     </article>
 
-    <!-- 9 · GlucoTrust German -->
+    <!-- 10 · GlucoTrust German (id offer-9) -->
     <article class="card flagship rev" data-cat="blood" id="offer-9" style="--catc:var(--c-blood)">
       <header>
-        <div class="rank">9</div>
+        <div class="rank">10</div>
         <div class="hgroup">
-          <div class="eyebrow2"><b>GlucoTrust German</b> &middot; Blood Sugar &middot; Flagship &middot; EU + CH, LI, NO, IS</div>
-          <h3>Clickbank&rsquo;s All-Time Best Blood-Sugar Offer &mdash; Localized for 100M+ German Speakers</h3>
-          <p class="subhead">The offer this whole portfolio was built on, running in German on Digistore24 &mdash; $2.45 EPC, $231 AOV, 1.82% CVR, with an email swipe library that keeps getting refreshed.</p>
+          <div class="eyebrow2"><b>GlucoTrust German</b> &middot; Blood Sugar &middot; Flagship &middot; German-language funnel</div>
+          <h3>GlucoTrust &mdash; Clickbank&rsquo;s All-Time Best Blood-Sugar Offer &mdash; Localized for 100M+ German Speakers</h3>
+          <p class="subhead">The offer this whole portfolio was built on, running in German on Digistore24 &mdash; four funnel formats and an email swipe library that keeps getting refreshed.</p>
         </div>
         <img class="bottle" src="img/glucotrust-german.png" alt="GlucoTrust German bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">&#127942; All-Time Best Blood-Sugar Offer</span>
       </header>
       <div class="kpis">
-        <div class="kpi"><b>$2.45</b><span>EPC (min $2.30)</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>EPC &middot; current figure</span></div>
         <div class="kpi"><b>$231</b><span>AOV</span></div>
-        <div class="kpi"><b>1.82%</b><span>CVR</span></div>
+        <div class="kpi"><b>4</b><span>Funnel formats</span></div>
         <div class="kpi"><b>60&ndash;75%</b><span>RevShare</span></div>
         <div class="kpi"><b>&euro;120&ndash;150</b><span>CPA &middot; $140&ndash;176</span></div>
       </div>
@@ -993,7 +1082,7 @@
           <li>Pick the funnel that fits your traffic</li>
         </ul>
         <div class="aud">
-          <div><span>Geo</span><b><svg class="flag"><use href="#f-eu"/></svg> EU-wide + <svg class="flag"><use href="#f-ch"/></svg> <svg class="flag"><use href="#f-li"/></svg> <svg class="flag"><use href="#f-no"/></svg> <svg class="flag"><use href="#f-is"/></svg> &middot; German language</b></div>
+          <div><span>Geo</span><b>EU-wide + Switzerland, Liechtenstein, Norway, Iceland &middot; German language</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, blood sugar &amp; weight</b></div>
         </div>
         <div class="linkrows">
@@ -1013,17 +1102,27 @@
         </div>
       </div>
     </article>
-    <!-- 10 · SlimSana FR -->
+  </div>
+  </section>
+
+  <section class="langsec" id="lang-fr" aria-labelledby="lang-fr-h">
+    <div class="langhead rev">
+      <div class="eyebrow">French-language offers &middot; 2 offers, LigneSana coming within the next few days</div>
+      <h2 id="lang-fr-h">France &middot; Belgium &middot; Switzerland &middot; Luxembourg</h2>
+      <p>France and Luxembourg, plus the French-speaking regions of Belgium and Switzerland. The French offers run on their own Digistore24 products in a separate vendor account, with their own stats and their own commission line. There is no EPC history yet &mdash; you are early. Swiss traffic follows Swiss claim rules, which differ from the EU&rsquo;s: check the <a href="claims/">claims center</a> before you write.</p>
+    </div>
+  <div class="cards">
+    <!-- 11 · SlimSana FR (id offer-10) -->
     <article class="card rev" data-cat="weight" id="offer-10" style="--catc:var(--c-weight)">
       <header>
-        <div class="rank">10</div>
+        <div class="rank">11</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>SlimSana FR</b> &middot; Weight Loss &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
-          <h3>Our Best-Selling German Funnel, Rebuilt in French &mdash; Not Translated</h3>
+          <h3>SlimSana &mdash; Our Best-Selling German Funnel, Rebuilt in French &mdash; Not Translated</h3>
           <p class="subhead">SlimSana's French edition for France, Belgium, Switzerland and Luxembourg &mdash; written in French rather than machine-translated, on its own Digistore24 products in a separate vendor account.</p>
         </div>
         <img class="bottle" src="img/slimsana.png" alt="SlimSana bottle" loading="lazy" onerror="this.style.display='none'">
-        <span class="badge">Just Approved &middot; New Market</span>
+        <span class="badge">New Market</span>
       </header>
       <div class="kpis">
         <div class="kpi"><b>&mdash; new</b><span>EPC &middot; no history yet</span></div>
@@ -1032,6 +1131,7 @@
         <div class="kpi"><b>&euro;120&ndash;150</b><span>CPA &middot; $140&ndash;176</span></div>
         <div class="kpi"><b>35&ndash;60+</b><span>Women &amp; Men</span></div>
       </div>
+      <div class="body">
       <p class="pitch">The same 11-ingredient weight-loss funnel that produces our highest German volume, built for French-speaking Europe by French copywriters &mdash; <strong>not a translation layer over the German pages</strong>. It runs on its own Digistore24 products in a separate vendor account, so it carries its own stats and its own commission line.</p>
       <ul class="hooks">
         <li>A market our German offers <b>cannot</b> reach</li>
@@ -1039,13 +1139,15 @@
         <li>Separate DS24 vendor account &mdash; its own stats</li>
       </ul>
       <div class="aud">
-        <div><span>Geo</span><b><svg class="flag"><use href="#f-fr"/></svg> France, Belgium, Switzerland, Luxembourg</b></div>
+        <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
         <div><span>Segment</span><b>Women &amp; men 35&ndash;60+, failed diets</b></div>
       </div>
       <div class="linkrows">
-        <div class="lrow"><div class="tag geo"><svg class="flag tagflag"><use href="#f-fr"/></svg>PDP FR 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
       </div>
-      <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Brand new &mdash; read this before you scale.</b> Geo means the French-speaking audience in those four countries &mdash; all of France and Luxembourg, and the French-speaking regions of Belgium and Switzerland. The offer has just been approved and is appearing in the Digistore24 marketplace now, so if you search for it and come up empty, that is the reason. There is <b>no EPC history yet</b>: you are early, and the numbers on the German card above do not carry over. <b>Send French traffic here and German traffic to the SlimSana card.</b> A 2-bottle French entry is in preparation &mdash; email <a href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%202-bottle%20entry&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%20for%20French%20traffic%3A%0APlease%20notify%20me%20when%20the%202-bottle%20FR%20entry%20goes%20live.">affiliates@sana-socials.com</a> if you want it the day it goes live.</p>
+      <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Geo means the French-speaking audience in those four countries &mdash; all of France and Luxembourg, and the French-speaking regions of Belgium and Switzerland. There is <b>no EPC history yet</b>: you are early, and the numbers on the German card do not carry over. <b>Send French traffic here and German traffic to the SlimSana card.</b> The French VSL goes on this card as soon as its French video is live &mdash; email <a href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%20French%20VSL&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%20for%20French%20traffic%3A%0APlease%20notify%20me%20when%20the%20French%20VSL%20goes%20live.">affiliates@sana-socials.com</a> if you want it the day it goes live.</p>
       <div class="resources">
         <a class="mkt-verify" href="https://www.digistore24-app.com/product/720983" target="_blank" rel="noopener">See the French marketplace entry &#8599;</a>
         <a class="mkt-verify" href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%20creatives%20%26%20angles&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0AChannels%20you%20will%20run%20in%20French%3A%0AWhat%20you%20need%20(ads%2C%20pre-sells%2C%20angles)%3A">French creatives &amp; angles on request &#8599;</a>
@@ -1054,32 +1156,133 @@
         <span class="note">RevShare starts at 60% across the whole funnel &mdash; rises to 75% with volume. CPA on request.</span>
         <button class="btn small copyall" type="button">Copy this offer's links</button>
       </div>
+      </div>
     </article>
 
+    <!-- 12 · FloraVitaSana FR (id offer-12) -->
+    <article class="card rev" data-cat="gut" id="offer-12" style="--catc:var(--c-gut)">
+      <header>
+        <div class="rank">12</div>
+        <div class="hgroup">
+          <div class="eyebrow2"><b>FloraVitaSana FR</b> &middot; Gut Health &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
+          <h3>FloraVitaSana &mdash; The French Edition of CleanseSana &mdash; Under Its Own French Name</h3>
+          <p class="subhead">Our gut-health offer for French-speaking Europe, sold as FloraVitaSana on its own Digistore24 products in the French vendor account &mdash; 60-day money-back guarantee.</p>
+        </div>
+        <img class="bottle" src="img/floravitasana-fr.png" alt="FloraVitaSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <span class="badge green">New Market &middot; Just Launched</span>
+      </header>
+      <div class="kpis">
+        <div class="kpi"><b>&mdash; new</b><span>EPC &middot; no history yet</span></div>
+        <div class="kpi"><b>&euro;69&ndash;234</b><span>Order &middot; 1&ndash;6 bottles</span></div>
+        <div class="kpi"><b>60&ndash;75%</b><span>RevShare</span></div>
+        <div class="kpi"><b>&euro;120&ndash;150</b><span>CPA &middot; $140&ndash;176</span></div>
+        <div class="kpi"><b>30+</b><span>Women &amp; Men</span></div>
+      </div>
+      <div class="body">
+        <p class="pitch">The gut-health funnel behind CleanseSana, for French-speaking buyers &mdash; renamed for the French market and running on its own Digistore24 products in a separate vendor account, so it carries <strong>its own stats and its own commission line</strong>. PDP and cart page are live, each in 1&middot;3&middot;6 and 2&middot;3&middot;6.</p>
+        <ul class="hooks">
+          <li>A market our German offers <b>cannot</b> reach</li>
+          <li>Own French name, own Digistore24 products</li>
+          <li>PDP and cart page, each in 1&middot;3&middot;6 and 2&middot;3&middot;6</li>
+        </ul>
+        <div class="aud">
+          <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
+          <div><span>Segment</span><b>Men &amp; women 30+, digestion &amp; gut comfort</b></div>
+        </div>
+        <div class="linkrows">
+          <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">DTC 2&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-dtc-bb-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        </div>
+        <p class="fmtline" style="border-left-color:var(--c-gut);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Send French traffic here and German traffic to the CleanseSana card. In French, stay away from &laquo;&nbsp;d&eacute;tox&nbsp;&raquo; and any promise to cleanse or detoxify the body &mdash; Digistore24 does not approve that wording for this offer. The French VSL goes on this card as soon as its French video is live. There is <b>no EPC history yet</b>: you are early.</p>
+        <div class="resources">
+          <a class="mkt-verify" href="https://www.digistore24-app.com/product/740795" target="_blank" rel="noopener">See the French marketplace entry &#8599;</a>
+          <a class="mkt-verify" href="mailto:affiliates@sana-socials.com?subject=FloraVitaSana%20FR%20%E2%80%94%20creatives%20%26%20angles&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0AChannels%20you%20will%20run%20in%20French%3A%0AWhat%20you%20need%20(ads%2C%20pre-sells%2C%20angles)%3A">French creatives &amp; angles on request &#8599;</a>
+        </div>
+        <div class="cardfoot">
+          <span class="note">RevShare starts at 60% across the whole funnel &mdash; rises to 75% with volume. CPA on request.</span>
+          <button class="btn small copyall" type="button">Copy this offer's links</button>
+        </div>
+      </div>
+    </article>
 
-
-
+    <div class="soon rev" id="ligne-soon" style="--catc:var(--c-weight)"><b>LigneSana (KetoSana French) &mdash; coming within the next few days.</b> The French edition of KetoSana, for France, Belgium, Switzerland and Luxembourg. <a href="mailto:affiliates@sana-socials.com?subject=LigneSana%20FR%20%E2%80%94%20notify%20me&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%20for%20French%20traffic%3A%0APlease%20send%20me%20the%20LigneSana%20links%20the%20day%20they%20go%20live.">Get the links the day it goes live &rarr;</a></div>
   </div>
+  </section>
+
+  <section class="langsec" id="lang-en" aria-labelledby="lang-en-h">
+    <div class="langhead rev">
+      <div class="eyebrow">English-language offers &middot; 1 offer</div>
+      <h2 id="lang-en-h">United States &middot; Canada &middot; United Kingdom &middot; worldwide (outside the EU)</h2>
+      <p>The United States and Canada first &mdash; and the rest of the world outside the EU, because English-language orders ship from our US fulfillment center. The checkout charges in US dollars. KetoSana is the first English offer; more of the product family follows.</p>
+    </div>
+  <div class="cards">
+    <!-- 13 · KetoSana US (id offer-13) -->
+    <article class="card rev" data-cat="weight" id="offer-13" style="--catc:var(--c-weight)">
+      <header>
+        <div class="rank">13</div>
+        <div class="hgroup">
+          <div class="eyebrow2"><b>KetoSana US</b> &middot; Keto Weight Loss &middot; English-language funnel &middot; United States, Canada, United Kingdom, worldwide (outside the EU)</div>
+          <h3>KetoSana &mdash; Our Best-Selling Offer, Now in English &mdash; Checkout in US Dollars</h3>
+          <p class="subhead">The English edition of KetoSana: premium liquid drops, the same doctor, a 60-day money-back guarantee &mdash; and orders shipped from our US fulfillment center.</p>
+        </div>
+        <img class="bottle" src="img/ketosana-us.png" alt="KetoSana bottle, English label" loading="lazy" onerror="this.style.display='none'">
+        <span class="badge green">New Market &middot; English</span>
+      </header>
+      <div class="kpis">
+        <div class="kpi"><b>&mdash; new</b><span>EPC &middot; no history yet</span></div>
+        <div class="kpi"><b>$69&ndash;294</b><span>Order &middot; 1&ndash;6 bottles</span></div>
+        <div class="kpi"><b>60&ndash;75%</b><span>RevShare</span></div>
+        <div class="kpi"><b class="na">&mdash; ask</b><span>CPA &middot; on request</span></div>
+        <div class="kpi"><b>30&ndash;60+</b><span>Women &amp; Men</span></div>
+      </div>
+      <div class="body">
+        <p class="pitch"><strong>Clinical-grade keto, zero hype</strong> &mdash; now for English-language buyers. A Harvard-trained, genuinely well-known doctor &mdash; 17+ years treating high-performers in his US practice, featured on ABC, NBC, FOX &mdash; explains the three biological &ldquo;locks&rdquo; he sees behind stubborn weight after 40. Checkout in US dollars, orders shipped from our US fulfillment center, 60-day money-back guarantee.</p>
+        <ul class="hooks">
+          <li>Checkout in <b>US dollars</b> &mdash; $69 to $294</li>
+          <li>Ships from our US fulfillment center</li>
+          <li>PDP and cart page, each in 1&middot;3&middot;6 and 2&middot;3&middot;6</li>
+        </ul>
+        <div class="aud">
+          <div><span>Geo</span><b>United States, Canada, United Kingdom &middot; worldwide (outside the EU) from our US fulfillment center</b></div>
+          <div><span>Segment</span><b>30&ndash;65 &middot; keto-curious, disposable income</b></div>
+        </div>
+        <div class="linkrows">
+          <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+          <div class="lrow"><div class="tag">DTC 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-dtc-bb-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        </div>
+        <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Send English-language traffic here and German traffic to the KetoSana card. The VSL goes on this card as soon as its English video is live. For US traffic, disclose your affiliation the FTC way and make no specific weight-loss result promises. There is <b>no EPC history yet</b>: you are early.</p>
+        <div class="cardfoot">
+          <span class="note">RevShare starts at 60% across the whole funnel &mdash; rises to 75% with volume. CPA on request.</span>
+          <button class="btn small copyall" type="button">Copy this offer's links</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  </section>
 
   <div class="pipeline rev" id="pipeline">
     <div class="pt">
-      <div class="eyebrow" style="color:var(--gold)">In Production — Two New Offers</div>
+      <div class="eyebrow" style="color:var(--gold)">In Production — Next Up</div>
       <h3>Coming next: be first when the funnels go live</h3>
       <ul>
-        <li><b>HeroSana Caliber Gummies</b> — ED / men&rsquo;s-health gummies · VSL &amp; TSL in preparation</li>
+        <li><b>LigneSana</b> — the French edition of KetoSana · coming within the next few days</li>
         <li><b>MindSana — Mind Matrix Formula</b> · VSL &amp; TSL in preparation</li>
       </ul>
     </div>
     <div class="pa">
-      <a class="btn primary" href="mailto:affiliates@sana-socials.com?subject=Early%20List%20%E2%80%94%20HeroSana%20Caliber%20Gummies%20%2B%20MindSana&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0APlease%20notify%20me%20when%20the%20VSL%2FTSL%20go%20live.">Get on the early list →</a>
-      <p class="note">We email the early list the day the VSL/TSL are ready — before the offers appear on this page.</p>
+      <a class="btn primary" href="mailto:affiliates@sana-socials.com?subject=Early%20List%20%E2%80%94%20LigneSana%20FR%20%2B%20MindSana&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0APlease%20notify%20me%20when%20the%20links%20go%20live.">Get on the early list →</a>
+      <p class="note">We email the early list the day the links are ready — before the offers appear on this page.</p>
     </div>
   </div>
 
   <!-- why DACH -->
   <section class="block" id="why">
-    <div class="eyebrow">Why DACH — The Last Uncrowded Market</div>
-    <h2>Seven reasons this market beats your US numbers</h2>
+    <div class="eyebrow">Why German-Speaking Europe — The Last Uncrowded Market</div>
+    <h2>Seven reasons the German-language market beats saturated numbers</h2>
     <p class="lede">Not a pitch — a market argument. Every point below is why the same operator playbook produces better math in German-speaking Europe right now.</p>
     <div class="epis">
       <div class="epi rev"><h4>The Traffic-Arbitrage Inversion</h4><p>Same ad account, same funnel logic, 40–60% lower CPMs. Creative math that stopped working in the US suddenly clears again — without touching your playbook.</p></div>
@@ -1114,8 +1317,8 @@
     </div>
     <div class="opsgrid">
       <div class="tile rev"><h4>Support before you are a super</h4><p>The priority hotline is a volume perk, but the door is not. Email <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a> and you get an answer <b>within 28 hours, whatever your volume</b> &mdash; before your first click, not after your first thousand sales.</p></div>
-      <div class="tile rev"><h4>Where the volume comes from</h4><p>So you can map our numbers onto your own operation: the <b>$6.10 KetoSana EPC is Meta traffic</b>, and <b>Google is performing well</b> alongside it. Ask for the current source split on any offer before you plan media &mdash; an EPC you cannot attribute to a channel is not your number yet.</p></div>
-      <div class="tile rev"><h4>Refund rate, stated</h4><p>A 60-day guarantee can sit on a 3% refund rate or a 25% one, and those are completely different net EPCs. Across all our offers the Digistore24 dashboard shows <b>6.7% over the last 90 days</b>. It is on this page because otherwise you would have to ask.</p></div>
+      <div class="tile rev"><h4>Where the volume comes from</h4><p>So you can map our numbers onto your own operation: <b>Meta is the main volume source on KetoSana</b>, and <b>Google is performing well</b> alongside it. Ask for the current source split on any offer before you plan media &mdash; an EPC you cannot attribute to a channel is not your number yet.</p></div>
+      <div class="tile rev"><h4>Refund rate, on request</h4><p>A 60-day guarantee can sit on a 3% refund rate or a 25% one, and those are completely different net EPCs. Ask Stefan for the current 90-day refund rate on the offer you plan to run &mdash; you get it with its time window, before you spend.</p></div>
       <div class="tile rev"><h4>Proof, not promises</h4><p>Ask for any offer's live marketplace numbers and get them with explicit time windows — auditable stats, not screenshots. If a number isn't on this page, "ask support" means we show you the real one.</p></div>
       <div class="tile rev"><h4>Creative sovereignty</h4><p>Authorized custom hooks and VSL intros for qualified partners, plus a partner-only angle map: what's working, what's burned, what we're testing next. You build the edge; we supply the engine.</p></div>
       <div class="tile rev"><h4>Funnel control</h4><p>Pre-sell-first explicitly supported: quiz → checkout, listicle → checkout, advertorial → checkout, or VSL-first. We help you keep message match instead of forcing generic paths.</p></div>
@@ -1167,29 +1370,27 @@
   <section class="block" id="market">
     <div class="eyebrow">Market Intelligence</div>
     <h2>Where the orders actually come from</h2>
-    <p class="lede">German-language funnels sell far beyond Germany. Roughly 69% of orders come from DACH — the rest is German speakers across the EU. Geo-target accordingly.</p>
+    <p class="lede">Our German-language offers over the last 90 days: <b>95% of orders came from Germany, Austria and Switzerland</b>, the rest from German speakers across the EU. The French and English offers are new and have no country history yet.</p>
     <div class="market">
       <div class="tablewrap rev">
         <table class="mkt">
-          <thead><tr><th>Country</th><th class="barcell">Share of sales</th><th style="text-align:right">%</th></tr></thead>
+          <thead><tr><th>Country</th><th class="barcell">Share of orders &middot; last 90 days</th><th style="text-align:right">%</th></tr></thead>
           <tbody>
-            <tr><td><svg class="flag sm"><use href="#f-de"/></svg> Germany</td><td class="barcell"><div class="bar" style="width:100%"></div></td><td class="num">38.9</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-ch"/></svg> Switzerland</td><td class="barcell"><div class="bar" style="width:44%"></div></td><td class="num">17.2</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-at"/></svg> Austria</td><td class="barcell"><div class="bar" style="width:33%"></div></td><td class="num">12.8</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-es"/></svg> Spain</td><td class="barcell"><div class="bar" style="width:22%"></div></td><td class="num">8.7</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-lu"/></svg> Luxembourg</td><td class="barcell"><div class="bar" style="width:12%"></div></td><td class="num">4.6</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-it"/></svg> Italy</td><td class="barcell"><div class="bar" style="width:9%"></div></td><td class="num">3.7</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-hu"/></svg> Hungary</td><td class="barcell"><div class="bar" style="width:5%"></div></td><td class="num">2.1</td></tr>
-            <tr><td><svg class="flag sm"><use href="#f-dk"/></svg> Denmark</td><td class="barcell"><div class="bar" style="width:5%"></div></td><td class="num">1.8</td></tr>
-            <tr><td colspan="2" style="color:var(--dim)">18 more countries</td><td class="num">10.2</td></tr>
+            <tr><td>Germany</td><td class="barcell"><div class="bar" style="width:100%"></div></td><td class="num">79.2</td></tr>
+            <tr><td>Austria</td><td class="barcell"><div class="bar" style="width:10%"></div></td><td class="num">8.1</td></tr>
+            <tr><td>Switzerland</td><td class="barcell"><div class="bar" style="width:10%"></div></td><td class="num">7.9</td></tr>
+            <tr><td>Belgium</td><td class="barcell"><div class="bar" style="width:4%"></div></td><td class="num">3.1</td></tr>
+            <tr><td>Spain</td><td class="barcell"><div class="bar" style="width:1%"></div></td><td class="num">0.6</td></tr>
+            <tr><td>Italy</td><td class="barcell"><div class="bar" style="width:1%"></div></td><td class="num">0.5</td></tr>
+            <tr><td colspan="2" style="color:var(--dim)">4 more countries</td><td class="num">0.5</td></tr>
           </tbody>
         </table>
       </div>
       <div class="shipbox rev">
         <h4>Shipping coverage</h4>
-        <p>We ship to the <b>entire EU</b> plus <b>Switzerland, Liechtenstein, Norway and Iceland</b> — 31 countries. Don't geo-restrict to Germany: Swiss buyers alone are 17% of sales with premium purchasing power.</p>
-        <p style="margin-top:10px"><b>Targeting tip:</b> set language to German, geo to DE + AT + CH first, then expand to LU, ES (expat communities), IT and DK once your funnel proves out.</p>
-        <p style="margin-top:10px;font-size:14px;color:var(--dim)">Source: SanaSocials sales data across all offers, 2026.</p>
+        <p>We ship to the <b>entire EU</b> plus <b>Switzerland, Liechtenstein, Norway and Iceland</b> — 31 countries. Don't geo-restrict to Germany: Austria and Switzerland together bring 16% of orders, and Swiss buyers have premium purchasing power.</p>
+        <p style="margin-top:10px"><b>Targeting tip:</b> set language to German, geo to DE + AT + CH first, then expand to LU, BE and the rest of the EU once your funnel proves out. French offers: France, Belgium, Switzerland, Luxembourg. English offers: US and Canada first, then worldwide (outside the EU) from our US fulfillment center.</p>
+        <p style="margin-top:10px;font-size:14px;color:var(--dim)">Source: Digistore24 order data for our German-language offers, 9 July &ndash; 7 October 2026: 770 orders, upsells included, internal test orders excluded.</p>
       </div>
     </div>
   </section>
@@ -1226,13 +1427,13 @@
     <div class="faqs">
       <details class="rev"><summary>Can I run my own pre-sell in front of your funnel?</summary><p>Yes — explicitly supported: quiz → checkout, listicle → checkout, advertorial → checkout, or VSL-first. Keep message match between your pre-sell and the funnel's opening state, disclose your affiliation, and hold your pre-sell to the same <a href="claims/">claims rules</a> as our pages — your account and ours share the same regulator.</p></details>
       <details class="rev"><summary>How do you protect attribution on long VSLs with delayed CTAs?</summary><p>Digistore24 tracking pixel and S2S postback support, campaign-key conventions per traffic source, and delayed-CTA handling on the VSL pages. The rule that saves accounts: settle your campaign-key convention with Stefan <em>before</em> the first euro of spend, not after. Full walkthrough in the <a href="tracking/">tracking setup guide</a>.</p></details>
-      <details class="rev"><summary>What time window do the published numbers use?</summary><p>Network averages from our live Digistore24 campaigns, dated on this page (last verified 7 August 2026). Ask Stefan for per-channel or per-window splits — you get real numbers with explicit time windows, auditable against Digistore24 itself, not screenshots. With an account you can pull every one of our offers side by side in the <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">affiliate marketplace</a>, with Digistore24&rsquo;s own EPC and cancellation figures next to ours; without one, each card&rsquo;s marketplace entry link is public.</p></details>
-      <details class="rev"><summary>Why do some offers say "ask support" instead of an EPC?</summary><p>We publish only numbers verified from our own campaign data. Young VSLs move weekly — instead of a stale or padded figure, you get the current one from Stefan, usually with a channel split. An "ask" cell means the number exists and moves fast, not that it's hiding.</p></details>
-      <details class="rev"><summary>Which offer should I start with?</summary><p><b>Start with KetoSana or CleanseSana.</b> They are the two offers running a full VSL <em>and</em> PDP, so you can match the funnel to the traffic instead of forcing traffic into one format. <b>KetoSana</b> carries the top EPC on the program (~$6.10): send cold video to the VSL, readers to the PDP. <b>CleanseSana</b> is the freshest angle — the new VSL reads ~$4.25 against the proven PDP's $2.60, and almost nobody is running it yet. After those two: <b>MetaboSana</b> for science-trusting audiences, <b>SlimSana</b> for broad weight-loss volume, <b>VitaSana Collection</b> if you own a list.</p></details>
+      <details class="rev"><summary>What time window do the published numbers use?</summary><p>Every figure on this page carries its date: the conversion rates are July 2026, the country split covers the last 90 days to 7 October 2026. EPCs are no longer printed, because they move weekly &mdash; ask Stefan for per-offer, per-channel or per-window numbers and you get them with explicit time windows, auditable against Digistore24 itself, not screenshots. With an account you can pull every one of our offers side by side in the <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">affiliate marketplace</a>, with Digistore24&rsquo;s own EPC and cancellation figures next to ours; without one, each card&rsquo;s marketplace entry link is public.</p></details>
+      <details class="rev"><summary>Why is there no EPC on the cards?</summary><p>Because a stale EPC is worse than none. EPCs move weekly, most of all on young VSLs and new markets. Ask Stefan and you get the current figure for the offer you plan to run, usually with a channel split and always with its time window.</p></details>
+      <details class="rev"><summary>Which offer should I start with?</summary><p><b>German traffic: KetoSana or CleanseSana.</b> Both run a VSL, a PDP and a cart page, so you can match the funnel to the traffic instead of forcing traffic into one format. KetoSana brought the most orders on the program over the last 90 days; CleanseSana carries the freshest angle with its new VSL. After those two: <b>MetaboSana</b> for science-trusting audiences, <b>SlimSana</b> for broad weight-loss volume, <b>VitaSana Collection</b> if you own a list. <b>French traffic:</b> SlimSana FR or FloraVitaSana FR. <b>English traffic:</b> KetoSana US.</p></details>
       <details class="rev"><summary>How do I get above 60% RevShare?</summary><p>Volume, proven with data: 60% rises toward 75%, or you move to CPA €120–150 (currently $140–176), or a hybrid — structured per traffic source and quality. Start at 60% today, bring your numbers, upgrade. No tier is handed out on a promise, which is exactly why the tiers hold.</p></details>
       <details class="rev"><summary>Can I get custom landers or a custom VSL intro?</summary><p>Qualified volume partners, yes — the super-affiliate tier includes channel-personalized asset kits, tiered white-glove service, custom landers and VSL intros, and Stefan as your dedicated manager. Show volume, get the keys.</p></details>
-      <details class="rev"><summary>Do I need to speak German?</summary><p>No. The funnels are native German-built by DACH copywriters; swipes and angles come translated for you. You bring the media buying — pointing your proven creatives at German-speaking audiences is the whole play.</p></details>
-      <details class="rev"><summary>Which countries do I target first?</summary><p>Language German; geo DE + AT + CH first, then LU, ES (expat communities), IT and DK. We ship to 31 countries (entire EU plus CH, LI, NO, IS). Don't geo-restrict to Germany — Switzerland alone is 17% of sales and converts at 5.26% on desktop.</p></details>
+      <details class="rev"><summary>Do I need to speak German or French?</summary><p>No. The German funnels are built natively for German-speaking buyers, and swipes and angles come translated for you. You bring the media buying &mdash; pointing your proven creatives at the right language market is the whole play. English-language traffic goes to the English offers.</p></details>
+      <details class="rev"><summary>Which countries do I target first?</summary><p><b>German offers:</b> language German; geo Germany, Austria and Switzerland first &mdash; 95% of orders over the last 90 days &mdash; then Luxembourg, Belgium and the rest of the EU. Switzerland converted at 5.26% on desktop in July 2026. <b>French offers:</b> France, Belgium, Switzerland and Luxembourg, French-speaking audiences. <b>English offers:</b> the United States and Canada first; orders from the rest of the world outside the EU ship from our US fulfillment center too.</p></details>
     </div>
   </section>
 
@@ -1242,7 +1443,7 @@
     <h2>The rules that keep everyone's account alive</h2>
     <p class="lede">We run long-term offers in regulated health categories. These rules are enforced without exceptions — violations mean immediate, permanent blacklisting across all our offers. <b>Before you write a single ad:</b> the <a href="claims/">pre-approved claims center</a> lists what you may say per offer &mdash; and rule 1 below is absolute.</p>
     <ol class="rules">
-      <li class="hard spotlight"><b>The retired name.</b> &ldquo;ProNutraQuest&rdquo; is withdrawn and <b>must not be used &mdash; remove all existing material by 10 September 2026</b>. It must not appear anywhere in your promotion, in <b>text, image, video or audio</b>: ad copy and creatives, thumbnails and video frames, pre-sells and landing pages, email subject lines, from-names and sending domains, your own domains and social handles, and paid-search keywords and bids &mdash; on Meta, Google/YouTube, email and every other channel &mdash; in any spelling, translation or lookalike form. Already-published, archived, scheduled and automated material counts: delete the old files rather than just stopping. You are responsible for your sub-affiliates, agencies and any traffic you buy. <b>Any use is a material breach and grounds for immediate termination.</b> Promote only under the individual product names (SlimSana, KetoSana, MetaboSana, CleanseSana, GlucoSana, NerveSana, VigorSana).</li>
+      <li class="hard spotlight"><b>The retired name.</b> &ldquo;ProNutraQuest&rdquo; is withdrawn and <b>must not be used &mdash; remove all existing material</b>. It must not appear anywhere in your promotion, in <b>text, image, video or audio</b>: ad copy and creatives, thumbnails and video frames, pre-sells and landing pages, email subject lines, from-names and sending domains, your own domains and social handles, and paid-search keywords and bids &mdash; on Meta, Google/YouTube, email and every other channel &mdash; in any spelling, translation or lookalike form. Already-published, archived, scheduled and automated material counts: delete the old files rather than just stopping. You are responsible for your sub-affiliates, agencies and any traffic you buy. <b>Any use is a material breach and grounds for immediate termination.</b> Promote only under the individual product names shown on each card.</li>
       <li class="hard"><b>No spam. Ever.</b> Email traffic must be CAN-SPAM / GDPR compliant, with working unsubscribe and honest sender identity.</li>
       <li class="hard"><b>No deceptive claims.</b> Nothing misleading, untruthful or unsubstantiated. Use the claims in our official materials — do not invent cure promises, disease claims or guaranteed results.</li>
       <li class="hard"><b>No fake authority.</b> No fabricated testimonials, no before/after photos without written permission, no deepfakes or celebrity endorsements, no fake news formats.</li>
@@ -1270,7 +1471,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v5.11 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v6.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
@@ -1279,7 +1480,7 @@
       <a href="claims/">Claims Center</a>
       <a href="https://sana-socials.com/kontakt" target="_blank" rel="noopener">Contact (Kontakt)</a>
     </nav>
-    <div>EPC, AOV, CVR and CPA figures are historical network averages from our Digistore24 campaigns, verified 7 August 2026. They are not a promise of individual results. Commissions and CPA terms are confirmed individually and may change per traffic source. All promotion must comply with the rules above and applicable law. These products are dietary supplements and are not intended to diagnose, treat, cure or prevent any disease.</div>
+    <div>AOV and conversion figures are historical network averages from our Digistore24 campaigns (conversion rates: July 2026; country split: 9 July &ndash; 7 October 2026); commission terms as of 7 October 2026. They are not a promise of individual results. Commissions and CPA terms are confirmed individually and may change per traffic source. All promotion must comply with the rules above and applicable law. These products are dietary supplements and are not intended to diagnose, treat, cure or prevent any disease.</div>
   </div>
 </footer>
 
@@ -1377,8 +1578,10 @@
   });
   function copyEverything(){
     if(!hasId()){needId();return;}
-    var lines=['SanaSocials Affiliate Hub — all promo links ('+aff()+')',''];
+    var lines=['SanaSocials Affiliate Hub — all promo links ('+aff()+')',''],lastLang='';
     document.querySelectorAll('.card').forEach(function(card){
+      var sec=card.closest('.langsec'),lang=sec?sec.querySelector('.langhead .eyebrow').textContent.split('\u00b7')[0].trim():'';
+      if(lang&&lang!==lastLang){lines.push('== '+lang+' ==');lastLang=lang;}
       lines.push(card.querySelector('.rank').textContent.trim()+'. '+card.querySelector('.eyebrow2 b').textContent);
       card.querySelectorAll('.lrow').forEach(function(r){
         lines.push('  '+tagLabel(r)+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));
@@ -1403,7 +1606,11 @@
         card.style.display=show?'':'none';
         if(show)n++;
       });
-      countLabel.textContent='Showing '+n+' of 10';
+      countLabel.textContent='Showing '+n+' of '+cards.length;
+      document.querySelectorAll('.langsec').forEach(function(sec){
+        var any=[].some.call(sec.querySelectorAll('.card'),function(c){return c.style.display!=='none';});
+        sec.style.display=any?'':'none';
+      });
     });
   });
 
@@ -1424,8 +1631,9 @@
   var topbarEl=document.getElementById('topbar'),railEl=document.getElementById('rail');
   function setHeadH(){
     document.documentElement.style.setProperty('--head-h',topbarEl.getBoundingClientRect().height+'px');
+    if(railEl){document.documentElement.style.setProperty('--rail-h',railEl.getBoundingClientRect().height+'px');}
   }
-  if('ResizeObserver' in window){new ResizeObserver(setHeadH).observe(topbarEl);}
+  if('ResizeObserver' in window){var ro=new ResizeObserver(setHeadH);ro.observe(topbarEl);if(railEl)ro.observe(railEl);}
   window.addEventListener('resize',setHeadH);
   setHeadH();
   var lastHeadH=0;
