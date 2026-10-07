@@ -205,6 +205,72 @@
   .langhead b{color:var(--band-ink)}
   .langhead a{color:var(--band-acc);text-decoration:underline;text-underline-offset:3px}
   .h1sub{font-family:var(--disp);font-weight:800;font-size:clamp(22px,2.7vw,33px);line-height:1.15;letter-spacing:-.005em;color:var(--mut);margin:-.15em 0 .7em}
+
+  /* v7: market tabs, quick-links grid, compact cards, two-column grid */
+  .rail .wrap{max-width:1560px}
+  .rpill{padding:3px 9px 3px 4px;font-size:12.5px;gap:5px}
+  .rrow{gap:5px}
+  button.rgrp{background:none;border:0;cursor:pointer;text-align:left;font:inherit;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--gold);padding:0}
+  .rrow.on button.rgrp{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+  .tabbar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 0}
+  .tab{cursor:pointer;text-align:left;border:2px solid var(--line2);border-radius:14px;background:var(--card);padding:14px 18px;display:flex;flex-direction:column;gap:4px;color:var(--mut);font:inherit}
+  .tab b{font-family:var(--disp);font-size:21px;font-weight:800;color:var(--ink)}
+  .tab span{font-size:13.5px;font-weight:600;line-height:1.4}
+  .tab:hover{border-color:var(--band)}
+  .tab.on{background:var(--band);border-color:var(--band)}
+  .tab.on b{color:var(--band-ink)}
+  .tab.on span{color:var(--band-mut)}
+  .tab:focus-visible{outline:2.5px solid var(--acc);outline-offset:2px}
+  @media(max-width:700px){.tabbar{gap:6px}.tab{padding:10px 10px;border-radius:11px}.tab b{font-size:16px}.tab span{font-size:11.5px}}
+  .langsec[hidden]{display:none}
+  .langsec{margin-top:0}
+  .moretoggle{cursor:pointer;font:inherit;font-size:14px;font-weight:800;color:var(--acc);background:none;border:1.5px dashed color-mix(in srgb,var(--acc) 45%,var(--line2));border-radius:9px;padding:7px 13px;margin:0 0 14px}
+  .moretoggle:hover{border-style:solid}
+  .moretoggle[aria-expanded="true"] .chev{display:inline-block;transform:rotate(180deg)}
+  .more{margin:0 0 6px}
+  .mxwrap{border:1px solid var(--line);border-radius:var(--rad);background:var(--card);margin-top:18px;overflow:hidden}
+  .mxhead{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding:12px 16px;background:var(--card2);border-bottom:1px solid var(--line)}
+  .mxhead b{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}
+  .mxhead span{font-size:14px;color:var(--dim);font-weight:600}
+  .mxrow{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;border-bottom:1px solid var(--line)}
+  .mxrow:last-child{border-bottom:0}
+  .mxth div{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);font-weight:800;padding:9px 14px}
+  .mxth div+div{border-left:1px solid var(--line)}
+  .mxp,.mxc{padding:7px 14px;display:flex;align-items:center;gap:8px;min-width:0}
+  .mxp{font-weight:800;color:var(--ink);font-size:15px;flex-wrap:wrap}
+  .mxp i{font-style:normal;font-weight:600;color:var(--dim);font-size:12.5px}
+  .mxc{border-left:1px solid var(--line);font-size:14.5px;font-weight:700;justify-content:space-between}
+  .mxc a{color:var(--ink)}
+  .mxc a:hover{color:var(--acc)}
+  .mxc .btn.small{padding:4px 11px;font-size:12.5px;flex:0 0 auto}
+  .mxnone{color:var(--line2);justify-content:center}
+  .mxsoon{flex-direction:column;align-items:flex-start;gap:0}
+  .mxsoon em{font-style:normal;font-size:12px;color:var(--dim);font-weight:600}
+  @media(max-width:760px){
+    .mxrow{grid-template-columns:1fr 1fr 1fr}
+    .mxth{display:none}
+    .mxp{grid-column:1/-1;padding:9px 12px 2px}
+    .mxc{border-left:0;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;padding:4px 12px 10px;font-size:13.5px}
+    .mxc::before{content:attr(data-m);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:800}
+  }
+  @media(min-width:1100px){
+    .langsec .cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;width:min(1560px,calc(100vw - 48px));margin-left:calc(50% - min(780px,calc(50vw - 24px)))}
+    .langsec .cards .soon{grid-column:1/-1;margin-top:0}
+    .langsec .card header{padding:22px 22px 14px;gap:14px}
+    .langsec .card h3{font-size:22px}
+    .langsec .subhead{font-size:15.5px}
+    .langsec .bottle{height:120px}
+    .langsec .rank{font-size:38px;min-width:40px}
+    .langsec .card .body{padding:16px 22px 20px}
+    .langsec .kpis{grid-template-columns:repeat(auto-fit,minmax(104px,1fr))}
+    .langsec .kpi{padding:11px 12px 10px}
+    .langsec .kpi b{font-size:18.5px}
+    .langsec .kpi b.na{font-size:15px}
+    .langsec .kpi span{font-size:10.5px;letter-spacing:.08em}
+    .langsec .lrow .tag{flex-basis:112px;font-size:11.5px}
+    .langsec .lrow .url{font-size:12.5px;padding:8px 11px}
+    .langsec .resources a{font-size:13.5px;padding:8px 12px}
+  }
   .langline{font-size:16px;color:var(--mut);margin:0 0 22px;max-width:none}
   
 
@@ -444,6 +510,19 @@
     .rank{font-size:36px;min-width:38px}
     .indexwrap .hidem{display:none}
   }
+  @media(max-width:640px){
+    .lrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 6px}
+    .lrow .tag{grid-column:1/-1}
+    .lrow .url{font-size:12.5px;padding:8px 10px}
+    .lrow .copy{padding:6px 11px}
+    .langsec .kpis{grid-template-columns:repeat(3,1fr)}
+    .langsec .kpi{padding:10px 10px 9px}
+    .langsec .kpi b{font-size:16.5px}
+    .langsec .kpi b.na{font-size:14px}
+    .langsec .kpi span{font-size:10px;letter-spacing:.05em}
+    .langsec .bottle{height:84px}
+    .langsec .resources a{font-size:13px;padding:7px 11px}
+  }
 </style>
 
 
@@ -478,7 +557,7 @@
 
 <nav class="rail" id="rail" aria-label="Jump to offer">
   <div class="wrap">
-    <div class="rrow"><span class="rgrp">German Offers:</span>
+    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-de">German Offers:</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-1"><i>1</i> SlimSana</a>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-2"><i>2</i> KetoSana</a>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-3"><i>3</i> MetaboSana</a>
@@ -490,12 +569,12 @@
       <a class="rpill" style="--catc:var(--c-bundle)" href="#offer-8"><i>9</i> VitaSana</a>
       <a class="rpill" style="--catc:var(--c-blood)" href="#offer-9"><i>10</i> GlucoTrust</a>
     </div>
-    <div class="rrow"><span class="rgrp">French Offers:</span>
+    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-fr">French Offers:</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-10"><i>11</i> SlimSana FR</a>
       <a class="rpill" style="--catc:var(--c-gut)" href="#offer-12"><i>12</i> FloraVitaSana FR</a>
       <a class="rpill soonpill" href="#ligne-soon">LigneSana (KetoSana French) <em>&middot; coming within the next few days</em></a>
     </div>
-    <div class="rrow"><span class="rgrp">US Offers:</span>
+    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-en">US Offers:</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-13"><i>13</i> KetoSana US</a>
     </div>
   </div>
@@ -536,28 +615,21 @@
       <div class="hint">Links update live as you type: <code>?aff=</code><span style="color:var(--acc);font-weight:800">your-id</span><code>&amp;cam=</code><span style="color:var(--gold);font-weight:800">campaign-key</span>. New to Digistore24? <a href="https://www.digistore24.com" target="_blank" rel="noopener">Create your free account</a> — one account covers every offer here.</div>
     </div>
 
-    <div class="indexwrap rev">
-      <table>
-        <thead><tr><th>#</th><th>Offer</th><th class="hidem">Niche</th><th></th></tr></thead>
-        <tbody>
-          <tr class="grp"><td colspan="4">German &middot; Germany &middot; Austria &middot; Switzerland &middot; Liechtenstein &middot; Luxembourg</td></tr>
-          <tr><td>1</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana</td><td class="hidem">Weight Loss</td><td><a href="#offer-1">Jump →</a></td></tr>
-          <tr><td>2</td><td><span class="idot" style="background:var(--c-weight)"></span>KetoSana</td><td class="hidem">Keto Weight Loss</td><td><a href="#offer-2">Jump →</a></td></tr>
-          <tr><td>3</td><td><span class="idot" style="background:var(--c-weight)"></span>MetaboSana</td><td class="hidem">Metabolism</td><td><a href="#offer-3">Jump →</a></td></tr>
-          <tr><td>4</td><td><span class="idot" style="background:var(--c-gut)"></span>CleanseSana</td><td class="hidem">Detox &amp; Gut</td><td><a href="#offer-4">Jump →</a></td></tr>
-          <tr><td>5</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoSana</td><td class="hidem">Blood Sugar</td><td><a href="#offer-5">Jump →</a></td></tr>
-          <tr><td>6</td><td><span class="idot" style="background:var(--c-nerve)"></span>NerveSana</td><td class="hidem">Nerve Health</td><td><a href="#offer-6">Jump →</a></td></tr>
-          <tr><td>7</td><td><span class="idot" style="background:var(--c-men)"></span>VigorSana</td><td class="hidem">Men's Health</td><td><a href="#offer-7">Jump →</a></td></tr>
-          <tr><td>8</td><td><span class="idot" style="background:var(--c-men)"></span>HeroSana Caliber</td><td class="hidem">Men's Vitality Gummies</td><td><a href="#offer-11">Jump →</a></td></tr>
-          <tr><td>9</td><td><span class="idot" style="background:var(--c-bundle)"></span>VitaSana Collection</td><td class="hidem">VIP Wellness System</td><td><a href="#offer-8">Jump →</a></td></tr>
-          <tr><td>10</td><td><span class="idot" style="background:var(--c-blood)"></span>GlucoTrust German</td><td class="hidem">Blood Sugar</td><td><a href="#offer-9">Jump →</a></td></tr>
-          <tr class="grp"><td colspan="4">French &middot; France &middot; Belgium &middot; Switzerland &middot; Luxembourg</td></tr>
-          <tr><td>11</td><td><span class="idot" style="background:var(--c-weight)"></span>SlimSana FR</td><td class="hidem">Weight Loss</td><td><a href="#offer-10">Jump →</a></td></tr>
-          <tr><td>12</td><td><span class="idot" style="background:var(--c-gut)"></span>FloraVitaSana FR</td><td class="hidem">Gut Health</td><td><a href="#offer-12">Jump →</a></td></tr>
-          <tr class="grp"><td colspan="4">English &middot; United States &middot; Canada &middot; United Kingdom &middot; worldwide (outside the EU)</td></tr>
-          <tr><td>13</td><td><span class="idot" style="background:var(--c-weight)"></span>KetoSana US</td><td class="hidem">Keto Weight Loss</td><td><a href="#offer-13">Jump →</a></td></tr>
-        </tbody>
-      </table>
+    <div class="mxwrap rev" id="quicklinks">
+      <div class="mxhead"><b>Quick links by market</b><span>Copy an offer&rsquo;s links straight from here &mdash; or open its card for the details.</span></div>
+      <div class="mxgrid" role="table" aria-label="Offers by market">
+        <div class="mxrow mxth" role="row"><div role="columnheader">Product</div><div role="columnheader">German</div><div role="columnheader">French</div><div role="columnheader">US</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-weight)"></span>SlimSana <i>Weight Loss</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-1">SlimSana</a><button class="btn small mxcopy" type="button" data-card="offer-1">Copy links</button></div><div class="mxc" role="cell" data-m="French"><a href="#offer-10">SlimSana FR</a><button class="btn small mxcopy" type="button" data-card="offer-10">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-weight)"></span>KetoSana <i>Keto</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-2">KetoSana</a><button class="btn small mxcopy" type="button" data-card="offer-2">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="French"><a href="#ligne-soon">LigneSana</a><em>coming within the next few days</em></div><div class="mxc" role="cell" data-m="US"><a href="#offer-13">KetoSana US</a><button class="btn small mxcopy" type="button" data-card="offer-13">Copy links</button></div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-weight)"></span>MetaboSana <i>Metabolism</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-3">MetaboSana</a><button class="btn small mxcopy" type="button" data-card="offer-3">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-gut)"></span>CleanseSana <i>Gut</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-4">CleanseSana</a><button class="btn small mxcopy" type="button" data-card="offer-4">Copy links</button></div><div class="mxc" role="cell" data-m="French"><a href="#offer-12">FloraVitaSana FR</a><button class="btn small mxcopy" type="button" data-card="offer-12">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-blood)"></span>GlucoSana <i>Blood Sugar</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-5">GlucoSana</a><button class="btn small mxcopy" type="button" data-card="offer-5">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-nerve)"></span>NerveSana <i>Nerve Health</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-6">NerveSana</a><button class="btn small mxcopy" type="button" data-card="offer-6">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-men)"></span>VigorSana <i>Men's Health</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-7">VigorSana</a><button class="btn small mxcopy" type="button" data-card="offer-7">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-men)"></span>HeroSana Caliber <i>Men's Vitality</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-11">HeroSana</a><button class="btn small mxcopy" type="button" data-card="offer-11">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-bundle)"></span>VitaSana Collection <i>VIP Wellness</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-8">VitaSana</a><button class="btn small mxcopy" type="button" data-card="offer-8">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxp" role="rowheader"><span class="idot" style="background:var(--c-blood)"></span>GlucoTrust <i>Blood Sugar</i></div><div class="mxc" role="cell" data-m="German"><a href="#offer-9">GlucoTrust German</a><button class="btn small mxcopy" type="button" data-card="offer-9">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+      </div>
     </div>
   </div>
 </header>
@@ -576,6 +648,11 @@
   <p class="langline"><b>You don&rsquo;t need to speak German or French.</b> The German funnels are built natively for German-speaking buyers &mdash; not translated US pages &mdash; and swipes and angles come translated for you. Pick the language market that fits your traffic and point your proven creatives at it. <em>The language barrier is the moat</em> &mdash; it kept your competitors out, not you.</p>
 
   <p class="fmtline"><b>The funnel formats, and what each one is for.</b> <b>VSL</b> = video sales letter page &middot; <b>PDP</b> = long-form product detail page (text sales page) &middot; <b>DTC</b> = direct-to-cart page: the package boxes and prices only, no sales content &mdash; built for warm traffic, email lists and affiliates running their own pre-sell or advertorial. The <b>VSL</b>, <b>PDP</b> and <b>DTC</b> rows each come in two bundle sets: <b>1&middot;3&middot;6</b> bottles (single-bottle entry price) and <b>2&middot;3&middot;6</b> bottles (2-bottle entry, higher starting order value). HeroSana Caliber gummies come in jars instead: <b>2&middot;4&middot;8</b> jars plus a monthly subscription. Not every offer carries every format &mdash; the rows on each card are the ones that are live today. Every format carries your <code>aff</code> and <code>cam</code> parameters through to Digistore24 checkout.</p>
+  <div class="tabbar" role="tablist" aria-label="Offer markets" id="markets-tabs">
+    <button class="tab on" type="button" role="tab" data-tab="lang-de" aria-selected="true"><b>German offers</b><span>10 offers &middot; Germany, Austria, Switzerland, Liechtenstein, Luxembourg</span></button>
+    <button class="tab" type="button" role="tab" data-tab="lang-fr" aria-selected="false"><b>French offers</b><span>2 offers + LigneSana coming soon &middot; France, Belgium, Switzerland, Luxembourg</span></button>
+    <button class="tab" type="button" role="tab" data-tab="lang-en" aria-selected="false"><b>US offers</b><span>1 offer &middot; United States, Canada, United Kingdom, worldwide (outside the EU)</span></button>
+  </div>
   <section class="langsec" id="lang-de" aria-labelledby="lang-de-h">
     <div class="langhead rev">
       <div class="eyebrow">German-language offers &middot; 10 offers</div>
@@ -1471,7 +1548,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v6.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v7.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
@@ -1509,7 +1586,7 @@
   }
   function syncCopyGate(){
     var ok=hasId();
-    document.querySelectorAll('.copy,.copyall,#copyAllTop,#copyAllMain').forEach(function(b){
+    document.querySelectorAll('.copy,.copyall,.mxcopy,#copyAllTop,#copyAllMain').forEach(function(b){
       b.classList.toggle('needsid',!ok);
       b.setAttribute('aria-disabled',ok?'false':'true');
       b.title=ok?'':'Enter your Digistore24 ID above to activate your links';
@@ -1564,16 +1641,25 @@
       copyText(buildLink(btn.parentElement.querySelector('.url').getAttribute('data-link')),'Link copied');
     });
   });
+  function copyCard(card){
+    var name=card.querySelector('.eyebrow2 b').textContent;
+    var lines=[name+' — promo links ('+aff()+')'];
+    card.querySelectorAll('.lrow').forEach(function(r){
+      lines.push(tagLabel(r)+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));
+    });
+    copyText(lines.join('\n'),name+' links copied');
+  }
+  document.querySelectorAll('.mxcopy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(!hasId()){needId();return;}
+      var card=document.getElementById(btn.getAttribute('data-card'));
+      if(card)copyCard(card);
+    });
+  });
   document.querySelectorAll('.copyall').forEach(function(btn){
     btn.addEventListener('click',function(){
       if(!hasId()){needId();return;}
-      var card=btn.closest('.card');
-      var name=card.querySelector('.eyebrow2 b').textContent;
-      var lines=[name+' — promo links ('+aff()+')'];
-      card.querySelectorAll('.lrow').forEach(function(r){
-        lines.push(tagLabel(r)+': '+buildLink(r.querySelector('.url').getAttribute('data-link')));
-      });
-      copyText(lines.join('\n'),name+' links copied');
+      copyCard(btn.closest('.card'));
     });
   });
   function copyEverything(){
@@ -1596,21 +1682,24 @@
   /* filters */
   var chips=document.querySelectorAll('.chip'),cards=document.querySelectorAll('.card'),
       countLabel=document.getElementById('countLabel');
+  var curF='all';
+  function applyFilter(){
+    var n=0,tot=0;
+    cards.forEach(function(card){
+      var sec=card.closest('.langsec'),inTab=!sec||!sec.hidden;
+      var show=inTab&&(curF==='all'||card.getAttribute('data-cat')===curF);
+      card.style.display=show?'':'none';
+      if(inTab)tot++;
+      if(show)n++;
+    });
+    countLabel.textContent='Showing '+n+' of '+tot+' in this market';
+  }
   chips.forEach(function(chip){
     chip.addEventListener('click',function(){
       chips.forEach(function(c){c.setAttribute('aria-pressed','false');});
       chip.setAttribute('aria-pressed','true');
-      var f=chip.getAttribute('data-f'),n=0;
-      cards.forEach(function(card){
-        var show=(f==='all')||(card.getAttribute('data-cat')===f);
-        card.style.display=show?'':'none';
-        if(show)n++;
-      });
-      countLabel.textContent='Showing '+n+' of '+cards.length;
-      document.querySelectorAll('.langsec').forEach(function(sec){
-        var any=[].some.call(sec.querySelectorAll('.card'),function(c){return c.style.display!=='none';});
-        sec.style.display=any?'':'none';
-      });
+      curF=chip.getAttribute('data-f');
+      applyFilter();
     });
   });
 
@@ -1670,12 +1759,14 @@
     if(!id) return;
     var t=document.getElementById(id);
     if(!t||!t.scrollIntoView) return;      /* no target or no support -> native behaviour */
+    var tsec=t.classList.contains('langsec')?t:(t.closest?t.closest('.langsec'):null);
+    if(tsec&&tsec.hidden){showTab(tsec.id);}
     e.preventDefault();
     try{ t.scrollIntoView({behavior:reduceMo?'auto':'smooth',block:'start'}); }
     catch(_){ location.hash=id; }          /* last-resort fallback: never leave the click dead */
   });
   window.addEventListener('load',function(){
-    if(location.hash){ setTimeout(function(){
+    if(location.hash){ var ht=document.getElementById(location.hash.slice(1)); if(ht&&ht.scrollIntoView){ht.scrollIntoView();} setTimeout(function(){
       history.replaceState(null,'',location.pathname+location.search);
     },700); }
   });
@@ -1727,6 +1818,44 @@
       'Preferred funnel style: '+encodeURIComponent(document.getElementById('opFunnel').value)+'%0D%0A'+
       'Optimization model: '+encodeURIComponent(document.getElementById('opModel').value)+'%0D%0A';
     window.location.href='mailto:affiliates@sana-socials.com?subject='+encodeURIComponent('Volume Operator Application — SanaSocials')+'&body='+body;
+  });
+
+  /* v7: market tabs */
+  function showTab(id,save){
+    if(!id||!document.getElementById(id)||!document.getElementById(id).classList.contains('langsec')) id='lang-de';
+    document.querySelectorAll('.langsec').forEach(function(sec){sec.hidden=(sec.id!==id);});
+    document.querySelectorAll('.tabbar .tab').forEach(function(b){var on=b.getAttribute('data-tab')===id;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false');});
+    document.querySelectorAll('.rrow').forEach(function(r){var b=r.querySelector('.rgrp');r.classList.toggle('on',!!b&&b.getAttribute('data-tab')===id);});
+    if(save!==false){try{localStorage.setItem('hub_tab',id);}catch(e){}}
+    applyFilter();
+  }
+  document.querySelectorAll('[data-tab]').forEach(function(b){
+    b.addEventListener('click',function(){
+      showTab(b.getAttribute('data-tab'));
+      if(b.classList.contains('rgrp')){var tb=document.getElementById('markets-tabs');if(tb)tb.scrollIntoView({behavior:reduceMo?'auto':'smooth',block:'start'});}
+    });
+  });
+  (function(){
+    var alias={de:'lang-de',german:'lang-de',fr:'lang-fr',french:'lang-fr',us:'lang-en',en:'lang-en',english:'lang-en'};
+    var h=location.hash.slice(1).toLowerCase(),id=alias[h]||null;
+    if(!id&&h){var t=document.getElementById(location.hash.slice(1));if(t){var sec=t.classList.contains('langsec')?t:t.closest('.langsec');if(sec)id=sec.id;}}
+    if(!id){try{id=localStorage.getItem('hub_tab');}catch(e){}}
+    showTab(id||'lang-de',false);
+    if(alias[h]){var el=document.getElementById(alias[h]);setTimeout(function(){if(el)el.scrollIntoView();},60);}
+  })();
+
+  /* v7: compact cards - pitch, hooks, audience and conversion line behind a toggle */
+  document.querySelectorAll('.card').forEach(function(card){
+    var body=card.querySelector('.body');if(!body)return;
+    var parts=[].slice.call(body.querySelectorAll('.pitch,.hooks,.aud,.cvrline')).filter(function(p){return !p.closest('.linkrows');});
+    if(!parts.length)return;
+    var more=document.createElement('div');more.className='more';more.hidden=true;
+    var name=card.querySelector('.eyebrow2 b').textContent.replace(/ (FR|US|German)$/,'');
+    var btn=document.createElement('button');btn.type='button';btn.className='moretoggle';btn.setAttribute('aria-expanded','false');
+    btn.innerHTML='More about '+name+': pitch, angles &amp; audience <span class="chev" aria-hidden="true">&#9662;</span>';
+    parts.forEach(function(p){more.appendChild(p);});
+    body.insertBefore(more,body.firstChild);body.insertBefore(btn,more);
+    btn.addEventListener('click',function(){var open=more.hidden;more.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');});
   });
 
   render();
