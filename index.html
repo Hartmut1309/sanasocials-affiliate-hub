@@ -565,6 +565,19 @@
     .rail.open .rgrp{flex-basis:100%}
     .rail.open .rpill{flex:0 1 auto;max-width:100%;white-space:normal;flex-wrap:wrap}
   }
+
+  /* v8.1: market buttons bigger, one colour per market */
+  @media(min-width:861px){.ss-steps{grid-template-columns:1.05fr 1.35fr 1.15fr}}
+  .ss-mk{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;width:100%}
+  .ss-mk button{--mk:#4E6484;background:var(--mk);border:0;color:#fff;font-size:19px;font-weight:800;letter-spacing:.01em;border-radius:12px;padding:14px 8px;min-height:56px;box-shadow:0 8px 18px -10px var(--mk),inset 0 -3px 0 rgba(0,0,0,.2);transition:transform .12s ease,filter .12s ease,box-shadow .12s ease}
+  .ss-mk button[data-go="lang-de"]{--mk:#C2410C}
+  .ss-mk button[data-go="lang-fr"]{--mk:#1D4ED8}
+  .ss-mk button[data-go="lang-en"]{--mk:#6D28D9}
+  .ss-mk button:hover{color:#fff;filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 12px 22px -10px var(--mk),inset 0 -3px 0 rgba(0,0,0,.2)}
+  .ss-mk button.on{color:#fff;outline:3px solid var(--mk);outline-offset:3px}
+  .ss-mk button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  @media(max-width:860px){.ss-mk button{font-size:18px;min-height:54px}}
+  @media(prefers-reduced-motion:reduce){.ss-mk button{transition:none}.ss-mk button:hover{transform:none}}
 </style>
 
 
@@ -1274,6 +1287,7 @@
         <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
+        <div class="lrow"><div class="tag">DTC 2&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-dtc-bb-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
       </div>
       <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Geo means the French-speaking audience in those four countries &mdash; all of France and Luxembourg, and the French-speaking regions of Belgium and Switzerland. There is <b>no EPC history yet</b>: you are early, and the numbers on the German card do not carry over. <b>Send French traffic here and German traffic to the SlimSana card.</b> The French VSL goes on this card as soon as its French video is live &mdash; email <a href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%20French%20VSL&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%20for%20French%20traffic%3A%0APlease%20notify%20me%20when%20the%20French%20VSL%20goes%20live.">affiliates@sana-socials.com</a> if you want it the day it goes live.</p>
       <div class="resources">
@@ -1599,7 +1613,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.1 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
