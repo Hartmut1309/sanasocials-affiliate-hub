@@ -70,21 +70,47 @@
   </table></div>
   <p class="note">Rules that keep the data readable: lowercase, hyphens only, never reuse a key across channels, and agree the convention with Stefan before launch so our reporting and yours name the same thing the same way.</p>
 
-  <h2>2 · Pixel &amp; server-to-server postback</h2>
-  <p>All nine funnels support the <b>Digistore24 tracking pixel</b> and <b>S2S postbacks</b>, configured from your own Digistore24 account. The exact, always-current setup steps live in the official <a href="https://help.digistore24.com/" target="_blank" rel="noopener">Digistore24 help center</a> — search "tracking pixel" or "postback". Tell Stefan which platform you optimize on (Meta CAPI, native network S2S, etc.) and he confirms the event mapping on our side before you spend.</p>
+  <h2>2 · What this covers</h2>
+  <p>Every link on the hub &mdash; <b>13 offers in three markets</b>: 10 German, 2 French and 1 US offer, each in its VSL, PDP and DTC formats where they exist. All of them run on Digistore24 and take the same parameters, so one setup covers them all. The US checkout charges in US dollars.</p>
 
-  <h2>3 · Delayed CTAs on VSL pages</h2>
-  <p>Our VSL buy buttons appear mid-video, not on page load. For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model — that's why.</p>
+  <h2>3 · Cookie length and who gets the sale</h2>
+  <p>Digistore24 sets the affiliate cookie for <b>up to 180 days in Europe and up to 365 days in the US</b>, and <b>the last cookie set wins</b> the sale. Some older Digistore24 help pages still give a flat 180 days, so plan on 180 days for European traffic. Sources: <a href="https://help.digistore24.com/hc/en-us/articles/24293091859985" target="_blank" rel="noopener">Promolink</a> &middot; <a href="https://help.digistore24.com/hc/en-us/articles/23946916490129" target="_blank" rel="noopener">affiliate FAQ</a>.</p>
 
-  <h2>4 · Running your own pre-sell into EU traffic?</h2>
-  <p>If you put a quiz, listicle or advertorial in front of our funnel, GDPR applies to <b>your</b> page: non-essential pixels need a consent banner before they fire. Our funnel pages handle their own consent — your pre-sell needs its own. Budget for it; consent-loss is measurement-loss, not a reason to skip the banner.</p>
+  <h2>4 · Your pixel on the order form</h2>
+  <p>In your Digistore24 account go to <b>Account &rarr; Order form tracking</b>. You can add a <b>Facebook pixel ID</b>, a <b>Google Analytics ID</b>, a <b>pixel URL</b> (loaded in an iframe) or your <b>own tracking code</b> &mdash; Digistore24 approves custom code before it runs. Each one fires on the order form, on the order confirmation page, or on both. For Meta server-side events, add a <b>Facebook IPN connection</b> under <b>Sales &amp; partners &rarr; Integrations</b>. Sources: <a href="https://help.digistore24.com/hc/en-us/articles/24293231847569" target="_blank" rel="noopener">order-form tracking</a> &middot; <a href="https://help.digistore24.com/hc/en-us/articles/24293227203089" target="_blank" rel="noopener">Facebook Conversion API</a>.</p>
 
-  <h2>5 · The pre-spend checklist</h2>
+  <h2>5 · Server-to-server postback</h2>
+  <p>Go to <b>Sales &amp; partners &rarr; Integrations &rarr; Add new integration</b>, pick the partnerships (our offers) and the order events that should fire. Pass your tracker&rsquo;s click ID as <code>cid</code> on any hub link &mdash; for example <code style="white-space:normal;overflow-wrap:anywhere">?aff=your-id&amp;cam=campaign-key&amp;cid={clickid}</code> &mdash; and Digistore24 returns it as <code>{cid}</code>. We checked that <code>cam</code> and <code>cid</code> on a hub link reach the Digistore24 order form.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Placeholder</th><th>What it returns</th></tr></thead>
+    <tbody>
+      <tr><td><code>{cid}</code></td><td>Your click ID from the link</td></tr>
+      <tr><td><code>{campaignkey}</code></td><td>The <code>cam</code> value from the link</td></tr>
+      <tr><td><code>{amount_affiliate}</code></td><td>What you earn on this transaction</td></tr>
+      <tr><td><code>{transaction_id}</code> &middot; <code>{transaction_type}</code></td><td>The order and the event type</td></tr>
+      <tr><td><code>{product_id}</code> &middot; <code>{product_name}</code></td><td>Which product sold, upsells included</td></tr>
+      <tr><td><code>{country}</code> &middot; <code>{currency}</code></td><td>Buyer country and order currency</td></tr>
+      <tr><td><code>{is_test}</code></td><td>Marks test transactions</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">You can add <code>sid1</code>&ndash;<code>sid5</code> to a link, but Digistore24 lists no postback placeholder for them &mdash; put anything you need back in the postback into <code>cid</code> or the campaign key. Full list: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
+
+  <h2>6 · Test before you spend</h2>
+  <p>Affiliates can&rsquo;t place test purchases on Digistore24. Instead, open your integration and press <b>Test connection</b>: Digistore24 simulates a sale and sends it to your tracker, and the <b>Log</b> tab shows every call. Source: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
+
+  <h2>7 · Delayed CTAs on VSL pages</h2>
+  <p>Our VSL buy buttons appear mid-video, not on page load. For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model &mdash; that&rsquo;s why.</p>
+
+  <h2>8 · Running your own pre-sell into EU traffic?</h2>
+  <p>If you put a quiz, listicle or advertorial in front of our funnel, GDPR applies to <b>your</b> page: non-essential pixels need a consent banner before they fire. Our funnel pages handle their own consent &mdash; your pre-sell needs its own. Budget for it; consent-loss is measurement-loss, not a reason to skip the banner.</p>
+
+  <h2>9 · The pre-spend checklist</h2>
   <ul class="check">
-    <li>Digistore24 ID entered on the hub — every link personalized</li>
-    <li>Campaign-key convention agreed with Stefan (one key per creative/ad set)</li>
-    <li>Pixel or postback test conversion confirmed in your DS24 account</li>
-    <li>Language German, geo DE + AT + CH first — expand once the funnel proves</li>
+    <li>Digistore24 ID entered on the hub &mdash; every link personalized</li>
+    <li>Campaign-key convention agreed with Stefan (one key per creative or ad set)</li>
+    <li>Click ID passed as <code>cid</code> if you run a tracker</li>
+    <li>Pixel or postback set up, and <b>Test connection</b> shows the call in your integration&rsquo;s log</li>
+    <li>Market matched to your traffic: German (start with Germany, Austria and Switzerland), French or US</li>
   </ul>
   <a class="cta" href="mailto:affiliates@sana-socials.com?subject=Tracking%20Setup%20Check&amp;body=Digistore24%20ID%3A%0APlatform%20(Meta%20CAPI%2C%20native%20S2S%2C%20other)%3A%0ACampaign-key%20convention%3A%0AOffers%20you%20will%20run%3A%0AOptimization%20model%20(purchase%20%2F%20IC%20%2F%20blended)%3A%0A">Confirm my tracking setup with Stefan →</a>
   <p class="note">Stefan Richter, your affiliate manager, replies from affiliates@sana-socials.com.</p>

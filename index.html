@@ -523,6 +523,48 @@
     .langsec .bottle{height:84px}
     .langsec .resources a{font-size:13px;padding:7px 11px}
   }
+
+  /* v8: start strip, hero buttons, operator button in the header, compact phone header */
+  .startstrip{border:1.5px solid var(--line2);border-radius:var(--rad);background:var(--card);padding:14px 16px 16px;margin:0 0 26px;box-shadow:0 1px 0 var(--line)}
+  .ss-kick{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800;margin:0 0 10px}
+  .ss-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1.15fr 1fr 1.25fr;gap:14px}
+  .ss-step{display:flex;gap:11px;align-items:flex-start;min-width:0}
+  .ss-step>i{font-style:normal;flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-weight:800;font-size:14.5px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+  .ss-body{display:flex;flex-direction:column;gap:7px;min-width:0;flex:1}
+  .ss-body>b{font-size:16px;color:var(--ink);line-height:1.25}
+  .ss-body input{background:var(--bg);border:1.5px solid var(--line2);color:var(--ink);border-radius:9px;padding:9px 11px;font-family:var(--mono);font-size:15px;width:100%;max-width:280px}
+  .ss-body input:focus{outline:2.5px solid var(--acc);outline-offset:1px;border-color:transparent}
+  .ss-note{font-size:13.5px;color:var(--mut);line-height:1.45}
+  .ss-mk{display:flex;gap:6px;flex-wrap:wrap}
+  .ss-mk button{cursor:pointer;font:inherit;font-size:14px;font-weight:800;border:1.5px solid var(--line2);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 14px}
+  .ss-mk button:hover,.ss-mk button.on{border-color:var(--acc);color:var(--acc)}
+  .ss-mk button:focus-visible{outline:2.5px solid var(--acc);outline-offset:2px}
+  @media(max-width:860px){.ss-steps{grid-template-columns:1fr;gap:12px}.ss-body input{max-width:none}}
+  .herocta{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 22px}
+  .herocta .btn{font-size:16px;padding:13px 20px;text-decoration:none}
+  .herocta .opcta{border-color:var(--ink);font-weight:800}
+  .herocta .opcta:hover{border-color:var(--acc);color:var(--acc)}
+  @media(max-width:480px){.herocta .btn{flex:1 1 100%;text-align:center}}
+  .opbtn{white-space:nowrap;font-size:13.5px;font-weight:800;color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:6px 13px}
+  .opbtn:hover{color:var(--acc);border-color:var(--acc);text-decoration:none}
+  .opbtn{display:none}
+  @media(min-width:1320px){.opbtn{display:inline-block}.themebtn .tlab{display:none}.navlinks a,.topbar .idwrap .btn{white-space:nowrap}}
+  .railtoggle{display:none}
+  @media(max-width:700px){
+    .brand small{display:none}
+    .brand{font-size:19px}
+    .topbar .wrap{padding:7px 16px}
+    .railtoggle{display:flex;align-items:center;gap:8px;width:100%;cursor:pointer;font:inherit;font-size:14px;font-weight:800;color:var(--ink);background:none;border:0;padding:2px 0;text-align:left}
+    .railtoggle em{font-style:normal;font-weight:600;color:var(--dim);font-size:12.5px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .railtoggle .chev{transition:transform .18s ease}
+    .rail.open .railtoggle .chev{transform:rotate(180deg)}
+    .rail:not(.open) .rrow{display:none}
+    .rail .wrap,.rail.stuck .wrap{padding:6px 16px}
+    .rail.open .wrap{gap:9px;padding-bottom:10px;max-height:calc(100vh - var(--head-h,45px) - 20px);overflow-y:auto}
+    .rail.open .rrow{flex-wrap:wrap;row-gap:6px}
+    .rail.open .rgrp{flex-basis:100%}
+    .rail.open .rpill{flex:0 1 auto;max-width:100%;white-space:normal;flex-wrap:wrap}
+  }
 </style>
 
 
@@ -538,6 +580,7 @@
       <a href="#rules">Rules</a>
     </nav>
     <div class="tbctl">
+      <a class="opbtn" href="#apply">Apply as operator</a>
       <button class="idtoggle" id="idToggle" type="button" aria-expanded="false" aria-controls="idWrap" aria-label="Your Digistore24 ID and copy links">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.6" cy="11" r="2.1"/><path d="M5.7 16.4c.6-1.5 1.6-2.2 2.9-2.2s2.3.7 2.9 2.2M14.6 9.6h4M14.6 13h4"/></svg>
         <span id="idToggleLabel">Your ID</span>
@@ -557,6 +600,7 @@
 
 <nav class="rail" id="rail" aria-label="Jump to offer">
   <div class="wrap">
+    <button class="railtoggle" id="railToggle" type="button" aria-expanded="false">Jump to an offer <em>German &middot; French &middot; US &middot; 13 offers</em><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     <div class="rrow"><button class="rgrp" type="button" data-tab="lang-de">German Offers:</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-1"><i>1</i> SlimSana</a>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-2"><i>2</i> KetoSana</a>
@@ -582,10 +626,19 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="flagpill">● <b>13 offers live</b>&nbsp;· German, French and English&nbsp;&nbsp;·&nbsp;&nbsp;updated 7 October 2026</div>
+    <div class="startstrip" id="startstrip" role="region" aria-label="Start in three steps">
+      <div class="ss-kick">Start in three steps</div>
+      <ol class="ss-steps">
+        <li class="ss-step"><i>1</i><div class="ss-body"><b>Enter your Digistore24 ID</b><input id="affStart" placeholder="your-digistore-id" autocomplete="off" spellcheck="false" aria-label="Your Digistore24 affiliate ID"><span class="ss-note">Every link on this page becomes yours. <a href="https://www.digistore24.com" target="_blank" rel="noopener">No account yet? It&rsquo;s free.</a></span></div></li>
+        <li class="ss-step"><i>2</i><div class="ss-body"><b>Pick your market</b><div class="ss-mk"><button type="button" data-go="lang-de">German</button><button type="button" data-go="lang-fr">French</button><button type="button" data-go="lang-en">US</button></div><span class="ss-note">Opens that market&rsquo;s offers below.</span></div></li>
+        <li class="ss-step"><i>3</i><div class="ss-body"><b>Copy your first link</b><span class="ss-note">Cold video &rarr; <b>VSL</b> (German offers) &middot; readers &rarr; <b>PDP</b> &middot; warm traffic and email &rarr; <b>DTC</b>. Every link row on an offer card has its own Copy button &mdash; or use the <a href="#quicklinks">quick links by market</a>.</span></div></li>
+      </ol>
+    </div>
+    <div class="flagpill">● <b>13 offers live</b>&nbsp;· German, French and English&nbsp;&nbsp;·&nbsp;&nbsp;updated 8 October 2026</div>
     <div class="eyebrow">SanaSocials × Digistore24 · Partner Program</div>
     <h1>One Doctor-Fronted Product Family.</h1>
     <p class="h1sub">Three Language Markets. All Your Links in One Place.</p>
+    <div class="herocta"><button class="btn primary" type="button" id="ctaId">Enter ID and copy links</button><a class="btn opcta" href="#apply">Apply as volume operator &rarr;</a></div>
     <p class="lede"><strong>German, French and English funnels on Digistore24</strong>, all fronted by the same genuinely reputable, well-known doctor. Run the <strong>German offers</strong> where your angles have never been seen: Europe&rsquo;s wealthiest language market, at <strong>40&ndash;60% cheaper CPMs</strong> than the US, with a fraction of the competition. Open the <strong>French offers</strong> to France, Belgium, Switzerland and Luxembourg. Send <strong>English traffic</strong> to the English offers, shipped from our US fulfillment center. Everywhere: <strong>60&ndash;75% RevShare</strong> through the whole funnel &mdash; thank-you page included.</p>
     <div class="markets" aria-label="Language markets">
       <a class="mk" href="#lang-de"><b>German</b><span>Germany &middot; Austria &middot; Switzerland &middot; Liechtenstein &middot; Luxembourg</span><i>10 offers</i></a>
@@ -724,7 +777,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/slimsana/" target="_blank" rel="noopener">Dedicated SlimSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/1t81_w0ka4dA6v-fN5r-dVEMcyd68Yek9" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1t81_w0ka4dA6v-fN5r-dVEMcyd68Yek9" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), 40 Angles, Buyer Psychographics, Sales by Country</a>
           <a class="altpage" href="https://myslimsana.com/slimsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional SlimSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/651454" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
@@ -776,7 +829,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/ketosana/" target="_blank" rel="noopener">Dedicated KetoSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/1BuaCKRyYBrygAvYtXS9f-TSkbiOaB5Rm" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1BuaCKRyYBrygAvYtXS9f-TSkbiOaB5Rm" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://myketosana.com/ketosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional KetoSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/661129" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
@@ -828,7 +881,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/metabosana/" target="_blank" rel="noopener">Dedicated MetaboSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/12x8xEba9e37lQULX6rCb2VC1MpHODGnI" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/12x8xEba9e37lQULX6rCb2VC1MpHODGnI" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://metabosana.com/metabosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional MetaboSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/663162" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
@@ -881,7 +934,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/cleansesana/" target="_blank" rel="noopener">Dedicated CleanseSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/1SWzh7WvOJAuV8qDu5jkjqfkRojlVNX1W" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1SWzh7WvOJAuV8qDu5jkjqfkRojlVNX1W" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://cleansesana.com/cleansesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional CleanseSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/665412" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
@@ -932,9 +985,8 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/glucosana/" target="_blank" rel="noopener">Dedicated GlucoSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/12h0kSFHBlDmbaCbMqHh5vPesH9MAtVAW" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/12h0kSFHBlDmbaCbMqHh5vPesH9MAtVAW" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://myglucosana.com/glucosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional GlucoSana Affiliate Page ↗</a>
-          <a class="mkt-verify" href="https://www.digistore24-app.com/product/668255" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Blood-sugar demand in DACH is rising with an aging population — evergreen category.</span>
@@ -983,9 +1035,8 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/nervesana/" target="_blank" rel="noopener">Dedicated NerveSana Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/1D1tEBOm49z5KKQXMvGVKLXuSg2zfLNb5" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, …</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1D1tEBOm49z5KKQXMvGVKLXuSg2zfLNb5" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English)</a>
           <a class="altpage" href="https://nervesana.com/nervesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional NerveSana Affiliate Page ↗</a>
-          <a class="mkt-verify" href="https://www.digistore24-app.com/product/670068" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
         <div class="cardfoot">
           <span class="note">Premium pricing holds because the pain is real and untreated — low refunds.</span>
@@ -1034,6 +1085,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/vigorsana/" target="_blank" rel="noopener">Dedicated VigorSana Affiliate Page →</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1-7KzQUNKIr8gV0YxxZ3M0s200TVtqc64" target="_blank" rel="noopener">Affiliate Assets: VSL Script, Buyer Psychographics</a>
           <a class="altpage" href="https://myvigorsana.com/vigorsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional VigorSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/671283" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
         </div>
@@ -1122,7 +1174,6 @@
         <p class="fmtline" style="border-left-color:var(--c-bundle);margin:12px 0 4px;font-size:13.5px"><b>New funnel address is live.</b> The PDP and DTC rows above are the current promo links for VitaSana Collection. If you still run an older VitaSana link from before the move, replace it &mdash; the previous address no longer resolves. Commission, tracking and assets are unchanged.</p>
         <div class="resources">
           <a class="offerpage" href="offers/vitasana-collection/" target="_blank" rel="noopener">Dedicated VitaSana Collection Affiliate Page →</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/10zABAswTGyC6i-gxzyqs_TufieAlUDco" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, &hellip;</a>
           <a class="altpage" href="https://vitasanacollection.com/vitasana-collections-affiliate-page-ds24" target="_blank" rel="noopener">Additional VitaSana Collection Affiliate Page ↗</a>
         </div>
         <div class="cardfoot">
@@ -1170,7 +1221,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/glucotrust-german/" target="_blank" rel="noopener">Dedicated GlucoTrust German Affiliate Page &rarr;</a>
-          <a class="assets" href="https://drive.google.com/drive/folders/1GMEaoI6qlP6RWRkgIXc_z_IFSZJEu9KH" target="_blank" rel="noopener">Affiliate Assets: Psychographics, Angles, VSL Script, Ads, Landing Pages, &hellip;</a>
+          <a class="assets" href="https://drive.google.com/drive/folders/1GMEaoI6qlP6RWRkgIXc_z_IFSZJEu9KH" target="_blank" rel="noopener">Affiliate Assets: Angles, Buyer Psychographics, Bridge-Page Example, Copy Research, Sales by Country</a>
           <a class="altpage" href="https://myvitalletter.com/affiliates-ds24-irl" target="_blank" rel="noopener">Email swipes + all current links &#8599;</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/600901" target="_blank" rel="noopener">Verify stats in the DS24 marketplace &uarr;</a>
         </div>
@@ -1548,7 +1599,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v7.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.0 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
@@ -1602,17 +1653,18 @@
     try{localStorage.setItem('pnq_aff',affMain.value);localStorage.setItem('pnq_cam',camMain.value);}catch(e){}
     syncCopyGate();
   }
+  var affStart=document.getElementById('affStart');
   function sync(src){
-    if(src===affTop && affMain.value!==affTop.value) affMain.value=affTop.value;
-    if(src===affMain && affTop.value!==affMain.value) affTop.value=affMain.value;
+    [affTop,affMain,affStart].forEach(function(el){if(el&&el!==src&&el.value!==src.value)el.value=src.value;});
     render();
   }
   affTop.addEventListener('input',function(){sync(affTop);});
   affMain.addEventListener('input',function(){sync(affMain);});
+  if(affStart)affStart.addEventListener('input',function(){sync(affStart);});
   camMain.addEventListener('input',render);
   try{
     var sa=localStorage.getItem('pnq_aff'),sc=localStorage.getItem('pnq_cam');
-    if(sa){affMain.value=sa;affTop.value=sa;}
+    if(sa){affMain.value=sa;affTop.value=sa;if(affStart)affStart.value=sa;}
     if(sc){camMain.value=sc;}
   }catch(e){}
 
@@ -1857,6 +1909,31 @@
     body.insertBefore(more,body.firstChild);body.insertBefore(btn,more);
     btn.addEventListener('click',function(){var open=more.hidden;more.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');});
   });
+
+  /* v8: start strip market buttons, hero button, phone offer menu */
+  document.querySelectorAll('.ss-mk [data-go]').forEach(function(b){
+    b.addEventListener('click',function(){
+      showTab(b.getAttribute('data-go'));
+      document.querySelectorAll('.ss-mk [data-go]').forEach(function(x){x.classList.toggle('on',x===b);});
+      var tb=document.getElementById('markets-tabs');
+      if(tb){var off=topbarEl.offsetHeight+(railEl?railEl.offsetHeight:0)+12;window.scrollTo({top:tb.getBoundingClientRect().top+window.scrollY-off,behavior:reduceMo?'auto':'smooth'});}
+    });
+  });
+  var ctaId=document.getElementById('ctaId');
+  if(ctaId)ctaId.addEventListener('click',function(){
+    document.getElementById('generator').scrollIntoView({behavior:reduceMo?'auto':'smooth',block:'center'});
+    setTimeout(function(){affMain.focus();},450);
+  });
+  var railToggle=document.getElementById('railToggle');
+  if(railToggle&&railEl){
+    railToggle.addEventListener('click',function(){
+      var open=!railEl.classList.contains('open');
+      railEl.classList.toggle('open',open);railToggle.setAttribute('aria-expanded',open?'true':'false');setHeadH();
+    });
+    railEl.addEventListener('click',function(e){
+      if(e.target.closest('.rpill')&&railEl.classList.contains('open')){railEl.classList.remove('open');railToggle.setAttribute('aria-expanded','false');setTimeout(setHeadH,0);}
+    });
+  }
 
   render();
 })();
