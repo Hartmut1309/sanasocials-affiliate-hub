@@ -644,6 +644,19 @@
     .rail.open .rrow button.rgrp,.rail.open .rrow button.rgrp:first-child{flex:0 0 calc(100% + 16px);margin:0 -8px 3px;padding:5px 10px;position:static;font-size:11.5px}
     .rail.open .soongrp{white-space:normal;flex-wrap:wrap;border-radius:12px;padding:4px 6px 4px 10px;max-width:100%}
   }
+  /* v8.10: German in Amazon orange with dark text, lanes slightly more coloured */
+  :root{--m-de:#FF9900;--m-de-ink:#0A1220;--m-de-txt:#9A5200}
+  .ss-mk button[data-go="lang-de"],.ss-mk button[data-go="lang-de"]:hover,.ss-mk button[data-go="lang-de"].on{color:var(--m-de-ink)}
+  .tab[data-tab="lang-de"] .tabgo{color:var(--m-de-ink)}
+  .tab.on[data-tab="lang-de"] b{color:var(--m-de-ink)}
+  .tab.on[data-tab="lang-de"] span{color:rgba(10,18,32,.82)}
+  .tab.on[data-tab="lang-de"] .tabgo{color:var(--m-de-txt)}
+  .rrow{--m-ink:#fff;--m-txt:var(--m);background:color-mix(in srgb,var(--m) 12%,var(--bg))}
+  .rrow[data-m="de"]{--m-ink:var(--m-de-ink);--m-txt:var(--m-de-txt)}
+  .rrow[data-m="en"]{--m-txt:#065F46}
+  .rrow button.rgrp,.rrow button.rgrp:first-child,.rrow.on button.rgrp{color:var(--m-ink)}
+  .rrow .rpill i{color:var(--m-txt)}
+  .rrow .rpill.active i,:root[data-theme="dark"] .rrow .rpill i{color:var(--m-ink)}
 </style>
 
 
@@ -1687,7 +1700,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.9 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.10 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
