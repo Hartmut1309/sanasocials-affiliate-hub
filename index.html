@@ -610,6 +610,40 @@
   @media(max-width:700px){.tab .tabgo{font-size:13px;padding:5px 11px}.tabhint{font-size:14.5px}
     .tab .tabgo .go,.tab.on .tabgo .is{display:none}.tab:not(.on) .tabgo .go-s{display:inline}.tab.on .tabgo .is-s{display:inline}}
   @media(prefers-reduced-motion:reduce){.tab{transition:none}.tab:hover{transform:none}}
+  /* v8.9: market lanes in the rail, one colour per market (US purple -> emerald) */
+  :root{--m-de:#C2570C;--m-fr:#1D4ED8;--m-en:#047857}
+  .ss-mk button[data-go="lang-de"],.tab[data-tab="lang-de"]{--mk:var(--m-de)}
+  .ss-mk button[data-go="lang-fr"],.tab[data-tab="lang-fr"]{--mk:var(--m-fr)}
+  .ss-mk button[data-go="lang-en"],.tab[data-tab="lang-en"]{--mk:var(--m-en)}
+  .ss-mk button{white-space:nowrap}
+  @media(max-width:560px){.ss-mk{display:flex}.ss-mk button{flex:1 1 auto;padding:14px 6px;font-size:clamp(15px,4.4vw,18px)}}
+  .rail .wrap,.rail.stuck .wrap{gap:0;padding-top:6px;padding-bottom:6px}
+  .rrow[data-m="de"]{--m:var(--m-de)} .rrow[data-m="fr"]{--m:var(--m-fr)} .rrow[data-m="en"]{--m:var(--m-en)}
+  .rrow{gap:5px;padding:4px 10px 4px 0;align-items:center;background:color-mix(in srgb,var(--m) 7%,var(--bg));border-left:5px solid var(--m)}
+  .rrow+.rrow{border-top:1px solid color-mix(in srgb,var(--m) 28%,var(--line))}
+  .rrow:first-of-type{border-top-left-radius:9px;border-top-right-radius:9px}
+  .rrow:last-of-type{border-bottom-left-radius:9px;border-bottom-right-radius:9px}
+  .rrow button.rgrp,.rrow button.rgrp:first-child{flex:0 0 140px;align-self:stretch;margin:-4px 6px -4px 0;padding:0 12px;display:flex;align-items:center;background:var(--m);color:#fff;font-size:12px;letter-spacing:.08em;position:sticky;left:0;z-index:1}
+  .rrow.on button.rgrp{color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+  .rrow button.rgrp:focus-visible{outline:2.5px solid var(--ink);outline-offset:-3px}
+  .rrow .rpill{background:var(--card)}
+  .rrow .rpill i{background:color-mix(in srgb,var(--m) 14%,var(--card));color:var(--m)}
+  .rrow .rpill:hover{border-color:var(--m)}
+  .rrow .rpill.active{border-color:var(--m);box-shadow:inset 0 0 0 1px var(--m)}
+  .rrow .rpill.active i{background:var(--m);color:#fff}
+  :root[data-theme="dark"] .rrow .rpill i{background:var(--m);color:#fff}
+  .soongrp{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;border:1.25px dashed color-mix(in srgb,var(--m) 55%,var(--line2));border-radius:999px;padding:2px 3px 2px 10px;font-size:12px;font-weight:700;color:var(--dim);white-space:nowrap}
+  .soongrp .rpill.soonpill{border-style:solid;padding:2px 9px;font-size:12px}
+  .rail.stuck .rrow{padding-top:2px;padding-bottom:2px}
+  .rail.stuck .rrow button.rgrp{margin-top:-2px;margin-bottom:-2px;font-size:11px}
+  .rail.stuck .soongrp{font-size:11.5px;padding-top:1px;padding-bottom:1px}
+  .rail.stuck .soongrp .rpill.soonpill{padding:1px 8px;font-size:11.5px}
+  @media(max-width:700px){
+    .rail.open .wrap{gap:0}
+    .rail.open .rrow{padding:0 8px 7px 8px}
+    .rail.open .rrow button.rgrp,.rail.open .rrow button.rgrp:first-child{flex:0 0 calc(100% + 16px);margin:0 -8px 3px;padding:5px 10px;position:static;font-size:11.5px}
+    .rail.open .soongrp{white-space:normal;flex-wrap:wrap;border-radius:12px;padding:4px 6px 4px 10px;max-width:100%}
+  }
 </style>
 
 
@@ -646,7 +680,7 @@
 <nav class="rail" id="rail" aria-label="Jump to offer">
   <div class="wrap">
     <button class="railtoggle" id="railToggle" type="button" aria-expanded="false">Jump to an offer <em>German &middot; French &middot; US &middot; 13 offers</em><svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-de">German Offers:</button>
+    <div class="rrow" data-m="de"><button class="rgrp" type="button" data-tab="lang-de">German offers</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-1"><i>1</i> SlimSana</a>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-2"><i>2</i> KetoSana</a>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-3"><i>3</i> MetaboSana</a>
@@ -658,13 +692,12 @@
       <a class="rpill" style="--catc:var(--c-bundle)" href="#offer-8"><i>9</i> VitaSana</a>
       <a class="rpill" style="--catc:var(--c-blood)" href="#offer-9"><i>10</i> GlucoTrust</a>
     </div>
-    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-fr">French Offers:</button>
+    <div class="rrow" data-m="fr"><button class="rgrp" type="button" data-tab="lang-fr">French offers</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-10"><i>11</i> SlimSana FR</a>
       <a class="rpill" style="--catc:var(--c-gut)" href="#offer-12"><i>12</i> FloraVitaSana FR</a>
-      <a class="rpill soonpill" href="#ligne-soon">LigneSana (KetoSana French) <em>&middot; coming within the next few days</em></a>
-      <a class="rpill soonpill" href="#vigor-fr-soon">VigorSana FR <em>&middot; coming within the next few days</em></a>
+      <span class="soongrp">Coming within the next few days: <a class="rpill soonpill" href="#ligne-soon">LigneSana (KetoSana French)</a><a class="rpill soonpill" href="#vigor-fr-soon">VigorSana FR</a></span>
     </div>
-    <div class="rrow"><button class="rgrp" type="button" data-tab="lang-en">US Offers:</button>
+    <div class="rrow" data-m="en"><button class="rgrp" type="button" data-tab="lang-en">US offers</button>
       <a class="rpill" style="--catc:var(--c-weight)" href="#offer-13"><i>13</i> KetoSana US</a>
     </div>
   </div>
@@ -1654,7 +1687,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.8 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.9 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
