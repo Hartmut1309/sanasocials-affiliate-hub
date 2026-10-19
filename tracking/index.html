@@ -18,19 +18,19 @@
   .topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 20px}
   .brand{font-family:var(--disp);font-weight:800;font-size:21px;color:var(--ink)}
-  .brand small{display:block;font-family:var(--sans);font-weight:800;font-size:11.5px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+  .brand small{display:block;font-family:var(--sans);font-weight:800;font-size:12.5px;letter-spacing:0;color:var(--gold)}
   .backbtn{border:1.5px solid var(--acc);background:var(--acc);color:var(--acc-ink);border-radius:9px;padding:9px 15px;font-size:14.5px;font-weight:800;white-space:nowrap}
   .backbtn:hover{filter:brightness(1.07);text-decoration:none}
   h1{font-family:var(--disp);font-weight:800;font-size:clamp(30px,4.6vw,44px);line-height:1.08;margin:.4em 0 .35em;letter-spacing:-.01em}
   h2{font-family:var(--disp);font-weight:800;font-size:24px;margin:38px 0 10px}
-  .eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-top:34px}
+  .eyebrow{font-size:14px;letter-spacing:0;color:var(--gold);font-weight:800;margin-top:34px}
   .lede{color:var(--mut);font-size:18.5px}
   p{color:var(--mut)}p b,p strong{color:var(--ink)}li{color:var(--mut)}li b{color:var(--ink)}
   .box{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px 24px;margin:16px 0}
   .box.gold{border-color:color-mix(in srgb,var(--gold) 50%,var(--line2));background:linear-gradient(180deg,var(--gold-dim),transparent 75%),var(--card)}
   .tablewrap{border:1px solid var(--line);border-radius:12px;overflow-x:auto;background:var(--card);margin:14px 0}
   table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
-  th{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);text-align:left;padding:10px 16px;background:var(--card2);border-bottom:1px solid var(--line);font-weight:800}
+  th{font-size:12.5px;letter-spacing:0;color:var(--dim);text-align:left;padding:10px 16px;background:var(--card2);border-bottom:1px solid var(--line);font-weight:800}
   td{padding:9px 16px;border-bottom:1px solid var(--line);color:var(--mut);font-weight:600}
   tr:last-child td{border-bottom:none}
   code{font-family:var(--mono);font-size:14px;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--ink);white-space:nowrap}
@@ -44,6 +44,17 @@
   footer .wrap{display:flex;flex-direction:column;gap:10px}
   .legallinks{display:flex;gap:8px 22px;flex-wrap:wrap;font-size:14.5px;font-weight:700}
   .legallinks a{color:var(--mut)}
+  /* v8.11 (19.10.2026): header on one line, no all-caps (phones: logo only, as on the hub) */
+  @media(min-width:701px){
+    .topbar .wrap{padding-top:6px;padding-bottom:6px}
+    .brand{display:flex;align-items:baseline;gap:12px;line-height:1.15}
+    .brand small{display:inline;font-size:14px;letter-spacing:0}
+    .topbar .btn{padding-top:7px;padding-bottom:7px;white-space:nowrap}
+    .topbar .idwrap input{padding-top:6px;padding-bottom:6px}
+    .themebtn .tlab{display:none}
+  }
+  @media(max-width:700px){.brand small{display:none}}
+
 </style>
 <script>try{var t=localStorage.getItem('pnq_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 
