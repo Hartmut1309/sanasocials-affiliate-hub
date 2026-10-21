@@ -32,7 +32,7 @@
     --acc:#0B8A64; --acc-ink:#FFFFFF; --acc-dim:rgba(11,138,100,.10);
     --gold:#8A6A20; --gold-dim:rgba(138,106,32,.12);
     --assets:#F0A41A; --assets-ink:#231604;
-    --alt:#1D4E89; --alt-ink:#FFFFFF;
+    --alt:#1D4E89; --alt-ink:#FFFFFF;--img:#6B3FA0;--img-ink:#FFFFFF;
     --danger:#B3402F;
     --money:#0E1626; --money-ink:#EDF1F8; --money-acc:#3FD9A4;
     --c-weight:#E8590C; --c-blood:#1971C2; --c-gut:#2F9E44; --c-nerve:#6741D9; --c-men:#C2255C; --c-bundle:#B08D2F;
@@ -48,7 +48,7 @@
     --acc:#3FD9A4; --acc-ink:#062117; --acc-dim:rgba(63,217,164,.13);
     --gold:#D9B36B; --gold-dim:rgba(217,179,107,.14);
     --assets:#F7B733; --assets-ink:#231604;
-    --alt:#6FB3F2; --alt-ink:#06182B;
+    --alt:#6FB3F2; --alt-ink:#06182B;--img:#C4A8F5;--img-ink:#1B0B33;
     --danger:#E07A6B;
     --money:#0A1120; --money-ink:#EDF1F8; --money-acc:#3FD9A4;
     --c-weight:#FF8A3D; --c-blood:#4DA3E8; --c-gut:#51C462; --c-nerve:#9775FA; --c-men:#F06595; --c-bundle:#D9B36B;
@@ -682,6 +682,10 @@
 
   /* v8.12 (19.10.2026): market lanes full width, lined up with the logo and the right-hand controls */
   .rail .wrap{max-width:none}
+  /* v8.13 (21.10.2026): bottle-mockups button on every card */
+  .resources a.bottles{background:var(--img);border-color:var(--img);color:var(--img-ink);font-weight:800;box-shadow:0 5px 15px -7px color-mix(in srgb,var(--img) 70%,transparent)}
+  .resources a.bottles:hover{filter:brightness(1.08);color:var(--img-ink);border-color:var(--img);text-decoration:none}
+  .resources a.bottles:focus-visible{outline:2.5px solid var(--ink);outline-offset:2px}
 </style>
 
 
@@ -896,6 +900,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/slimsana/" target="_blank" rel="noopener">Dedicated SlimSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/14qxJ1YM-dpy7Zh8kd4Px9QdVcHH-Mkbo" target="_blank" rel="noopener">SlimSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1t81_w0ka4dA6v-fN5r-dVEMcyd68Yek9" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), 40 Angles, Buyer Psychographics, Sales by Country</a>
           <a class="altpage" href="https://myslimsana.com/slimsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional SlimSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/651454" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
@@ -948,6 +953,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/ketosana/" target="_blank" rel="noopener">Dedicated KetoSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1kgHko1FOOlvzNLXj1xbwe03-z5hGvxhs" target="_blank" rel="noopener">KetoSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1BuaCKRyYBrygAvYtXS9f-TSkbiOaB5Rm" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://myketosana.com/ketosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional KetoSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/661129" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
@@ -1000,6 +1006,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/metabosana/" target="_blank" rel="noopener">Dedicated MetaboSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1mlqiBT5v4PXr8Draz5ZcGJ4fP0weEDOp" target="_blank" rel="noopener">MetaboSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/12x8xEba9e37lQULX6rCb2VC1MpHODGnI" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://metabosana.com/metabosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional MetaboSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/663162" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
@@ -1053,6 +1060,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/cleansesana/" target="_blank" rel="noopener">Dedicated CleanseSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/12pcEHcSYYxOCk6VsNxpBMRSl6lo9BydU" target="_blank" rel="noopener">CleanseSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1SWzh7WvOJAuV8qDu5jkjqfkRojlVNX1W" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://cleansesana.com/cleansesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional CleanseSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/665412" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
@@ -1104,6 +1112,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/glucosana/" target="_blank" rel="noopener">Dedicated GlucoSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1KVmt0aBP5BdgaWZwHT7Mk22jIxqeZFWA" target="_blank" rel="noopener">GlucoSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/12h0kSFHBlDmbaCbMqHh5vPesH9MAtVAW" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English), Buyer Psychographics</a>
           <a class="altpage" href="https://myglucosana.com/glucosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional GlucoSana Affiliate Page ↗</a>
         </div>
@@ -1154,6 +1163,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/nervesana/" target="_blank" rel="noopener">Dedicated NerveSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1X0Fxd9lBmItxJ8ws-csHnuoT89FWN13N" target="_blank" rel="noopener">NerveSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1D1tEBOm49z5KKQXMvGVKLXuSg2zfLNb5" target="_blank" rel="noopener">Affiliate Assets: VSL Script (German + English)</a>
           <a class="altpage" href="https://nervesana.com/nervesana-affiliate-page-ds24" target="_blank" rel="noopener">Additional NerveSana Affiliate Page ↗</a>
         </div>
@@ -1204,6 +1214,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/vigorsana/" target="_blank" rel="noopener">Dedicated VigorSana Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1h0L6qynQJORkL1s93ilowO2xA6bXHGnx" target="_blank" rel="noopener">VigorSana Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1-7KzQUNKIr8gV0YxxZ3M0s200TVtqc64" target="_blank" rel="noopener">Affiliate Assets: VSL Script, Buyer Psychographics</a>
           <a class="altpage" href="https://myvigorsana.com/vigorsana-affiliate-page-ds24" target="_blank" rel="noopener">Additional VigorSana Affiliate Page ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/671283" target="_blank" rel="noopener">Verify stats in the DS24 marketplace ↗</a>
@@ -1250,6 +1261,7 @@
         </div>
         <p class="fmtline" style="border-left-color:var(--c-men);margin:12px 0 4px;font-size:13.5px"><b>Read this before you run it.</b> The Digistore24 checkout is approved and live since 13 October 2026. Promote HeroSana Caliber only with the EU-authorized nutrient claims shown on the sales page and the label &mdash; no erectile-dysfunction or &ldquo;testosterone booster&rdquo; angles, no weight-loss promises. The VSL goes on this card as soon as it is switched to the HeroSana checkout; until then, send all traffic to the PDP. There is <b>no EPC history yet</b>: you are early.</p>
         <div class="resources">
+          <a class="bottles" href="https://drive.google.com/drive/folders/1ulbNn91IelzcVCcxkwvGeqcNZ2ahAN-n" target="_blank" rel="noopener">HeroSana Caliber Bottle Mockups ↗</a>
           <a class="altpage" href="https://herosana.com/herosana-affiliate-page-ds24" target="_blank" rel="noopener">Additional HeroSana Caliber Affiliate Page ↗</a>
         </div>
         <div class="cardfoot">
@@ -1296,6 +1308,7 @@
         <p class="fmtline" style="border-left-color:var(--c-bundle);margin:12px 0 4px;font-size:13.5px"><b>New funnel address is live.</b> The PDP and DTC rows above are the current promo links for VitaSana Collection. If you still run an older VitaSana link from before the move, replace it &mdash; the previous address no longer resolves. Commission, tracking and assets are unchanged.</p>
         <div class="resources">
           <a class="offerpage" href="offers/vitasana-collection/" target="_blank" rel="noopener">Dedicated VitaSana Collection Affiliate Page →</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1S-xms2kBLQysKuj_t_GiMwxc1UpDq9g7" target="_blank" rel="noopener">VitaSana Collection Bottle Mockups ↗</a>
           <a class="altpage" href="https://vitasanacollection.com/vitasana-collections-affiliate-page-ds24" target="_blank" rel="noopener">Additional VitaSana Collection Affiliate Page ↗</a>
         </div>
         <div class="cardfoot">
@@ -1343,6 +1356,7 @@
         </div>
         <div class="resources">
           <a class="offerpage" href="offers/glucotrust-german/" target="_blank" rel="noopener">Dedicated GlucoTrust German Affiliate Page &rarr;</a>
+          <a class="bottles" href="https://drive.google.com/drive/folders/1GA_hCfEvKGElmozhWWyYgOUY5EH370Ij" target="_blank" rel="noopener">GlucoTrust Bottle Mockups ↗</a>
           <a class="assets" href="https://drive.google.com/drive/folders/1GMEaoI6qlP6RWRkgIXc_z_IFSZJEu9KH" target="_blank" rel="noopener">Affiliate Assets: Angles, Buyer Psychographics, Bridge-Page Example, Copy Research, Sales by Country</a>
           <a class="altpage" href="https://myvitalletter.com/affiliates-ds24-irl" target="_blank" rel="noopener">Email swipes (sending needs our prior written permission) + all current links &#8599;</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/600901" target="_blank" rel="noopener">Verify stats in the DS24 marketplace &uarr;</a>
@@ -1400,6 +1414,7 @@
       </div>
       <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Geo means the French-speaking audience in those four countries &mdash; all of France and Luxembourg, and the French-speaking regions of Belgium and Switzerland. There is <b>no EPC history yet</b>: you are early, and the numbers on the German card do not carry over. <b>Send French traffic here and German traffic to the SlimSana card.</b> The French VSL goes on this card as soon as its French video is live &mdash; email <a href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%20French%20VSL&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%20for%20French%20traffic%3A%0APlease%20notify%20me%20when%20the%20French%20VSL%20goes%20live.">affiliates@sana-socials.com</a> if you want it the day it goes live.</p>
       <div class="resources">
+        <a class="bottles" href="https://drive.google.com/drive/folders/1fVilbMJDDvxJMUSZeJHfriU-bLqPPnKg" target="_blank" rel="noopener">SlimSana FR Bottle Mockups ↗</a>
         <a class="mkt-verify" href="https://www.digistore24-app.com/product/720983" target="_blank" rel="noopener">See the French marketplace entry &#8599;</a>
         <a class="mkt-verify" href="mailto:affiliates@sana-socials.com?subject=SlimSana%20FR%20%E2%80%94%20creatives%20%26%20angles&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0AChannels%20you%20will%20run%20in%20French%3A%0AWhat%20you%20need%20(ads%2C%20pre-sells%2C%20angles)%3A">French creatives &amp; angles on request &#8599;</a>
       </div>
@@ -1448,6 +1463,7 @@
         </div>
         <p class="fmtline" style="border-left-color:var(--c-gut);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Send French traffic here and German traffic to the CleanseSana card. In French, stay away from &laquo;&nbsp;d&eacute;tox&nbsp;&raquo; and any promise to cleanse or detoxify the body &mdash; Digistore24 does not approve that wording for this offer. The French VSL goes on this card as soon as its French video is live. There is <b>no EPC history yet</b>: you are early.</p>
         <div class="resources">
+          <a class="bottles" href="https://drive.google.com/drive/folders/1MBGSwsr-EwUePBM_OxG1j_l_6KDdq2bd" target="_blank" rel="noopener">FloraVitaSana FR Bottle Mockups ↗</a>
           <a class="mkt-verify" href="https://www.digistore24-app.com/product/740795" target="_blank" rel="noopener">See the French marketplace entry &#8599;</a>
           <a class="mkt-verify" href="mailto:affiliates@sana-socials.com?subject=FloraVitaSana%20FR%20%E2%80%94%20creatives%20%26%20angles&amp;body=Digistore24%20ID%3A%0ATraffic%20sources%3A%0AChannels%20you%20will%20run%20in%20French%3A%0AWhat%20you%20need%20(ads%2C%20pre-sells%2C%20angles)%3A">French creatives &amp; angles on request &#8599;</a>
         </div>
@@ -1507,6 +1523,9 @@
           <div class="lrow"><div class="tag">DTC 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-dtc-bb-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         </div>
         <p class="fmtline" style="border-left-color:var(--c-weight);margin:12px 0 4px;font-size:13.5px"><b>Read this before you scale.</b> Send English-language traffic here and German traffic to the KetoSana card. The VSL goes on this card as soon as its English video is live. For US traffic, disclose your affiliation the FTC way and make no specific weight-loss result promises. There is <b>no EPC history yet</b>: you are early.</p>
+        <div class="resources">
+          <a class="bottles" href="https://drive.google.com/drive/folders/1TEkLhanbmczlddNoZwsCwvmt2tqtV2ae" target="_blank" rel="noopener">KetoSana US Bottle Mockups ↗</a>
+        </div>
         <div class="cardfoot">
           <span class="note">RevShare starts at 65% across the whole funnel &mdash; rises to 75% with volume. CPA on request.</span>
           <button class="btn small copyall" type="button">Copy this offer's links</button>
@@ -1725,7 +1744,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.12 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.13 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Legal">
       <a href="impressum/">Legal Notice (Impressum)</a>
       <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
