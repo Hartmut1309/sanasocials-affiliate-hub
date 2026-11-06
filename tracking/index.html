@@ -55,6 +55,14 @@
   }
   @media(max-width:700px){.brand small{display:none}}
 
+  /* v8.19 legal footer band, like the GHL affiliate-page footer */
+  .ssband{background:#7b1c2d;color:#faf089;text-align:center;padding:26px 16px 30px;border-top:2px solid #000}
+  .ssband img{display:block;height:56px;width:auto;margin:0 auto 14px}
+  .ssband nav{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 22px;font:700 17px/1.6 Arial,Helvetica,sans-serif}
+  .ssband a{color:#faf089;text-decoration:none}
+  .ssband a:hover,.ssband a:focus-visible{text-decoration:underline}
+  @media (max-width:900px){.ssband{padding-bottom:88px}}   /* room for the fixed "Your links" button */
+  @media (max-width:600px){.ssband img{height:44px}.ssband nav{font-size:15px;gap:4px 16px}}
 </style>
 <script>try{var t=localStorage.getItem('pnq_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 
@@ -129,10 +137,16 @@
 
 <footer><div class="wrap">
   <div><b>SanaSocials Affiliate Hub</b> · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
-  <nav class="legallinks" aria-label="Legal">
-    <a href="/impressum/">Legal Notice (Impressum)</a>
-    <a href="https://sana-socials.com/datenschutz" target="_blank" rel="noopener">Privacy Policy (Datenschutz)</a>
-    <a href="/disclaimer/">Disclaimer</a>
+  <nav class="legallinks" aria-label="Hub pages">
     <a href="/claims/">Claims Center</a>
   </nav>
 </div></footer>
+<div class="ssband">
+  <img src="/img/sanasocials-logo.png" alt="SanaSocials" width="264" height="56" loading="lazy">
+  <nav aria-label="Legal">
+    <a href="https://avaluequestconsulting.com/impressum-ds24-aff" target="_blank" rel="noopener">Imprint</a>
+    <a href="https://avaluequestconsulting.com/datenschutz-ds24-aff" target="_blank" rel="noopener">Privacy Policy</a>
+    <a href="https://avaluequestconsulting.com/disclaimer-ds24-aff" target="_blank" rel="noopener">Disclaimer</a>
+    <a href="https://avaluequestconsulting.com/contact-affiliates-ds24" target="_blank" rel="noopener">Contact</a>
+  </nav>
+</div>
