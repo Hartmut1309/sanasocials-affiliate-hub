@@ -5,17 +5,17 @@
 <meta property="og:description" content="15 doctor-fronted offers in German, French and US markets. 65–75% RevShare or CPA €120–150. All your links in one click.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://affiliate-hub.sana-socials.com/">
-<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9.jpg">
-<meta property="og:image:secure_url" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9.jpg">
+<meta property="og:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9-1.jpg">
+<meta property="og:image:secure_url" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9-1.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SanaSocials Affiliate Hub: 15 offers in 3 markets (10 German, 4 French, 1 US), 65–75% full-funnel RevShare or CPA €120–150, US $140–176">
+<meta property="og:image:alt" content="SanaSocials Affiliate Hub: 15 offers in 3 markets (10 German, 4 French, 1 US), 65–75% full-funnel RevShare or CPA €120–€150, US $140–$180">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SanaSocials Affiliate Hub — 15 Doctor-Fronted Offers, 65–75% RevShare">
 <meta name="twitter:description" content="15 doctor-fronted offers in German, French and US markets. 65–75% RevShare or CPA €120–150. All your links in one click.">
-<meta name="twitter:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9.jpg">
-<meta name="twitter:image:alt" content="SanaSocials Affiliate Hub: 15 offers in 3 markets (10 German, 4 French, 1 US), 65–75% full-funnel RevShare or CPA €120–150, US $140–176">
+<meta name="twitter:image" content="https://affiliate-hub.sana-socials.com/og-sanasocials-v9-1.jpg">
+<meta name="twitter:image:alt" content="SanaSocials Affiliate Hub: 15 offers in 3 markets (10 German, 4 French, 1 US), 65–75% full-funnel RevShare or CPA €120–€150, US $140–$180">
 <meta name="description" content="Doctor-fronted supplement offers for affiliates in three language markets: German (Germany, Austria, Switzerland, Liechtenstein, Luxembourg), French (France, Belgium, Switzerland, Luxembourg) and English (United States, Canada, United Kingdom and worldwide outside the EU). Live Digistore24 affiliate-link generator.">
 <title>SanaSocials Affiliate Hub</title>
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
@@ -694,6 +694,21 @@
   .ssband a:hover,.ssband a:focus-visible{text-decoration:underline}
   @media (max-width:900px){.ssband{padding-bottom:88px}}   /* room for the fixed "Your links" button */
   @media (max-width:600px){.ssband img{height:44px}.ssband nav{font-size:15px;gap:4px 16px}}
+  /* v8.20 (06.11.2026): quick-links table in the market-lane colours */
+  .mxth div{font-size:17px;font-weight:800;color:var(--ink);padding:12px 14px}
+  .mxth div:nth-child(2){background:var(--m-de);color:var(--m-de-ink)}
+  .mxth div:nth-child(3){background:var(--m-fr);color:#fff}
+  .mxth div:nth-child(4){background:var(--m-en);color:#fff}
+  .mxc[data-m="German"]{background:color-mix(in srgb,var(--m-de) 12%,var(--bg))}
+  .mxc[data-m="French"]{background:color-mix(in srgb,var(--m-fr) 12%,var(--bg))}
+  .mxc[data-m="US"]{background:color-mix(in srgb,var(--m-en) 12%,var(--bg))}
+  @media(max-width:760px){
+    .mxc::before{font-size:13.5px}
+    .mxc[data-m="German"]::before{color:var(--m-de-txt)}
+    .mxc[data-m="French"]::before{color:var(--m-fr)}
+    .mxc[data-m="US"]::before{color:#065F46}
+    :root[data-theme="dark"] .mxc::before{color:var(--ink)}
+  }
 </style>
 
 
@@ -1857,7 +1872,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.19 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.20 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
