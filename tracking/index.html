@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tracking Setup Guide — SanaSocials Affiliate Hub</title>
-<meta name="description" content="Campaign-key conventions, Digistore24 pixel &amp; S2S postback setup, delayed-CTA handling and DACH consent notes — settle attribution before the first euro of spend.">
+<meta name="description" content="Campaign-key conventions, Digistore24 pixel &amp; S2S postback setup, delayed-CTA handling and consent notes for Germany, Austria and Switzerland — settle attribution before the first euro of spend.">
 <link rel="icon" href="/favicon.ico?v=4" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=4">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=4">
@@ -81,13 +81,13 @@
   <div class="tablewrap"><table>
     <thead><tr><th>Traffic source</th><th>Key pattern</th><th>Example</th></tr></thead>
     <tbody>
-      <tr><td>Meta / Facebook</td><td><code>meta-{angle}-{adset}</code></td><td><code>meta-sludge-b3</code></td></tr>
+      <tr><td>Meta / Facebook</td><td><code>meta-{angle}-{adset}</code></td><td><code>meta-cleanse-b3</code></td></tr>
       <tr><td>Native (Taboola, Outbrain…)</td><td><code>ntv-{network}-{widget}</code></td><td><code>ntv-taboola-w41</code></td></tr>
-      <tr><td>YouTube</td><td><code>yt-{angle}-{cut}</code></td><td><code>yt-locks-cut3</code></td></tr>
+      <tr><td>YouTube</td><td><code>yt-{angle}-{cut}</code></td><td><code>yt-keto-cut3</code></td></tr>
       <tr><td>Email (only possible with our prior written permission)</td><td><code>em-{list}-{send}</code></td><td><code>em-health-aug12</code></td></tr>
     </tbody>
   </table></div>
-  <p class="note">Rules that keep the data readable: lowercase, hyphens only, never reuse a key across channels, and agree the convention with Stefan before launch so our reporting and yours name the same thing the same way.</p>
+  <p class="note">Rules that keep the data readable: lowercase, hyphens only, never reuse a key across channels. Recommended: agree your key pattern with Stefan Richter, our affiliate manager (<a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a>) before launch, so our reporting and yours name the same thing the same way.</p>
 
   <h2>2 · What this covers</h2>
   <p>Every link on the hub &mdash; <b>16 offers in three markets</b>: 10 German, 4 French and 2 US offers, each in its VSL, PDP and DTC formats where they exist. All of them run on Digistore24 and take the same parameters, so one setup covers them all. The US checkout charges in US dollars.</p>
@@ -118,7 +118,7 @@
   <p>Affiliates can&rsquo;t place test purchases on Digistore24. Instead, open your integration and press <b>Test connection</b>: Digistore24 simulates a sale and sends it to your tracker, and the <b>Log</b> tab shows every call. Source: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
 
   <h2>7 · Delayed CTAs on VSL pages</h2>
-  <p>Our VSL buy buttons appear mid-video, not on page load. For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model &mdash; that&rsquo;s why.</p>
+  <p>On most of our VSLs the buy buttons appear mid-video, not on page load (exception: the GlucoTrust VSL with buy boxes visible from the start). For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model &mdash; that&rsquo;s why.</p>
 
   <h2>8 · Running your own pre-sell into EU traffic?</h2>
   <p>If you put a quiz, listicle or advertorial in front of our funnel, GDPR applies to <b>your</b> page: non-essential pixels need a consent banner before they fire. Our funnel pages handle their own consent &mdash; your pre-sell needs its own. Budget for it; consent-loss is measurement-loss, not a reason to skip the banner.</p>
@@ -126,7 +126,7 @@
   <h2>9 · The pre-spend checklist</h2>
   <ul class="check">
     <li>Digistore24 ID entered on the hub &mdash; every link personalized</li>
-    <li>Campaign-key convention agreed with Stefan (one key per creative or ad set)</li>
+    <li>Campaign-key pattern agreed with Stefan (recommended; one key per creative or ad set)</li>
     <li>Click ID passed as <code>cid</code> if you run a tracker</li>
     <li>Pixel or postback set up, and <b>Test connection</b> shows the call in your integration&rsquo;s log</li>
     <li>Market matched to your traffic: German (start with Germany, Austria and Switzerland), French or US</li>
