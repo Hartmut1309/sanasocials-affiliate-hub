@@ -1,0 +1,30 @@
+# Refreshes the "updated <date>" line in the hero pill every 2 days (Hartmut, 24.11.2026).
+# Only the date changes; the script stops without a commit if the offer count no longer matches the cards.
+# To stop it: delete this file, or disable the workflow under the repo's Actions tab.
+name: Refresh updated date
+on:
+  schedule:
+    - cron: "0 5 */2 * *"   # 05:00 UTC on odd days of the month (06:00 Berlin in winter)
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh the date
+        run: python3 .github/scripts/bump_updated_date.py index.html
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then echo "nothing to commit"; exit 0; fi
+          git config user.name "hub-date-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Hub: refresh 'updated' date"
+          git push
+          curl -s -X POST -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/pages/builds || true
