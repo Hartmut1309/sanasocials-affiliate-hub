@@ -798,6 +798,40 @@
     .wrap{padding-left:14px;padding-right:14px}
   }
   .mxo li strong,.mx6 .mxd strong,.mx6 .mxc em strong,.mxhead span strong{font-weight:800;color:var(--ink)}
+  /* v8.35 (24.11.2026): quick-links design pass, same copy */
+  #quicklinks{box-shadow:0 10px 30px -18px rgba(10,18,32,.35)}
+  #quicklinks .mxhead{display:block;padding:16px 20px 14px;background:var(--card2)}
+  #quicklinks .mxhead>b{display:block;font-family:var(--disp);font-size:clamp(22px,2.3vw,30px);line-height:1.12;font-weight:800;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px;text-wrap:balance}
+  #quicklinks .mxchips{display:flex;flex-wrap:wrap;gap:6px 8px}
+  #quicklinks .mxchip{display:inline-block;font-size:13.5px;font-weight:700;color:var(--ink);background:var(--card);border:1.5px solid var(--line2);border-radius:999px;padding:4px 12px;line-height:1.3}
+  #quicklinks .mxchip:first-child{background:none;border-color:transparent;padding-left:0;color:var(--dim)}
+  .mxo{padding:16px 20px 14px}
+  .mxo .mxo-t{display:block;margin-bottom:8px}
+  .mxo-mk{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:800;color:var(--ink);opacity:.8;margin-bottom:3px}
+  .mxo-mk::before{content:"";width:10px;height:10px;border-radius:999px;background:var(--mk);flex:0 0 auto}
+  .mxo-h{display:block;font-family:var(--disp);font-size:clamp(19px,1.6vw,23px);line-height:1.15;font-weight:800;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
+  .mxo ul{list-style:none;padding:0}
+  .mxo li{position:relative;padding-left:20px;margin:5px 0;color:var(--ink);opacity:.9}
+  .mxo li::before{content:"";position:absolute;left:2px;top:.5em;width:9px;height:9px;border-radius:3px;background:var(--mk);transform:rotate(45deg)}
+  .mx6 .mxth div{font-family:var(--disp);font-size:19px;letter-spacing:-.005em}
+  .mx6 .mxth div small{font-family:var(--sans)}
+  .mx6 .mxp{font-family:var(--disp);font-size:17px;font-weight:800;letter-spacing:-.01em}
+  @media(min-width:1100px){.mx6 .mxrow{grid-template-columns:118px 160px minmax(0,1.6fr) repeat(3,minmax(0,1fr))}}
+  .mxniche{border-left:0;border-radius:8px;padding:4px 9px 4px 8px;font-size:12px;background:color-mix(in srgb,var(--catc) 16%,transparent);display:inline-flex;align-items:center;gap:6px}
+  .mxniche::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--catc);flex:0 0 auto}
+  .mx6 .mxrow:not(.mxth):hover .mxn2,.mx6 .mxrow:not(.mxth):hover .mxp,.mx6 .mxrow:not(.mxth):hover .mxd{background:color-mix(in srgb,var(--acc) 6%,var(--card))}
+  .mx6 .mxcopy{border-radius:999px;border:0;font-weight:800;padding:6px 14px}
+  .mx6 .mxc[data-m="German"] .mxcopy{background:var(--m-de);color:var(--m-de-ink)}
+  .mx6 .mxc[data-m="French"] .mxcopy{background:var(--m-fr);color:#fff}
+  .mx6 .mxc[data-m="US"] .mxcopy{background:var(--m-en);color:#fff}
+  .mx6 .mxcopy:hover{filter:brightness(1.08)}
+  .mx6 .mxsoon em{display:inline-block;margin-top:4px;padding:2px 9px;border:1.5px dashed var(--line2);border-radius:999px;font-size:11.5px}
+  .mxsrc{background:var(--card2)}
+  @media(max-width:640px){
+    #quicklinks .mxhead{padding:12px 14px}
+    .mxo{padding:12px 14px}
+    #quicklinks .mxchip{font-size:12.5px;padding:3px 10px}
+  }
 </style>
 
 
@@ -905,8 +939,8 @@
     </div>
 
     <div class="mxwrap rev" id="quicklinks">
-      <div class="mxhead"><b>183 million people across six European countries, more than half the US population</b><span>Pick your niche, pick your market, copy your links · 17 live offers in German, French and US English · 65–75% RevShare through the whole funnel · €120–150 CPA on 13 offers · 60-day money-back guarantee · EPC on request</span></div>
-      <div class="mxopp" role="list" aria-label="Market opportunity by market"><div class="mxo" data-m="German" role="listitem"><b>German-speaking Europe · Europe’s wealthiest language market</b><ul><li><strong>More than 100 million</strong> German speakers</li><li><strong>About €4.3 billion</strong> spent on supplements in Germany from September 2024 to September 2025, and <strong>51%</strong> of Germans over 16 took at least one supplement in the last twelve months</li><li><strong>11</strong> German-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>10 of them are ours and on this offer hub</strong></li><li>Germany’s Meta CPM averaged <strong>about 28% below</strong> the global baseline across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="French" role="listitem"><b>France and French-speaking Europe · €3 billion market with limited marketplace supply</b><ul><li>France’s supplement market passed <strong>€3 billion</strong> for the first time in 2025, up 2.6%, and <strong>61%</strong> of French adults take supplements</li><li><strong>8</strong> French-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>4 of them are ours and on this offer hub</strong></li><li>France’s Meta CPM averaged <strong>about 39% of</strong> the global benchmark and France’s Meta CPC averaged <strong>about 40% below</strong> the global median across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="US" role="listitem"><b>United States · the crowded benchmark</b><ul><li><strong>More than 120</strong> English-language supplement offers on Digistore24, about 126 in total, <strong>2 of them are ours and on this offer hub</strong></li><li>United States Meta CPM averaged <strong>about 13.8% above</strong> the global median and United States Meta CPC <strong>about 13% above</strong> the global median across all industries over the 13 months to July 2026</li><li><strong>KetoSana US and CleanseSana US are live</strong>: both are editions of our German top offers, with checkout in US dollars and fulfillment from our US fulfillment center</li></ul></div></div>
+      <div class="mxhead"><b>183 million people across six European countries, more than half the US population</b><span class="mxchips"><span class="mxchip">Pick your niche, pick your market, copy your links</span><span class="mxchip">17 live offers in German, French and US English</span><span class="mxchip">65–75% RevShare through the whole funnel</span><span class="mxchip">€120–150 CPA on 13 offers</span><span class="mxchip">60-day money-back guarantee</span><span class="mxchip">EPC on request</span></span></div>
+      <div class="mxopp" role="list" aria-label="Market opportunity by market"><div class="mxo" data-m="German" role="listitem"><b class="mxo-t"><span class="mxo-mk">German-speaking Europe</span><span class="mxo-h">Europe’s wealthiest language market</span></b><ul><li><strong>More than 100 million</strong> German speakers</li><li><strong>About €4.3 billion</strong> spent on supplements in Germany from September 2024 to September 2025, and <strong>51%</strong> of Germans over 16 took at least one supplement in the last twelve months</li><li><strong>11</strong> German-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>10 of them are ours and on this offer hub</strong></li><li>Germany’s Meta CPM averaged <strong>about 28% below</strong> the global baseline across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="French" role="listitem"><b class="mxo-t"><span class="mxo-mk">France and French-speaking Europe</span><span class="mxo-h">€3 billion market with limited marketplace supply</span></b><ul><li>France’s supplement market passed <strong>€3 billion</strong> for the first time in 2025, up 2.6%, and <strong>61%</strong> of French adults take supplements</li><li><strong>8</strong> French-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>4 of them are ours and on this offer hub</strong></li><li>France’s Meta CPM averaged <strong>about 39% of</strong> the global benchmark and France’s Meta CPC averaged <strong>about 40% below</strong> the global median across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="US" role="listitem"><b class="mxo-t"><span class="mxo-mk">United States</span><span class="mxo-h">The crowded benchmark</span></b><ul><li><strong>More than 120</strong> English-language supplement offers on Digistore24, about 126 in total, <strong>2 of them are ours and on this offer hub</strong></li><li>United States Meta CPM averaged <strong>about 13.8% above</strong> the global median and United States Meta CPC <strong>about 13% above</strong> the global median across all industries over the 13 months to July 2026</li><li><strong>KetoSana US and CleanseSana US are live</strong>: both are editions of our German top offers, with checkout in US dollars and fulfillment from our US fulfillment center</li></ul></div></div>
       <div class="mxgrid mx6" role="table" aria-label="Offers by niche and market">
         <div class="mxrow mxth" role="row"><div role="columnheader">Niche</div><div role="columnheader">Offer</div><div role="columnheader">Why send traffic here</div><div role="columnheader">German<small>Native German funnels · German-speaking Europe</small></div><div role="columnheader">French<small>Written in French, not translated · France, Belgium, Switzerland, Luxembourg</small></div><div role="columnheader">US<small>Checkout in US dollars · ships from our US fulfillment center</small></div></div>
         <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Keto Weight Loss</span></div><div class="mxp" role="rowheader">KetoSana</div><div class="mxd" role="cell"><span><strong>Our #1 offer by orders</strong>. German-made keto drops, a three-lock keto story, <strong>~€250 AOV</strong>, Meta leads and Google performing well.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-2">KetoSana</a><em>Meta leads · Google performing well</em></div><button class="btn small mxcopy" type="button" data-card="offer-2">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-15">LigneSana FR</a><em>French edition of KetoSana · €69–294 orders</em></div><button class="btn small mxcopy" type="button" data-card="offer-15">Copy links</button></div><div class="mxc" role="cell" data-m="US"><div class="mxl"><a href="#offer-13">KetoSana US</a><em>$69–294 checkout · PDP and DTC page live</em></div><button class="btn small mxcopy" type="button" data-card="offer-13">Copy links</button></div></div>
@@ -2055,7 +2089,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.34 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.35 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
