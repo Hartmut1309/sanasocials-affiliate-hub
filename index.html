@@ -832,6 +832,116 @@
     .mxo{padding:12px 14px}
     #quicklinks .mxchip{font-size:12.5px;padding:3px 10px}
   }
+  /* v8.36 (24.11.2026): colour pass, same content. Panel consensus (colour designer + CI strategist):
+     navy = house colour (structure), champagne = sparing premium accent (rules, figures on navy),
+     green = action only (deeper, AA with white), market colours = market signals on the market cards. */
+  :root{
+    --sig:var(--band); --sig-ink:var(--band-ink); --head:#132A4A; --head2:#24426B;
+    --acc:#0A7355; --acc-dim:rgba(10,115,85,.09); --acc-lt:#2BB383; --acc-lt-ink:#04140E;
+    --gold:#7A5C14; --gold-dim:rgba(201,162,74,.14); --champ:#C9A24A;
+    --money:#132A4A; --money-acc:#F2C66D; --money-lab:#C9D5E8;
+    --ledger:#F3F5F9; --num:#132A4A;
+    --de-txt:#9A5200; --fr-txt:#1D4ED8; --en-txt:#065F46;
+    --hero-top:#ECF0F6;
+  }
+  :root[data-theme="dark"]{
+    --head:#EFF3FA; --head2:#B4C3DA;
+    --acc:#45C99A; --acc-ink:#04140E; --acc-dim:rgba(69,201,154,.12); --acc-lt:#0A7355; --acc-lt-ink:#FFFFFF;
+    --gold:#D9B36B; --gold-dim:rgba(217,179,107,.14); --champ:#BF9E5C;
+    --money:#13213A; --money-acc:#F2C66D; --money-lab:#C9D5E8;
+    --ledger:#0F1A2E; --num:#EAF0F8;
+    --de-txt:#FFB24D; --fr-txt:#8DB0FF; --en-txt:#5FD3A8;
+    --hero-top:#0F1B31;
+  }
+
+  /* 1. Header: navy letterhead rule; Copy controls waiting for an ID look ready, not faded */
+  .topbar{background:linear-gradient(var(--sig),var(--sig)) top/100% 3px no-repeat,color-mix(in srgb,var(--bg) 94%,transparent)}
+  .opbtn{color:var(--head);border-color:var(--head)}
+  .btn.needsid{opacity:1;filter:none}
+  .btn.primary.needsid{background:color-mix(in srgb,var(--acc) 7%,var(--card));color:var(--acc);border-color:color-mix(in srgb,var(--acc) 45%,var(--line2))}
+
+  /* 2. Hero: quiet navy wash into cream, champagne glow top right */
+  .hero{background:linear-gradient(180deg,var(--hero-top) 0,transparent 560px),
+    radial-gradient(900px 380px at 88% -140px,var(--gold-dim),transparent 70%),var(--bg)}
+  h1,h2{color:var(--head)}
+  .h1sub{color:var(--head2)}
+  .herocta .opcta{border-color:var(--head);color:var(--head)}
+  .herocta .opcta:hover{background:var(--head);color:var(--bg);border-color:var(--head)}
+  .hero .flagpill{background:color-mix(in srgb,var(--acc) 6%,var(--card));border-color:color-mix(in srgb,var(--acc) 38%,var(--line2))}
+
+  /* 3. Start in three steps: navy rule, navy step numbers with a champagne ring, market buttons without the bevel */
+  .startstrip{background:linear-gradient(var(--sig),var(--sig)) top/100% 4px no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--champ) 6%,var(--card)),var(--card) 60%);border-color:color-mix(in srgb,var(--sig) 22%,var(--line2))}
+  .ss-step>i{background:var(--sig);color:var(--sig-ink);box-shadow:0 0 0 2px var(--card),0 0 0 3.5px var(--champ)}
+  .ss-mk button{box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 18px -12px color-mix(in srgb,var(--mk) 70%,#000)}
+  .ss-mk button:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 12px 24px -12px color-mix(in srgb,var(--mk) 75%,#000)}
+
+  /* 4. The three market cards carry their market: top rule, tint, coloured count */
+  .mk[href="#lang-de"]{--mk:var(--m-de);--mk-t:var(--de-txt)}
+  .mk[href="#lang-fr"]{--mk:var(--m-fr);--mk-t:var(--fr-txt)}
+  .mk[href="#lang-en"]{--mk:var(--m-en);--mk-t:var(--en-txt)}
+  .mk[href^="#lang-"]{border-color:color-mix(in srgb,var(--mk) 38%,var(--line2));
+    background:linear-gradient(var(--mk),var(--mk)) top/100% 5px no-repeat,
+    linear-gradient(180deg,color-mix(in srgb,var(--mk) 8%,var(--card)),var(--card) 75%)}
+  .mk[href^="#lang-"]:hover{border-color:var(--mk)}
+  .mk[href^="#lang-"] i{color:var(--mk-t)}
+
+  /* 5. Stats band: navy with champagne figures and a champagne hairline (replaces mint on black) */
+  .statstrip{background:color-mix(in srgb,var(--champ) 30%,var(--money));border-color:color-mix(in srgb,var(--champ) 40%,var(--money))}
+  .stat{background:linear-gradient(var(--champ),var(--champ)) top/100% 2px no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--money) 88%,#2A4A7A),var(--money))}
+  .stat b{color:var(--money-acc)}
+  .stat span{color:var(--money-lab)}
+
+  /* 6. ID panel and quick-links header: the same navy tool rule as the start panel */
+  .genpanel{background:linear-gradient(var(--sig),var(--sig)) top/100% 4px no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--sig) 4%,var(--card)),var(--card2));border-color:color-mix(in srgb,var(--sig) 22%,var(--line2))}
+  #quicklinks .mxhead{background:linear-gradient(var(--sig),var(--sig)) top/100% 4px no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--champ) 9%,var(--card)),var(--card))}
+  #quicklinks .mxhead>b{color:var(--head)}
+  #quicklinks .mxchip{border-color:color-mix(in srgb,var(--champ) 50%,var(--line2))}
+
+  /* 7. Quick-links Copy buttons before an ID: market outline instead of a washed pastel */
+  .mx6 .mxc[data-m="German"]{--mk-t:var(--de-txt)}
+  .mx6 .mxc[data-m="French"]{--mk-t:var(--fr-txt)}
+  .mx6 .mxc[data-m="US"]{--mk-t:var(--en-txt)}
+  .mx6 .mxc .mxcopy.needsid{background:var(--card);color:var(--mk-t);box-shadow:inset 0 0 0 1.5px var(--mk)}
+
+  /* 8. Market tabs: "All markets" in navy (green belongs to action and to US) */
+  .tab[data-tab="all"]{--mk:var(--sig)}
+  .tab[data-tab="all"] .tabgo{color:var(--sig-ink)}
+  .tab.on[data-tab="all"] b{color:var(--sig-ink)}
+  .tab.on[data-tab="all"] span{color:var(--band-mut)}
+  .tab.on[data-tab="all"] .tabgo{background:var(--sig-ink);color:var(--sig)}
+  .tab:not(.on){background:linear-gradient(180deg,color-mix(in srgb,var(--mk) 6%,var(--card)),var(--card) 65%)}
+
+  /* 9. Start here: champagne-tinted, curated */
+  .starthere{background:linear-gradient(180deg,color-mix(in srgb,var(--champ) 9%,var(--card)),var(--card2));border-color:color-mix(in srgb,var(--champ) 40%,var(--line))}
+
+  /* 10. Offer cards: navy figures on a ledger ground, fewer competing fills in the button row */
+  .kpis{background:color-mix(in srgb,var(--sig) 14%,var(--line))}
+  .kpi{background:var(--ledger)}
+  .kpi b{color:var(--num)}
+  .resources a.altpage{background:var(--head);border-color:var(--head);color:#FFFFFF}
+  .resources a.bottles,.resources a.bottles:hover{background:var(--card);border-color:color-mix(in srgb,var(--head) 55%,var(--line2));color:var(--head);box-shadow:none;filter:none}
+  .resources a.bottles:hover{border-color:var(--head)}
+  .resources a.assets,.resources a.assets:hover{background:#F4E7C6;border-color:var(--champ);color:#4A3608;box-shadow:none;filter:none}
+  :root[data-theme="dark"] .resources a.altpage{background:#B8C7DE;border-color:#B8C7DE;color:#0A1220}
+  :root[data-theme="dark"] .resources a.bottles{border-color:#5D7AA6;color:#D6E1F2}
+  :root[data-theme="dark"] .resources a.assets,:root[data-theme="dark"] .resources a.assets:hover{background:#3A2F17;border-color:#8A6A20;color:#F2D48E}
+
+  /* 11. Lower sections: champagne rule on tiles, navy data bars, navy fab */
+  .tile,.epi{box-shadow:inset 0 3px 0 color-mix(in srgb,var(--champ) 75%,transparent)}
+  .tile:hover,.epi:hover{box-shadow:inset 0 3px 0 var(--champ),0 14px 30px -20px rgba(11,21,38,.3)}
+  .bar{background:var(--sig);opacity:1}
+  table.mkt th{background:var(--ledger)}
+  .fab button{background:var(--sig);border-color:var(--sig);color:var(--sig-ink)}
+
+  /* 12. Closing call to action: a navy panel */
+  .cta{background:radial-gradient(700px 280px at 50% -140px,color-mix(in srgb,var(--champ) 16%,transparent),transparent 65%),var(--band);border-color:var(--band)}
+  .cta .eyebrow{color:var(--band-acc)}
+  .cta h2{color:var(--band-ink)}
+  .cta p,.cta .plain{color:var(--band-mut)}
+  .cta .plain b{color:var(--band-ink)}
+  .cta a:not(.btn){color:var(--band-acc)}
+  .cta .btn.primary{background:var(--acc-lt);border-color:var(--acc-lt);color:var(--acc-lt-ink)}
+  .cta .row .btn:not(.primary){background:transparent;color:var(--band-ink);border-color:color-mix(in srgb,var(--band-ink) 55%,transparent)}
 </style>
 
 
@@ -2089,7 +2199,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.35 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.36 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
