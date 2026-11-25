@@ -967,6 +967,15 @@
   /* v8.41 (25.11.2026): hero lines from the headline panel round */
   @media(min-width:641px){.hero h1{font-size:clamp(36px,3.9vw,56px)}}
   @media(max-width:640px){.hero .eyebrow{display:block;font-size:12.5px;margin-bottom:6px}}
+  /* v8.43 (25.11.2026): order value per German offer (#aov) */
+  table.aovt td a{color:var(--ink);text-decoration:none;font-weight:700}
+  table.aovt td a:hover{text-decoration:underline}
+  table.aovt td.num b{font-weight:800}
+  table.aovt .usd{font-weight:600;color:var(--dim);font-size:13px;white-space:nowrap}
+  table.aovt td.fo{color:var(--mut)}
+  table.aovt .barcell{width:30%}
+  @media(max-width:640px){table.aovt{font-size:14.5px}table.aovt th,table.aovt td{padding:9px 10px}
+   table.aovt .barcell{display:none}table.aovt .usd{display:block;font-size:12px}}
   /* v8.42 (25.11.2026): hero type (typographer spec + StefanBrain): no italic, bigger slate pre-headline, quieter sub */
   .hero .eyebrow{font-family:Manrope,sans-serif;font-size:clamp(16.5px,1.4vw,20px);font-weight:700;font-style:normal;line-height:1.3;letter-spacing:0;color:var(--dim);margin:0}
   .hero .eyebrow b{font-weight:800}
@@ -997,6 +1006,7 @@
       <a href="#why">Why German</a>
       <a href="#operators">For Operators</a>
       <a href="#market">Market Data</a>
+      <a href="#aov">Order Value</a>
       <a href="#faq">FAQ</a>
       <a href="#rules">Rules</a>
     </nav>
@@ -1098,11 +1108,11 @@
       <div class="mxopp" role="list" aria-label="Market opportunity by market"><div class="mxo" data-m="German" role="listitem"><b class="mxo-t"><span class="mxo-mk">German-speaking Europe</span><span class="mxo-h">Europe’s wealthiest language market</span></b><ul><li><strong>More than 100 million</strong> German speakers</li><li><strong>About €4.3 billion</strong> spent on supplements in Germany from September 2024 to September 2025, and <strong>51%</strong> of Germans over 16 took at least one supplement in the last twelve months</li><li><strong>11</strong> German-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>10 of them are ours and on this offer hub</strong></li><li>Germany’s Meta CPM averaged <strong>about 28% below</strong> the global baseline across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="French" role="listitem"><b class="mxo-t"><span class="mxo-mk">France and French-speaking Europe</span><span class="mxo-h">€3 billion market with limited marketplace supply</span></b><ul><li>France’s supplement market passed <strong>€3 billion</strong> for the first time in 2025, up 2.6%, and <strong>61%</strong> of French adults take supplements</li><li><strong>8</strong> French-language supplement offers in Digistore24’s Shipping Products → Food Supplements section, <strong>4 of them are ours and on this offer hub</strong></li><li>France’s Meta CPM averaged <strong>about 39% of</strong> the global benchmark and France’s Meta CPC averaged <strong>about 40% below</strong> the global median across all industries over the 13 months to July 2026</li></ul></div><div class="mxo" data-m="US" role="listitem"><b class="mxo-t"><span class="mxo-mk">United States</span><span class="mxo-h">The crowded benchmark</span></b><ul><li><strong>More than 120</strong> English-language supplement offers on Digistore24, about 126 in total, <strong>2 of them are ours and on this offer hub</strong></li><li>United States Meta CPM averaged <strong>about 13.8% above</strong> the global median and United States Meta CPC <strong>about 13% above</strong> the global median across all industries over the 13 months to July 2026</li><li><strong>KetoSana US and CleanseSana US are live</strong>: both are editions of our German top offers, with checkout in US dollars and fulfillment from our US fulfillment center</li></ul></div></div>
       <div class="mxgrid mx6" role="table" aria-label="Offers by niche and market">
         <div class="mxrow mxth" role="row"><div role="columnheader">Niche</div><div role="columnheader">Offer</div><div role="columnheader">Why send traffic here</div><div role="columnheader">German<small>Native German funnels · German-speaking Europe</small></div><div role="columnheader">French<small>Written in French, not translated · France, Belgium, Switzerland, Luxembourg</small></div><div role="columnheader">US<small>Checkout in US dollars · ships from our US fulfillment center</small></div></div>
-        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Keto Weight Loss</span></div><div class="mxp" role="rowheader">KetoSana</div><div class="mxd" role="cell"><span><strong>Our #1 offer by orders</strong>. German-made keto drops, a three-lock keto story, <strong>~€250 AOV</strong>, Meta leads and Google performing well.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-2">KetoSana</a><em>Meta leads · Google performing well</em></div><button class="btn small mxcopy" type="button" data-card="offer-2">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-15">LigneSana FR</a><em>French edition of KetoSana · €69–294 orders</em></div><button class="btn small mxcopy" type="button" data-card="offer-15">Copy links</button></div><div class="mxc" role="cell" data-m="US"><div class="mxl"><a href="#offer-13">KetoSana US</a><em>$69–294 checkout · PDP and DTC page live</em></div><button class="btn small mxcopy" type="button" data-card="offer-13">Copy links</button></div></div>
-        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Weight Loss</span></div><div class="mxp" role="rowheader">SlimSana</div><div class="mxd" role="cell"><span>A 60-second metabolic switch story for buyers 35–60+ who failed diets, with <strong>~€250 AOV</strong> on native and social traffic.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-1">SlimSana</a><em>From the team behind GlucoTrust German</em></div><button class="btn small mxcopy" type="button" data-card="offer-1">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-10">SlimSana FR</a><em>€69–294 orders · French copy, not a translation</em></div><button class="btn small mxcopy" type="button" data-card="offer-10">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">SlimSana US</span><em>Coming end of November</em></div></div>
-        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-gut)">Gut Health</span></div><div class="mxp" role="rowheader">CleanseSana</div><div class="mxd" role="cell"><span>Hit Digistore24’s <strong>top-offers list within four weeks</strong> and is one of only 11 German-language supplement offers in Shipping Products → Food Supplements, <strong>10 of them are ours and on this offer hub</strong>. New VSL beside the proven PDP, <strong>~€250 AOV</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-4">CleanseSana</a><em>Four-mechanism gut protocol, not a detox tea</em></div><button class="btn small mxcopy" type="button" data-card="offer-4">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-12">FloraVitaSana FR</a><em>French edition of CleanseSana · €69–234 orders</em></div><button class="btn small mxcopy" type="button" data-card="offer-12">Copy links</button></div><div class="mxc" role="cell" data-m="US"><div class="mxl"><a href="#offer-16">CleanseSana US</a><em>$69–234 checkout · upsells inside your commission</em></div><button class="btn small mxcopy" type="button" data-card="offer-16">Copy links</button></div></div>
-        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Cellular Metabolism</span></div><div class="mxp" role="rowheader">MetaboSana</div><div class="mxd" role="cell"><span>A three-phase cell unlock story explains why fat stays locked despite clean eating. Fresh VSL for buyers 30+, <strong>~€250 AOV</strong>. <strong>Email traffic requires prior written permission</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-3">MetaboSana</a><em>VSL live · email requires written permission</em></div><button class="btn small mxcopy" type="button" data-card="offer-3">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="French"><span class="mxn">MetaboSana FR</span><em>Coming early December</em></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">MetaboSana US</span><em>Coming end of November</em></div></div>
-        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-blood)">Blood Sugar</span></div><div class="mxp" role="rowheader">GlucoTrust</div><div class="mxd" role="cell"><span><strong>ClickBank’s all-time best blood-sugar offer</strong>, localized for more than 100 million German speakers, with <strong>$231 AOV</strong>, four funnel formats and a refreshed swipe library. The German edition runs EU-wide plus Switzerland, Liechtenstein, Norway and Iceland.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-9">GlucoTrust German</a><em>$231 AOV · EU-wide plus Switzerland, Liechtenstein, Norway and Iceland</em></div><button class="btn small mxcopy" type="button" data-card="offer-9">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
+        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Keto Weight Loss</span></div><div class="mxp" role="rowheader">KetoSana</div><div class="mxd" role="cell"><span><strong>Our #1 offer by orders</strong>. German-made keto drops, a three-lock keto story, <strong>€222 AOV</strong>, Meta leads and Google performing well.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-2">KetoSana</a><em>Meta leads · Google performing well</em></div><button class="btn small mxcopy" type="button" data-card="offer-2">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-15">LigneSana FR</a><em>French edition of KetoSana · €69–294 orders</em></div><button class="btn small mxcopy" type="button" data-card="offer-15">Copy links</button></div><div class="mxc" role="cell" data-m="US"><div class="mxl"><a href="#offer-13">KetoSana US</a><em>$69–294 checkout · PDP and DTC page live</em></div><button class="btn small mxcopy" type="button" data-card="offer-13">Copy links</button></div></div>
+        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Weight Loss</span></div><div class="mxp" role="rowheader">SlimSana</div><div class="mxd" role="cell"><span>A 60-second metabolic switch story for buyers 35–60+ who failed diets, with <strong>€190 AOV</strong> on native and social traffic.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-1">SlimSana</a><em>From the team behind GlucoTrust German</em></div><button class="btn small mxcopy" type="button" data-card="offer-1">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-10">SlimSana FR</a><em>€69–294 orders · French copy, not a translation</em></div><button class="btn small mxcopy" type="button" data-card="offer-10">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">SlimSana US</span><em>Coming end of November</em></div></div>
+        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-gut)">Gut Health</span></div><div class="mxp" role="rowheader">CleanseSana</div><div class="mxd" role="cell"><span>Hit Digistore24’s <strong>top-offers list within four weeks</strong> and is one of only 11 German-language supplement offers in Shipping Products → Food Supplements, <strong>10 of them are ours and on this offer hub</strong>. New VSL beside the proven PDP, <strong>€168 AOV</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-4">CleanseSana</a><em>Four-mechanism gut protocol, not a detox tea</em></div><button class="btn small mxcopy" type="button" data-card="offer-4">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-12">FloraVitaSana FR</a><em>French edition of CleanseSana · €69–234 orders</em></div><button class="btn small mxcopy" type="button" data-card="offer-12">Copy links</button></div><div class="mxc" role="cell" data-m="US"><div class="mxl"><a href="#offer-16">CleanseSana US</a><em>$69–234 checkout · upsells inside your commission</em></div><button class="btn small mxcopy" type="button" data-card="offer-16">Copy links</button></div></div>
+        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-weight)">Cellular Metabolism</span></div><div class="mxp" role="rowheader">MetaboSana</div><div class="mxd" role="cell"><span>A three-phase cell unlock story explains why fat stays locked despite clean eating. Fresh VSL for buyers 30+, <strong>€179 AOV</strong>. <strong>Email traffic requires prior written permission</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-3">MetaboSana</a><em>VSL live · email requires written permission</em></div><button class="btn small mxcopy" type="button" data-card="offer-3">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="French"><span class="mxn">MetaboSana FR</span><em>Coming early December</em></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">MetaboSana US</span><em>Coming end of November</em></div></div>
+        <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-blood)">Blood Sugar</span></div><div class="mxp" role="rowheader">GlucoTrust</div><div class="mxd" role="cell"><span><strong>ClickBank’s all-time best blood-sugar offer</strong>, localized for more than 100 million German speakers, with <strong>€249 AOV</strong> (≈ $272), four funnel formats and a refreshed swipe library. The German edition runs EU-wide plus Switzerland, Liechtenstein, Norway and Iceland.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-9">GlucoTrust German</a><em>€249 AOV · EU-wide plus Switzerland, Liechtenstein, Norway and Iceland</em></div><button class="btn small mxcopy" type="button" data-card="offer-9">Copy links</button></div><div class="mxc mxnone" role="cell" data-m="French">&mdash;</div><div class="mxc mxnone" role="cell" data-m="US">&mdash;</div></div>
         <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-blood)">Blood Sugar</span></div><div class="mxp" role="rowheader">GlucoSana</div><div class="mxd" role="cell"><span>Built on the GlucoTrust German playbook: a doctor’s 17-year Glucose Prison story for high-intent buyers 40+ who failed mainstream solutions, with <strong>€177–294 orders</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-5">GlucoSana</a><em>Doctor credibility · cross-sells into SlimSana and MetaboSana</em></div><button class="btn small mxcopy" type="button" data-card="offer-5">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="French"><span class="mxn">GlucoSana FR</span><em>Coming early December</em></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">GlucoSana US</span><em>Coming early December</em></div></div>
         <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-nerve)">Nerve Health</span></div><div class="mxp" role="rowheader">NerveSana</div><div class="mxd" role="cell"><span>The Ikaria anomaly hook explains why 90-year-old Greeks have healthier nerves than 40-year-old Germans, backed by 32 peer-reviewed studies. It speaks to <strong>8.3M German neuropathy sufferers</strong>. <strong>€177–294 orders</strong> from high-intent buyers 40+.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-6">NerveSana</a><em>Facebook 40+ audiences convert strongly</em></div><button class="btn small mxcopy" type="button" data-card="offer-6">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="French"><span class="mxn">NeuroSana FR</span><em>Coming early December</em></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">NerveSana US</span><em>Coming end of November</em></div></div>
         <div class="mxrow" role="row"><div class="mxn2" role="cell"><span class="mxniche" style="--catc:var(--c-men)">Men’s Health</span></div><div class="mxp" role="rowheader">VigorSana</div><div class="mxd" role="cell"><span>A fresh Bio-Energetic Leak angle for men 40+ seeking a private purchase. Four-phase protocol, no blue-pill positioning and <strong>€177–294 orders</strong>.</span></div><div class="mxc" role="cell" data-m="German"><div class="mxl"><a href="#offer-7">VigorSana</a><em>Private purchase · fresh angle versus tired T-boosters</em></div><button class="btn small mxcopy" type="button" data-card="offer-7">Copy links</button></div><div class="mxc" role="cell" data-m="French"><div class="mxl"><a href="#offer-14">VigorSana FR</a><em>€69–294 orders · French upsell chain inside your commission</em></div><button class="btn small mxcopy" type="button" data-card="offer-14">Copy links</button></div><div class="mxc mxsoon" role="cell" data-m="US"><span class="mxn">VigorSana US</span><em>Coming end of November</em></div></div>
@@ -1181,7 +1191,7 @@
       </header>
       <div class="kpis">
         <div class="kpi"><b class="na">On request</b><span>EPC &middot; ask Stefan</span></div>
-        <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
+        <div class="kpi"><b>€190</b><span>AOV · ≈ $207</span></div>
         <div class="kpi"><b>65–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–180</span></div>
         <div class="kpi"><b>35–60+</b><span>Women &amp; Men</span></div>
@@ -1225,14 +1235,14 @@
         <div class="hgroup">
           <div class="eyebrow2"><b>KetoSana</b> · Keto Weight Loss · German-language funnel</div>
           <h3>KetoSana &mdash; Our Best-Selling Offer Runs on a Keto Mechanism Nobody Else Is Selling</h3>
-          <p class="subhead">The most orders on the program over the last 90 days — premium liquid drops, AOV around €250 (≈ $290), 60-day guarantee, made-in-Germany trust that closes cold German-speaking traffic.</p>
+          <p class="subhead">The most orders on the program over the last 90 days — premium liquid drops, AOV €222 (≈ $243), 60-day guarantee, made-in-Germany trust that closes cold German-speaking traffic.</p>
         </div>
         <img class="bottle" src="img/ketosana.png" alt="KetoSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">🏆 #1 by Orders &middot; Last 90 Days</span>
       </header>
       <div class="kpis">
         <div class="kpi"><b class="na">On request</b><span>EPC &middot; ask Stefan</span></div>
-        <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
+        <div class="kpi"><b>€222</b><span>AOV · ≈ $243</span></div>
         <div class="kpi"><b>65–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–180</span></div>
         <div class="kpi"><b>30–60+</b><span>Women &amp; Men</span></div>
@@ -1277,14 +1287,14 @@
         <div class="hgroup">
           <div class="eyebrow2"><b>MetaboSana</b> · Metabolism · German-language funnel</div>
           <h3>MetaboSana &mdash; Stanford-Backed 3-Phase "Cell Unlock" Makes Clean Eating Finally Work</h3>
-          <p class="subhead">VSL live since 22 April 2026 — AOV around €250 (≈ $290) and a research story that converts science-trusting diet skeptics in German-speaking Europe.</p>
+          <p class="subhead">VSL live since 22 April 2026 — AOV €179 (≈ $195) and a research story that converts science-trusting diet skeptics in German-speaking Europe.</p>
         </div>
         <img class="bottle" src="img/metabosana.png" alt="MetaboSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">Stanford-Backed Research Story</span>
       </header>
       <div class="kpis">
         <div class="kpi"><b class="na">On request</b><span>EPC &middot; ask Stefan</span></div>
-        <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
+        <div class="kpi"><b>€179</b><span>AOV · ≈ $195</span></div>
         <div class="kpi"><b>65–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–180</span></div>
         <div class="kpi"><b>30+</b><span>Women &amp; Men</span></div>
@@ -1337,7 +1347,7 @@
       <div class="kpis">
         <div class="kpi"><b class="na">On request</b><span>EPC &middot; ask Stefan</span></div>
         <div class="kpi"><b>VSL + PDP</b><span>Both live</span></div>
-        <div class="kpi"><b>~€250</b><span>AOV · ≈ $290</span></div>
+        <div class="kpi"><b>€168</b><span>AOV · ≈ $184</span></div>
         <div class="kpi"><b>65–75%</b><span>RevShare</span></div>
         <div class="kpi"><b>€120–150</b><span>CPA · $140–180</span></div>
       </div>
@@ -1634,7 +1644,7 @@
       </header>
       <div class="kpis">
         <div class="kpi"><b class="na">On request</b><span>EPC &middot; ask Stefan</span></div>
-        <div class="kpi"><b>$231</b><span>AOV</span></div>
+        <div class="kpi"><b>€249</b><span>AOV · ≈ $272</span></div>
         <div class="kpi"><b>4</b><span>Funnel formats</span></div>
         <div class="kpi"><b>65&ndash;75%</b><span>RevShare</span></div>
         <div class="kpi"><b>&euro;120&ndash;150</b><span>CPA &middot; $140&ndash;180</span></div>
@@ -2050,7 +2060,7 @@
       <div class="epi rev"><h4>The Market-Size Miscalculation</h4><p>"Small market" is the wrong read. One-third of the US population is not a niche: about 100 million German speakers with high spending power and far less ad fatigue.</p></div>
       <div class="epi rev"><h4>The Doctor-Trust Differential</h4><p>German buyers convert on credentials, not hype — and this whole portfolio is fronted by a genuinely reputable, well-known doctor. It's the Dr. Gundry MD playbook — one trusted physician, one coherent product family — replicated for German-speaking Europe. Typical Digistore24 and Clickbank offers never have this; that credibility gap is your conversion edge with skeptical EU buyers. One doctor. One product family. Total consistency.</p></div>
       <div class="epi rev"><h4>The Refund Question — Answered With Numbers</h4><p>On KetoSana, 7.9% of traffic-partner orders were refunded and 0.5% charged back from January to October 2026 — more than nine in ten commissions stay earned.</p></div>
-      <div class="epi rev"><h4>The Deep-Funnel Multiplier</h4><p>AOV around €250 (≈ $290) on SlimSana, KetoSana, MetaboSana and CleanseSana, €245+ on the VIP Wellness System — and you earn 65–75% through the entire funnel, thank-you page included. Not front-end scraps.</p></div>
+      <div class="epi rev"><h4>The Deep-Funnel Multiplier</h4><p>€222 per KetoSana order (≈ $243) and €249 per GlucoTrust German order (≈ $272) with upsells in 2026, €245+ on the VIP Wellness System — and you earn 65–75% through the entire funnel, thank-you page included. Not front-end scraps.</p></div>
       <div class="epi rev"><h4>The Infrastructure Shortcut</h4><p>Market entry usually costs months: translation, funnels, compliance, support. Here it's already built and converting. You bring traffic — everything else is running.</p></div>
     </div>
     <p class="proofline rev"><b>The thesis is proven:</b> our team took GlucoTrust — the all-time best performing blood-sugar offer on Clickbank — and turned its German edition into the market-defining blood-sugar offer for German-speaking Europe, then compounded that exact playbook across the whole product family. And this is not a launch experiment — these funnels have been running for over a year, a track record most affiliates never stopped to look at. You’re not the experiment. You’re the scale phase.</p>
@@ -2151,6 +2161,36 @@
         <p>We ship to the <b>entire EU</b> plus <b>Switzerland, Liechtenstein, Norway and Iceland</b> — 31 countries. Don't geo-restrict to Germany: Austria and Switzerland together bring 16% of orders, and Swiss buyers have premium purchasing power.</p>
         <p style="margin-top:10px"><b>Targeting tip:</b> set language to German, geo to DE + AT + CH first, then expand to LU, BE and the rest of the EU once your funnel proves out. French offers: France, Belgium, Switzerland, Luxembourg. English offers: US and Canada first, then worldwide (outside the EU) from our US fulfillment center.</p>
         <p style="margin-top:10px;font-size:14px;color:var(--dim)">Source: Digistore24 order data for our German-language offers, 9 July &ndash; 7 October 2026; upsells included, internal test orders excluded.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- v8.43: order value per German offer -->
+  <section class="block" id="aov">
+    <div class="eyebrow">Order Value</div>
+    <h2>What one German order is worth</h2>
+    <p class="lede">Average order value per German offer, from every real Digistore24 order in 2026. Your RevShare covers the whole funnel, upsells included, so the <b>with upsells</b> figure is the one to model your earnings with.</p>
+    <div class="market">
+      <div class="tablewrap rev">
+        <table class="mkt aovt">
+          <thead><tr><th>Offer</th><th class="barcell">Average order value with upsells &middot; 2026</th><th style="text-align:right">With upsells</th><th style="text-align:right">First order</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#offer-9">GlucoTrust German</a></td><td class="barcell"><div class="bar" style="width:100%"></div></td><td class="num"><b>€249</b> <span class="usd">≈ $272</span></td><td class="num fo">€213</td></tr>
+            <tr><td><a href="#offer-2">KetoSana</a></td><td class="barcell"><div class="bar" style="width:89%"></div></td><td class="num"><b>€222</b> <span class="usd">≈ $243</span></td><td class="num fo">€195</td></tr>
+            <tr><td><a href="#offer-1">SlimSana</a></td><td class="barcell"><div class="bar" style="width:76%"></div></td><td class="num"><b>€190</b> <span class="usd">≈ $207</span></td><td class="num fo">€172</td></tr>
+            <tr><td><a href="#offer-7">VigorSana</a></td><td class="barcell"><div class="bar" style="width:76%"></div></td><td class="num"><b>€190</b> <span class="usd">≈ $207</span></td><td class="num fo">€166</td></tr>
+            <tr><td><a href="#offer-3">MetaboSana</a></td><td class="barcell"><div class="bar" style="width:72%"></div></td><td class="num"><b>€179</b> <span class="usd">≈ $195</span></td><td class="num fo">€162</td></tr>
+            <tr><td><a href="#offer-5">GlucoSana</a></td><td class="barcell"><div class="bar" style="width:71%"></div></td><td class="num"><b>€176</b> <span class="usd">≈ $192</span></td><td class="num fo">€162</td></tr>
+            <tr><td><a href="#offer-4">CleanseSana</a></td><td class="barcell"><div class="bar" style="width:68%"></div></td><td class="num"><b>€168</b> <span class="usd">≈ $184</span></td><td class="num fo">€152</td></tr>
+            <tr><td><a href="#offer-6">NerveSana</a></td><td class="barcell"><div class="bar" style="width:63%"></div></td><td class="num"><b>€157</b> <span class="usd">≈ $172</span></td><td class="num fo">€139</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="shipbox rev">
+        <h4>Last 90 days</h4>
+        <p>The offers with enough recent orders to read: <b>GlucoTrust German €276</b> (≈ $302), <b>KetoSana €213</b> (≈ $233) and <b>VigorSana €199</b> (≈ $217) per order with upsells, 28 August &ndash; 25 November 2026.</p>
+        <p style="margin-top:10px"><b>How we count:</b> &ldquo;with upsells&rdquo; adds every upsell and downsell the same customer buys within 24 hours to the first order. Gross in Euros incl. VAT, internal test orders removed.</p>
+        <p style="margin-top:10px;font-size:14px;color:var(--dim)">Source: Digistore24 order data for our German-language offers, 1 January &ndash; 25 November 2026, read 25 November 2026. US Dollars at the ECB rate of that day (1 Euro = 1.0935 US Dollars).</p>
       </div>
     </div>
   </section>
@@ -2296,7 +2336,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.42 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.43 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
