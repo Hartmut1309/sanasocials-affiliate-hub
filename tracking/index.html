@@ -96,7 +96,7 @@
   <p>Digistore24 sets the affiliate cookie for <b>up to 180 days in Europe and up to 365 days in the US</b>, and <b>the last cookie set wins</b> the sale. Some older Digistore24 help pages still give a flat 180 days, so plan on 180 days for European traffic. Sources: <a href="https://help.digistore24.com/hc/en-us/articles/24293091859985" target="_blank" rel="noopener">Promolink</a> &middot; <a href="https://help.digistore24.com/hc/en-us/articles/23946916490129" target="_blank" rel="noopener">affiliate FAQ</a>.</p>
 
   <h2>4 · Your pixel on the order form</h2>
-  <p>In your Digistore24 account go to <b>Account &rarr; Order form tracking</b>. You can add a <b>Facebook pixel ID</b>, a <b>Google Analytics ID</b>, a <b>pixel URL</b> (loaded in an iframe) or your <b>own tracking code</b> &mdash; Digistore24 approves custom code before it runs. Each one fires on the order form, on the order confirmation page, or on both. For Meta server-side events, add a <b>Facebook IPN connection</b> under <b>Sales &amp; partners &rarr; Integrations</b>. Sources: <a href="https://help.digistore24.com/hc/en-us/articles/24293231847569" target="_blank" rel="noopener">order-form tracking</a> &middot; <a href="https://help.digistore24.com/hc/en-us/articles/24293227203089" target="_blank" rel="noopener">Facebook Conversion API</a>.</p>
+  <p>In your Digistore24 account go to <b>Sales &amp; partners &rarr; Tracking</b>. You can add a <b>Facebook pixel ID</b>, a <b>Google Analytics ID</b>, a <b>pixel URL</b> (loaded in an iframe) or your <b>own tracking code</b> &mdash; Digistore24 approves custom code before it runs. Each one fires on the order form, on the order confirmation page, or on both. <b>The confirmation page misses most of our sales:</b> it only fires when a buyer lands on Digistore24&rsquo;s own confirmation page, and our buyers finish on our own thank-you page after the upsells. Use the postback below to count every sale. For Meta server-side events, add a <b>Facebook IPN connection</b> under <b>Sales &amp; partners &rarr; Integrations</b>. Sources: <a href="https://help.digistore24.com/hc/en-us/articles/24293231847569" target="_blank" rel="noopener">order-form tracking</a> &middot; <a href="https://help.digistore24.com/hc/en-us/articles/24293227203089" target="_blank" rel="noopener">Facebook Conversion API</a>.</p>
 
   <h2>5 · Server-to-server postback</h2>
   <p>Go to <b>Sales &amp; partners &rarr; Integrations &rarr; Add new integration</b>, pick the partnerships (our offers) and the order events that should fire. Pass your tracker&rsquo;s click ID as <code>cid</code> on any hub link &mdash; for example <code style="white-space:normal;overflow-wrap:anywhere">?aff=your-id&amp;cam=campaign-key&amp;cid={clickid}</code> &mdash; and Digistore24 returns it as <code>{cid}</code>. We checked that <code>cam</code> and <code>cid</code> on a hub link reach the Digistore24 order form.</p>
@@ -112,10 +112,10 @@
       <tr><td><code>{is_test}</code></td><td>Marks test transactions</td></tr>
     </tbody>
   </table></div>
-  <p class="note">You can add <code>sid1</code>&ndash;<code>sid5</code> to a link, but Digistore24 lists no postback placeholder for them &mdash; put anything you need back in the postback into <code>cid</code> or the campaign key. Full list: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
+  <p class="note">You can add <code>sid1</code>&ndash;<code>sid5</code> to a link, and the postback form has placeholders for them too. Digistore24 has no Google Ads connection for affiliates: for Google Ads, pass the Google click ID as <code>cid</code> into a tracker that takes the postback and sends the conversion on to Google Ads. Full list: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
 
   <h2>6 · Test before you spend</h2>
-  <p>Affiliates can&rsquo;t place test purchases on Digistore24. Instead, open your integration and press <b>Test connection</b>: Digistore24 simulates a sale and sends it to your tracker, and the <b>Log</b> tab shows every call. Source: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
+  <p>Affiliates can&rsquo;t place test purchases on Digistore24. Instead, open your integration and press <b>Test connection</b>: Digistore24 simulates a sale and sends it to your tracker, and the <b>History</b> tab shows every call. Source: <a href="https://help.digistore24.com/hc/en-us/articles/24293197806225" target="_blank" rel="noopener">Set up S2S postback</a>.</p>
 
   <h2>7 · Delayed CTAs on VSL pages</h2>
   <p>On most of our VSLs the buy buttons appear mid-video, not on page load (exception: the GlucoTrust VSL with buy boxes visible from the start). For young campaigns that means <b>early micro-events (initiate-checkout and player engagement) are the honest early signal</b>; switch optimization to purchase events once volume supports it. The volume-operator form on the hub asks for exactly this optimization model &mdash; that&rsquo;s why.</p>
@@ -128,7 +128,7 @@
     <li>Digistore24 ID entered on the hub &mdash; every link personalized</li>
     <li>Campaign-key pattern agreed with Stefan (recommended; one key per creative or ad set)</li>
     <li>Click ID passed as <code>cid</code> if you run a tracker</li>
-    <li>Pixel or postback set up, and <b>Test connection</b> shows the call in your integration&rsquo;s log</li>
+    <li>Pixel or postback set up, and <b>Test connection</b> shows the call in your integration&rsquo;s History tab</li>
     <li>Market matched to your traffic: German (start with Germany, Austria and Switzerland), French or US</li>
   </ul>
   <a class="cta" href="mailto:affiliates@sana-socials.com?subject=Tracking%20Setup%20Check&amp;body=Digistore24%20ID%3A%0APlatform%20(Meta%20CAPI%2C%20native%20S2S%2C%20other)%3A%0ACampaign-key%20convention%3A%0AOffers%20you%20will%20run%3A%0AOptimization%20model%20(purchase%20%2F%20IC%20%2F%20blended)%3A%0A">Confirm my tracking setup with Stefan →</a>

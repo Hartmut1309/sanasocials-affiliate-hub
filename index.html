@@ -949,6 +949,16 @@
   .hero .herocta+.statstrip{margin-top:22px}
   .hero .genpanel+.startstrip{margin-top:18px}
   .langsec .cvrsec{margin:4px 0 18px}
+  /* v8.39 (25.11.2026): FAQ by topic, each topic opens and closes */
+  .faqtopics{margin-top:24px}
+  .fgroup{border:1px solid var(--line2);border-radius:14px;background:var(--card2);margin-top:12px;padding:0 20px}
+  .fgroup>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:18px 0;font-family:var(--disp);font-weight:800;font-size:20px;color:var(--ink)}
+  .fgroup>summary::-webkit-details-marker{display:none}
+  .fgroup>summary::after{content:"+";margin-left:auto;font-family:var(--mono);color:var(--acc);font-weight:700;font-size:22px}
+  .fgroup[open]>summary::after{content:"–"}
+  .fcount{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+  .fgroup .faqs{margin:0 0 18px}
+  @media (max-width:520px){.fgroup{padding:0 14px}.fgroup>summary{font-size:18px}}
 </style>
 
 
@@ -2145,19 +2155,83 @@
   <!-- FAQ -->
   <section class="block" id="faq">
     <div class="eyebrow">FAQ</div>
-    <h2>Questions volume buyers actually ask</h2>
-    <p class="lede">No payout-schedule filler — you know how Digistore24 pays. These are the operator questions that decide whether a campaign scales.</p>
-    <div class="faqs">
-      <details class="rev"><summary>Can I promote your offers by email?</summary><p><b>Not by default.</b> Email marketing for any of our offers is only possible with our prior written permission &mdash; that covers your own list, rented or bought lists, solo ads, newsletters and co-registration. Write to Stefan at <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a> with the list source, opt-in method and planned volume before the first send. Mailing without a written yes is a material breach and ends the partnership across all our offers.</p></details>
-      <details class="rev"><summary>Can I run my own pre-sell in front of your funnel?</summary><p>Yes — explicitly supported: quiz → checkout, listicle → checkout, advertorial → checkout, or VSL-first. Keep message match between your pre-sell and the funnel's opening state, disclose your affiliation, and hold your pre-sell to the same <a href="claims/">claims rules</a> as our pages — your account and ours share the same regulator.</p></details>
-      <details class="rev"><summary>How do you protect attribution on long VSLs with delayed CTAs?</summary><p>Digistore24 tracking pixel and S2S postback support, campaign-key conventions per traffic source, and delayed-CTA handling on the VSL pages. The rule that saves accounts: settle your campaign-key convention with Stefan <em>before</em> the first euro of spend, not after. Full walkthrough in the <a href="tracking/">tracking setup guide</a>.</p></details>
-      <details class="rev"><summary>What time window do the published numbers use?</summary><p>Every figure on this page carries its date: the conversion rates are July 2026, the country split covers 9 July to 7 October 2026. EPCs are no longer printed, because they move weekly &mdash; ask Stefan for per-offer, per-channel or per-window numbers and you get them with explicit time windows, auditable against Digistore24 itself, not screenshots. With an account you can pull every one of our offers side by side in the <a href="https://www.digistore24-app.com/app/en/affiliate/account/marketplace/all" target="_blank" rel="noopener">affiliate marketplace</a>, with Digistore24&rsquo;s own EPC and cancellation figures next to ours; without one, the marketplace entry links on the cards are public.</p></details>
-      <details class="rev"><summary>Why is there no EPC on the cards?</summary><p>Because a stale EPC is worse than none. EPCs move weekly, most of all on young VSLs and new markets. Ask Stefan and you get the current figure for the offer you plan to run, usually with a channel split and always with its time window.</p></details>
-      <details class="rev"><summary>Which offer should I start with?</summary><p><b>German traffic: KetoSana or CleanseSana.</b> Both run a VSL, a PDP and a DTC page, so you can match the funnel to the traffic instead of forcing traffic into one format. KetoSana brought the most orders on the program over the last 90 days; CleanseSana carries the freshest angle with its new VSL. After those two: <b>MetaboSana</b> for science-trusting audiences, <b>SlimSana</b> for broad weight-loss volume, <b>VitaSana Collection</b> if you own a list. <b>French traffic:</b> SlimSana FR or FloraVitaSana FR. <b>English traffic:</b> KetoSana US or CleanseSana US.</p></details>
-      <details class="rev"><summary>How do I get above 65% RevShare?</summary><p>Volume, proven with data: 65% rises toward 75%, or you move to CPA €120–150 (about $140–180), or a hybrid — structured per traffic source and quality. Start at 65% today, bring your numbers, upgrade. No tier is handed out on a promise, which is exactly why the tiers hold.</p></details>
-      <details class="rev"><summary>Can I get custom landers or a custom VSL intro?</summary><p>Qualified volume partners, yes — the super-affiliate tier includes channel-personalized asset kits, tiered white-glove service, custom landers and VSL intros, and Stefan as your dedicated manager. Show volume, get the keys.</p></details>
-      <details class="rev"><summary>Do I need to speak German or French?</summary><p>No. The German funnels are built natively for German-speaking buyers, and swipes and angles come translated for you. You bring the media buying &mdash; pointing your proven creatives at the right language market is the whole play. English-language traffic goes to the English offers.</p></details>
-      <details class="rev"><summary>Which countries do I target first?</summary><p><b>German offers:</b> language German; geo Germany, Austria and Switzerland first &mdash; 95% of orders from 9 July to 7 October 2026 &mdash; then Luxembourg, Belgium and the rest of the EU. Switzerland converted at 5.26% on desktop in July 2026. <b>French offers:</b> France, Belgium, Switzerland and Luxembourg, French-speaking audiences. <b>English offers:</b> the United States and Canada first; orders from the rest of the world outside the EU ship from our US fulfillment center too.</p></details>
+    <h2>SanaSocials Affiliate Hub questions</h2>
+    <p class="lede">Clear answers on commissions, traffic, funnels, compliance and tracking for SanaSocials affiliates. Open a topic, then a question.</p>
+    <div class="faqtopics">
+      <details class="fgroup" open id="faq-pay"><summary><span>Commission, CPA and payout</span><span class="fcount">5</span></summary>
+        <div class="faqs">
+          <details><summary>What commission do I get?</summary><p>You receive <b>65% revenue share</b> from your first sale on every offer. This applies to the front end and every upsell. On the HeroSana subscription, you earn 65% on every monthly renewal.</p></details>
+          <details><summary>How do I get a higher RevShare or a CPA deal?</summary><p>Bring volume backed by data. After you show Stefan your sales, refunds and traffic quality, 65% can rise up to <b>75% RevShare</b>, or you can move to <b>CPA of €120–150</b>, about $140–180. A hybrid model may also be structured by traffic source and quality.</p></details>
+          <details><summary>When and how am I paid?</summary><p>Digistore24 pays your commissions directly. Your payout schedule, minimum payout requirement and available payment methods are shown in your Digistore24 account.</p></details>
+          <details><summary>How long is the cookie, and who gets the sale?</summary><p>Digistore24 sets the cookie when someone clicks your link: up to <b>180 days in Europe</b> and up to <b>365 days in the US</b>. The last affiliate link clicked before the purchase receives the commission.</p></details>
+          <details><summary>Do you provide affiliate discount codes?</summary><p>No. We do not issue discount codes to affiliates.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-numbers"><summary><span>Numbers</span><span class="fcount">3</span></summary>
+        <div class="faqs">
+          <details><summary>Why is there no EPC on the offer cards?</summary><p>EPCs change weekly and differ by traffic source and country. The published conversion rates are from July 2026, and the country split covers 9 July to 7 October 2026. On 10 October 2026, KetoSana showed <b>$36.57 per cart visitor</b> and ranked <b>#1 of 63</b> Food Supplements offers. This counts order-form visitors, not ad clicks. Ask Stefan for current figures with exact time windows. With an account, you can compare offers in the Digistore24 affiliate marketplace; marketplace links on the cards are public without an account.</p></details>
+          <details><summary>What is your refund and chargeback rate?</summary><p>On KetoSana, <b>7.9%</b> of traffic-partner orders were refunded and <b>0.5%</b> resulted in chargebacks from January to October 2026. More than nine in ten commissions stay earned. Every offer includes a <b>60-day money-back guarantee</b>.</p></details>
+          <details><summary>Does desktop or mobile convert better?</summary><p>Desktop converts better. July 2026 desktop conversion was <b>5.26%</b> in Switzerland, <b>3.85%</b> in Germany and <b>3.17%</b> in Austria. Mobile conversion runs 1 to 1.7 percentage points lower.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-start"><summary><span>Getting started</span><span class="fcount">5</span></summary>
+        <div class="faqs">
+          <details><summary>How do I join?</summary><p>Register for a free affiliate account at digistore24.com, then enter your Digistore24 ID at the top of this page. Every link across the hub automatically uses your ID, and one account covers all our offers.</p></details>
+          <details><summary>Is there a minimum budget or volume?</summary><p>No. There is no minimum budget or volume required to start. Volume only becomes relevant when you want to discuss better commission terms.</p></details>
+          <details><summary>Which offer should I start with?</summary><p>For German traffic, start with <b>KetoSana</b> or <b>CleanseSana</b>. Both have a VSL, a PDP and a DTC page. KetoSana generated the most orders across our program over the last 90 days. CleanseSana has the newest VSL angle. Then consider MetaboSana for science-focused audiences, SlimSana for broad weight-loss volume, and VitaSana Collection if you run email lists. For French traffic, choose SlimSana FR or FloraVitaSana FR. For English traffic, choose KetoSana US or CleanseSana US.</p></details>
+          <details><summary>Do I need to speak German or French?</summary><p>No. The German and French funnels are written for local buyers, and translated swipes and angles are provided for you. You focus on media buying and send your proven creatives to the right language market. English-language traffic goes to the English offers.</p></details>
+          <details><summary>Can I work with you outside Digistore24?</summary><p>No. Our affiliate program runs through Digistore24, which tracks every sale, pays your commission and handles VAT.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-traffic"><summary><span>Traffic sources</span><span class="fcount">4</span></summary>
+        <div class="faqs">
+          <details><summary>Which traffic sources are allowed?</summary><p><b>Allowed freely:</b> Meta, including Facebook, Instagram and Reels; Google Search; Microsoft Ads, including Bing; native networks such as Taboola, Outbrain and MGID; YouTube; TikTok; Pinterest; and organic short-form video, including AI voiceover.<br><b>Prior written permission required:</b> email marketing, Telegram blasts, incentivized traffic and adult placements.<br><b>Forbidden:</b> Amazon, eBay and other retail platforms, spam and retargeting based on scraped pixels.</p></details>
+          <details><summary>Can I promote your offers by email?</summary><p><b>Not by default.</b> Email marketing requires prior written permission, including owned, rented or purchased lists, solo ads, newsletters and co-registration. Contact Stefan at <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a> with your list source, opt-in method and planned volume before sending traffic. Sending without written permission is a material breach and ends the partnership across all our offers.</p></details>
+          <details><summary>Which source brings the volume?</summary><p>On KetoSana, Meta is the main volume source and Google performs well alongside it. We do not yet have benchmark data for YouTube or TikTok, so treat those channels as tests.</p></details>
+          <details><summary>Do you provide lookalike audiences or customer lists?</summary><p>No. We never share customer data.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-google"><summary><span>Google and Bing</span><span class="fcount">4</span></summary>
+        <div class="faqs">
+          <details><summary>Can I run Google Search and Microsoft Ads, including Bing?</summary><p>Yes, on every offer. Generic keywords are allowed, and you may send traffic to our funnels or to your own compliant pre-sell landing page. Brand bidding is also allowed under the conditions in the next question.</p></details>
+          <details><summary>Can I bid on your product names?</summary><p><b>Yes.</b> Brand bidding is allowed on Google Search and Bing, including terms such as “ketosana” or “ketosana erfahrungen”. Do not present yourself as the product owner or the official shop. Do not use Ozempic, Wegovy, Mounjaro or Abnehmspritze in your keywords or ads.</p></details>
+          <details><summary>Which of your pages should Google traffic land on?</summary><p>Send Google traffic to the <b>DTC pages</b>. They have no doctor, no video and no drug names. Our PDPs compare with weight-loss injections, which Google flags as restricted drug terms. You can also use your own advertorial and send visitors to the DTC page.</p></details>
+          <details><summary>Google asks for a healthcare certificate. Do you have documents?</summary><p>We do not provide healthcare certification documents for affiliate accounts. Our own Google campaigns have not been asked for certification.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-pages"><summary><span>Pages and funnels</span><span class="fcount">5</span></summary>
+        <div class="faqs">
+          <details><summary>Can I run my own pre-sell in front of your funnel?</summary><p>Yes. You can use a quiz, listicle, advertorial or VSL-first page. On cold paid traffic, a pre-sell can warm visitors before the VSL or bottle options. Keep strong message match, disclose your affiliation and follow the same <a href="claims/">claims rules</a> as our pages.</p></details>
+          <details><summary>Can I link directly to your pages?</summary><p>Yes. You can link to the VSL, PDP or DTC page, with or without your own pre-sell. <b>Never link directly to the Digistore24 order form.</b> The DTC page takes visitors straight to the bottle options.</p></details>
+          <details><summary>Do you need to approve my landing page?</summary><p>No sign-off is required. Before launch, send Stefan your pre-sell link and first ads. He checks them against the approved claims.</p></details>
+          <details><summary>When do the buy buttons show on the VSL?</summary><p>The buy section opens under the video by design. On the KetoSana VSL, it opens after about <b>12:46 minutes</b>. The screen at the end is the player replay screen, not a broken button. For a new campaign, optimize for Initiate Checkout first, then Purchase once volume builds.</p></details>
+          <details><summary>Can I get custom landers or a custom VSL intro?</summary><p>Yes, for qualified volume partners. The top affiliate tier includes channel-specific creative kits, custom landers, tailored VSL intros and direct support from Stefan. Show consistent traffic volume and conversion data to unlock custom assets.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-markets"><summary><span>Markets and language</span><span class="fcount">3</span></summary>
+        <div class="faqs">
+          <details><summary>Which countries do I target first?</summary><p>For German offers, target <b>Germany, Austria and Switzerland</b> first. These countries generated 95% of orders from 9 July to 7 October 2026. Secondary targets include Luxembourg, Belgium and the rest of the EU. French offers target France, Belgium, Switzerland and Luxembourg. English offers target the United States, Canada, the United Kingdom and other markets outside the EU.</p></details>
+          <details><summary>My buyers are in Germany. Can I use the US links?</summary><p>No. Buyers in the EU must go through the German or French offers. US offers are for buyers outside the EU.</p></details>
+          <details><summary>Can I promote in Polish, Spanish or another language?</summary><p>The German offers ship to every EU country and Switzerland, but every page and VSL is in German. If you use creatives in another language, target German speakers wherever they live.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-claims"><summary><span>Claims and compliance</span><span class="fcount">5</span></summary>
+        <div class="faqs">
+          <details><summary>Which claims can I use?</summary><p>You may use the copy on our <a href="claims/">pre-approved claims page</a> word for word, including the headlines, mechanisms and hooks on the offer cards. <b>Never</b> use disease claims, cure promises, guaranteed results or comparisons with medicines.</p></details>
+          <details><summary>Can I use recipe-style hooks?</summary><p>Yes. Recipe-style formats are allowed. Do not use comparisons with medicines or weight-loss injections, kilo or time-bound results, invented body effects, fake news formats or celebrities.</p></details>
+          <details><summary>Can I use before-and-after photos?</summary><p>Not without our prior written permission.</p></details>
+          <details><summary>What about Swiss traffic?</summary><p>Swiss claim rules differ from the EU’s. An EU-approved claim is not automatically approved in Switzerland. Check what is allowed under Swiss rules before using a claim for Swiss traffic.</p></details>
+          <details><summary>Can I use your product photos and bottle mockups?</summary><p>Yes. Use the bottle mockups linked on each offer card. They show only the product names. Remove any older image that shows the former company name.</p></details>
+        </div>
+      </details>
+      <details class="fgroup" id="faq-tracking"><summary><span>Tracking</span><span class="fcount">4</span></summary>
+        <div class="faqs">
+          <details><summary>Can you install my pixel or Google Tag Manager code on your pages?</summary><p>You do not need code on our pages. Add an S2S postback in Digistore24 under <b>Sales &amp; partners &rarr; Integrations</b>. Pass your tracker’s click ID as <code>cid</code>, plus up to five sub-IDs as <code>sid1</code> to <code>sid5</code>. Digistore24 reports every sale, upsell and refund. For Meta, add a Facebook integration on the same page. Code on Digistore24’s confirmation page misses most sales because buyers finish on our own thank-you page after the upsells.</p></details>
+          <details><summary>How do I track Google Ads conversions?</summary><p>Use a tracker. Digistore24 has no direct Google Ads connection for affiliates. Pass the Google click ID as <code>cid</code>, let the postback report the sale to your tracker, and let the tracker send the conversion to Google Ads.</p></details>
+          <details><summary>How do I test my tracking setup?</summary><p>Open your integration in Digistore24 and click <b>Test connection</b>. Digistore24 simulates a sale, and the <b>History</b> tab shows every call. Affiliates cannot place test purchases.</p></details>
+          <details><summary>How do you protect attribution on long VSLs with delayed buy buttons?</summary><p>Use campaign keys for each traffic source, an S2S postback carrying your click ID and early tracking events while the buy section is still ahead in the video. Settle your campaign-key structure with Stefan before your first euro of spend. Full instructions are in the <a href="tracking/">tracking setup guide</a>.</p></details>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -2171,8 +2245,8 @@
       <li class="hard spotlight"><b>Email marketing: not allowed by default.</b> Promoting any of our offers by email &mdash; your own list, rented or bought lists, solo ads, newsletters, co-registration or any other mailing &mdash; is <b>only possible with our prior written permission</b>. Ask Stefan at <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a> before the first send and wait for the written yes. <b>Any send without it is a material breach and ends the partnership.</b> With permission: CAN-SPAM / GDPR compliant, documented opt-in, working unsubscribe and honest sender identity. No spam. Ever.</li>
       <li class="hard"><b>No deceptive claims.</b> Nothing misleading, untruthful or unsubstantiated. Use the claims in our official materials — do not invent cure promises, disease claims or guaranteed results.</li>
       <li class="hard"><b>No fake authority.</b> No fabricated testimonials, no before/after photos without written permission, no deepfakes or celebrity endorsements, no fake news formats.</li>
-      <li><b>Don't impersonate the brand.</b> No brand-bidding on our product names in paid search without written approval, and never present yourself as the product owner.</li>
-      <li><b>Send traffic to our pages (VSL, PDP or DTC), never straight to the Digistore24 order form.</b> The DTC page is the approved way to go straight to the bottle options. No selling on Amazon, eBay or other retail platforms.</li>
+      <li><b>Don't impersonate the brand.</b> Brand bidding on our product names is allowed on Google Search and Bing. Never present yourself as the product owner or the official shop, and keep drug names out of your keywords and ads.</li>
+      <li><b>Send traffic to our pages (VSL, PDP or DTC), never straight to the Digistore24 order form.</b> With or without your own pre-sell in front. The DTC page is the approved way to go straight to the bottle options. No selling on Amazon, eBay or other retail platforms.</li>
       <li><b>Disclose your affiliation.</b> FTC/consumer-law compliant disclosure on review pages, ads and emails, in the local language of your traffic.</li>
       <li><b>Respect the customer.</b> No "scam"-style negative advertising against our or competitor products, and no retargeting scraped from our pixels.</li>
       <li><b>When unsure, ask first.</b> One email to <a href="mailto:affiliates@sana-socials.com">support</a> beats a burned account. Gray-area channels (Telegram blasts, incentivized traffic, adult) need written approval.</li>
@@ -2195,7 +2269,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.38 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.39 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
