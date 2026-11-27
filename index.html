@@ -1018,6 +1018,11 @@
   .fgroup .faqs{margin:0 0 18px}
   @media (max-width:520px){.fgroup{padding:0 14px}.fgroup>summary{font-size:18px}}
   /* v8.46 (25.11.2026): Microsoft Clarity on all 14 hub pages (no CSS change) */
+  /* v8.47 (27.11.2026): offer cards open their offer (header and pitch clickable), bottle images with fixed size */
+  .card header,.card .pitch{cursor:pointer}
+  .card h3 a.h3a{color:inherit;text-decoration:none}
+  .card h3 a.h3a:hover,.card h3 a.h3a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+  .card .linkrows.flash{outline:2px solid var(--catc,#1f6feb);outline-offset:6px;border-radius:10px;transition:outline-color .6s}
 </style>
 
 
@@ -1201,15 +1206,15 @@
   <div class="cards" id="cardlist">
 
     <!-- 1 · SlimSana -->
-    <article class="card rev" data-cat="weight" id="offer-1" style="--catc:var(--c-weight)">
+    <article data-open="offers/slimsana/" class="card rev" data-cat="weight" id="offer-1" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">1</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>SlimSana</b> · Weight Loss · German-language funnel</div>
-          <h3>SlimSana &mdash; Harvard-Trained Doctor's 60-Second "Metabolic Switch" Fix Germans Ignore</h3>
+          <h3><a class="h3a" href="offers/slimsana/" target="_blank" rel="noopener">SlimSana &mdash; Harvard-Trained Doctor's 60-Second "Metabolic Switch" Fix Germans Ignore</a></h3>
           <p class="subhead">11-ingredient deep funnel for the most frustrated weight-loss buyers in German-speaking Europe — 65–75% RevShare.</p>
         </div>
-        <img class="bottle" src="img/slimsana.png" alt="SlimSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/slimsana.png" alt="SlimSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">Proven Core Offer</span>
       </header>
       <div class="kpis">
@@ -1230,7 +1235,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; French edition: <a href="#offer-10">SlimSana FR</a></b></div>
           <div><span>Segment</span><b>Women &amp; men 35–60+, failed diets</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-1">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/slimsana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/slimsana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/slimsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1252,15 +1257,15 @@
     </article>
 
     <!-- 2 · KetoSana -->
-    <article class="card rev" data-cat="weight" id="offer-2" style="--catc:var(--c-weight)">
+    <article data-open="offers/ketosana/" class="card rev" data-cat="weight" id="offer-2" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">2</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>KetoSana</b> · Keto Weight Loss · German-language funnel</div>
-          <h3>KetoSana &mdash; Our Best-Selling Offer Runs on a Keto Mechanism Nobody Else Is Selling</h3>
+          <h3><a class="h3a" href="offers/ketosana/" target="_blank" rel="noopener">KetoSana &mdash; Our Best-Selling Offer Runs on a Keto Mechanism Nobody Else Is Selling</a></h3>
           <p class="subhead">The most orders on the program over the last 90 days — premium liquid drops, AOV €213 (≈ $233) in that window, 60-day guarantee, made-in-Germany trust that closes cold German-speaking traffic.</p>
         </div>
-        <img class="bottle" src="img/ketosana.png" alt="KetoSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="102" height="320" src="img/ketosana.png" alt="KetoSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">🏆 #1 by Orders &middot; Last 90 Days</span>
       </header>
       <div class="kpis">
@@ -1281,7 +1286,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; English edition: <a href="#offer-13">KetoSana US</a> &middot; French edition: <a href="#offer-15">LigneSana FR</a></b></div>
           <div><span>Segment</span><b>30–65, optimal 40–58 · keto-curious, disposable income</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-2">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/ketosana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/ketosana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/ketosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1304,15 +1309,15 @@
     </article>
 
     <!-- 3 · MetaboSana -->
-    <article class="card rev" data-cat="weight" id="offer-3" style="--catc:var(--c-weight)">
+    <article data-open="offers/metabosana/" class="card rev" data-cat="weight" id="offer-3" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">3</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>MetaboSana</b> · Metabolism · German-language funnel</div>
-          <h3>MetaboSana &mdash; Stanford-Backed 3-Phase "Cell Unlock" Makes Clean Eating Finally Work</h3>
+          <h3><a class="h3a" href="offers/metabosana/" target="_blank" rel="noopener">MetaboSana &mdash; Stanford-Backed 3-Phase "Cell Unlock" Makes Clean Eating Finally Work</a></h3>
           <p class="subhead">VSL live since 22 April 2026 — AOV €179 (≈ $195) and a research story that converts science-trusting diet skeptics in German-speaking Europe.</p>
         </div>
-        <img class="bottle" src="img/metabosana.png" alt="MetaboSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/metabosana.png" alt="MetaboSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">Stanford-Backed Research Story</span>
       </header>
       <div class="kpis">
@@ -1333,7 +1338,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Science-minded premium buyers 30+</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-3">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://metabosana.com/metabosana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://metabosana.com/metabosana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://metabosana.com/metabosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1356,15 +1361,15 @@
     </article>
 
     <!-- 4 · CleanseSana -->
-    <article class="card rev" data-cat="gut" id="offer-4" style="--catc:var(--c-gut)">
+    <article data-open="offers/cleansesana/" class="card rev" data-cat="gut" id="offer-4" style="--catc:var(--c-gut)">
       <header>
         <div class="rank">4</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>CleanseSana</b> · Gut Health · German-language funnel</div>
-          <h3>CleanseSana &mdash; The 4-Mechanism Gut Reboot That Hit Digistore24's Top Offers in 4 Weeks</h3>
+          <h3><a class="h3a" href="offers/cleansesana/" target="_blank" rel="noopener">CleanseSana &mdash; The 4-Mechanism Gut Reboot That Hit Digistore24's Top Offers in 4 Weeks</a></h3>
           <p class="subhead">The new VSL runs next to the proven PDP, putting a fresh "cellular sludge" angle on digestion, immunity and fat loss. Ask Stefan for the current EPC on both before you scale.</p>
         </div>
-        <img class="bottle" src="img/cleansesana.png" alt="CleanseSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/cleansesana.png" alt="CleanseSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">⚡ VSL live since 7 August 2026</span>
       </header>
       <div class="kpis">
@@ -1386,7 +1391,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; English edition: <a href="#offer-16">CleanseSana US</a> &middot; French edition: <a href="#offer-12">FloraVitaSana FR</a></b></div>
           <div><span>Segment</span><b>Men &amp; women 30+, digestion &amp; detox pain</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-4">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://cleansesana.com/cleansesana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://cleansesana.com/cleansesana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://cleansesana.com/cleansesana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1409,15 +1414,15 @@
     </article>
 
     <!-- 5 · GlucoSana -->
-    <article class="card rev" data-cat="blood" id="offer-5" style="--catc:var(--c-blood)">
+    <article data-open="offers/glucosana/" class="card rev" data-cat="blood" id="offer-5" style="--catc:var(--c-blood)">
       <header>
         <div class="rank">5</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>GlucoSana</b> · Blood Sugar · German-language funnel</div>
-          <h3>GlucoSana &mdash; Harvard-Trained Doctor's 17-Year "Glucose Prison" Protocol — Finally Outside His Clinic</h3>
+          <h3><a class="h3a" href="offers/glucosana/" target="_blank" rel="noopener">GlucoSana &mdash; Harvard-Trained Doctor's 17-Year "Glucose Prison" Protocol — Finally Outside His Clinic</a></h3>
           <p class="subhead">From the team behind <a href="#offer-9" style="text-decoration:underline">GlucoTrust German</a> (#10) — AOV €176 (≈ $192), built for high-intent 40+ buyers who've failed mainstream solutions.</p>
         </div>
-        <img class="bottle" src="img/glucosana.png" alt="GlucoSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/glucosana.png" alt="GlucoSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">Built on the GlucoTrust German playbook</span>
       </header>
       <div class="kpis">
@@ -1438,7 +1443,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, blood-sugar concerns</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-5">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://myglucosana.com/glucosana-vsl-fe-1?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://myglucosana.com/glucosana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myglucosana.com/glucosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1460,15 +1465,15 @@
     </article>
 
     <!-- 6 · NerveSana -->
-    <article class="card rev" data-cat="nerve" id="offer-6" style="--catc:var(--c-nerve)">
+    <article data-open="offers/nervesana/" class="card rev" data-cat="nerve" id="offer-6" style="--catc:var(--c-nerve)">
       <header>
         <div class="rank">6</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>NerveSana</b> · Nerve Health · German-language funnel</div>
-          <h3>NerveSana &mdash; The "Ikaria Anomaly" — Why 90-Year-Old Greeks Have Healthier Nerves Than 40-Year-Old Germans</h3>
+          <h3><a class="h3a" href="offers/nervesana/" target="_blank" rel="noopener">NerveSana &mdash; The "Ikaria Anomaly" — Why 90-Year-Old Greeks Have Healthier Nerves Than 40-Year-Old Germans</a></h3>
           <p class="subhead">8.3M German neuropathy sufferers, premium pricing, desperate high-intent buyers — a mechanism angle no competitor is running.</p>
         </div>
-        <img class="bottle" src="img/nervesana.png" alt="NerveSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/nervesana.png" alt="NerveSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge plain">High-Intent Premium Buyers</span>
       </header>
       <div class="kpis">
@@ -1489,7 +1494,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, neuropathy &amp; nerve pain</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-6">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://nervesana.com/nervesana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://nervesana.com/nervesana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://nervesana.com/nervesana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1511,15 +1516,15 @@
     </article>
 
     <!-- 7 · VigorSana -->
-    <article class="card rev" data-cat="men" id="offer-7" style="--catc:var(--c-men)">
+    <article data-open="offers/vigorsana/" class="card rev" data-cat="men" id="offer-7" style="--catc:var(--c-men)">
       <header>
         <div class="rank">7</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>VigorSana</b> · Men's Health · Performance · German-language funnel</div>
-          <h3>VigorSana &mdash; The "Bio-Energetic Leak" Quietly Draining Men Over 40 — and the 4-Phase Fix</h3>
+          <h3><a class="h3a" href="offers/vigorsana/" target="_blank" rel="noopener">VigorSana &mdash; The "Bio-Energetic Leak" Quietly Draining Men Over 40 — and the 4-Phase Fix</a></h3>
           <p class="subhead">A private, doctor-free solution for men too embarrassed to ask — 60-day money-back guarantee removes purchase friction.</p>
         </div>
-        <img class="bottle" src="img/vigorsana.png" alt="VigorSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/vigorsana.png" alt="VigorSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge plain">60-Day Money-Back Guarantee</span>
       </header>
       <div class="kpis">
@@ -1540,7 +1545,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU &middot; French edition: <a href="#offer-14">VigorSana FR</a></b></div>
           <div><span>Segment</span><b>Men 40–65, energy &amp; performance loss</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-7">
           <div class="lrow"><div class="tag">VSL 1&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/vigorsana-vsl-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL 2&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/vigorsana-vsl-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/vigorsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1563,15 +1568,15 @@
     </article>
 
     <!-- 8 · HeroSana Caliber (id offer-11) -->
-    <article class="card rev" data-cat="men" id="offer-11" style="--catc:var(--c-men)">
+    <article data-open="#links-offer-11" class="card rev" data-cat="men" id="offer-11" style="--catc:var(--c-men)">
       <header>
         <div class="rank">8</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>HeroSana Caliber</b> &middot; Men's Vitality &middot; Gummies &middot; German-language funnel</div>
-          <h3>HeroSana Caliber &mdash; &ldquo;Your Doctor Says Everything Is Normal for Your Age. So Why Don&rsquo;t You Feel Like Yourself?&rdquo;</h3>
+          <h3><a class="h3a" href="#links-offer-11">HeroSana Caliber &mdash; &ldquo;Your Doctor Says Everything Is Normal for Your Age. So Why Don&rsquo;t You Feel Like Yourself?&rdquo;</a></h3>
           <p class="subhead">A daily men&rsquo;s vitality gummy for German-speaking men aged 25 to 67, formulated by a Harvard-trained doctor and built on EU-authorized nutrient claims &mdash; 60-day money-back guarantee, from &euro;49 per jar.</p>
         </div>
-        <img class="bottle" src="img/herosana.png" alt="HeroSana Caliber jars" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="255" height="320" src="img/herosana.png" alt="HeroSana Caliber jars" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New &middot; live since 13 October 2026</span>
       </header>
       <div class="kpis">
@@ -1592,7 +1597,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men 25&ndash;67 who feel their energy and edge slipping</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-11">
           <div class="lrow"><div class="tag">PDP 2&middot;4&middot;8<span class="sub">Jars + subscription</span></div><div class="url" data-link="https://herosana.com/herosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         </div>
         <p class="fmtline" style="border-left-color:var(--c-men);margin:12px 0 4px;font-size:13.5px"><b>Read this before you run it.</b> The Digistore24 checkout is approved and live since 13 October 2026. Promote HeroSana Caliber only with the EU-authorized nutrient claims shown on the sales page and the label &mdash; no erectile-dysfunction or &ldquo;testosterone booster&rdquo; angles, no weight-loss promises. A VSL is coming; until its link appears on this card, send all traffic to the PDP. HeroSana Caliber is a new offer with no public stats yet; <b>ask Stefan for its current EPC</b>.</p>
@@ -1607,15 +1612,15 @@
     </article>
 
     <!-- 9 · VitaSana Collection (id offer-8) -->
-    <article class="card rev" data-cat="bundle" id="offer-8" style="--catc:var(--c-bundle)">
+    <article data-open="offers/vitasana-collection/" class="card rev" data-cat="bundle" id="offer-8" style="--catc:var(--c-bundle)">
       <header>
         <div class="rank">9</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>VitaSana Collection</b> &middot; VIP Wellness System &middot; 8 Products &middot; German-language funnel</div>
-          <h3>VitaSana Collection &mdash; The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</h3>
+          <h3><a class="h3a" href="offers/vitasana-collection/" target="_blank" rel="noopener">VitaSana Collection &mdash; The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</a></h3>
           <p class="subhead">Buyers pick their next transformation by their biggest pain point, and you earn 65&ndash;75% across the whole VIP Wellness System.</p>
         </div>
-        <img class="bottle" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="760" height="232" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">Lifetime-Customer Machine</span>
       </header>
       <div class="kpis">
@@ -1636,7 +1641,7 @@
           <div><span>Geo</span><b>Germany, Austria, Switzerland, Liechtenstein, Luxembourg + German speakers across the EU</b></div>
           <div><span>Segment</span><b>Men &amp; women 30+, multi-symptom health buyers</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-8">
           <div class="lrow"><div class="tag">PDP page</div><div class="url" data-link="https://vitasanacollection.com/8-products-pdp?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC page</div><div class="url" data-link="https://vitasanacollection.com/8-products-dtc?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         </div>
@@ -1654,15 +1659,15 @@
     </article>
 
     <!-- 10 · GlucoTrust German (id offer-9) -->
-    <article class="card flagship rev" data-cat="blood" id="offer-9" style="--catc:var(--c-blood)">
+    <article data-open="offers/glucotrust-german/" class="card flagship rev" data-cat="blood" id="offer-9" style="--catc:var(--c-blood)">
       <header>
         <div class="rank">10</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>GlucoTrust German</b> &middot; Blood Sugar &middot; Flagship &middot; German-language funnel</div>
-          <h3>GlucoTrust &mdash; Clickbank&rsquo;s All-Time Best Blood-Sugar Offer &mdash; Localized for 100M+ German Speakers</h3>
+          <h3><a class="h3a" href="offers/glucotrust-german/" target="_blank" rel="noopener">GlucoTrust &mdash; Clickbank&rsquo;s All-Time Best Blood-Sugar Offer &mdash; Localized for 100M+ German Speakers</a></h3>
           <p class="subhead">The offer this whole portfolio was built on, running in German on Digistore24 &mdash; four funnel formats and a swipe library that keeps getting refreshed.</p>
         </div>
-        <img class="bottle" src="img/glucotrust-german.png" alt="GlucoTrust German bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="316" height="320" src="img/glucotrust-german.png" alt="GlucoTrust German bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">&#127942; All-Time Best Blood-Sugar Offer</span>
       </header>
       <div class="kpis">
@@ -1683,7 +1688,7 @@
           <div><span>Geo</span><b>EU-wide + Switzerland, Liechtenstein, Norway, Iceland &middot; German language</b></div>
           <div><span>Segment</span><b>Men &amp; women 40+, blood sugar &amp; weight</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-9">
           <div class="lrow"><div class="tag">PDP page</div><div class="url" data-link="https://myvitalletter.com/tsl-ds24-irl-0?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL page</div><div class="url" data-link="https://myvitalletter.com/vsl-ds24-irl-0?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">VSL page<span class="sub">Buy boxes visible from the start</span></div><div class="url" data-link="https://myvitalletter.com/vsl-bb-ds24-irl-0?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1703,15 +1708,15 @@
     </article>
 
     <!-- 11 · PeakPeaceSana Daily Ritual (id offer-17) -->
-    <article class="card rev" data-cat="nerve" id="offer-17" style="--catc:var(--c-nerve)">
+    <article data-open="https://peakpeacesana.com/affiliate-page" class="card rev" data-cat="nerve" id="offer-17" style="--catc:var(--c-nerve)">
       <header>
         <div class="rank">11</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>PeakPeaceSana Daily Ritual</b> &middot; Two capsules a day &middot; German-language funnel</div>
-          <h3>PeakPeaceSana Daily Ritual &mdash; CogniPeakSana in the Morning, CogniPeaceSana in the Evening</h3>
+          <h3><a class="h3a" href="https://peakpeacesana.com/affiliate-page" target="_blank" rel="noopener">PeakPeaceSana Daily Ritual &mdash; CogniPeakSana in the Morning, CogniPeaceSana in the Evening</a></h3>
           <p class="subhead">A two-formula daily ritual for women and men 35&ndash;60 who want to stay productive at work and at home, compiled by a Harvard-trained doctor &mdash; one-time purchase, no subscription, 60-day money-back guarantee.</p>
         </div>
-        <img class="bottle" src="img/peakpeacesana.png" alt="PeakPeaceSana Daily Ritual: CogniPeakSana and CogniPeaceSana bottles" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="335" height="320" src="img/peakpeacesana.png" alt="PeakPeaceSana Daily Ritual: CogniPeakSana and CogniPeaceSana bottles" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New &middot; on the hub since 23 November 2026</span>
       </header>
       <div class="kpis">
@@ -1732,7 +1737,7 @@
           <div><span>Geo</span><b>Germany, Austria and Switzerland &middot; German-language traffic</b></div>
           <div><span>Segment</span><b>Women &amp; men 35&ndash;60 who want to stay productive at work and at home</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-17">
           <div class="lrow"><div class="tag">PDP 1&middot;2&middot;3&middot;6<span class="sub">Months of supply</span></div><div class="url" data-link="https://peakpeacesana.com/pps-pdp?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         </div>
         <p class="fmtline" style="border-left-color:var(--c-nerve);margin:12px 0 4px;font-size:13.5px"><b>Read this before you run it.</b> The Digistore24 marketplace listing is approved. The product page is the only landing page, so send all traffic there. Use only the six EU-authorised claims, word for word, each on its own capsule (for example: pantothenic acid contributes to normal mental performance; magnesium contributes to normal psychological function). No zinc or B6 claims, no caffeine statements, no sleep or melatonin promises beyond &ldquo;contains no melatonin&rdquo;, no disease claims. PeakPeaceSana is a new offer with no public stats yet; <b>ask Stefan for its current EPC</b>.</p>
@@ -1756,15 +1761,15 @@
     </div>
   <div class="cards">
     <!-- 11 · SlimSana FR (id offer-10) -->
-    <article class="card rev" data-cat="weight" id="offer-10" style="--catc:var(--c-weight)">
+    <article data-open="#links-offer-10" class="card rev" data-cat="weight" id="offer-10" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">12</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>SlimSana FR</b> &middot; Weight Loss &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
-          <h3>SlimSana &mdash; Our German Weight-Loss Funnel, Rebuilt in French &mdash; Not Translated</h3>
+          <h3><a class="h3a" href="#links-offer-10">SlimSana &mdash; Our German Weight-Loss Funnel, Rebuilt in French &mdash; Not Translated</a></h3>
           <p class="subhead">SlimSana's French edition for France, Belgium, Switzerland and Luxembourg &mdash; written in French rather than machine-translated, on its own Digistore24 products in a separate vendor account.</p>
         </div>
-        <img class="bottle" src="img/slimsana-fr.png" alt="SlimSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/slimsana-fr.png" alt="SlimSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">New Market</span>
       </header>
       <div class="kpis">
@@ -1785,7 +1790,7 @@
         <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
         <div><span>Segment</span><b>Women &amp; men 35&ndash;60+, failed diets</b></div>
       </div>
-      <div class="linkrows">
+      <div class="linkrows" id="links-offer-10">
         <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
         <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myslimsana.com/fr/slimsana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1804,15 +1809,15 @@
     </article>
 
     <!-- 12 · FloraVitaSana FR (id offer-12) -->
-    <article class="card rev" data-cat="gut" id="offer-12" style="--catc:var(--c-gut)">
+    <article data-open="https://mycleansesana.com/fr/floravitasana-affiliate-page-ds24" class="card rev" data-cat="gut" id="offer-12" style="--catc:var(--c-gut)">
       <header>
         <div class="rank">13</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>FloraVitaSana FR</b> &middot; Gut Health &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
-          <h3>FloraVitaSana &mdash; The French Edition of CleanseSana &mdash; Under Its Own French Name</h3>
+          <h3><a class="h3a" href="https://mycleansesana.com/fr/floravitasana-affiliate-page-ds24" target="_blank" rel="noopener">FloraVitaSana &mdash; The French Edition of CleanseSana &mdash; Under Its Own French Name</a></h3>
           <p class="subhead">Our gut-health offer for French-speaking Europe, sold as FloraVitaSana on its own Digistore24 products in the French vendor account &mdash; 60-day money-back guarantee.</p>
         </div>
-        <img class="bottle" src="img/floravitasana-fr.png" alt="FloraVitaSana bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/floravitasana-fr.png" alt="FloraVitaSana bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New Market &middot; live since October 2026</span>
       </header>
       <div class="kpis">
@@ -1833,7 +1838,7 @@
           <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
           <div><span>Segment</span><b>Men &amp; women 30+, digestion &amp; gut comfort</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-12">
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/fr/floravitasana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1853,15 +1858,15 @@
     </article>
 
     <!-- 13 · VigorSana FR (id offer-14) -->
-    <article class="card rev" data-cat="men" id="offer-14" style="--catc:var(--c-men)">
+    <article data-open="https://myvigorsana.com/fr/vigorsana-affiliate-page-ds24" class="card rev" data-cat="men" id="offer-14" style="--catc:var(--c-men)">
       <header>
         <div class="rank">14</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>VigorSana FR</b> &middot; Men's Health &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
-          <h3>VigorSana &mdash; Our German Men's Health Funnel, Now in French &mdash; for Men Over 40</h3>
+          <h3><a class="h3a" href="https://myvigorsana.com/fr/vigorsana-affiliate-page-ds24" target="_blank" rel="noopener">VigorSana &mdash; Our German Men's Health Funnel, Now in French &mdash; for Men Over 40</a></h3>
           <p class="subhead">The French edition of VigorSana: French sales pages, a French upsell chain and the French label, on its own Digistore24 products in the French vendor account &mdash; 60-day money-back guarantee.</p>
         </div>
-        <img class="bottle" src="img/vigorsana-fr.png" alt="VigorSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/vigorsana-fr.png" alt="VigorSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New Market &middot; live since 2 November 2026</span>
       </header>
       <div class="kpis">
@@ -1882,7 +1887,7 @@
           <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
           <div><span>Segment</span><b>Men 40&ndash;65, energy &amp; vitality</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-14">
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/fr/vigorsana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/fr/vigorsana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myvigorsana.com/fr/vigorsana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1902,15 +1907,15 @@
     </article>
 
     <!-- 14 · LigneSana FR (id offer-15) -->
-    <article class="card rev" data-cat="weight" id="offer-15" style="--catc:var(--c-weight)">
+    <article data-open="https://myketosana.com/fr/lignesana-affiliate-page-ds24" class="card rev" data-cat="weight" id="offer-15" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">15</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>LigneSana FR</b> &middot; Keto Weight Loss support &middot; French-language funnel &middot; France, Belgium, Switzerland, Luxembourg</div>
-          <h3>LigneSana &mdash; The French Edition of KetoSana, Our Best-Selling Offer &mdash; Under Its Own French Name</h3>
+          <h3><a class="h3a" href="https://myketosana.com/fr/lignesana-affiliate-page-ds24" target="_blank" rel="noopener">LigneSana &mdash; The French Edition of KetoSana, Our Best-Selling Offer &mdash; Under Its Own French Name</a></h3>
           <p class="subhead">Our keto drops for French-speaking Europe, sold as LigneSana on its own Digistore24 products in the French vendor account &mdash; 60-day money-back guarantee.</p>
         </div>
-        <img class="bottle" src="img/lignesana-fr.png" alt="LigneSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/lignesana-fr.png" alt="LigneSana bottle, French label" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New Market &middot; live since 6 November 2026</span>
       </header>
       <div class="kpis">
@@ -1931,7 +1936,7 @@
           <div><span>Geo</span><b>France, Belgium, Switzerland, Luxembourg &middot; French-speaking audiences</b></div>
           <div><span>Segment</span><b>Women &amp; men 30&ndash;65 &middot; keto-curious, disposable income</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-15">
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/fr/lignesana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/fr/lignesana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/fr/lignesana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -1961,15 +1966,15 @@
     </div>
   <div class="cards">
     <!-- 15 · KetoSana US (id offer-13) -->
-    <article class="card rev" data-cat="weight" id="offer-13" style="--catc:var(--c-weight)">
+    <article data-open="https://myketosana.com/en/ketosana-affiliate-page-ds24" class="card rev" data-cat="weight" id="offer-13" style="--catc:var(--c-weight)">
       <header>
         <div class="rank">16</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>KetoSana US</b> &middot; Keto Weight Loss &middot; English-language funnel &middot; United States, Canada, United Kingdom, worldwide (outside the EU)</div>
-          <h3>KetoSana &mdash; Our Best-Selling Offer, Now in English &mdash; Checkout in US Dollars</h3>
+          <h3><a class="h3a" href="https://myketosana.com/en/ketosana-affiliate-page-ds24" target="_blank" rel="noopener">KetoSana &mdash; Our Best-Selling Offer, Now in English &mdash; Checkout in US Dollars</a></h3>
           <p class="subhead">The English edition of KetoSana: premium liquid drops, the same doctor, a 60-day money-back guarantee &mdash; and orders shipped from our US fulfillment center.</p>
         </div>
-        <img class="bottle" src="img/ketosana-us.png" alt="KetoSana bottle, English label" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="101" height="320" src="img/ketosana-us.png" alt="KetoSana bottle, English label" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New Market &middot; English</span>
       </header>
       <div class="kpis">
@@ -1990,7 +1995,7 @@
           <div><span>Geo</span><b>United States, Canada, United Kingdom &middot; worldwide (outside the EU) from our US fulfillment center</b></div>
           <div><span>Segment</span><b>30&ndash;65 &middot; keto-curious, disposable income</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-13">
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://myketosana.com/en/ketosana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -2008,15 +2013,15 @@
     </article>
 
     <!-- 16 · CleanseSana US (id offer-16) -->
-    <article class="card rev" data-cat="gut" id="offer-16" style="--catc:var(--c-gut)">
+    <article data-open="https://mycleansesana.com/en/cleansesana-affiliate-page-ds24" class="card rev" data-cat="gut" id="offer-16" style="--catc:var(--c-gut)">
       <header>
         <div class="rank">17</div>
         <div class="hgroup">
           <div class="eyebrow2"><b>CleanseSana US</b> &middot; Gut Health &middot; English-language funnel &middot; United States, Canada, United Kingdom, worldwide (outside the EU)</div>
-          <h3>CleanseSana &mdash; Our Gut-Health Offer, Now in English &mdash; Checkout in US Dollars</h3>
+          <h3><a class="h3a" href="https://mycleansesana.com/en/cleansesana-affiliate-page-ds24" target="_blank" rel="noopener">CleanseSana &mdash; Our Gut-Health Offer, Now in English &mdash; Checkout in US Dollars</a></h3>
           <p class="subhead">The US edition of CleanseSana: the same doctor, sales pages in US English, a 60-day money-back guarantee &mdash; and orders shipped from our US fulfillment center.</p>
         </div>
-        <img class="bottle" src="img/cleansesana-us.png" alt="CleanseSana bottle, English label" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle" width="160" height="320" src="img/cleansesana-us.png" alt="CleanseSana bottle, English label" loading="lazy" onerror="this.style.display='none'">
         <span class="badge green">New Market &middot; English</span>
       </header>
       <div class="kpis">
@@ -2037,7 +2042,7 @@
           <div><span>Geo</span><b>United States and Canada first &middot; English-language traffic in the United Kingdom and worldwide (outside the EU) from our US fulfillment center</b></div>
           <div><span>Segment</span><b>Men &amp; women 35+ &middot; digestion and gut comfort</b></div>
         </div>
-        <div class="linkrows">
+        <div class="linkrows" id="links-offer-16">
           <div class="lrow"><div class="tag">PDP 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/en/cleansesana-pdp-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">PDP 2&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/en/cleansesana-pdp-fe-2bo?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
           <div class="lrow"><div class="tag">DTC 1&middot;3&middot;6</div><div class="url" data-link="https://mycleansesana.com/en/cleansesana-dtc-bb-fe?aff=AFFILIATE&amp;cam=CAMPAIGNKEY"></div><button class="btn small copy" type="button">Copy</button></div>
@@ -2378,7 +2383,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.46 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.47 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
@@ -2722,5 +2727,27 @@
   }
 
   render();
+})();
+</script>
+<script>
+/* v8.47 (27.11.2026): a click on a card's header or pitch opens the offer (Clarity second read, 27.11.) */
+(function(){
+  var C=function(n){try{if(window.clarity)window.clarity('event',n)}catch(e){}};
+  document.addEventListener('click',function(e){
+    var t=e.target;if(!t||!t.closest)return;
+    if(t.closest('a,button,input,select,textarea,summary,label'))return;
+    var part=t.closest('.card header,.card .pitch');if(!part)return;
+    var card=part.closest('article.card');if(!card)return;
+    var go=card.getAttribute('data-open')||'',id=card.id||'';
+    if(go.charAt(0)==='#'){
+      var rows=document.getElementById(go.slice(1));if(!rows)return;
+      rows.scrollIntoView({behavior:'smooth',block:'center'});
+      rows.classList.add('flash');setTimeout(function(){rows.classList.remove('flash')},1400);
+      C('card_links');C('card_links_'+id);
+    }else if(go){
+      C('card_open');C('card_open_'+id);
+      var w=window.open(go,'_blank');if(w){try{w.opener=null}catch(x){}}else{location.href=go}
+    }
+  });
 })();
 </script>
