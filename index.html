@@ -1024,6 +1024,24 @@
   .card h3 a.h3a:hover,.card h3 a.h3a:focus-visible{text-decoration:underline;text-underline-offset:3px}
   .card .linkrows.flash{outline:2px solid var(--catc,#1f6feb);outline-offset:6px;border-radius:10px;transition:outline-color .6s}
   /* v8.48 (27.11.2026): brighter bottle mockups (V20 droppers, VigorSana navy, new collection row) */
+  /* v8.49 (27.11.2026): bigger bottles that fill the card header (badge on top, bottle below it in a side column) */
+  @media(min-width:641px){
+    .card header{display:grid;grid-template-columns:auto minmax(0,1fr) fit-content(210px);grid-template-rows:auto 1fr;column-gap:18px;row-gap:10px;align-items:start}
+    .card header>.rank{grid-column:1;grid-row:1/span 2}
+    .card header>.hgroup{grid-column:2;grid-row:1/span 2;min-width:0}
+    .card header>.badge{grid-column:3;grid-row:1;justify-self:center;white-space:normal;text-align:center;margin-top:2px}
+    .card header>.bottle{grid-column:3;grid-row:2;justify-self:center;align-self:center;height:170px;width:auto;max-width:100%}
+    .card header>.bottle.wide{grid-column:2/span 2;grid-row:3;justify-self:start;height:170px}
+  }
+  @media(min-width:1100px){
+    .langsec .card header{column-gap:14px}
+    .langsec .card header>.bottle{height:190px}
+  }
+  @media(max-width:640px){
+    .card header>.bottle,.langsec .card header>.bottle{height:104px}
+    .card header>.bottle.wide,.langsec .card header>.bottle.wide{height:auto;width:100%;max-width:100%}
+    .card header>.badge{flex:1 1 120px;max-width:max-content;white-space:normal;align-self:center}
+  }
 </style>
 
 
@@ -1621,7 +1639,7 @@
           <h3><a class="h3a" href="offers/vitasana-collection/" target="_blank" rel="noopener">VitaSana Collection &mdash; The Self-Selecting Funnel That Turns One Sale Into &euro;245+ AOV Automatically</a></h3>
           <p class="subhead">Buyers pick their next transformation by their biggest pain point, and you earn 65&ndash;75% across the whole VIP Wellness System.</p>
         </div>
-        <img class="bottle" width="1053" height="320" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
+        <img class="bottle wide" width="1053" height="320" src="img/vitasana-collection.png" alt="VitaSana Collection bottle" loading="lazy" onerror="this.style.display='none'">
         <span class="badge">Lifetime-Customer Machine</span>
       </header>
       <div class="kpis">
@@ -2384,7 +2402,7 @@
 
 <footer>
   <div class="wrap">
-    <div><b>SanaSocials Affiliate Hub</b> · v8.48 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
+    <div><b>SanaSocials Affiliate Hub</b> · v8.49 · run by the SanaSocials partner team · affiliate manager: <b>Stefan Richter</b> · <a href="mailto:affiliates@sana-socials.com">affiliates@sana-socials.com</a></div>
     <nav class="legallinks" aria-label="Hub pages">
       <a href="tracking/">Tracking Guide</a>
       <a href="claims/">Claims Center</a>
